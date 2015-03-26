@@ -24,36 +24,36 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid Style="{StaticResource BilledeBaggrund}">
-        <Grid.ChildrenTransitions>
-            <TransitionCollection>
-                <EntranceThemeTransition/>
-            </TransitionCollection>
-        </Grid.ChildrenTransitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+	<Grid Style="{StaticResource BilledeBaggrund}">
+		<Grid.ChildrenTransitions>
+			<TransitionCollection>
+				<EntranceThemeTransition/>
+			</TransitionCollection>
+		</Grid.ChildrenTransitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="140"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
 
-        <!-- Back button and page title -->
-        <Grid Style="{StaticResource Top}">
-            <Grid.ColumnDefinitions>
-                <!--<ColumnDefinition Width="120"/>-->
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+		<!-- Back button and page title -->
+		<Grid Style="{StaticResource Top}">
+			<Grid.ColumnDefinitions>
+				<!--<ColumnDefinition Width="120"/>-->
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
             <!--<Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
                         Style="{StaticResource NavigationBackButtonNormalStyle}"
                         VerticalAlignment="Top"
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>-->
-            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}"
+			<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}"
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="50,0,30,40"/>
-            <TextBlock Style="{StaticResource LoggetIndText}">
+			<TextBlock Style="{StaticResource LoggetIndText}">
 				<Run Text="Du er logget ind som: "/>
 				<Run Text="{Binding Brugernavn}" FontWeight="Bold"/>
-            </TextBlock>
-        </Grid>
+			</TextBlock>
+		</Grid>
         <Grid Margin="20 40" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1.5*"/>
@@ -61,54 +61,54 @@
             </Grid.ColumnDefinitions>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="320"/>
-                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="260"/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="260"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" ToolTipService.ToolTip="Vis vagtplan">
-                    <HyperlinkButton.Background>
+                <Button Style="{StaticResource HovedmenuButton}" ToolTipService.ToolTip="Vis vagtplan">
+                    <Button.Background>
                         <ImageBrush ImageSource="ms-appx:///Assets/vagtplan.png"/>
-                    </HyperlinkButton.Background>
+                    </Button.Background>
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.Vagtplan"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                </HyperlinkButton>
-                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Column="1" ToolTipService.ToolTip="Rediger profil"  >
-                    <HyperlinkButton.Background>
+                </Button>
+                <Button Style="{StaticResource HovedmenuButton}" Grid.Column="1" ToolTipService.ToolTip="Rediger profil"  >
+                    <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/profil.png"/>
-                    </HyperlinkButton.Background>
+                    </Button.Background>
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.Profil"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                </HyperlinkButton>
-                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Row="1" ToolTipService.ToolTip="Skriv fællesbesked" >
-                    <HyperlinkButton.Background>
+                </Button>
+                <Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" ToolTipService.ToolTip="Skriv fællesbesked" >
+                    <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/skrivbesked.png"/>
-                    </HyperlinkButton.Background>
+                    </Button.Background>
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.SkrivBesked"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                </HyperlinkButton>
+                </Button>
 
-                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret bruger" >
-                    <HyperlinkButton.Background>
+                <Button Style="{StaticResource HovedmenuButton}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret bruger" >
+                    <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/opretbruger.png"/>
-                    </HyperlinkButton.Background>
+                    </Button.Background>
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.OpretBruger"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                </HyperlinkButton>
+                </Button>
             </Grid>
 
             <Grid Grid.Column="1" Margin="20,0,0,0">
