@@ -139,13 +139,7 @@ namespace _1aarsproeve.ViewModel
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
 
             FindUgenummer("da-DK");
-            Mandag = FoersteDagPaaUge(Ugenummer).ToString("D", new CultureInfo("da-DK"));
-            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("D", new CultureInfo("da-DK"));
-            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("D", new CultureInfo("da-DK"));
-            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("D", new CultureInfo("da-DK"));
-            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("D", new CultureInfo("da-DK"));
-            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("D", new CultureInfo("da-DK"));
-            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("D", new CultureInfo("da-DK"));
+            Ugedage();
 
             InitialiserUgedage();
             InitialiserAnsatte();
@@ -164,17 +158,11 @@ namespace _1aarsproeve.ViewModel
 
             Ugenummer = Ugenummer - 1;
 
-            if (Ugenummer == 0)
+            if (Ugenummer <= 0)
             {
                 Ugenummer = 52;
             }
-            Mandag = FoersteDagPaaUge(Ugenummer).ToString("D", new CultureInfo("da-DK"));
-            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("D", new CultureInfo("da-DK"));
-            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("D", new CultureInfo("da-DK"));
-            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("D", new CultureInfo("da-DK"));
-            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("D", new CultureInfo("da-DK"));
-            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("D", new CultureInfo("da-DK"));
-            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("D", new CultureInfo("da-DK"));
+            Ugedage();
 
             InitialiserAnsatte();
         }
@@ -184,21 +172,27 @@ namespace _1aarsproeve.ViewModel
 
             Ugenummer = Ugenummer + 1;
 
-            if (Ugenummer == 52)
+            if (Ugenummer >= 52)
             {
                 Ugenummer = 1;
             }
-            Mandag = FoersteDagPaaUge(Ugenummer).ToString("D", new CultureInfo("da-DK"));
-            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("D", new CultureInfo("da-DK"));
-            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("D", new CultureInfo("da-DK"));
-            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("D", new CultureInfo("da-DK"));
-            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("D", new CultureInfo("da-DK"));
-            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("D", new CultureInfo("da-DK"));
-            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("D", new CultureInfo("da-DK"));
 
+            Ugedage();
             InitialiserAnsatte();
         }
-        
+        /// <summary>
+        /// Sætter datoerne for hver ugedag
+        /// </summary>
+        public void Ugedage()
+        {
+            Mandag = FoersteDagPaaUge(Ugenummer).ToString("dd. MMMM", new CultureInfo("da-DK"));
+            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("dd. MMMM", new CultureInfo("da-DK"));
+            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("dd. MMMM", new CultureInfo("da-DK"));
+            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("dd. MMMM", new CultureInfo("da-DK"));
+            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("dd. MMMM", new CultureInfo("da-DK"));
+            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("dd. MMMM", new CultureInfo("da-DK"));
+            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("dd. MMMM", new CultureInfo("da-DK"));
+        }
 
         /// <summary>
         /// Angiver farve på nuværende ugedag
@@ -506,7 +500,6 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Ugenummer");
             }
         }
-
         #region PropertyChanged
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -519,7 +512,6 @@ namespace _1aarsproeve.ViewModel
         }
 
         #endregion
-
     }
     #region Forsøgsklasser
     internal class Ugedage
