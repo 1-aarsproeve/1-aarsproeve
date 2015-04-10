@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using _1aarsproeve.Annotations;
 using _1aarsproeve.Common;
+using _1aarsproeve.Strategy;
 using _1aarsproeve.View;
 
 namespace _1aarsproeve.ViewModel
@@ -27,6 +28,7 @@ namespace _1aarsproeve.ViewModel
     /// </summary>
     class VagtplanViewModel : INotifyPropertyChanged
     {
+        private IVagtSort _vagtsort;
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
@@ -367,48 +369,36 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void AlleVagter()
         {
-            InitialiserAnsatte();
+            for (int i = 0; i < UgedageCollection.Count; i++)
+            {
+                UgedageCollection[i].AnsatteListe.Clear();
+            }
+            _vagtsort = new AlleVagter();
+            _vagtsort.Sort(UgedageCollection);
         }
         /// <summary>
         /// Viser frie vagter
         /// </summary>
         public void FrieVagter()
         {
-            InitialiserAnsatte();
             for (int i = 0; i < UgedageCollection.Count; i++)
             {
-                var query =
-                    from u in UgedageCollection[i].AnsatteListe.ToList()
-                    where u.Navn == "Ubemandet"
-                    orderby u.Tidspunkt, u.Navn ascending 
-                    select u;
                 UgedageCollection[i].AnsatteListe.Clear();
-                foreach (var ansatte in query)
-                {
-                    UgedageCollection[i].AnsatteListe.Add(ansatte);
-                }
             }
+            _vagtsort = new FrieVagter();
+            _vagtsort.Sort(UgedageCollection);
         }
         /// <summary>
         /// Viser mine vagter
         /// </summary>
         public void MineVagter()
         {
-            InitialiserAnsatte();
             for (int i = 0; i < UgedageCollection.Count; i++)
             {
-                var query =
-                    from u in UgedageCollection[i].AnsatteListe.ToList()
-                    where u.Navn == Brugernavn
-                    orderby u.Tidspunkt, u.Navn ascending 
-                    select u;
                 UgedageCollection[i].AnsatteListe.Clear();
-
-                foreach (var ansatte in query)
-                {
-                    UgedageCollection[i].AnsatteListe.Add(ansatte);
-                }
             }
+            _vagtsort = new MineVagter();
+            _vagtsort.Sort(UgedageCollection);
         }
         /// <summary>
         /// Logger brugeren ud
@@ -514,13 +504,13 @@ namespace _1aarsproeve.ViewModel
         #endregion
     }
     #region Forsøgsklasser
-    internal class Ugedage
+    public class Ugedage
     {
         public string Ugedag { get; set; }
         public ObservableCollection<Ansatte> AnsatteListe { get; set; }
     }
 
-    internal class Ansatte
+    public class Ansatte
     {
         public string Navn { get; set; }
         public string Tidspunkt { get; set; }

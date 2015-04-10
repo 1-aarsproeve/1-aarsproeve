@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="b2da44f7-40e8-45c5-974d-958870fdf62d"
   name="ViewModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -698,6 +698,276 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="50de8acd-e11a-4447-9e2f-8b160016fbd4"
+            name="MandagFarve"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
+                LastKnownName="Brush"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="17b9f936-b444-4ced-9dbb-f4f8de5dd6ea"
+            name="TirsdagFarve"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
+                LastKnownName="Brush"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2ffb6875-54c8-43c2-9082-c458701de2ee"
+            name="OnsdagFarve"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
+                LastKnownName="Brush"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7bc757ee-3b48-43f9-b1c0-efd7377ec898"
+            name="TorsdagFarve"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
+                LastKnownName="Brush"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="beb7435d-5c44-44dd-9eeb-1894095f5565"
+            name="FredagFarve"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
+                LastKnownName="Brush"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b301a986-22e9-46db-8940-b0e3e015e22b"
+            name="LoerdagFarve"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
+                LastKnownName="Brush"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="166ed3e1-e491-40b7-acb2-5f2b00248475"
+            name="SoendagFarve"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
+                LastKnownName="Brush"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="110d2561-897d-4dd7-83e7-e4c8bf313bce"
+            name="Ugenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c1831ef6-5e75-4152-a42b-1f8d20601dbf"
+            name="Mandag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ec8b7b29-61ba-4378-bbdc-602a912046be"
+            name="Tirsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8267c39f-dfd1-4fdf-a134-f6152e3765a8"
+            name="Onsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="65f9a857-89e3-4b54-b0f5-984860d48645"
+            name="Torsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="58d22ced-df96-4ce9-9ff9-670187771021"
+            name="Fredag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f0c649db-8904-441d-967d-6e4d803afff3"
+            name="Loerdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2209f4b7-ee82-4ba2-87b9-9758067ae362"
+            name="Soendag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -781,6 +1051,30 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="bbeaefba-15de-40b8-a7d7-c306139703eb"
+            name="ForrigeUge"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7b2b2e33-ca5f-45e9-ab93-ddc49237517a"
+            name="NaesteUge"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f364d60c-e91e-4355-a21f-6940a5123f68"
+            name="Ugedage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -798,6 +1092,11 @@
       <undefinedType
         Id="d492ef00-755a-4d48-99a5-db6daf40fdb8"
         name="ObservableCollection" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
+        name="Brush" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

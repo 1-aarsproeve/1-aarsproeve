@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="4fa66bd6-87be-4e33-97e6-233028a22311"
   name="Handler" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -11,6 +11,116 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="06111c92-3095-4c87-ab07-7cc60d530bf2"
+            name="VagtId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3900fe43-a0c3-4ef0-8a6c-2107bf29cb7f"
+            name="Starttidspunkt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="449edf0f-ad14-4839-a2da-3c7251f77833"
+                LastKnownName="DateTime"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e71c833e-6fe7-43a6-a63b-69e2d1281c42"
+            name="Sluttidspunkt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="449edf0f-ad14-4839-a2da-3c7251f77833"
+                LastKnownName="DateTime"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dfaf1c97-be89-40a2-85d3-72d5c4493f7c"
+            name="Ugenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e8870fdb-7254-455e-823a-33574d7a81f7"
+            name="UgedagId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="be5ec35a-14c8-41ed-a94d-a1c6ca3663ef"
+            name="Brugernavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="35fe4e86-3606-44c6-8496-7d1b2498cf00"
@@ -19,7 +129,52 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6d26f74c-aa42-4c30-8324-928256540b0e"
+                  name="string brugernavn"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ec65f5b-54d2-48e6-ab92-2fe575094244"
+                  name="DateTime starttidspunkt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4f115d61-1f77-4751-899a-4e9fbba4dc24"
+                  name="DateTime sluttidspunkt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="35bccd8b-50a7-46e2-9641-f2184e1ccda6"
+                  name="int ugedagId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8e7f1afb-8deb-4533-9050-e86bf021adcb"
+                  name="int ugenummer"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5066c91d-e6ce-45ca-9d3e-e7cfd85bd38a"
+                  name="int vagtId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="90850351-f2a8-4d24-9fff-fb279ddc61cf"
             name="RedigerVagt"
@@ -27,7 +182,52 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1eed33de-3f2f-4553-8ab3-9b24e242ade5"
+                  name="string brugernavn"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="29c889e9-ccc1-41b5-8d2b-23b0652a295e"
+                  name="DateTime starttidspunkt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aebd1ec5-7e26-490a-8e1c-2e6e0fde35d3"
+                  name="DateTime sluttidspunkt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="80325c9e-4de3-4f04-8b87-7e7d5f5def21"
+                  name="int ugedagId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6ca846d7-0566-4a6e-9bc1-d8e7837e3d44"
+                  name="int ugenummer"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e91d7c7b-ce92-4f61-abd3-81bed9870642"
+                  name="int vagtId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="20a00673-c306-4e5f-bff9-fa0097c957cb"
             name="SletVagt"
@@ -35,7 +235,17 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b482f903-8bdd-47a0-8539-00c3cc83adad"
+                  name="Vagt vagt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -46,6 +256,98 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="0bad008a-ee77-47b5-a20a-4ea2588631be"
+            name="Overskrift"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="55287684-181e-4161-9461-55be4a4a0445"
+            name="BeskedId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1a7ced6b-f249-48c0-af57-3edddf4d651a"
+            name="Beskrivelse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6403b2c5-907f-4f7d-ad70-a884c8a14b9d"
+            name="Dato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="449edf0f-ad14-4839-a2da-3c7251f77833"
+                LastKnownName="DateTime"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3bd38e6a-f8ba-4a19-acbd-b0f1173385bd"
+            name="Udloebsdato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="449edf0f-ad14-4839-a2da-3c7251f77833"
+                LastKnownName="DateTime"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="8225488c-c488-45af-80bf-2d6df7654daf"
@@ -54,7 +356,45 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9f4613c3-92e2-4153-a2b9-36dfb03b58dc"
+                  name="int beskedId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2e629347-7be0-4f5b-af01-36ba93d30a8e"
+                  name="string overskrift"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a53c462f-5cec-4ca8-8568-e021046bb299"
+                  name="string beskrivelse"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e12b16df-03f4-41b2-92b5-f7024231ff45"
+                  name="DateTime dato"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a266f970-03aa-438d-8baa-02c5619c902c"
+                  name="DateTime udloebsdato"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -65,6 +405,134 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="f5cbff25-9264-4b52-a11a-03e74cb130cb"
+            name="Brugernavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9dbaf935-42d6-4487-aedf-d649711ac2de"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8e166112-eab6-4958-b24e-e17d01cba392"
+            name="Adresse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8e6dc782-71a0-4084-8fc0-bb7a70ae9f3e"
+            name="Postnummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="06f77252-0f14-4487-a8d6-e7813b4c275d"
+            name="Mobil"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="15d92c64-4c0c-40de-b3ee-a831bac06cb3"
+            name="Email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="08d631c9-d273-43e5-9bc2-1a9cc241bd03"
+            name="StillingId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="3a29f6cf-8cd3-44c5-b463-ca9106717c13"
@@ -77,8 +545,36 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ec0bebda-2436-47cd-9809-011ca090ec16"
-                  name="Ansatte ansat"
+                  Id="bdeb2512-b54f-421e-bffc-35ec4642b6c7"
+                  name="string password"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="33db5fd7-4944-4de5-9fdd-6a6152105c55"
+                  name="string email"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8ed25bad-9c12-4b8f-8970-2469fea484fe"
+                  name="string mobil"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2647508d-3767-4149-b1e6-1601a00327ca"
+                  name="string adresse"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="72b6f6fb-59d5-404a-a42b-4e1deb718bf9"
+                  name="string postnummer"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -95,36 +591,36 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="06e73ad5-a26c-4f44-a35d-bd24bbae5255"
+                  Id="4fe5a03d-4dd2-40a0-8e35-44924eb12d33"
                   name="string password"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1a776e23-3c7e-4eac-977e-b312acc6845e"
+                  Id="07cfbfb9-ecd2-4b76-ae58-eca95cfe72d1"
                   name="string email"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="88e75082-66a6-459c-9a5b-4c574ffc261b"
+                  Id="d9b795c5-2316-4e28-8f1d-293b7ad354ae"
                   name="string mobil"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="656fd72f-beed-4044-9758-bc63df36568b"
+                  Id="9498396e-7b47-4ae5-a1ad-443f0e7e035f"
                   name="string adresse"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="bd2d3e7a-8c40-46c5-a5d2-3f88bfd53550"
-                  name="int by"
+                  Id="23335aa7-fad6-448a-997d-a868ed37d02d"
+                  name="string postnummer"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
