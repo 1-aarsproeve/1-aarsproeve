@@ -54,6 +54,9 @@
     <Content Include="ModelDefinition\Package_1208.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_2239.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="SkriveFaellesbeskeder.sequencediagram">
       <SubType>Content</SubType>
     </Content>

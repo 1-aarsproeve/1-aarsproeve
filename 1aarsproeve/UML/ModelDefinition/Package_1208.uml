@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="4fa66bd6-87be-4e33-97e6-233028a22311"
   name="Handler" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -532,6 +532,24 @@
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="bc195625-bb6a-497a-8ac2-f5bb24326f7e"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -545,35 +563,35 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="bdeb2512-b54f-421e-bffc-35ec4642b6c7"
-                  name="string password"
+                  Id="533a78b7-a0c9-44a0-a1df-e1a35d625295"
+                  name="string brugernavn string navn string password"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="33db5fd7-4944-4de5-9fdd-6a6152105c55"
+                  Id="62606f51-f794-47fd-a1e9-3fd7e0683e35"
                   name="string email"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="8ed25bad-9c12-4b8f-8970-2469fea484fe"
+                  Id="e0cf1cdc-40f0-402c-b9cf-8e1d4d4073c4"
                   name="string mobil"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="2647508d-3767-4149-b1e6-1601a00327ca"
+                  Id="39e7f051-d0b2-4657-a84a-a3dc952d8230"
                   name="string adresse"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="72b6f6fb-59d5-404a-a42b-4e1deb718bf9"
+                  Id="bab58961-1742-4181-9524-6a0501c4c39c"
                   name="string postnummer"
                   direction="In"
                   isUnique="false" />
@@ -591,35 +609,35 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="4fe5a03d-4dd2-40a0-8e35-44924eb12d33"
-                  name="string password"
+                  Id="077a73bc-dc78-4c57-b3b5-a0b06bede763"
+                  name="string brugernavn string navn string password"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="07cfbfb9-ecd2-4b76-ae58-eca95cfe72d1"
+                  Id="cfdc78c4-c518-4741-9825-f40950e001b2"
                   name="string email"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d9b795c5-2316-4e28-8f1d-293b7ad354ae"
+                  Id="7c8d7f97-d24a-49da-851a-a6be13c140fd"
                   name="string mobil"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="9498396e-7b47-4ae5-a1ad-443f0e7e035f"
+                  Id="fef6f0ab-f17c-4670-af22-4815ae96a312"
                   name="string adresse"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="23335aa7-fad6-448a-997d-a868ed37d02d"
+                  Id="c6c2ff31-2408-44b1-bb01-48198f3daa60"
                   name="string postnummer"
                   direction="In"
                   isUnique="false" />

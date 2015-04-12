@@ -8,8 +8,11 @@ using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Strategy
 {
+    /// <summary>
+    /// Interface der ved implementering implementerer en sorteringsmetode
+    /// </summary>
     public interface IVagtSort
     {
-        void Sort(ObservableCollection<Ugedage> observableCollection);
+        void Sort(ObservableCollection<Ugedage> observableCollection, int ugenummer);
     }
 }

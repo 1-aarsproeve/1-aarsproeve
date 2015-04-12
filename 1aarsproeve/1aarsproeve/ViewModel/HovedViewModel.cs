@@ -35,8 +35,6 @@ namespace _1aarsproeve.ViewModel
         public HovedViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
-            Setting.Values["Brugernavn"] = "Daniel Winther";
-
             Brugernavn = (string)Setting.Values["Brugernavn"];
 
             LogUdCommand = new RelayCommand(LogUd);

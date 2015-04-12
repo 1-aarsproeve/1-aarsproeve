@@ -101,16 +101,16 @@
                 <RowDefinition Height="80"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Style="{StaticResource GenerelButton}" Command="{Binding ForrigeUgeCommand}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" Height="Auto" HorizontalAlignment="Left">
-                <Button.Background>
-                    <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/forrige.png"/>
-                </Button.Background>
-            </Button>
-            <Button Style="{StaticResource GenerelButton}" Command="{Binding NaesteUgeCommand}" Grid.Row="0" Grid.Column="6" VerticalAlignment="Stretch" Height="Auto" HorizontalAlignment="Right">
-                <Button.Background>
+            <HyperlinkButton Command="{Binding ForrigeUgeCommand}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" Height="Auto" HorizontalAlignment="Left" ToolTipService.ToolTip="Gå en uge tilbage">
+                <HyperlinkButton.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/forrige.png" Stretch="UniformToFill"/>
+                </HyperlinkButton.Background>
+            </HyperlinkButton>
+            <HyperlinkButton Command="{Binding NaesteUgeCommand}" Grid.Row="0" Grid.Column="6" VerticalAlignment="Stretch" Height="Auto" HorizontalAlignment="Right" ToolTipService.ToolTip="Gå en uge frem">
+                <HyperlinkButton.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/naeste.png"/>
-                </Button.Background>
-            </Button>
+                </HyperlinkButton.Background>
+            </HyperlinkButton>
             <Border Style="{StaticResource DatoBorder}" Grid.Column="0" Grid.Row="2" Background="{Binding MandagFarve}" />
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="0" Grid.Row="1" Text="Mandag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="0" Grid.Row="2" Text="{Binding Mandag}"/>
