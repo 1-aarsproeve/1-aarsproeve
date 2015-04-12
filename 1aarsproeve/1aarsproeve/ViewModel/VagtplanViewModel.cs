@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,9 +29,9 @@ namespace _1aarsproeve.ViewModel
     /// <summary>
     /// DataContext klasse til Views: OpretVagt, RedigerVagt, Vagtplan
     /// </summary>
-    class VagtplanViewModel : VagtplanSingleton<VagtplanViewModel>, INotifyPropertyChanged
+    class VagtplanViewModel : INotifyPropertyChanged
     {
-        private VagtplanSingleton<VagtplanViewModel> _collection = VagtplanSingleton<VagtplanViewModel>.Instance;
+        //private VagtplanSingleton<VagtplanViewModel> _collection = VagtplanSingleton<VagtplanViewModel>.Instance;
         private IVagtSort _vagtsort;
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
@@ -83,10 +85,9 @@ namespace _1aarsproeve.ViewModel
 
         public ObservableCollection<Ugedage> UgedageCollection
         {
-            get { return _collection.Ugedage; }
-            set { _collection.Ugedage = value; }
+            get { return _ugedageCollection; }
+            set { _ugedageCollection = value; }
         }
-
         /// <summary>
         /// ForrigeUgeCommand property
         /// </summary>
@@ -164,6 +165,7 @@ namespace _1aarsproeve.ViewModel
             }
 
             Ugedage();
+
             InitialiserAnsatte();
         }
         /// <summary>
@@ -259,7 +261,7 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void InitialiserUgedage()
         {
-            /*UgedageCollection = new ObservableCollection<Ugedage>()
+            UgedageCollection = new ObservableCollection<Ugedage>()
             {
                 new Ugedage {Ugedag = "Mandag", AnsatteListe = new ObservableCollection<Ansatte>()},
                 new Ugedage {Ugedag = "Tirsdag", AnsatteListe = new ObservableCollection<Ansatte>()},
@@ -268,7 +270,7 @@ namespace _1aarsproeve.ViewModel
                 new Ugedage {Ugedag = "Fredag", AnsatteListe = new ObservableCollection<Ansatte>()},
                 new Ugedage {Ugedag = "Lørdag", AnsatteListe = new ObservableCollection<Ansatte>()},
                 new Ugedage {Ugedag = "Søndag", AnsatteListe = new ObservableCollection<Ansatte>()},
-            };*/
+            };
         }
         #endregion
         #region InitialiserAnsatte
@@ -277,7 +279,7 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void InitialiserAnsatte()
         {
-            /*UgedageCollection[0].AnsatteListe.Add(new Ansatte
+            UgedageCollection[0].AnsatteListe.Add(new Ansatte
             {
                 Navn = "Daniel Winther",
                 Tidspunkt = "16:00 - 19:50",
@@ -289,6 +291,7 @@ namespace _1aarsproeve.ViewModel
                 Tidspunkt = "15:00 - 18:10",
                 Ugenummer = 16
             });
+
             for (int i = 0; i < UgedageCollection.Count; i++)
             {
                 var query =
@@ -301,7 +304,7 @@ namespace _1aarsproeve.ViewModel
                 {
                     UgedageCollection[i].AnsatteListe.Add(ansatte);
                 }
-            }*/
+            }
         }
         #endregion
 
