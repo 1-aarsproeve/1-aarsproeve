@@ -36,6 +36,22 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="7df3db24-f8dd-4618-852d-53dd21b1ce66"
+            name="GemDB"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3ed42757-4db9-40fb-bffe-0aee6737e433"
+            name="SletDB"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>

@@ -11,6 +11,6 @@ namespace _1aarsproeve.Model
         }*/
         public int UgedagId { get; set; }
         public string Ugedag { get; set; }
-        public ObservableCollection<Vagter> VagtListe { get; set; }
+        //public ObservableCollection<Vagter> VagtListe { get; set; }
     }
 }

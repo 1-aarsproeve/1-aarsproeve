@@ -105,7 +105,6 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Folder Include="Handler\" />
-    <Folder Include="Persistency\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -121,6 +120,7 @@
     <Compile Include="Model\Ugedage.cs" />
     <Compile Include="Model\Vagter.cs" />
     <Compile Include="Model\VagtplanSingleton.cs" />
+    <Compile Include="Persistency\PersistencyFacade.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Strategy\AlleVagter.cs" />
     <Compile Include="Strategy\FrieVagter.cs" />

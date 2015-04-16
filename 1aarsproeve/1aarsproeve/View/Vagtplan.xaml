@@ -139,23 +139,23 @@
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="6" Grid.Row="1" Text="Søndag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="6" Grid.Row="2" Text="{Binding Soendag}"/>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding UgedageCollection[0].AnsatteListe}" Grid.Row="3" Grid.Column="0">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding MandagVagter}" Grid.Row="3" Grid.Column="0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Tidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding UgedageCollection[1].AnsatteListe}" Grid.Row="3" Grid.Column="1">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding TirsdagVagter}" Grid.Row="3" Grid.Column="1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Tidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

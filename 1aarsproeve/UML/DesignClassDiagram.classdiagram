@@ -1277,6 +1277,12 @@
                 <operation Id="aba9565b-e6eb-411c-85b3-981c128909f8" name="LoadBruger" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="c7119930-07ab-4075-acae-28307991d18b" />
                 </operation>
+                <operation Id="85149b2c-0724-4ba8-81d3-02379a02346d" name="GemDB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7df3db24-f8dd-4618-852d-53dd21b1ce66" />
+                </operation>
+                <operation Id="e077c43d-6983-4b1c-9c49-bb9f17919a65" name="SletDB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3ed42757-4db9-40fb-bffe-0aee6737e433" />
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>

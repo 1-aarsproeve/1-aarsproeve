@@ -77,17 +77,22 @@ namespace _1aarsproeve.ViewModel
         private string _fredag;
         private string _loerdag;
         private string _soendag;
-
+        private ObservableCollection<Ugedage> _ugedageCollection;
         /// <summary>
         /// Indeholder collection af ugedage + evt. vagter
         /// </summary>
-        private ObservableCollection<Ugedage> _ugedageCollection;
-
         public ObservableCollection<Ugedage> UgedageCollection
         {
             get { return _ugedageCollection; }
             set { _ugedageCollection = value; }
         }
+        public ObservableCollection<Vagter> MandagVagter { get; set; }
+        public ObservableCollection<Vagter> TirsdagVagter { get; set; }
+        public ObservableCollection<Vagter> OnsdagVagter { get; set; }
+        public ObservableCollection<Vagter> TorsdagVagter { get; set; }
+        public ObservableCollection<Vagter> FredagVagter { get; set; }
+        public ObservableCollection<Vagter> LoerdagVagter { get; set; }
+        public ObservableCollection<Vagter> SoerdagVagter { get; set; }
         /// <summary>
         /// ForrigeUgeCommand property
         /// </summary>
@@ -126,6 +131,14 @@ namespace _1aarsproeve.ViewModel
             FindUgenummer("da-DK");
             Ugedage();
 
+            MandagVagter = new ObservableCollection<Vagter>();
+            TirsdagVagter = new ObservableCollection<Vagter>();
+            OnsdagVagter = new ObservableCollection<Vagter>();
+            TorsdagVagter = new ObservableCollection<Vagter>();
+            FredagVagter = new ObservableCollection<Vagter>();
+            LoerdagVagter = new ObservableCollection<Vagter>();
+            SoerdagVagter = new ObservableCollection<Vagter>();
+
             InitialiserUgedage();
             InitialiserAnsatte();
 
@@ -136,6 +149,17 @@ namespace _1aarsproeve.ViewModel
             FrieVagterCommand = new RelayCommand(FrieVagter);
             MineVagterCommand = new RelayCommand(MineVagter);
             LogUdCommand = new RelayCommand(LogUd);
+        }
+
+        public void ClearVagterCollections()
+        {
+            MandagVagter.Clear();
+            TirsdagVagter.Clear();
+            OnsdagVagter.Clear();
+            TorsdagVagter.Clear();
+            FredagVagter.Clear();
+            LoerdagVagter.Clear();
+            SoerdagVagter.Clear();            
         }
         /// <summary>
         /// Henter vagter for forrige uge
@@ -149,7 +173,7 @@ namespace _1aarsproeve.ViewModel
                 Ugenummer = 52;
             }
             Ugedage();
-
+            ClearVagterCollections();
             InitialiserAnsatte();
         }
         /// <summary>
@@ -165,7 +189,7 @@ namespace _1aarsproeve.ViewModel
             }
 
             Ugedage();
-
+            ClearVagterCollections();
             InitialiserAnsatte();
         }
         /// <summary>
@@ -279,6 +303,56 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void InitialiserAnsatte()
         {
+            const string serverUrl = "http://localhost:7656/";
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.UseDefaultCredentials = true;
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(serverUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                
+
+                var response = client.GetAsync("api/Vagters").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var vagter = response.Content.ReadAsAsync<IEnumerable<Vagter>>().Result;
+                    for (int i = 1; i < 7; i++)
+                    {
+                        var query =
+                            from q in vagter
+                            where q.UgedagId == i && q.Ugenummer == Ugenummer
+                            select q;
+                        foreach (var item in query)
+                        {
+                            switch (i)
+                            {
+                                case 1:
+                                    MandagVagter.Add(item);
+                                    break;
+                                case 2:
+                                    TirsdagVagter.Add(item);
+                                    break;
+                                case 3:
+                                    OnsdagVagter.Add(item);
+                                    break;
+                                case 4:
+                                    TorsdagVagter.Add(item);
+                                    break;
+                                case 5:
+                                    FredagVagter.Add(item);
+                                    break;
+                                case 6:
+                                    LoerdagVagter.Add(item);
+                                    break;
+                                case 7:
+                                    SoerdagVagter.Add(item);
+                                    break;
+                            }
+                        }    
+                    }
+                }
+            }
             UgedageCollection[0].AnsatteListe.Add(new Ansatte
             {
                 Navn = "Daniel Winther",
@@ -306,6 +380,7 @@ namespace _1aarsproeve.ViewModel
                 }
             }
         }
+
         #endregion
 
         /// <summary>
@@ -313,6 +388,9 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void AlleVagter()
         {
+            Vagter v = new Vagter{Starttidspunkt = 1300, Sluttidspunkt = 9900, Ugenummer = 16, UgedagId = 1, Brugernavn = "Daniel"};
+            Persistency.PersistencyFacade.Gem("api/Vagters", v);
+
             for (int i = 0; i < UgedageCollection.Count; i++)
             {
                 UgedageCollection[i].AnsatteListe.Clear();
