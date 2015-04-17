@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using _1aarsproeve.Model;
+using _1aarsproeve.Persistens;
 using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Strategy
@@ -19,31 +23,18 @@ namespace _1aarsproeve.Strategy
         /// </summary>
         /// <param name="ugedageCollection">Angiver hvilken collection der skal sorteres</param>
         /// <param name="ugenummer">Angiver for hvilken uge vagterne skal vises i</param>
-        public void Sort(ObservableCollection<Ugedage> ugedageCollection, int ugenummer)
+        public async void Sort(ObservableCollection<ObservableCollection<Vagter>> vagtCollection, int ugenummer)
         {
-            ugedageCollection[0].AnsatteListe.Add(new Ansatte
-            {
-                Navn = "Daniel Winther",
-                Tidspunkt = "16:00 - 19:50",
-                Ugenummer = 15
-            });
-            ugedageCollection[4].AnsatteListe.Add(new Ansatte
-            {
-                Navn = "Ubemandet",
-                Tidspunkt = "15:00 - 18:10",
-                Ugenummer = 16
-            });
-            for (int i = 0; i < ugedageCollection.Count; i++)
+            var vagter = await PersistensFacade<Vagter>.LoadDB("api/Vagters");
+            for (int i = 0; i < vagtCollection.Count; i++)
             {
                 var query =
-                    from u in ugedageCollection[i].AnsatteListe.ToList()
-                    where u.Ugenummer == ugenummer
-                    orderby u.Tidspunkt, u.Navn ascending
-                    select u;
-                ugedageCollection[i].AnsatteListe.Clear();
-                foreach (var ansatte in query)
+                    from q in vagter
+                    where q.UgedagId == i + 1 && q.Ugenummer == ugenummer
+                    select q;
+                foreach (var item in query)
                 {
-                    ugedageCollection[i].AnsatteListe.Add(ansatte);
+                    vagtCollection[i].Add(item);
                 }
             }
         }

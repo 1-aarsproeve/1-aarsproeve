@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _1aarsproeve.Model;
 using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Strategy
@@ -13,6 +14,6 @@ namespace _1aarsproeve.Strategy
     /// </summary>
     public interface IVagtSort
     {
-        void Sort(ObservableCollection<Ugedage> observableCollection, int ugenummer);
+        void Sort(ObservableCollection<ObservableCollection<Vagter>> vagtCollection, int ugenummer);
     }
 }

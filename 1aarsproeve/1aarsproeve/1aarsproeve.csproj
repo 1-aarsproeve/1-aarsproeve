@@ -119,8 +119,8 @@
     <Compile Include="Model\Stillinger.cs" />
     <Compile Include="Model\Ugedage.cs" />
     <Compile Include="Model\Vagter.cs" />
-    <Compile Include="Model\VagtplanSingleton.cs" />
-    <Compile Include="Persistency\PersistencyFacade.cs" />
+    <Compile Include="Model\GeneriskSingleton.cs" />
+    <Compile Include="Persistens\PersistensFacade.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Strategy\AlleVagter.cs" />
     <Compile Include="Strategy\FrieVagter.cs" />

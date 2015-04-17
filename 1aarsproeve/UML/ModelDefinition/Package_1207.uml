@@ -685,14 +685,14 @@
     <packageHasNamedElement>
       <class
         Id="ed3785a2-9540-4710-ae43-f007aeef8947"
-        name="VagtplanSingleton"
+        name="GeneriskSingleton"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
             Id="45c55816-f009-4103-bc73-e585fc558775"
-            name="VagtplanInstance"
+            name="Collection"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -702,33 +702,35 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="ed3785a2-9540-4710-ae43-f007aeef8947"
-                LastKnownName="VagtplanSingleton"
+              <undefinedTypeMoniker
+                Id="521d6fef-918d-44ec-b2a2-8c0376b78a28"
+                LastKnownName="ObservableCollection&lt;T&gt;"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4199e0b6-d3cf-4604-b724-77e541a5fdbf"
+            name="_instance"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="eba8afaf-e342-47dc-bdea-e999de4dc6c6"
+                LastKnownName="GeneriskSingleton&lt;T&gt;"
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="c80b24cf-5196-4413-9cbc-536befe7e4ec"
-            name="AlleVagter"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="199afeb3-5ac9-40ca-982e-f0e39d6803d7"
-            name="FrieVagter"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="e46cc5bd-a4fa-4ae5-9627-2a126b561703"
-            name="MineVagter"
+            Id="b3847214-e87c-4a02-b2eb-98af48d1b46a"
+            name="Instance : GeneriskSingleton&lt;T&gt;"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -812,6 +814,16 @@
           </property>
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="521d6fef-918d-44ec-b2a2-8c0376b78a28"
+        name="ObservableCollection&lt;T&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="eba8afaf-e342-47dc-bdea-e999de4dc6c6"
+        name="GeneriskSingleton&lt;T&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

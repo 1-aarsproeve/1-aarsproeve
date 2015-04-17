@@ -88,7 +88,7 @@
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </HyperlinkButton>
-                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Row="1" ToolTipService.ToolTip="Skriv fællesbesked" >
+                <HyperlinkButton Visibility="{Binding SkjulKnap}" Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Row="1" ToolTipService.ToolTip="Skriv fællesbesked" >
                     <HyperlinkButton.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/skrivbesked.png"/>
                     </HyperlinkButton.Background>
@@ -99,7 +99,7 @@
                     </Interactivity:Interaction.Behaviors>
                 </HyperlinkButton>
 
-                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret bruger" >
+                <HyperlinkButton Visibility="{Binding SkjulKnap}" Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Row="1" Grid.Column="1" ToolTipService.ToolTip="Opret bruger" >
                     <HyperlinkButton.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/opretbruger.png"/>
                     </HyperlinkButton.Background>
@@ -117,13 +117,13 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <TextBlock Style="{StaticResource BeskederText}" Text="Fællesbeskeder"/>
-                <ListView ItemsSource="{Binding BeskedCollection}" Grid.Row="1">
+                <ListView ItemsSource="{Binding BeskedCollection[0]}" Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Margin="0,0,0,10">
                                 <TextBlock Style="{StaticResource BeskederOverskrift}" Text="{Binding Overskrift}" />
                                 <TextBlock Style="{StaticResource BeskederForfatterDatoBeskrivelse}">
-									<Run Text="{Binding Forfatter}"/>
+									<Run Text="{Binding Brugernavn}"/>
 									<Run Text=" - "/>
 									<Run Text="{Binding Dato}"/>
                                 </TextBlock>

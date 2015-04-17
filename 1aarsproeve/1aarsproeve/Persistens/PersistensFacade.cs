@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using _1aarsproeve.Model;
 
-namespace _1aarsproeve.Persistency
+namespace _1aarsproeve.Persistens
 {
-    class PersistencyFacade <T>
+    class PersistensFacade<T>
     {
         public static async void GemDB(string api, object objekt)
         {
@@ -32,7 +34,7 @@ namespace _1aarsproeve.Persistency
             }
         }
 
-        /*public static async Task<IEnumerable<object>> LoadDB(string api, object objekt)
+        public static async Task<List<T>> LoadDB(string api)
         {
             const string serverUrl = "http://localhost:7656/";
             HttpClientHandler handler = new HttpClientHandler();
@@ -43,13 +45,13 @@ namespace _1aarsproeve.Persistency
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-
-                var response = client.GetAsync("api/Vagters").Result;
+                var response = client.GetAsync(api).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    var vagter = response.Content.ReadAsAsync<IEnumerable<T>>().Result;
+                    return response.Content.ReadAsAsync<IEnumerable<T>>().Result.ToList();
                 }
+                return null;
             }
-        }*/
+        }
     }
 }

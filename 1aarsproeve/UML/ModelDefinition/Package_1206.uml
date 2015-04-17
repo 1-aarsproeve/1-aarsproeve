@@ -135,6 +135,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="63f39a29-700e-4cb1-b100-c6121828fde8"
+            isDerived="false"
+            sourceEndRoleName="BrugerViewModel"
+            targetEndRoleName="GeneriskSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ed3785a2-9540-4710-ae43-f007aeef8947"
+              LastKnownName="GeneriskSingleton"
+              LastKnownLocation="Package_1207.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f81d33e-d58b-4104-b066-5a2399089d32"
+                  name="BrugerViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="50cbcd8a-192a-457f-9b8d-86da3fa41a91"
+                  name="GeneriskSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -391,6 +430,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="7cb0533f-7f86-4ce0-b745-e0064dddc0a1"
+            isDerived="false"
+            sourceEndRoleName="HovedViewModel"
+            targetEndRoleName="GeneriskSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ed3785a2-9540-4710-ae43-f007aeef8947"
+              LastKnownName="GeneriskSingleton"
+              LastKnownLocation="Package_1207.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="382af2d1-182b-48a2-a1a1-1a542c1f0113"
+                  name="HovedViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ed4df0a-0594-4216-99ca-7356bad6056c"
+                  name="GeneriskSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -489,19 +567,19 @@
           <association
             Id="25deaabf-ddff-4b5c-804d-a0ac2482da1d"
             isDerived="false"
-            sourceEndRoleName="VagtplanViewModel"
-            targetEndRoleName="VagtplanSingleton"
+            sourceEndRoleName="GeneriskSingleton"
+            targetEndRoleName="GeneriskSingleton"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="ed3785a2-9540-4710-ae43-f007aeef8947"
-              LastKnownName="VagtplanSingleton"
+              LastKnownName="GeneriskSingleton"
               LastKnownLocation="Package_1207.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="7b4dbc5c-466f-45ba-89b9-5611a78ed30a"
-                  name="VagtplanViewModel"
+                  name="GeneriskSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -514,7 +592,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="17cfe584-0718-493e-924e-8247524c2df9"
-                  name="VagtplanSingleton"
+                  name="GeneriskSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1007,6 +1085,132 @@
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="c3dc70de-5bca-4960-a86e-0070f006e21c"
+            name="MandagVager"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5"
+                LastKnownName="ObservableCollection&lt;Vagter&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="76774db6-031b-4408-87d6-c9a1c35febd8"
+            name="TirsdagVagter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5"
+                LastKnownName="ObservableCollection&lt;Vagter&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="acb02e1b-aa3d-4256-9c95-feeca8c039b2"
+            name="OnsdagVagter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5"
+                LastKnownName="ObservableCollection&lt;Vagter&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6373c86f-3676-4a20-aa03-267389e45760"
+            name="TorsdagVagter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5"
+                LastKnownName="ObservableCollection&lt;Vagter&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0e9f8c3a-ffc8-4dcb-b147-cef2501dcfef"
+            name="FredagVagter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5"
+                LastKnownName="ObservableCollection&lt;Vagter&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="49095a15-d45c-42b0-b9e6-505fe0c8d43e"
+            name="LoerdagVagter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5"
+                LastKnownName="ObservableCollection&lt;Vagter&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8de488d5-75e9-46d8-89ad-2f7e3a8ec9f4"
+            name="SoendagVagter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5"
+                LastKnownName="ObservableCollection&lt;Vagter&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1114,6 +1318,30 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="ab67411b-350f-4c0c-bd31-10f5d541657a"
+            name="AlleVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7a3550e7-200c-4323-a231-7c814539723b"
+            name="FrieVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="53fa0194-c5a9-4a2b-862d-0e654105547f"
+            name="MineVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1136,6 +1364,16 @@
       <undefinedType
         Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2"
         name="Brush" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5"
+        name="ObservableCollection&lt;Vagter&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c079aa4e-b8ba-4205-a238-5348e6abf78d"
+        name="GeneriskSingleton&lt;ObservableCollection&lt;Vagter&gt;&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

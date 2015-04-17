@@ -59,6 +59,7 @@
         </Grid>
         <Grid Margin="300 40" Grid.Row="1">
             <StackPanel Margin="100 0">
+                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Navn"/>
                 <PasswordBox Style="{StaticResource GenerelPasswordbox}" PlaceholderText="Password"/>
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="E-mail"/>
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Adresse"/>

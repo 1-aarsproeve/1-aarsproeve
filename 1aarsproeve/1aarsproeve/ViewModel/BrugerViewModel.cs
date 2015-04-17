@@ -50,7 +50,7 @@ namespace _1aarsproeve.ViewModel
         private void LogInd()
         {
             Setting = ApplicationData.Current.LocalSettings;
-            Setting.Values["Brugernavn"] = "Daniel Winther";
+            Setting.Values["Brugernavn"] = "Daniel";
 
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Hovedmenu));

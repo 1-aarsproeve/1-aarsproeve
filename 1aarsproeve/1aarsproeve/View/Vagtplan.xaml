@@ -139,78 +139,106 @@
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="6" Grid.Row="1" Text="Søndag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="6" Grid.Row="2" Text="{Binding Soendag}"/>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding MandagVagter}" Grid.Row="3" Grid.Column="0">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[0]}" Grid.Row="3" Grid.Column="0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
                             <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}">
+                                <Run Text="{Binding Starttidspunkt}"/>
+                                <Run Text=" - "/>
+                                <Run Text="{Binding Sluttidspunkt}"/>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding TirsdagVagter}" Grid.Row="3" Grid.Column="1">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[1]}" Grid.Row="3" Grid.Column="1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
                             <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}">
+                                <Run Text="{Binding Starttidspunkt}"/>
+                                <Run Text=" - "/>
+                                <Run Text="{Binding Sluttidspunkt}"/>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding UgedageCollection[2].AnsatteListe}" Grid.Row="3" Grid.Column="2">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[2]}" Grid.Row="3" Grid.Column="2">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Tidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}">
+                                <Run Text="{Binding Starttidspunkt}"/>
+                                <Run Text=" - "/>
+                                <Run Text="{Binding Sluttidspunkt}"/>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding UgedageCollection[3].AnsatteListe}" Grid.Row="3" Grid.Column="3">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[3]}" Grid.Row="3" Grid.Column="3">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Tidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}">
+                                <Run Text="{Binding Starttidspunkt}"/>
+                                <Run Text=" - "/>
+                                <Run Text="{Binding Sluttidspunkt}"/>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding UgedageCollection[4].AnsatteListe}" Grid.Row="3" Grid.Column="4">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[4]}" Grid.Row="3" Grid.Column="4">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Tidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}">
+                                <Run Text="{Binding Starttidspunkt}"/>
+                                <Run Text=" - "/>
+                                <Run Text="{Binding Sluttidspunkt}"/>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding UgedageCollection[5].AnsatteListe}" Grid.Row="3" Grid.Column="5">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[5]}" Grid.Row="3" Grid.Column="5">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Tidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}">
+                                <Run Text="{Binding Starttidspunkt}"/>
+                                <Run Text=" - "/>
+                                <Run Text="{Binding Sluttidspunkt}"/>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding UgedageCollection[6].AnsatteListe}" Grid.Row="3" Grid.Column="6">
+            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[6]}" Grid.Row="3" Grid.Column="6">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Tidspunkt}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}">
+                                <Run Text="{Binding Starttidspunkt}"/>
+                                <Run Text=" - "/>
+                                <Run Text="{Binding Sluttidspunkt}"/>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
