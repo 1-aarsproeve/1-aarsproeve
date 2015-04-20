@@ -1,0 +1,2212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f660b91d-6fb0-498d-98f5-f12789bdb2db"
+  name="Context" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="378d365c-479a-4062-a6c9-5aa6e37d5fb4"
+        name="DataViewContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="865826bd-4a92-45dd-885b-1b3986744748"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ca037016-a6cf-4d19-9de8-13cf25d2bd80"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eb90d972-500c-4709-86c3-711b48e7d105">
+                <propertyInstance
+                  Id="3d0bf1fe-35d4-4f67-ba41-624fdbfd617c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e038875-ce11-4f76-8816-5fd0cf90dbfc">
+                <propertyInstance
+                  Id="6f230d6e-ae38-4cc3-982a-1a4f7dcfb645"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="338f2d38-fe0b-4639-94c6-90e54f5229a2">
+                <propertyInstance
+                  Id="87b6f6f5-232d-4fc6-a365-74bc190a9e80"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7de4f490-8f22-4f0f-9b99-222ec3b8e34d">
+                <propertyInstance
+                  Id="ced82d34-d7fd-439b-8e10-05d851a2e5a1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="78d1c9db-e146-4812-885d-2562f5d83ba5">
+                <propertyInstance
+                  Id="c615c7ab-a945-4d6b-90cf-a5ea52e4f43d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="f01451ac-bb42-4684-8fc5-cdaea220e617"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0b29363b-55b9-4c3c-9aff-e28f85d7d841"
+              LastKnownName="DbContext"
+              LastKnownLocation="Package5_1234.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="a5ff9791-085b-4b60-9a02-7925a80c3311"
+            isDerived="false"
+            sourceEndRoleName="DataViewContext"
+            targetEndRoleName="Vagters"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7c81ca38-cc35-48e4-b9bf-7fbf674241f2"
+              LastKnownName="DbSet&lt;Vagter‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Vagters references type DbSet&lt;Vagter‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="06cb9880-a624-467a-8c5a-0ebc33ee97a4"
+                  name="DataViewContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b1720306-5b05-45bc-a0a9-ce2dcc1155b6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="aec1368f-3528-4f7f-ae52-a066dd79dfc6"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="23d35266-4a14-4345-9df5-a3e2cab0ba5c"
+                  name="Vagters"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3e10e470-f256-479a-b069-b13f9890aacb"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="db05f933-4665-46d4-97a6-393be30e07fc"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bdbb8ace-3ad1-4773-a2ab-a655dc67edf1"
+            isDerived="false"
+            sourceEndRoleName="DataViewContext"
+            targetEndRoleName="AnsatteViews"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e5838a2f-82b9-4c19-a0b6-b8e7b0d5da6e"
+              LastKnownName="DbSet&lt;AnsatteView‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property AnsatteViews references type DbSet&lt;AnsatteView‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="19370e8a-c73c-467d-be3c-fbd8b649248e"
+                  name="DataViewContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a3336c63-a4e8-4229-888e-682af05d72fc"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1003e14e-e8fa-4ba3-a2c0-ec030900e2b3"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a4951bcb-5ceb-4889-82ec-250f9e39e63b"
+                  name="AnsatteViews"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e10ec221-8a03-49ba-900a-8f3f21aca534"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="55a63fb6-ec33-46ea-b6f3-c79de4bab1ca"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a32f916d-50b3-41b8-a3e4-f931363a4bb3"
+            isDerived="false"
+            sourceEndRoleName="DataViewContext"
+            targetEndRoleName="Ansattes"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="83a1f562-c3f6-4d35-92e2-4d8904141a2c"
+              LastKnownName="DbSet&lt;Ansatte‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Ansattes references type DbSet&lt;Ansatte‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="42798008-9712-41e8-acb4-fecf7d55233f"
+                  name="DataViewContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="eb39c02f-d8b2-41a9-badf-ee9aa2e742db"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="741e84f4-17ca-447b-9e2c-cb4d77f5904b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7ddbbac-e4ce-4103-9074-c0169ba7cbf2"
+                  name="Ansattes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9ac2c972-3f25-4526-89b8-d1aec60eb3cd"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a3b2da12-b547-4fe4-a51a-7fe367813034"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d828f5b1-849d-4e13-af5a-3eea2dbe002b"
+            isDerived="false"
+            sourceEndRoleName="DataViewContext"
+            targetEndRoleName="Beskeders"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="867aff7c-c0a1-4a5a-8a8a-2d6a776b761e"
+              LastKnownName="DbSet&lt;Beskeder‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Beskeders references type DbSet&lt;Beskeder‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c4bb051e-3b46-423a-8376-68c43344561e"
+                  name="DataViewContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="03d07a09-75e3-4bf7-8dac-32af90c621ae"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fef3ea27-f162-46c4-b4da-1d2a96b195a6"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="334ca888-84ef-4fd9-84bd-c2f7fd89df4a"
+                  name="Beskeders"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="01f76bc9-a82b-40c6-8910-ab741c563e09"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0952ae71-a841-47e5-a8e2-21f0062d2671"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d2be106a-382e-4254-8f65-b8b7479aa71a"
+            isDerived="false"
+            sourceEndRoleName="DataViewContext"
+            targetEndRoleName="HovedmenuViews"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="74c5a026-a868-44a9-b7ee-6a4fb7465e95"
+              LastKnownName="DbSet&lt;HovedmenuView‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property HovedmenuViews references type DbSet&lt;HovedmenuView‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f397a71e-7921-4071-9903-f3f7e304085d"
+                  name="DataViewContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b2d5b454-38ad-4d67-9f84-6c68aa1b6aa7"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="71278944-b251-4544-b64a-2440976daf6e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a38cebe-5640-4bf5-939a-3c6f1a95199d"
+                  name="HovedmenuViews"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="52e74734-858e-441d-a953-3774525e725c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ef1b711f-f807-42d6-91c6-1ee067184ccc"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="80e65b76-c82f-455f-81f8-7877e2fb49dd"
+            isDerived="false"
+            sourceEndRoleName="DataViewContext"
+            targetEndRoleName="Ugedages"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e0ca7c2e-2e3e-481d-a5c5-d8744085bbd4"
+              LastKnownName="DbSet&lt;Ugedage‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Ugedages references type DbSet&lt;Ugedage‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a7d6c72-ae60-4c1b-b1e9-17822a97c584"
+                  name="DataViewContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6275ff9e-44cb-41bd-a3ed-06c81c24f79d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f58e12fb-e029-4796-bf09-6196571fa447"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8da5d8a0-a45c-4e2e-a1e6-09a84f934715"
+                  name="Ugedages"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="573f4ca9-3dcc-4bb0-ac3b-e77ef5c62b81"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c751325d-412e-4e13-9dcf-d8f33cce1de2"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="70ece1da-3579-42f6-930e-fc6dda234777"
+            isDerived="false"
+            sourceEndRoleName="DataViewContext"
+            targetEndRoleName="VagtplanViews"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7bd91fa6-6818-4b54-9760-1004a59a15a0"
+              LastKnownName="DbSet&lt;VagtplanView‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property VagtplanViews references type DbSet&lt;VagtplanView‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d9af3c2a-9ed2-4173-8a12-9ce9e6313ec8"
+                  name="DataViewContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e687e843-789b-48c9-bafc-db2047f6e9c3"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="172a429d-f1c2-4d3a-8b2b-6dec1dedb719"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="edd72be6-9dbf-4074-b494-4cce65b73474"
+                  name="VagtplanViews"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5c979386-50f2-4434-86f1-c8cbea67deb7"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fe16ba07-ffb9-4d81-9de4-75196e4d2325"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="3e884e0e-b0f9-496b-aa35-d43376cccbcb"
+            name="Vagters"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7989af1f-b38a-4106-a787-348e83cd41fb"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3DVagters"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e9389be8-5e96-4bc4-beed-9c0a514a99ee"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4051d82a-f838-4b58-a822-dbc8ccb51046">
+                    <propertyInstance
+                      Id="32cdbef6-d832-4873-a9e2-6cbfee428e5f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f2abba0-cd13-4d4d-82f4-0de5c13cad03">
+                    <propertyInstance
+                      Id="6c902051-4321-4528-ada5-e59d7da5637d"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fa8b514-1915-4c56-bbc2-f9f657792657">
+                    <propertyInstance
+                      Id="f23d6e33-1607-4e6a-97f0-fd0f92d9e01c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25d28f44-dade-4759-b80d-5e76e9e4069f">
+                    <propertyInstance
+                      Id="6070008e-14f8-495f-8fb4-838621345a1b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="860e7e9f-4273-414a-b218-69ef31f3718b">
+                    <propertyInstance
+                      Id="3469f372-b31b-4968-bbd1-bfa4a106b16c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8df7aaba-b704-4034-bbc9-1d5e6b810fb6">
+                    <propertyInstance
+                      Id="1aea64b0-1410-4603-b61e-22374d56b50f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b595e058-643f-43d0-a235-51b17d295806">
+                    <propertyInstance
+                      Id="de58de97-5d1c-432d-9da8-dcc60cd63087"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7c81ca38-cc35-48e4-b9bf-7fbf674241f2"
+                LastKnownName="DbSet&lt;Vagter‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="13e2c51f-d1db-451c-ac99-cbca62448e8b"
+            name="AnsatteViews"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d1054bd8-7f87-4289-92ef-545993225893"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3DAnsatteViews"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4640ef7f-c7e7-44c7-8fc7-ac588d23e107"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0153f823-1f61-493e-84f5-2f2828a88d61">
+                    <propertyInstance
+                      Id="a6406342-c20c-4513-b38f-71d4950a9199"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa3fd47f-dfe2-4f7c-bb3e-75a3da4776eb">
+                    <propertyInstance
+                      Id="d0e47269-730a-4269-aa6a-40f55727abd5"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e313f31-90c6-4a0e-9450-3963a2fcb010">
+                    <propertyInstance
+                      Id="a193ec56-9b8b-47ad-8c89-81fa0feb0ccb"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6592b793-6872-4514-b3a0-3d7bc0a54fc8">
+                    <propertyInstance
+                      Id="a5f10940-2ef3-4a80-83f4-3cecf23c7433"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f95b2077-b676-4450-9672-1ede89781dc3">
+                    <propertyInstance
+                      Id="9bd6c17d-ae5d-40cb-9f63-641183a931f8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfd2b86e-7bbf-41ee-b310-049b6432a7ce">
+                    <propertyInstance
+                      Id="4fa0e601-c2a4-4007-8389-f5a7f095feee"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32adcb15-a80c-4ec8-b724-b26da23d49d7">
+                    <propertyInstance
+                      Id="a429ba23-51c9-4fad-b5fd-0c993afdbc5c"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="e5838a2f-82b9-4c19-a0b6-b8e7b0d5da6e"
+                LastKnownName="DbSet&lt;AnsatteView‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a09af155-42d4-4b45-b851-2e90a2170969"
+            name="Ansattes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="cc9a2962-89b5-49d6-8d12-e1a276f4fe1c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3DAnsattes"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d22b16fe-36b2-446f-9828-031a4975a3a9"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e91d240a-3af6-459d-a4f4-f0823fb25f64">
+                    <propertyInstance
+                      Id="b1dbc90b-a2c7-4568-a824-77f6b65d19ca"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e1706a0-26f7-4762-b2d0-4b815d3d0858">
+                    <propertyInstance
+                      Id="334a3a53-82cb-44ec-b8f8-d72433db4d6c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bcb4edb6-36c8-4ed6-b797-a995d953f7d1">
+                    <propertyInstance
+                      Id="763cfb38-e7f4-4dc5-a03c-cca671dae77c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6085b7f6-77f0-423f-b14f-c1b1bcbbb300">
+                    <propertyInstance
+                      Id="8034c15a-e707-4fc8-a9a8-0b339b359cef"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83bd5fdf-0b31-42d3-b92f-8b4436132e3d">
+                    <propertyInstance
+                      Id="3c004f27-6d5c-4332-bdb7-80c6160ec1ed"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ff7abcd-b3dd-41d0-927b-bb25c69cfafc">
+                    <propertyInstance
+                      Id="60ecf713-04c2-41da-a12e-fecb18fa3e1c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4d0d46d-aa60-4c36-aca7-74c940737988">
+                    <propertyInstance
+                      Id="3ac57ca6-665a-45dc-b96e-c9db08d3a7a2"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="83a1f562-c3f6-4d35-92e2-4d8904141a2c"
+                LastKnownName="DbSet&lt;Ansatte‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="330a5af8-277f-485b-ab82-641ca0b41bb1"
+            name="Beskeders"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5fecad20-2ab5-488a-896b-0f9bc8f9fc7e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3DBeskeders"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9b14cc1b-45d0-4326-8f6e-56374a17338c"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8aee972-7331-4e1a-b759-349a3243a471">
+                    <propertyInstance
+                      Id="56cb96be-41a5-44c3-876f-891352743ac7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="557d4a61-bc2d-4d9e-b12e-88fc8fbf1f6b">
+                    <propertyInstance
+                      Id="828e847e-f2d2-4b22-9052-0c65ce4cf741"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44195564-a9f7-4084-a640-bfcb9c493777">
+                    <propertyInstance
+                      Id="8b0a4021-7730-4a14-9086-3bf9078d7b1f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8a4704b-1ffc-4e46-8df4-dbc773d0a340">
+                    <propertyInstance
+                      Id="a987d67e-9d36-41ff-9ae7-be0c3f8d4070"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="131b6aeb-58b9-484e-8dc6-744522847055">
+                    <propertyInstance
+                      Id="6a124078-2027-48cf-b478-d72dd1d47466"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3abb25c3-671d-40c0-bf30-a6e5f7c2d6ee">
+                    <propertyInstance
+                      Id="6514f2ab-2013-4cbd-944c-c6f3736fb5e4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fa037ff-8efe-4012-b533-e3f65058d62a">
+                    <propertyInstance
+                      Id="6d64f2f8-5dbd-499b-972d-65b656a6f769"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="867aff7c-c0a1-4a5a-8a8a-2d6a776b761e"
+                LastKnownName="DbSet&lt;Beskeder‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fc1bb1df-89ad-4236-9cba-6038b490e771"
+            name="HovedmenuViews"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="105a1e23-e808-48e5-8745-b148ed7fadaf"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3DHovedmenuViews"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0708a585-98bc-4cb2-8d70-480a8742fc57"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3ca525d-81ba-4741-9067-65275979136d">
+                    <propertyInstance
+                      Id="b1411f33-6a72-442c-9d83-34409be3a277"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddd7bcfc-0cf7-4f61-b753-fbe4eea5924b">
+                    <propertyInstance
+                      Id="484f2d07-d6e2-4c4b-92ba-b410cfa96343"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d860b95e-a212-4fc4-9bc1-002aef1c0be3">
+                    <propertyInstance
+                      Id="d683c84e-a4a3-4fc1-a73e-c00649ced7b9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9166a792-bf17-4e26-8898-72d2034e952d">
+                    <propertyInstance
+                      Id="ef2bfd7f-0f77-4b15-b705-82c554144ee3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d46cb0eb-636f-42ab-8b01-5b4303152379">
+                    <propertyInstance
+                      Id="b0476ba6-1838-43fc-a840-7166368649bb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e681aee-fc95-4f7f-8e74-5081c2543946">
+                    <propertyInstance
+                      Id="ff8708bb-3751-457b-820e-30536069bca1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40eaeeb7-2249-49f4-a114-16f6e6e9d2b8">
+                    <propertyInstance
+                      Id="0dc1301e-1a76-4a74-951b-cc223dac9b25"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="74c5a026-a868-44a9-b7ee-6a4fb7465e95"
+                LastKnownName="DbSet&lt;HovedmenuView‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4b15ee90-8156-4374-8a86-94b461ca7914"
+            name="Ugedages"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8c080a59-a759-4634-8c70-90ac2bf89736"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3DUgedages"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="20d45836-785b-4c73-ba37-bb1904370fa4"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="052f8fa4-bc0c-4e43-a41c-ea190a756142">
+                    <propertyInstance
+                      Id="c965cfe1-29f3-422f-9a1d-f9f0b988b9cc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab00de3c-e154-4595-a7e3-21e674141270">
+                    <propertyInstance
+                      Id="293e1483-5ccc-44a4-9512-8ac523a5f7c5"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f2ed6e0-d36a-432d-8ce6-c9f705bb5332">
+                    <propertyInstance
+                      Id="0e119290-ac9c-4d0a-aeb2-2dff9976b009"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75b5c45b-dd35-438e-92e8-d60c0749e92f">
+                    <propertyInstance
+                      Id="28c77dce-b53f-4e5d-9ba2-5167a52d88d0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0723106-540f-43b2-b879-44d2d1243227">
+                    <propertyInstance
+                      Id="3456e8c2-b4ea-498f-b307-d4c04696ec40"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b08d8d0d-33c7-41f6-b33e-8230a30af8df">
+                    <propertyInstance
+                      Id="ea449079-e794-4e50-ba98-d0b68ce56837"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="499f3df5-ac77-4b70-94b2-44efb0a07599">
+                    <propertyInstance
+                      Id="3d74febe-5a52-4387-a6a2-ac356fcdefae"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="e0ca7c2e-2e3e-481d-a5c5-d8744085bbd4"
+                LastKnownName="DbSet&lt;Ugedage‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="55312716-9422-4704-a3d3-2d3b9ce0bbfd"
+            name="VagtplanViews"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="66c43ccb-8036-424d-8e71-2f5c537fcc90"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3DVagtplanViews"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="97d8998e-91ad-49ac-a663-c4aaf722dab6"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1d631ef-665d-4d6c-b714-f8dea864baf6">
+                    <propertyInstance
+                      Id="7b675de0-fb1c-4dbc-a018-ce891f98d775"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3bd7bfb-e835-4c89-bb3d-3bef22295bb9">
+                    <propertyInstance
+                      Id="cad90c50-c58d-43d2-8fb8-f150ce695f75"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="278a50fc-4cec-4d38-8f6a-c8cd64d88975">
+                    <propertyInstance
+                      Id="95c4c360-80a5-4b80-bfdf-0aa4e1f98b84"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8dbfb88-cee5-4ffa-ab7b-4abd16245161">
+                    <propertyInstance
+                      Id="6a3ed975-8613-41e7-bbb2-9c26da6d9b44"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b47ccecd-5c41-411c-bfdb-4e4086992dec">
+                    <propertyInstance
+                      Id="0214fa31-e0cf-447d-945d-8111eeb5a6c9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06c3d3a7-3565-44f4-9f21-67d2bbc3c64a">
+                    <propertyInstance
+                      Id="8112f9f8-c466-4079-b7ce-1f256441f17e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81664028-bf28-43fa-bc77-057926a7b8f5">
+                    <propertyInstance
+                      Id="851625bc-107d-4d1f-bb8b-199f1e156406"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7bd91fa6-6818-4b54-9760-1004a59a15a0"
+                LastKnownName="DbSet&lt;VagtplanView‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0bb1e6b9-fa83-4782-8692-168a612f4594"
+            name="DataViewContext"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cc998e24-cc17-4c7e-8682-ce32a6ac84c7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3de10973-bc86-499b-8696-c836ab68411d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="772fd29a-e34b-43eb-acfb-0671d41aa110">
+                    <propertyInstance
+                      Id="d1fe2c8e-ad43-4a1a-a81f-aabad6e409a4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f4ba0fb-e692-4dd7-8b54-54b9ab5c473b">
+                    <propertyInstance
+                      Id="adf1a46c-7faf-495b-a0a7-463338e27ec3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="253ecf1c-2fca-4040-9027-c73301728f62">
+                    <propertyInstance
+                      Id="b215a07b-341f-4bfa-85a5-a796ab78b521"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aafe10a5-b5f3-4b5e-b5c7-1bd3cd21b894">
+                    <propertyInstance
+                      Id="cd079830-b0b4-4712-a61b-7333bafda3ff"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bb33837-b653-4843-add1-ef06b13a6599">
+                    <propertyInstance
+                      Id="90252902-5f86-4fc5-88c6-1f2044eda119"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fb70c3b-ce93-4daf-a28c-6cf943a49e5c">
+                    <propertyInstance
+                      Id="0864473b-71b1-424d-ae96-97a63998e905"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="e79a2496-65a7-4e3a-903e-1d9d13b0f6ea"
+            name="OnModelCreating"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="34cfa0eb-a4c2-4a65-9a91-d1e65d44d927"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3D(Name%3DOnModelCreating OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2Fpackages%2FEntityFramework.6.1.3%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbModelBuilder)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="699482e4-2cf7-4979-99b5-be317a44cdf9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cec84ff9-8589-4762-b588-d617e50bfc11">
+                    <propertyInstance
+                      Id="772bbb70-9c45-42a9-91de-1e5a4ff70187"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c77b1a5-5247-45dd-83d9-c0ce6e6d776c">
+                    <propertyInstance
+                      Id="8485dd80-1536-4936-8e09-f86f49f5b73b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2dcca3b5-29e5-4cae-a603-d41591dc5435">
+                    <propertyInstance
+                      Id="49a96207-36e8-4657-8c8e-9e745880b3f6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f010c14-2ffb-4ae5-80f0-9840aa1496a5">
+                    <propertyInstance
+                      Id="4d7cb3ef-13eb-47e2-afeb-8ff4cbbfaba5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d70a107-c036-4656-a05b-23ccb2a6cdec">
+                    <propertyInstance
+                      Id="f6888587-e0bb-4574-8c0d-b3c220872272"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="407ca324-f612-4fbd-a541-177446f85d43">
+                    <propertyInstance
+                      Id="3cb4bbc6-316e-4683-80ea-4f8cdc3ea618"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e3694eb0-47c0-4412-ae86-51b20815ab7b"
+                  name="modelBuilder"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="38b435bf-5744-4318-84b2-d8e6143dcb2f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataViewContext Member%3D(Name%3DOnModelCreating OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2Fpackages%2FEntityFramework.6.1.3%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbModelBuilder)]) ParameterIdentifier%3DmodelBuilder"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d44db13c-9c64-49d7-9127-970f2b485e69"
+                      LastKnownName="DbModelBuilder"
+                      LastKnownLocation="Package5_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="181f0c91-aaf9-4b32-95ec-91600045ea10"
+        name="DataTableContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1c7864ce-216e-4739-963a-9e058eb6f90e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="682f61aa-b74b-47a5-86b1-d66e314f32d9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="461a3d9b-0d68-4e93-a4ae-bbb767ce0bfa">
+                <propertyInstance
+                  Id="4d8427d1-114f-484d-899a-bbf05e0ed884"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="26523732-b7d8-4e67-bf71-74896da165a2">
+                <propertyInstance
+                  Id="ce563e83-b305-4060-841c-c9ab364f3bf6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="46f71cdb-1794-4c2b-9e7f-0bdbd439e190">
+                <propertyInstance
+                  Id="80acb7fc-4294-41aa-bf62-cf2b7486a8d3"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="087a0243-12c1-4c40-a1f2-73d6bcde1e87">
+                <propertyInstance
+                  Id="195359bc-bc51-436f-ad55-bf1ce37cac51"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7fb5445a-5010-46f7-8005-7787477678a5">
+                <propertyInstance
+                  Id="3421cf03-69ff-48ff-9c01-00e1758a1d2c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="131c6458-4d33-4580-a833-7c04146cf441"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0b29363b-55b9-4c3c-9aff-e28f85d7d841"
+              LastKnownName="DbContext"
+              LastKnownLocation="Package5_1234.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="f44ae36a-7303-4c2b-abd4-b5bcc0b1f679"
+            isDerived="false"
+            sourceEndRoleName="DataTableContext"
+            targetEndRoleName="Vagters"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7c81ca38-cc35-48e4-b9bf-7fbf674241f2"
+              LastKnownName="DbSet&lt;Vagter‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Vagters references type DbSet&lt;Vagter‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17401fb1-d741-426e-887f-e3c467579ba5"
+                  name="DataTableContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1f2e4dbd-143b-4f13-8b46-1f660bacc3b6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="838886f4-fc75-4450-ab9f-02f80e473804"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bad838b7-06ff-421e-92c2-31c0b051a403"
+                  name="Vagters"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="50c8e1a3-8dd7-4af6-aab4-0ffba266382f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="006541b3-62e0-4463-a72e-3c3c85216461"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f684a473-6fcc-4b60-9b3f-8bc49586ed94"
+            isDerived="false"
+            sourceEndRoleName="DataTableContext"
+            targetEndRoleName="Ansattes"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="83a1f562-c3f6-4d35-92e2-4d8904141a2c"
+              LastKnownName="DbSet&lt;Ansatte‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Ansattes references type DbSet&lt;Ansatte‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b9f2bac0-c30d-450e-abb3-b80d146e72ce"
+                  name="DataTableContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4f36770f-ba7e-4fbc-b032-1de683cba879"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2a8f1b7f-1726-4ff8-a243-c35cf6001326"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f797e30-1133-49fc-a3b3-929b42119613"
+                  name="Ansattes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="353f2080-defa-4dc8-93b8-aec81f09d1e4"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c13c3f90-ca5f-4a6e-8698-d4d9d38b1344"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fb5b68c8-123d-470a-a8bc-41fc8e3c02cd"
+            isDerived="false"
+            sourceEndRoleName="DataTableContext"
+            targetEndRoleName="Beskeders"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="867aff7c-c0a1-4a5a-8a8a-2d6a776b761e"
+              LastKnownName="DbSet&lt;Beskeder‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Beskeders references type DbSet&lt;Beskeder‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="689f0a50-3248-4d4b-bf65-05c97692b9a4"
+                  name="DataTableContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2fc6154a-9c55-480c-9b14-05b0a1d2bbed"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2bb19520-58c7-47fb-935b-a32d3ea0e06f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c8231629-93f2-4ca2-9443-921c3c72c64a"
+                  name="Beskeders"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="cfb66f50-3d07-4985-abdd-26e53ef848dd"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="61029fb7-787a-4f2b-8844-80531064a2c2"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0de6bc33-9920-4a31-babf-ec9efc0eddd4"
+            isDerived="false"
+            sourceEndRoleName="DataTableContext"
+            targetEndRoleName="Stillingers"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="75076e1f-abf9-4cc9-9f6f-45589551dd73"
+              LastKnownName="DbSet&lt;Stillinger‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Stillingers references type DbSet&lt;Stillinger‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a679a016-a7f1-4057-9121-11cf049e06a0"
+                  name="DataTableContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c4d87f58-252e-483d-a5e5-8411ae0e92f0"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="427f3b6f-fd44-4c98-9b75-b00d497393ca"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ee427370-99eb-46c3-a375-f0cca8ad4b13"
+                  name="Stillingers"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="cdb8acc8-3c92-4c5f-a95b-76f22fd36d53"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="214d806a-f6a2-4534-af40-4b7f9643864e"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="53437801-6ea0-4551-823b-6fd97a8eb432"
+            isDerived="false"
+            sourceEndRoleName="DataTableContext"
+            targetEndRoleName="Ugedages"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e0ca7c2e-2e3e-481d-a5c5-d8744085bbd4"
+              LastKnownName="DbSet&lt;Ugedage‎&gt;"
+              LastKnownLocation="Package5_1234.uml" />
+            <description>Property Ugedages references type DbSet&lt;Ugedage‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="21120247-4503-4a73-b568-2ae74c19cf1a"
+                  name="DataTableContext"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="118c005a-955f-46e1-8e24-05f49e1633af"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fdb4f6c5-0645-4a49-9212-01d39c2dc73c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d58d6c5-721a-4c02-8ee3-5ddf892c2c23"
+                  name="Ugedages"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="01fde75f-08f0-4fe7-b737-bd78f905e5b9"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a3c4e99e-af48-4475-9672-01b89083a38a"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="a623da00-a58c-412c-b72a-ad743392b8a8"
+            name="Vagters"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a6e5e02c-083b-4858-b8bc-514ad51a8fd2"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext Member%3DVagters"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bee23a3f-0277-4cec-8777-5db5abe1d432"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5a5278a2-07b9-4080-8391-cca842001042">
+                    <propertyInstance
+                      Id="136bfe49-32a3-40f1-998b-985e7724f180"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dc9281b-299d-4212-9a94-2bcd6d8f4098">
+                    <propertyInstance
+                      Id="ca0b33ef-b683-455a-ac23-59a460297193"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40792ecc-32ee-4cd2-85e5-837391eb34bf">
+                    <propertyInstance
+                      Id="cb2e8f2b-3829-4a69-978d-a66e328884ed"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd360374-f618-4b52-bebc-05d8b1a023cc">
+                    <propertyInstance
+                      Id="f872edbe-bfc7-4f1e-a008-63bae63bec40"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1b16463-7f88-4990-83b4-7ce4804c1765">
+                    <propertyInstance
+                      Id="583c216b-fe35-49b6-a5d6-476008ff1f92"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9dc679b-c1f2-4bcc-8b1b-d44c3bbfdad7">
+                    <propertyInstance
+                      Id="4f7a9620-e5c2-4b04-ba4a-876e16b3445b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d51855eb-9ff3-4d39-911b-3bbf8fc27957">
+                    <propertyInstance
+                      Id="1d8926da-79fd-4056-8ebb-030a59b6be9c"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7c81ca38-cc35-48e4-b9bf-7fbf674241f2"
+                LastKnownName="DbSet&lt;Vagter‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="062b3183-5f27-4829-887a-4c728e0977b7"
+            name="Ansattes"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="950368b1-c662-4802-ae5d-ad696a7ae04d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext Member%3DAnsattes"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="898b3c43-6fc7-4e87-9b93-bc2937acf440"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="127789d5-e56c-446b-8dce-03fa0f432f0b">
+                    <propertyInstance
+                      Id="3d812215-15a8-4bc6-a57a-c9211603595a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9931a40-6bbc-4dfe-a25d-b1334b2f83f6">
+                    <propertyInstance
+                      Id="ac68c932-be91-4ed3-ae7d-adaf2555fc7a"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e86ae6e-236f-4b60-813d-37779ee9d4d5">
+                    <propertyInstance
+                      Id="2db697c1-7097-4aec-99d4-576c2eedc864"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddd9eebd-4a02-4308-b4c2-3ed141634503">
+                    <propertyInstance
+                      Id="d23325ea-f3c5-4cbf-a132-441d69605ded"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="635ce366-d9ff-401b-be1d-6007f0381ed4">
+                    <propertyInstance
+                      Id="f5caa2c7-4592-48b1-a271-0c9f55a35b08"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d16b898-248f-430f-b114-5ad8d754d925">
+                    <propertyInstance
+                      Id="1683c3a2-cde3-4520-9f21-5926c0b97b7b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d39538b5-c705-4d07-8fc0-4ef2007ff7c1">
+                    <propertyInstance
+                      Id="c7a599bf-7ad2-4743-8cce-be895bd87a1a"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="83a1f562-c3f6-4d35-92e2-4d8904141a2c"
+                LastKnownName="DbSet&lt;Ansatte‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8cc2336c-aea3-4da0-ac67-e46212e157ca"
+            name="Beskeders"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1cfdc08b-0c90-4fc6-80af-78c7072eca80"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext Member%3DBeskeders"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a94bebf-febb-46c7-9936-8e00db60e34c"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9711f077-3468-4b38-9ebc-168f1da3e79b">
+                    <propertyInstance
+                      Id="804e29b0-3b46-4eba-b80e-695950aa69da"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ecd740a-8dae-4d6f-9222-f7bb2b464e53">
+                    <propertyInstance
+                      Id="3b946843-8550-4342-ab3c-ceb310be0f0e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d92de74-6d41-4909-b8d9-a8e49f53c65d">
+                    <propertyInstance
+                      Id="beaa6714-df52-483c-b736-254f83f9573c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c227710-908e-449b-b96f-a54a780497b1">
+                    <propertyInstance
+                      Id="44410bc3-0d79-47bf-942b-129844cdc63d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e58ee563-4dc8-4ebd-b27b-1b631b56b9c1">
+                    <propertyInstance
+                      Id="fce485b7-aae1-45c5-b23c-f1b2a7163cd6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b37eebea-1031-40c7-91a5-4348914a0989">
+                    <propertyInstance
+                      Id="4d73611b-04fc-4ff0-a8ba-86ba08bbd324"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33d66dc2-f5fa-4011-a3f9-48b426f6b4b6">
+                    <propertyInstance
+                      Id="3f75de20-2a1b-493a-b6ca-ff5701cc6b05"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="867aff7c-c0a1-4a5a-8a8a-2d6a776b761e"
+                LastKnownName="DbSet&lt;Beskeder‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e717dd1f-6bbc-4ee8-8995-edd2a2444631"
+            name="Stillingers"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fccadbf0-4306-4690-be24-6721d419f1f4"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext Member%3DStillingers"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8e606df4-6724-41f1-b7bf-9923e617c2c6"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4409fd43-d74b-4e84-a863-a9c6fa99ed4e">
+                    <propertyInstance
+                      Id="6057c221-b7d0-4461-82f3-84a6c2431788"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="abfccf39-dc0f-4d72-bd83-4758c2596df6">
+                    <propertyInstance
+                      Id="16b27d05-6026-42b8-ba62-62cad8b68514"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42c6b8cf-6c3c-46a8-af2e-7d77034d2f45">
+                    <propertyInstance
+                      Id="46543687-5269-42e7-b12a-60aaeaefc842"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="202c5169-9e50-46ac-a016-b310bf5f5727">
+                    <propertyInstance
+                      Id="106db216-36ef-4264-b3f5-75995d0bb3ed"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ee57b60-49c1-466d-bd3e-a5a3af77fce0">
+                    <propertyInstance
+                      Id="87db2103-abf6-4f14-a2e1-420c9fcef678"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a69202f-530d-4740-9a87-9366b77ec945">
+                    <propertyInstance
+                      Id="b6391529-1c10-47af-830a-69c76ab44a7e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89262b15-dc21-429c-88a7-a80adff42418">
+                    <propertyInstance
+                      Id="24debd74-a73a-4eba-b85c-d543aa190e57"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="75076e1f-abf9-4cc9-9f6f-45589551dd73"
+                LastKnownName="DbSet&lt;Stillinger‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ed1b5c9f-f47a-452a-bb81-9243204178d2"
+            name="Ugedages"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8eb48a0a-eea3-4740-a4de-f368bd797c39"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext Member%3DUgedages"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d00f1772-c606-405d-bbfd-a1899c068faa"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8985fe7e-23e1-4b15-ac24-157e78577114">
+                    <propertyInstance
+                      Id="f4ab375c-0dc3-478f-bbe8-5c91a310d0a0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="703acb8c-b220-4f30-bf45-831745bc5a2c">
+                    <propertyInstance
+                      Id="ff1983c1-a1f1-4622-ba36-a0e11300e389"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48798e60-bc3e-4fa9-87d3-a7a5e3885d52">
+                    <propertyInstance
+                      Id="862738ac-3298-4926-9c28-7312e826f173"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3be4556f-c3cc-4fee-bafc-5e8a27b4dc70">
+                    <propertyInstance
+                      Id="533800e2-42c4-4119-a2f8-87e90c4eeeb3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03ad1df7-de61-4f0c-9bb3-feac4e089112">
+                    <propertyInstance
+                      Id="33e78b63-7e01-4c4c-8cf9-c994192df7bd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b95d8f9-6969-493d-9af6-d81c70864250">
+                    <propertyInstance
+                      Id="0057d996-f491-446d-a015-a0edfb1ad220"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8480ad14-5e19-4420-bbee-a72436945705">
+                    <propertyInstance
+                      Id="86233acd-23ab-4d23-8e45-2ae723a0a391"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="e0ca7c2e-2e3e-481d-a5c5-d8744085bbd4"
+                LastKnownName="DbSet&lt;Ugedage‎&gt;"
+                LastKnownLocation="Package5_1234.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c180ef44-b24a-43a0-a5e8-6f7911cb6249"
+            name="DataTableContext"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fc2a4994-0bc1-438a-8211-51f04b72e82f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f5825dbf-445a-4e74-a98f-d66a2fa9b268"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ddd57f4-07ba-4088-b573-0702bbfa2520">
+                    <propertyInstance
+                      Id="d3e1d31f-3a8d-4ad6-9ccf-632bc868a6d0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21677413-1a55-4ad9-96f6-229edf58cd4c">
+                    <propertyInstance
+                      Id="d7cfb60c-3f4f-42f1-b58e-bb8120d4cc71"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08a6ae98-ad78-441f-9cda-8f0550e942cd">
+                    <propertyInstance
+                      Id="3c89c981-4ee6-4039-b71b-f680180804d4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36f01971-4ddd-49d8-aee5-0cae8eb21ac8">
+                    <propertyInstance
+                      Id="8db687fa-5b03-43d2-9c1e-b2fabcba6902"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb9d8dd8-ae85-43a8-928d-441ddfe9e875">
+                    <propertyInstance
+                      Id="009522a6-9ca5-415a-859d-20ea51ae68ac"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2b2f34d-cb9a-4896-8f36-672edefe5b74">
+                    <propertyInstance
+                      Id="eba3478c-1bd0-427e-b709-3c8ec15d77f6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="ee39059e-211d-44bb-8ebc-89f8fad2a257"
+            name="OnModelCreating"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="145111f3-878b-44e8-9f8c-dec4d2db14aa"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext Member%3D(Name%3DOnModelCreating OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2Fpackages%2FEntityFramework.6.1.3%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbModelBuilder)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ffb67cf3-183c-4bea-a4fa-d4c97fca6b43"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f85bacf9-e408-44c4-b42b-d770329b958b">
+                    <propertyInstance
+                      Id="b1910df4-9a9f-43a8-a42f-d34fd2af1e00"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b9d848e-7a64-4db3-8663-944dabca03a4">
+                    <propertyInstance
+                      Id="c899e58c-2d98-4c40-97c5-acca6f2c8da7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22fbed91-4a24-4864-8671-45310ac57486">
+                    <propertyInstance
+                      Id="bce9b0dc-c240-4b13-9138-d2fbbdfd290c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e878ef2a-45e3-4362-b187-af59b45553b9">
+                    <propertyInstance
+                      Id="df4fc9e3-32c3-4c88-91c2-75f48782851a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa23341e-c4c6-4900-9e95-be5411287329">
+                    <propertyInstance
+                      Id="65eb8465-1bfa-4beb-9abe-402c52e87e07"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9738f7c2-8b46-4a4f-a3a6-b89347501405">
+                    <propertyInstance
+                      Id="0448c3dc-5e64-47f8-bde9-98472d79f6de"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a2981c4-45f4-4673-a542-e3932f6574da"
+                  name="modelBuilder"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="412fc2e5-9d2d-4aa2-877b-788cdb43f2aa"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DDataTableContext Member%3D(Name%3DOnModelCreating OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2Fpackages%2FEntityFramework.6.1.3%2Flib%2Fnet45%2FEntityFramework.dll Namespace%3DSystem.Data.Entity Type%3DDbModelBuilder)]) ParameterIdentifier%3DmodelBuilder"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d44db13c-9c64-49d7-9127-970f2b485e69"
+                      LastKnownName="DbModelBuilder"
+                      LastKnownLocation="Package5_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

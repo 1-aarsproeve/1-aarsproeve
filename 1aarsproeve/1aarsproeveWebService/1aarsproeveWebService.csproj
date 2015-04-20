@@ -158,11 +158,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Beskeder.cs" />
+    <Compile Include="Controllers\AnsattesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UgedagesController.cs" />
-    <Compile Include="Controllers\Vagters1Controller.cs" />
     <Compile Include="Controllers\VagtersController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\VagtersViewController.cs" />
     <Compile Include="DataTableContext.cs" />
     <Compile Include="DataViewContext.cs" />
     <Compile Include="Global.asax.cs">

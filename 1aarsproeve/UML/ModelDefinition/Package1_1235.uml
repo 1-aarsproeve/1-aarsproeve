@@ -1,0 +1,1768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="89d4f1f6-7292-4dd6-97d4-a02a1ec5e78e"
+  name="Controller" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="d67d64c9-3732-4438-8f6c-6f5f33878dfe"
+        name="VagtersController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d1f6d6d4-2ba5-4094-a9b5-d8b6666e0c73"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="731a9fed-7a16-42c9-8c7b-d8363b4bc512"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9f5ca40d-be24-4670-b331-04becba3df4a">
+                <propertyInstance
+                  Id="36a0fdc1-5654-42ee-a11a-aaab601bf9b4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7de576dc-34d5-4ae2-ae9b-b031699f321e">
+                <propertyInstance
+                  Id="bdccfbbf-8097-469e-8530-d873e665e0be"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0965b1b9-337c-4274-b94c-255346c41f63">
+                <propertyInstance
+                  Id="65116eec-1fbb-45ac-9970-664628eba645"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b86d9755-5b44-44bc-8f74-8bdc182eafc6">
+                <propertyInstance
+                  Id="173d302a-7d77-4bc9-a187-d988c35522eb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6affb7c7-4f25-43df-845f-5bc09cb53864">
+                <propertyInstance
+                  Id="6e56d228-b2e8-4a2d-b44a-b759e680d960"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="33064992-48ad-443d-bd68-9f221b170d86"
+            isSubstitutable="false">
+            <classMoniker
+              Id="ef7bb0fc-bea2-478d-a75f-35b1d02232f2"
+              LastKnownName="ApiController"
+              LastKnownLocation="Package8_1234.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="dbe42e0d-219d-4848-a56e-a6c1b72d53f3"
+            name="db"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="659abf65-ba25-49b1-a519-46e47f8123c1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3Ddb"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c70d211e-5959-467b-a5dc-7f1c832c36a1"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c08dd9d2-d2c7-45f6-a288-edf3cc7800e7">
+                    <propertyInstance
+                      Id="ca81e799-afd6-4ab6-9b11-61a5445033bf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bba0a89-20a5-46a7-b9b3-42a470000388">
+                    <propertyInstance
+                      Id="68975ed7-af0a-42f1-9415-54de973833dd"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f29a93d-49cd-4d13-9c48-783e167c2477">
+                    <propertyInstance
+                      Id="81f04000-1449-4d4d-aaee-9fce07c212ac"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ffb3719-d8bb-4d33-997d-9f70bcf0497b">
+                    <propertyInstance
+                      Id="824369ea-2099-46c1-9b47-4d54e8e4b60f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e84faab8-4db5-4d34-ae16-61090be6ae9b">
+                    <propertyInstance
+                      Id="55988b6a-20bd-4509-9e22-cb669a30dea4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="181f0c91-aaf9-4b32-95ec-91600045ea10"
+                LastKnownName="DataTableContext"
+                LastKnownLocation="Package_1237.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2171c8c6-85f5-4299-ba78-e8c623ffa6df"
+            name="VagtersController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5263e9d9-3ea8-446b-9baf-b13e4c22b0ae"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="96b45774-3e53-40dd-b352-8a438c7806f8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="186131f8-436b-45bb-96d2-1dcb42fdcdbc">
+                    <propertyInstance
+                      Id="e93194cb-486e-4b39-9ddf-6d1f78ba9cf2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a28a086c-f588-420c-a2af-461786cf149c">
+                    <propertyInstance
+                      Id="fa4dc7f0-f070-4536-acd8-c8f774d3eb61"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b86e4c32-4212-4347-976e-42bb188bdbcd">
+                    <propertyInstance
+                      Id="5e6451ac-1fef-4c3e-a5e6-9ba602a6e8ed"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4f5e786-2ab5-460a-b7fb-fd70a2e968ae">
+                    <propertyInstance
+                      Id="28b8a079-3bcd-4fe3-8d15-c72bc4302b6d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e70193e-d80f-4cf9-9623-f547c75b83c9">
+                    <propertyInstance
+                      Id="97e97bee-8772-4315-b753-61ba82f7b664"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4881e579-a307-43fc-9d03-66f65d5555ed">
+                    <propertyInstance
+                      Id="ed7c205d-1a63-4a90-b302-848ff256545f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="782cc2f1-90cf-4655-bfc2-380a647a02b2"
+            name="DeleteVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d3227982-f19b-41db-9e11-8b47ccef4b9e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DDeleteVagter OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3fadc25d-ec02-4c5e-abfc-a81030a0c670"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7f29455-e587-4961-8fd2-6d6bc12002bd">
+                    <propertyInstance
+                      Id="38aad986-7300-463c-a7f3-a3bcc9e20d29"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e2319f0-bf0c-4356-a27f-df450d62a545">
+                    <propertyInstance
+                      Id="a0fe9886-9a12-45a0-bf72-b4b73836ee91"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6eebeffe-945f-4147-89db-b1e86e121ca8">
+                    <propertyInstance
+                      Id="0b2d1851-b5f2-41cc-877f-86dc9e4f7113"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ad1495e-65b8-4e4c-a956-d0d0ec0e1ec8">
+                    <propertyInstance
+                      Id="a42357cd-f46f-40da-8ba6-cb807946ff2c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ae44a3b-847d-4449-81ba-d2f8253accab">
+                    <propertyInstance
+                      Id="4c0c669f-0f3c-4a5e-89b5-f30557854296"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e02257c5-425c-4ce1-9d5a-46d067f2c357">
+                    <propertyInstance
+                      Id="a9ae1759-091d-49cb-a68b-0793759889e1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e6d8facd-5be3-4aa8-bbea-327ac5b94a33"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+                      LastKnownName="IHttpActionResult"
+                      LastKnownLocation="Package8_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0406240-5c8c-4dbb-8f37-666c8e0554a0"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d118f4b9-0555-4984-be48-aab47a138f04"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DDeleteVagter OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a74edc47-555a-4f71-9c24-e170c7b9ee79"
+            name="Dispose"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ced2c8ea-614d-4271-b391-8354d4fab361"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="161a89c7-e5e7-40cf-9325-136daa8b9db7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd2bc020-8c27-4af0-aaf0-e2a2affd4f7a">
+                    <propertyInstance
+                      Id="cb1ed42c-068a-46c6-9b42-42a3d8de0316"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd37ff51-5020-4dcd-91ec-383d04d1aaec">
+                    <propertyInstance
+                      Id="7f06c103-3c86-4bc5-81bd-6b39df61c68c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28c961f9-d159-421a-841b-3843e3d580e6">
+                    <propertyInstance
+                      Id="61335a36-39d5-4b63-9963-d80f390bdb08"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2f9e42c-1082-48fa-b2d2-662c4b93ec5d">
+                    <propertyInstance
+                      Id="b3d50240-6625-405d-bb69-4821581be389"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="184b8794-7867-4fdd-bfb4-cf5f4d15fe3e">
+                    <propertyInstance
+                      Id="bc855dbc-d1c4-4cf1-b021-18b5543ba73f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b4c4723-409d-4262-a827-44d95c909d2e">
+                    <propertyInstance
+                      Id="b8e1bd4d-fb18-4125-a839-3bf73946fe91"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a6205f1a-5727-4212-b7c9-144163bfbc07"
+                  name="disposing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8db18bdf-f464-4e1a-81cf-e3b0713c4c2e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Ddisposing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="662ae235-cd85-4233-a06f-acc3964f7cf2"
+            name="GetVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1258f2a7-f869-4819-969c-35b1cc9fca8a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DGetVagter OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6c7dec04-ac2a-4bb0-804b-921de9a57690"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7025eb67-217d-4055-9b25-0c6d042cb41d">
+                    <propertyInstance
+                      Id="b6dc42b4-1a51-4488-8438-4c5dc03d52c5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9588e0e7-a877-40bf-b7a8-7f1b323e4d64">
+                    <propertyInstance
+                      Id="5495932a-34c4-428d-a26d-158139c368ce"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0dd20ec7-b571-49db-809f-10390822f3d3">
+                    <propertyInstance
+                      Id="6f1711de-0abf-4cdc-b9b4-e8aa0469eee4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3aee27c0-d293-4347-8b4d-2afba408e6f4">
+                    <propertyInstance
+                      Id="7c816866-abd5-4766-bcf1-4739ffc7081f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb03e196-6348-4cbb-a124-cc94abe12732">
+                    <propertyInstance
+                      Id="34b6a299-dc57-44cb-8eed-dfce07ebfbfe"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6cfc6c6-a0ef-48d5-a7e3-756b18577f03">
+                    <propertyInstance
+                      Id="2572ff8d-7898-4d7d-afc9-96d31eb0d8a0"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="69db99d8-62b1-4475-afbb-828a739521e0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+                      LastKnownName="IHttpActionResult"
+                      LastKnownLocation="Package8_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8649fe5e-02cf-4116-b428-a239293ce11e"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="71526c07-9edd-4a34-848b-f68f18b9e9f0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DGetVagter OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fa6d066d-e3fe-4eca-a92f-dc5cd58ed232"
+            name="PostVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="63766193-e508-40e3-92d7-2c434d29ce93"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DPostVagter OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DVagter)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="811c08f3-5882-40d4-8556-6db4dd3a98d2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dad0cf9f-06e7-4e3e-8ec5-c64bc99997ff">
+                    <propertyInstance
+                      Id="f74a2b3d-7ad5-44a3-9170-26c81d05d9d5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c889f29-e097-4989-a2c2-4a139d3cea67">
+                    <propertyInstance
+                      Id="11e6ec68-ecfa-4822-a59b-eded3c3c06fc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8938316c-a4b2-4354-8acc-1b5551ce476d">
+                    <propertyInstance
+                      Id="15ded899-d59c-42eb-a8b9-dc85c8fe41da"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="253cae33-bbef-441f-89cc-4bb7fd6a9b27">
+                    <propertyInstance
+                      Id="3592d292-402d-4089-912f-242e6ff26187"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b9d855c-ca76-44f5-86d8-b92c3fe0fd65">
+                    <propertyInstance
+                      Id="04acb5dc-05d8-41ef-833a-a7364a22bcb0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe10eb39-629c-49f4-85e7-14f26d5e7c8e">
+                    <propertyInstance
+                      Id="f4b5ceb1-eda4-4521-b807-556631361d6e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f880cdab-3916-4128-a3b6-83db34ab39f1"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+                      LastKnownName="IHttpActionResult"
+                      LastKnownLocation="Package8_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4fa43ee7-bf53-489d-8496-58801fa990ed"
+                  name="vagter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="beb6676e-fa3a-4aec-897c-9e4ff030e27f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DPostVagter OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DVagter)]) ParameterIdentifier%3Dvagter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1bec1e8c-9fe1-42a1-8e2e-794bf56fa59d"
+                      LastKnownName="Vagter"
+                      LastKnownLocation="Package_1235.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e1df167e-61d7-4820-9dc9-069309b38d96"
+            name="PutVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="31c549fb-0f55-4923-ac0d-c3351d47c72e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DPutVagter OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DVagter)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3f3fb408-bfac-4c05-8da4-a67a42ba16ca"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2331c9ce-1e5a-444e-9df3-c0beb28a7353">
+                    <propertyInstance
+                      Id="a3ba4d72-2036-4402-85cd-697d887d49f3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9763d2b9-2682-4e5e-aa9c-7073d4e29d1d">
+                    <propertyInstance
+                      Id="045e7f76-7d04-4eb9-8816-c7b202db37f4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d772fa3-26bb-4dfb-8ba3-e92bea141241">
+                    <propertyInstance
+                      Id="2ae7577d-a63a-4692-9e07-89080900f878"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57955ae4-792a-473c-9076-e9b0c02bc91d">
+                    <propertyInstance
+                      Id="c5fb7ee3-fcb4-4b05-b9c5-1e1a626e9723"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1db2fda-33a5-4a2f-8609-d9c5db97d542">
+                    <propertyInstance
+                      Id="b72d7ae3-ad2e-44ae-bd2b-893c68da88a2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d1eb4c5-b3c6-4e76-958b-c80907653e7a">
+                    <propertyInstance
+                      Id="8284a08e-b5da-40e4-b95f-70572076a8bb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="78b008ee-2552-4fbf-97d0-8f2298dc52aa"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+                      LastKnownName="IHttpActionResult"
+                      LastKnownLocation="Package8_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf5b2f8b-40dc-41a2-8ecc-8c38c7d1ce3f"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="615ae08d-f980-4f62-9fe2-4a2d9cd71c03"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DPutVagter OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DVagter)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dfe450c0-58bf-4df4-8042-251399a42757"
+                  name="vagter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="376a7496-8fe8-4918-88d9-7c5f26afc472"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DPutVagter OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DVagter)]) ParameterIdentifier%3Dvagter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1bec1e8c-9fe1-42a1-8e2e-794bf56fa59d"
+                      LastKnownName="Vagter"
+                      LastKnownLocation="Package_1235.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b6706441-ddab-4751-a95a-f69bbd5c039b"
+            name="VagterExists"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e236d08c-a8bf-4f39-bc29-93fa08837603"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DVagterExists OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="63b4e8d2-4e35-434b-84c6-3830aa1355c4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c92781d-717c-4a50-8b4b-e65428f44ae5">
+                    <propertyInstance
+                      Id="3c1baded-2beb-41d3-a3ac-78c6b4a94538"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d036f010-c282-4cce-a191-7dd8a052ff6a">
+                    <propertyInstance
+                      Id="2ac0793b-7583-44d2-be92-0affef22cf9e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b825a3f3-e8f1-4555-9cd5-f9dd5e4e5eb5">
+                    <propertyInstance
+                      Id="7ffe084f-c4b8-4dd0-8704-a7fad2b4e680"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d811d6e-140c-4c7a-8395-238a09e25055">
+                    <propertyInstance
+                      Id="031692c6-8dec-4676-8499-fb0ad8955e6f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be0021e7-2960-46ad-9bb0-7f65fac4af51">
+                    <propertyInstance
+                      Id="402f7c5b-1319-409c-8db4-94e6f54fb01a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cfa9ff50-77cb-4467-9d5c-b1393837116e">
+                    <propertyInstance
+                      Id="0d0172b0-1a66-43f1-9082-684f555363ee"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="31275945-bb7f-41cd-ab7c-00ecd1997e39"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fca1325f-a3ae-4f29-8d90-b718f23633d8"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d72661d6-3e1c-4b45-94b0-82373542d962"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3D(Name%3DVagterExists OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a21382c1-494a-4402-9245-8d8f5c447450"
+            name="GetVagters"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="277b22f0-1714-4d9e-9331-2681bae278d9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DVagtersController Member%3DGetVagters"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f9e13ffc-5eb6-4838-bb0a-e7be5e722cce"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c51ab32d-2d11-4179-adf2-4776dcf6d4dd">
+                    <propertyInstance
+                      Id="c5723c3d-7f0d-4862-885c-96c827844f8f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2632bbe4-ab4f-417f-a990-20c03b623d33">
+                    <propertyInstance
+                      Id="5d60e33b-e163-463b-bfbb-0ddaa7264ec6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="711a0aa2-a76a-4594-9b35-2f48049d3115">
+                    <propertyInstance
+                      Id="9f8d40d3-00f1-4e2d-89cc-71648c291f20"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d4cf65a-5755-4a9d-9c7b-52c71733c6ee">
+                    <propertyInstance
+                      Id="ea057761-5171-426a-b3a6-44fec5898a07"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2356620-b855-4228-88f6-697b469ce563">
+                    <propertyInstance
+                      Id="c8480179-f3f0-4614-b69a-914bf56e11bc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9378fc89-9317-4396-8c36-5e6b2e3ab2af">
+                    <propertyInstance
+                      Id="b7a95fbb-ba23-43ce-9c7d-139b2db615de"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d54c1ad4-e0ce-4017-aca3-d6564de481f5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="5b711263-842e-4dd1-bd3c-462da80cd428"
+                      LastKnownName="IQueryable&lt;Vagter‎&gt;"
+                      LastKnownLocation="Package9_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f8b7d1a4-92f2-4d0a-8926-1aeab243fcd5"
+        name="UgedagesController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="deb8c3a9-ff1c-4c0c-a50e-c16b0a60b83a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="abe78d60-3b6b-4c2a-b3a6-c3ac249cb391"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="94bdbb32-6111-4d3b-9b38-0b855d33c394">
+                <propertyInstance
+                  Id="cbfa4a55-70fd-4a8d-9b34-d58dc670c06b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ead7224c-213a-4b0d-8b09-29c121959cc4">
+                <propertyInstance
+                  Id="42dff529-b7e5-49b8-bee5-43382b3223d4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="55ca1f0d-8a3f-4c0f-abab-6a25da0309d5">
+                <propertyInstance
+                  Id="d456eaf0-e038-410b-bf7b-57ba83d25320"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4d366c44-11ab-47e1-82ef-16be0da538bf">
+                <propertyInstance
+                  Id="f09b77b4-e963-4b8c-9f56-53ef5af53ddb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="55751a52-4ac6-4bb8-8ab6-0fbbd47f2cb7">
+                <propertyInstance
+                  Id="4e3f96b6-57df-4cd3-aede-0dc955da90c0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="6833da55-831b-4b73-961a-ac47101e2c57"
+            isSubstitutable="false">
+            <classMoniker
+              Id="ef7bb0fc-bea2-478d-a75f-35b1d02232f2"
+              LastKnownName="ApiController"
+              LastKnownLocation="Package8_1234.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="fafb7bed-a2a7-4e66-8e63-6adc0e24b5cf"
+            name="db"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a412c626-9e6a-4905-b9b4-de6e2b6e7723"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3Ddb"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ce77265c-42d1-4c89-8627-5d602c1f4f72"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="352235b8-8ba6-4469-a26d-995b4cd62921">
+                    <propertyInstance
+                      Id="56fb0cd4-92e1-442e-a6e3-38060ac4468b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02798f8b-53fe-4769-9aa9-7af49a676eb0">
+                    <propertyInstance
+                      Id="2b16b154-ec01-45b5-aae8-f4ebaab1d709"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd33ba64-b835-403b-acb2-49006adfb3d4">
+                    <propertyInstance
+                      Id="7d95a270-32ba-4e47-92b9-f8d38a1c8560"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a45c890-59c4-455b-a70b-29bcc3319d1f">
+                    <propertyInstance
+                      Id="b39aab75-8a66-4022-b825-96249ebd6aa2"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4dd107e7-ceeb-40a5-b3e3-9848dfdc00c1">
+                    <propertyInstance
+                      Id="63b7a593-cb45-4a11-9d89-b55e7631aaa4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="181f0c91-aaf9-4b32-95ec-91600045ea10"
+                LastKnownName="DataTableContext"
+                LastKnownLocation="Package_1237.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e5ab07b7-c814-43b3-94ea-4f93197f8db1"
+            name="UgedagesController"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="03378c51-c539-4c7b-9421-797c1df659cf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c0380e4f-48cc-49cc-975f-a1f09e13d3ad"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02a73a93-9c27-4893-9a8d-d564b67a9b72">
+                    <propertyInstance
+                      Id="63adcde6-fd79-4f98-98a1-67a01d7d7453"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13ae2b8f-a768-436d-b77a-23a4e86cbd31">
+                    <propertyInstance
+                      Id="5b603327-5848-44a1-873c-44628ea1190a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10e12666-89a9-48e7-8f76-954436ac55e2">
+                    <propertyInstance
+                      Id="30c6d69b-d703-4e80-8b1f-775df0cf77af"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a6116eb-26af-4bbc-b5c6-d4931513506e">
+                    <propertyInstance
+                      Id="b2d00329-c2a2-4be6-ace2-e818b589d581"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1860acd2-3950-4536-91f5-24825eb78cea">
+                    <propertyInstance
+                      Id="c02ad889-33ee-47fb-9ce0-57c3fb1784a7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca90cd63-79b5-45b2-93e4-f9ee88be5965">
+                    <propertyInstance
+                      Id="2eee1572-1cd1-49bb-8404-2e582b21bb67"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="52976f11-2c26-4f8b-b0e2-a723da4f1ac1"
+            name="DeleteUgedage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="287d307e-1057-4fa2-97ca-af13e0488210"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DDeleteUgedage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6037a8eb-0d9d-40ec-8d58-70125b9543ba"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22c39f21-4674-4c1c-a391-c5e4b3c8c968">
+                    <propertyInstance
+                      Id="cff02ed5-3d45-4eb7-a2c5-4ddf2e986081"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07f1fc92-fafb-444d-8dd1-0e3986f42689">
+                    <propertyInstance
+                      Id="f4fcd2e7-4098-4211-8582-3003bd2132d7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4666e02b-7caa-4d82-a8ba-730a67668680">
+                    <propertyInstance
+                      Id="d5fde288-1c09-4d4e-ac88-384994cf8b84"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3aca17eb-c00d-439b-9b7c-e3e19d1ecd36">
+                    <propertyInstance
+                      Id="99436430-7365-4135-b3f8-6dfb31d88dfe"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="def43f8b-7d45-426b-91dd-3d87f9879d96">
+                    <propertyInstance
+                      Id="9cb66334-73c2-44c0-aef0-31bc6db4972f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72ae84a5-049e-4d5d-9a9a-cfc43f42e42f">
+                    <propertyInstance
+                      Id="8c6da932-6838-4bd9-a765-57b909edb4d9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f3a500b7-d692-468c-a5eb-d6f62410533e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+                      LastKnownName="IHttpActionResult"
+                      LastKnownLocation="Package8_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d29f0bf-f50f-4732-ba7a-f183b57e0a00"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2e74eb51-5952-4e4b-98c1-748aaa594abe"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DDeleteUgedage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="19da7053-9607-4b61-8826-95598abd5833"
+            name="Dispose"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0aba9d98-09c6-4e00-a908-caef49f5d1a1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="86da9580-bd79-44c3-bc58-058acf4c2326"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5232dfa0-9c76-484e-b166-2db34e845c95">
+                    <propertyInstance
+                      Id="b04bf862-9404-4930-8910-0e88411349c6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46daede0-ba1f-4021-beb4-34659ec03c68">
+                    <propertyInstance
+                      Id="c4dab30f-26df-463f-bf05-3d1b060a6e2b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4c0715b-2766-4aa5-8cef-4b33f8026d2a">
+                    <propertyInstance
+                      Id="a27a5235-660b-4322-87da-1ce3b4b93bcc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0e589ac-21d4-4363-a713-e77d26ec628f">
+                    <propertyInstance
+                      Id="ad57a9e6-abce-4ac2-a459-62534bbd3a67"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f0267ba-e482-458b-ad4e-52fe4c5f3c15">
+                    <propertyInstance
+                      Id="05556bc5-063e-4ba0-9864-55d143532c6d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b135b15-6a6a-4e80-be9b-5f9ea477ab36">
+                    <propertyInstance
+                      Id="a48b6716-0524-4732-a3b3-ff5ab6fa3dbb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1159be91-228d-426a-89cf-a5008914637e"
+                  name="disposing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="54fdcae9-475b-4604-ad5e-f8483a6953e4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DDispose OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3Ddisposing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a85c5a21-46a1-42c2-857f-f8e0a189b1c2"
+            name="GetUgedage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6110a03c-18a0-4ee4-874f-5509a61589e5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DGetUgedage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7d564733-671f-4fb6-b378-0c6f7503dcb6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b208ca44-4fbc-4186-a7c3-e27054e1cdb5">
+                    <propertyInstance
+                      Id="c445eb69-83d6-43b3-8f33-f926dce2931c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c856fe6-7b87-4e34-9716-b96a4824fccf">
+                    <propertyInstance
+                      Id="4ca49ba1-6148-4726-8f20-d70d173c4442"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c48aff3-cb82-4b8b-a5ac-5aa8b4ba5027">
+                    <propertyInstance
+                      Id="76a60042-edbb-4cf2-bc8a-11aae8736094"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="581b2417-7594-45e9-9b43-7f35ac553213">
+                    <propertyInstance
+                      Id="36d77cca-f8ed-44ee-a848-b42a03423418"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9dcac43d-a575-4007-acbc-29f07b36faa7">
+                    <propertyInstance
+                      Id="e7f5233c-1d2a-4e43-a52d-f4dfbe34e186"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83578bc7-8c49-4dcc-8fed-b85782aa7ae1">
+                    <propertyInstance
+                      Id="5d7b3e94-74ce-4ab6-9884-d8a0c79cb13d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3edac58c-a266-48f7-a944-b2c970a4c47b"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+                      LastKnownName="IHttpActionResult"
+                      LastKnownLocation="Package8_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7337dc08-2b72-4ef7-a8ea-59dab72f9fc6"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="84f9ebd4-2691-42ee-b60f-85a272997728"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DGetUgedage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="396a61a4-d685-4782-8a50-b8a3cf1b8bd7"
+            name="PostUgedage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ea9fcebc-603a-4905-9aa6-2aa3116bd13c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DPostUgedage OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DUgedage)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b9d0f5ad-5a5d-4043-a1a8-e60ba881a39d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="222f591d-497c-410e-a410-c66d2eb9f6b9">
+                    <propertyInstance
+                      Id="1105e223-4407-411a-87d4-ec2d5834d739"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0bd3f8ef-6d0e-4243-820e-380530313272">
+                    <propertyInstance
+                      Id="a6ba04d2-af13-4bf9-9814-c8ec52391aa6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23b49040-09f4-4f29-bfdc-78aaa3f64b97">
+                    <propertyInstance
+                      Id="65882be5-bf6b-4fa1-b9e3-356e5469f79d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e933461c-9401-41cb-ba94-943d521b9c42">
+                    <propertyInstance
+                      Id="bfc1eb20-5a95-49fc-86ff-459566a22de1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b883cc2d-ae7a-4dcc-b412-b8e88488d8a4">
+                    <propertyInstance
+                      Id="c20cb8ef-352e-4654-93cd-e48346a866db"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6bd1ffce-31a8-47ea-929c-25e960c8884f">
+                    <propertyInstance
+                      Id="998e4aed-84e7-4142-9fc0-0357a3dce475"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="12a9af6d-42e9-4f88-95e0-5c5e22799692"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+                      LastKnownName="IHttpActionResult"
+                      LastKnownLocation="Package8_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e15c694f-e4c0-45b8-be3c-0acede41a6f2"
+                  name="ugedage"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3dafd9c6-ff7d-4839-8a9d-d85b4b0bb499"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DPostUgedage OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DUgedage)]) ParameterIdentifier%3Dugedage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="db85d3d1-2796-493c-8398-8c38700802e5"
+                      LastKnownName="Ugedage"
+                      LastKnownLocation="Package_1235.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="53df56e1-a233-4c31-9b00-7dc5ec353aa6"
+            name="PutUgedage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="600a1049-7b4c-4243-89fd-b89da3e78f57"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DPutUgedage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DUgedage)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="85030ccf-484c-4dd6-94f3-84afd474f98f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f771b766-6be3-4f4c-9aa5-d90f414f5fe3">
+                    <propertyInstance
+                      Id="74c98b7f-8e07-4123-9ad3-6eb83d91aca8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7d734ce-5766-4d5a-aadb-977fede4776c">
+                    <propertyInstance
+                      Id="e5c9f6b6-b39e-4604-ab3a-0f5863a4c9fd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9618dd2a-17e0-42f6-bf98-739f5a52e630">
+                    <propertyInstance
+                      Id="6f668c2b-2c1f-48aa-8902-2522d79635f8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6fe067d7-d295-4154-a230-3b053f83ade9">
+                    <propertyInstance
+                      Id="435e4cc8-e333-434f-86ad-8476dce8549d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbbc8ce2-96a6-4a28-b0b5-fcac15c77b6b">
+                    <propertyInstance
+                      Id="6846264b-dca5-4893-8dd6-fa343e6d5562"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51ad6a22-d1bb-4c1d-95c7-bf513553520b">
+                    <propertyInstance
+                      Id="236e3fbe-4040-467f-bd1c-53569e935b81"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e30b36d2-b558-4d1d-80aa-93ecee75dc1c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+                      LastKnownName="IHttpActionResult"
+                      LastKnownLocation="Package8_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b0160259-18bd-4f9a-a10a-60893430d4bf"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="91d0d67a-fff4-4f5c-b103-df42d6f4a2c4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DPutUgedage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DUgedage)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="88030e21-28cb-4ae1-bf72-b1ac83b6c798"
+                  name="ugedage"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d12d85cd-cf15-44fb-9cfe-5325dfbea880"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DPutUgedage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService Type%3DUgedage)]) ParameterIdentifier%3Dugedage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="db85d3d1-2796-493c-8398-8c38700802e5"
+                      LastKnownName="Ugedage"
+                      LastKnownLocation="Package_1235.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="23b3c90f-3d60-4d4e-9655-01158a29797a"
+            name="UgedageExists"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d14d5cfa-937f-4407-a3e8-90edae9e08c9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DUgedageExists OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="72341859-b83b-4f74-8d60-577459644964"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec2fedb3-bf56-47ce-9aa8-a489665285c7">
+                    <propertyInstance
+                      Id="bd934ffc-28ba-49dd-bf8e-93674ac213ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36b5474a-963b-4db4-96b7-505dcb827f00">
+                    <propertyInstance
+                      Id="ed0ecf2b-afc9-4eff-8486-f1218d194038"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52170200-ee58-4b91-986e-56ed31e14e45">
+                    <propertyInstance
+                      Id="f4032cde-402d-4883-b397-9e0fb8a8cb1b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0884cfe1-e1c7-47d6-bb3c-9a639da592b5">
+                    <propertyInstance
+                      Id="fdaa720b-3827-49bc-bc25-aa6ef8d1ee40"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61efc4c9-6b08-4670-abb5-8be5e85ace71">
+                    <propertyInstance
+                      Id="204a3918-beed-47ef-ad67-18d2f745a1c3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30ddf76d-4799-46d5-ab73-421f37c58252">
+                    <propertyInstance
+                      Id="b7bae3b6-f216-452c-9bec-62c134112baf"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="87224faa-3817-4a34-a7b4-fac07d8d73ff"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17e37f53-336d-451c-a6e0-873bb81c83d5"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6bf90146-1435-471b-bab7-b8d9749efa98"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3D(Name%3DUgedageExists OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b92d76ef-d978-456d-b026-5400d0f3fcdc"
+            name="GetUgedages"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3a447f7a-00e7-41da-9565-c523852111b4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeveWebService%2Fbin%2F1aarsproeveWebService.dll Namespace%3D_1aarsproeveWebService.Controllers Type%3DUgedagesController Member%3DGetUgedages"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1c467a91-0c41-4fe5-a092-e316d2bf510f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9e95ac6-d9ea-4aa2-b2af-0bee3087d4a1">
+                    <propertyInstance
+                      Id="fdbd1f8c-139e-4e36-a663-d621938e956a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d9663e2-3009-441e-ac95-5718c10f1aef">
+                    <propertyInstance
+                      Id="5cda5497-08be-4dcf-aea2-4768b24e9dbc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38fd4ff6-1c1a-483c-ab27-41b0d0f2233f">
+                    <propertyInstance
+                      Id="bf1701c0-7121-4b65-8a95-1d6dba68d45c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86f8589a-c550-4804-bdd9-338a40e3d6f5">
+                    <propertyInstance
+                      Id="e44d6fa3-d370-47c5-873b-ef4a8011da41"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="608f5b7a-69c6-4331-b419-62268aa8f2aa">
+                    <propertyInstance
+                      Id="5dd3a466-e633-4c87-b423-010fa821c90c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5aea6065-8488-4955-b9fc-211a7b9c1539">
+                    <propertyInstance
+                      Id="ac1ecdcb-f8e2-4615-8406-cbb298a3ae4e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15691707-83a6-495d-aaf6-002e6166b0cc"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="44baca53-48bd-4592-abba-764e3adfff28"
+                      LastKnownName="IQueryable&lt;Ugedage‎&gt;"
+                      LastKnownLocation="Package9_1234.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

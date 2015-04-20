@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="89f7bcaf-3547-408c-8e24-3f42bb740c6c"
+  name="Http"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a2528d78-5816-475d-b06f-ffbce08bf3b8"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web.Http"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="b3d20c2f-1cc7-4268-bda5-d3491369aa91"
+        name="IHttpActionResult"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="a0696879-36ac-481a-b7cd-e08b509a1e04"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2Fpackages%2FMicrosoft.AspNet.WebApi.Core.5.2.2%2Flib%2Fnet45%2FSystem.Web.Http.dll Namespace%3DSystem.Web.Http Type%3DIHttpActionResult"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bf4cc47b-ba11-4e9a-bf84-7e8dd98678f5"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a42ea927-455e-4347-9eca-53d9bde31a2e">
+                <propertyInstance
+                  Id="06ac1348-dd4d-4481-8e33-cbfefd37675b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="94faf01d-672a-40f1-b7c8-b8a0c8b1019c">
+                <propertyInstance
+                  Id="587c1f6e-05cd-4e33-9006-70f863a444ed"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e32948dd-ca0d-436c-bb86-54b5c6f3f4e7">
+                <propertyInstance
+                  Id="9107ccf5-7363-4596-b1c9-8bd3fabd4882"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f00c5f8-dd59-48db-bd1b-0ae15324b203">
+                <propertyInstance
+                  Id="deac130c-7717-45db-b8bc-78c8e260132d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ef7bb0fc-bea2-478d-a75f-35b1d02232f2"
+        name="ApiController"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f702d901-d195-4503-b6dd-f3075d27ce81"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2Fpackages%2FMicrosoft.AspNet.WebApi.Core.5.2.2%2Flib%2Fnet45%2FSystem.Web.Http.dll Namespace%3DSystem.Web.Http Type%3DApiController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1038e196-a3c4-40b3-a77e-dfd01a97c13a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="65cb28cb-6608-4672-b46b-b739610270a7">
+                <propertyInstance
+                  Id="66276cc7-d00b-471c-a92d-06fd8a7d729b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f785e39-5446-49cc-bbc8-46d90b87eceb">
+                <propertyInstance
+                  Id="95d50e91-d8e5-4824-89e8-a0dd8f661c4d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2fcbe3c7-9673-45af-8dfb-fd484adf85eb">
+                <propertyInstance
+                  Id="5ce96f08-8991-40a2-9a71-fc9ae0876702"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="70538791-5167-4e87-8e89-1eaf9e7abccb">
+                <propertyInstance
+                  Id="a50bd2b0-011d-4bac-928f-ebef612931b9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ecdd666b-8b73-42c6-b5f9-d193f04877ee">
+                <propertyInstance
+                  Id="48bcd183-e31e-41fa-8f72-de4cf7a344db"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace _1aarsproeveWebService.Controllers
+namespace WS1aarsproeve.Controllers
 {
     public class ValuesController : ApiController
     {

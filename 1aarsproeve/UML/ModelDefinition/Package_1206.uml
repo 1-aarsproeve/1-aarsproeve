@@ -1211,6 +1211,24 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="9b4b2298-178f-4286-af22-b5ec56436123"
+            name="EkporterCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1337,6 +1355,14 @@
           <operation
             Id="53fa0194-c5a9-4a2b-862d-0e654105547f"
             name="MineVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="50741ac2-d2cc-4364-b42c-16b6686e8425"
+            name="Eksporter"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

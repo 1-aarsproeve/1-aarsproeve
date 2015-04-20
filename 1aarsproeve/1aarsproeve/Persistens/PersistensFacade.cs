@@ -13,9 +13,9 @@ namespace _1aarsproeve.Persistens
 {
     class PersistensFacade<T>
     {
-        public static async void GemDB(string api, object objekt)
+        public static void GemDB(string api, object objekt)
         {
-            const string serverUrl = "http://localhost:7656";
+            const string serverUrl = "http://localhost:16052";
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
             using (var client = new HttpClient(handler))
@@ -25,18 +25,12 @@ namespace _1aarsproeve.Persistens
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 var response = client.PostAsJsonAsync(api, objekt).Result;
-                if (response.IsSuccessStatusCode)
-                {
-                    MessageDialog m = new MessageDialog("den gik igennem!");
-                    m.ShowAsync();
-                }
 
             }
         }
-
         public static async Task<List<T>> LoadDB(string api)
         {
-            const string serverUrl = "http://localhost:7656/";
+            const string serverUrl = "http://localhost:16052/";
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
             using (var client = new HttpClient(handler))

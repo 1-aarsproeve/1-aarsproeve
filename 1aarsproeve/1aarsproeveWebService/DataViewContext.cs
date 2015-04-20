@@ -8,7 +8,7 @@ namespace _1aarsproeveWebService
     public partial class DataViewContext : DbContext
     {
         public DataViewContext()
-            : base("name=DataViewContext1")
+            : base("name=DataViewContext5")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
@@ -64,18 +64,16 @@ namespace _1aarsproeveWebService
                 .IsUnicode(false);
 
             modelBuilder.Entity<VagtplanView>()
-                .Property(e => e.Brugernavn)
-                .IsUnicode(false);
+                .Property(e => e.Sluttidspunkt)
+                .HasPrecision(0);
+
+            modelBuilder.Entity<VagtplanView>()
+                .Property(e => e.Starttidspunkt)
+                .HasPrecision(0);
 
             modelBuilder.Entity<VagtplanView>()
                 .Property(e => e.Navn)
                 .IsUnicode(false);
         }
-
-        public System.Data.Entity.DbSet<_1aarsproeveWebService.Vagter> Vagters { get; set; }
-
-        public System.Data.Entity.DbSet<_1aarsproeveWebService.Ansatte> Ansattes { get; set; }
-
-        public System.Data.Entity.DbSet<_1aarsproeveWebService.Ugedage> Ugedages { get; set; }
     }
 }

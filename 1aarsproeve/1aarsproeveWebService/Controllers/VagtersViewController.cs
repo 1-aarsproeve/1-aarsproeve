@@ -12,17 +12,17 @@ using _1aarsproeveWebService;
 
 namespace _1aarsproeveWebService.Controllers
 {
-    public class Vagters1Controller : ApiController
+    public class VagtersViewController : ApiController
     {
         private DataViewContext db = new DataViewContext();
 
-        // GET: api/Vagters1
+        // GET: api/VagtersView
         public IQueryable<Vagter> GetVagters()
         {
             return db.Vagters;
         }
 
-        // GET: api/Vagters1/5
+        // GET: api/VagtersView/5
         [ResponseType(typeof(Vagter))]
         public IHttpActionResult GetVagter(int id)
         {
@@ -35,7 +35,7 @@ namespace _1aarsproeveWebService.Controllers
             return Ok(vagter);
         }
 
-        // PUT: api/Vagters1/5
+        // PUT: api/VagtersView/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutVagter(int id, Vagter vagter)
         {
@@ -70,7 +70,7 @@ namespace _1aarsproeveWebService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Vagters1
+        // POST: api/VagtersView
         [ResponseType(typeof(Vagter))]
         public IHttpActionResult PostVagter(Vagter vagter)
         {
@@ -85,7 +85,7 @@ namespace _1aarsproeveWebService.Controllers
             return CreatedAtRoute("DefaultApi", new { id = vagter.VagtId }, vagter);
         }
 
-        // DELETE: api/Vagters1/5
+        // DELETE: api/VagtersView/5
         [ResponseType(typeof(Vagter))]
         public IHttpActionResult DeleteVagter(int id)
         {

@@ -42,6 +42,36 @@
     <Content Include="ModelDefinition\Package1_1208.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package1_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1235.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package7_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package8_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package9_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1205.uml">
       <SubType>Content</SubType>
     </Content>
@@ -52,6 +82,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1208.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1234.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1235.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1237.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_2239.uml">
@@ -84,6 +123,20 @@
     <Content Include="TilfoejVagtSD.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>TilfoejVagtSD.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="VagtersController_PostVagter.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="VagtersController_PostVagter.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>VagtersController_PostVagter.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="WSDesignClassDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="WSDesignClassDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>WSDesignClassDiagram.classdiagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\UML.uml">

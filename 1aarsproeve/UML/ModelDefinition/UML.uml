@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -15,6 +15,12 @@
       <profileInstance
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="2069808b-ddf0-45a1-8651-0056c02892eb">
+      <profileInstance
+        Id="8ec30f03-3be4-4f30-9116-465333b6ee59"
+        name="CSharpProfile" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -249,6 +255,45 @@
                 <memberEnd
                   Id="efea621f-d828-4db5-8bd6-73e7cc9e148c"
                   name="Naviger en uge frem/tilbage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bd6834d9-9c5e-4b79-99d6-86392049adc4"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Eksporter mine vagter"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d92797c0-d5e1-4d79-9e2c-e5e75ac9f35f"
+              LastKnownName="Eksporter mine vagter"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="33596547-69f0-4822-bde6-980d954269b6"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="66c17231-33ea-48fb-b4de-32f6bc9d3947"
+                  name="Eksporter mine vagter"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -610,6 +655,45 @@
                 <memberEnd
                   Id="502ee7d6-fced-4034-8957-d180ca002267"
                   name="Naviger en uge frem/tilbage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a24eb30e-bf02-46ae-90d6-6f3b93835c79"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Eksporter mine vagter"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d92797c0-d5e1-4d79-9e2c-e5e75ac9f35f"
+              LastKnownName="Eksporter mine vagter"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d62f318-8693-444e-ab15-7b003205006c"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="573cad04-7dc0-4377-b93e-4f2a8d869018"
+                  name="Eksporter mine vagter"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2859,6 +2943,43 @@
         Id="d45ed390-3c0c-4cd6-bb42-abdc69ca9629"
         LastKnownName="Strategy"
         LastKnownLocation="Package_2239.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="06799230-998d-4fb8-acfe-f31773216dbc"
+        LastKnownName="_1aarsproeveWebService"
+        LastKnownLocation="Package_1234.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="21e066b6-04d3-4aaf-96b2-514f62e42d3b"
+        LastKnownName="System"
+        LastKnownLocation="Package1_1234.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="30c5c160-7296-4b30-8b30-84449cdf0fbd"
+        LastKnownName="Model"
+        LastKnownLocation="Package_1235.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="89d4f1f6-7292-4dd6-97d4-a02a1ec5e78e"
+        LastKnownName="Controller"
+        LastKnownLocation="Package1_1235.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f660b91d-6fb0-498d-98f5-f12789bdb2db"
+        LastKnownName="Context"
+        LastKnownLocation="Package_1237.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d92797c0-d5e1-4d79-9e2c-e5e75ac9f35f"
+        name="Eksporter mine vagter"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

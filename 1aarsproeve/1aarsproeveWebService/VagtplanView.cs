@@ -11,33 +11,21 @@ namespace _1aarsproeveWebService
     {
         [Key]
         [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int VagtId { get; set; }
+        public TimeSpan Sluttidspunkt { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Starttidspunkt { get; set; }
+        public TimeSpan Starttidspunkt { get; set; }
 
         [Key]
         [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Sluttidspunkt { get; set; }
+        public int UgedagId { get; set; }
 
         [Key]
         [Column(Order = 3)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Ugenummer { get; set; }
-
-        [Key]
-        [Column(Order = 4)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int UgedagId { get; set; }
-
-        [Key]
-        [Column(Order = 5)]
-        [StringLength(50)]
-        public string Brugernavn { get; set; }
 
         [StringLength(50)]
         public string Navn { get; set; }
