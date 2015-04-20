@@ -9,6 +9,9 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Provider;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -89,8 +92,8 @@ namespace _1aarsproeve.View
         /// NavigationHelper to respond to the page's navigation methods.
         /// 
         /// Page specific logic should be placed in event handlers for the  
-        /// <see cref="GridCS.Common.NavigationHelper.LoadState"/>
-        /// and <see cref="GridCS.Common.NavigationHelper.SaveState"/>.
+        /// <see cref="Common.NavigationHelper.LoadState"/>
+        /// and <see cref="Common.NavigationHelper.SaveState"/>.
         /// The navigation parameter is available in the LoadState method 
         /// in addition to page state preserved during an earlier session.
 

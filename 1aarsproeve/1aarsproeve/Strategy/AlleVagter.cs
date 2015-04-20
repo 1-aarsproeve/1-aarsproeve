@@ -21,7 +21,7 @@ namespace _1aarsproeve.Strategy
         /// <summary>
         /// Sorterer vagterne udfra Mine vagter
         /// </summary>
-        /// <param name="ugedageCollection">Angiver hvilken collection der skal sorteres</param>
+        /// <param name="vagtCollection">Angiver hvilken collection der skal sorteres</param>
         /// <param name="ugenummer">Angiver for hvilken uge vagterne skal vises i</param>
         public async void Sort(ObservableCollection<ObservableCollection<Vagter>> vagtCollection, int ugenummer)
         {
@@ -31,6 +31,7 @@ namespace _1aarsproeve.Strategy
                 var query =
                     from q in vagter
                     where q.UgedagId == i + 1 && q.Ugenummer == ugenummer
+                    orderby q.Starttidspunkt ascending
                     select q;
                 foreach (var item in query)
                 {

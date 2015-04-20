@@ -13,6 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Provider;
 using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.StartScreen;
@@ -79,30 +81,34 @@ namespace _1aarsproeve.ViewModel
         private string _fredag;
         private string _loerdag;
         private string _soendag;
-        private ObservableCollection<Ugedage> _ugedageCollection;
         /// <summary>
-        /// Indeholder collection af ugedage + evt. vagter
+        /// Alle mandagsvagter
         /// </summary>
-        public ObservableCollection<Ugedage> UgedageCollection
-        {
-            get { return _ugedageCollection; }
-            set { _ugedageCollection = value; }
-        }
-
         public ObservableCollection<Vagter> MandagVagter;
+        /// <summary>
+        /// Alle tirsdagsvagter
+        /// </summary>
         public ObservableCollection<Vagter> TirsdagVagter;
+        /// <summary>
+        /// Alle onsdagsvagter
+        /// </summary>
         public ObservableCollection<Vagter> OnsdagVagter;
+        /// <summary>
+        /// Alle torsdagssvagter
+        /// </summary>
         public ObservableCollection<Vagter> TorsdagVagter;
+        /// <summary>
+        /// Alle fredagsvagter
+        /// </summary>
         public ObservableCollection<Vagter> FredagVagter;
+        /// <summary>
+        /// Alle lørdagsvagter
+        /// </summary>
         public ObservableCollection<Vagter> LoerdagVagter;
+        /// <summary>
+        /// Alle søndagsvagter
+        /// </summary>
         public ObservableCollection<Vagter> SoendagVagter;
-
-        public ObservableCollection<ObservableCollection<Vagter>> VagtCollection
-        {
-            get { return _vagtCollection.Collection; }
-            set { _vagtCollection.Collection = value; }
-        }
-
         /// <summary>
         /// ForrigeUgeCommand property
         /// </summary>
@@ -124,13 +130,20 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public ICommand MineVagterCommand { get; set; }
         /// <summary>
+        /// EksporterMineCommand property
+        /// </summary>
+        public ICommand EksporterMineCommand { get; set; }
+        /// <summary>
+        /// EksporterAlleCommand property
+        /// </summary>
+        public ICommand EksporterAlleCommand { get; set; }
+        /// <summary>
         /// LogUdCommand property
         /// </summary>
         public ICommand LogUdCommand { get; set; }
         /// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
-
         public VagtplanViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
@@ -165,9 +178,168 @@ namespace _1aarsproeve.ViewModel
             AlleVagterCommand = new RelayCommand(AlleVagter);
             FrieVagterCommand = new RelayCommand(FrieVagter);
             MineVagterCommand = new RelayCommand(MineVagter);
+            EksporterMineCommand = new RelayCommand(EksporterMineVagter);
+            EksporterAlleCommand = new RelayCommand(EksporterAlleVagter);
             LogUdCommand = new RelayCommand(LogUd);
-        }
 
+        }
+        /// <summary>
+        /// Eksporterer alle mine vagter
+        /// </summary>
+        public async void EksporterMineVagter()
+        {
+            FileSavePicker savePicker = new FileSavePicker();
+            savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
+            savePicker.FileTypeChoices.Add("vagtplan", new List<string>() { ".ics", ".csv" });
+            savePicker.SuggestedFileName = "vagtplan-mine-uge-" + Ugenummer;
+            
+            StorageFile fil = await savePicker.PickSaveFileAsync();
+            if (fil != null)
+            {
+                CachedFileManager.DeferUpdates(fil);
+                string vagter = "";
+                const string emne = "Fakta - vagt";
+                const string sted = "Jyderup";
+                if (fil.FileType.Equals(".ics"))
+                {
+                    vagter +=
+                     "BEGIN:VCALENDAR\n" +
+                     "VERSION:2.0\n\n";
+                    for (int i = 0; i < VagtCollection.Count; i++)
+                    {
+                        var query1 =
+                            from q in VagtCollection[i]
+                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                            select new { q.Starttidspunkt, q.Sluttidspunkt };
+                        foreach (var item in query1)
+                        {
+                            vagter +=
+                                "BEGIN:VEVENT\n" +
+                                "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Starttidspunkt.ToString("hhmmss") + "\n" +
+                                "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Sluttidspunkt.ToString("hhmmss") + "\n" +
+                                "SUMMARY:" + emne + "\n" +
+                                "LOCATION:" + sted + "\n" +
+                                "END:VEVENT\n\n";
+                        }
+                    }
+                    vagter += "END:VCALENDAR";
+                }
+                else
+                {
+                    vagter +=
+                        "Subject, Start Date, Start Time, End Date, End Time, Location\n";
+                    for (int i = 0; i < VagtCollection.Count; i++)
+                    {
+                        var query1 =
+                            from q in VagtCollection[i]
+                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                            select new { q.Starttidspunkt, q.Sluttidspunkt };
+                        foreach (var item in query1)
+                        {
+                            vagter +=
+                                emne +
+                                ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
+                                ", " + item.Starttidspunkt +
+                                ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
+                                ", " + item.Sluttidspunkt +
+                                ", " + sted + "\n";
+                        }
+                    }
+                }
+                await FileIO.WriteTextAsync(fil, vagter);
+                FileUpdateStatus status = await CachedFileManager.CompleteUpdatesAsync(fil);
+                if (status == FileUpdateStatus.Complete)
+                {
+                    MessageDialog m = new MessageDialog("Vagtplanen blev eksporteret som " + fil.FileType + "-fil", "Succes!");
+                    m.ShowAsync();
+                }
+                else
+                {
+                    MessageDialog m = new MessageDialog("Der skete en fejl under eksporteringen - prøv igen", "Fejl!");
+                    m.ShowAsync();
+                }
+            }
+        }
+        /// <summary>
+        /// Eksporter alle vagter
+        /// </summary>
+        public async void EksporterAlleVagter()
+        {
+            FileSavePicker savePicker = new FileSavePicker();
+            savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
+            savePicker.FileTypeChoices.Add("vagtplan", new List<string>() { ".ics", ".csv" });
+            savePicker.SuggestedFileName = "vagtplan-alle-uge-" + Ugenummer;
+
+            StorageFile fil = await savePicker.PickSaveFileAsync();
+            if (fil != null)
+            {
+                CachedFileManager.DeferUpdates(fil);
+                string vagter = "";
+                const string emne = "Fakta - vagt";
+                const string sted = "Jyderup";
+                if (fil.FileType.Equals(".ics"))
+                {
+                    vagter +=
+                     "BEGIN:VCALENDAR\n" +
+                     "VERSION:2.0\n\n";
+                    for (int i = 0; i < VagtCollection.Count; i++)
+                    {
+                        var query1 =
+                            from q in VagtCollection[i]
+                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
+                            select new { q.Starttidspunkt, q.Sluttidspunkt };
+                        foreach (var item in query1)
+                        {
+                            vagter +=
+                                "BEGIN:VEVENT\n" +
+                                "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Starttidspunkt.ToString("hhmmss") + "\n" +
+                                "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Sluttidspunkt.ToString("hhmmss") + "\n" +
+                                "SUMMARY:" + emne + "\n" +
+                                "LOCATION:" + sted + "\n" +
+                                "END:VEVENT\n\n";
+                        }
+                    }
+                    vagter += "END:VCALENDAR";
+                }
+                else
+                {
+                    vagter +=
+                        "Subject, Start Date, Start Time, End Date, End Time, Location\n";
+                    for (int i = 0; i < VagtCollection.Count; i++)
+                    {
+                        var query1 =
+                            from q in VagtCollection[i]
+                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                            select new { q.Starttidspunkt, q.Sluttidspunkt };
+                        foreach (var item in query1)
+                        {
+                            vagter +=
+                                emne +
+                                ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
+                                ", " + item.Starttidspunkt +
+                                ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
+                                ", " + item.Sluttidspunkt +
+                                ", " + sted + "\n";
+                        }
+                    }
+                }
+                await FileIO.WriteTextAsync(fil, vagter);
+                FileUpdateStatus status = await CachedFileManager.CompleteUpdatesAsync(fil);
+                if (status == FileUpdateStatus.Complete)
+                {
+                    MessageDialog m = new MessageDialog("Vagtplanen blev eksporteret som " + fil.FileType + "-fil", "Succes!");
+                    m.ShowAsync();
+                }
+                else
+                {
+                    MessageDialog m = new MessageDialog("Der skete en fejl under eksporteringen - prøv igen", "Fejl!");
+                    m.ShowAsync();
+                }
+            }
+        }
+        /// <summary>
+        /// Clear alle collections
+        /// </summary>
         public void ClearVagterCollections()
         {
             for (int i = 0; i < VagtCollection.Count; i++)
@@ -305,6 +477,7 @@ namespace _1aarsproeve.ViewModel
                 var query =
                     from q in vagter
                     where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
+                    orderby q.Starttidspunkt ascending
                     select q;
                 foreach (var item in query)
                 {
@@ -354,6 +527,14 @@ namespace _1aarsproeve.ViewModel
 
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Login));
+        }
+        /// <summary>
+        /// Singleton vagtcollection
+        /// </summary>
+        public ObservableCollection<ObservableCollection<Vagter>> VagtCollection
+        {
+            get { return _vagtCollection.Collection; }
+            set { _vagtCollection.Collection = value; }
         }
         /// <summary>
         /// Mandag property

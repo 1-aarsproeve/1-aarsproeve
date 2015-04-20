@@ -43,8 +43,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="449edf0f-ad14-4839-a2da-3c7251f77833"
-                LastKnownName="DateTime"
+                Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
+                LastKnownName="TimeSpan"
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
@@ -61,8 +61,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="449edf0f-ad14-4839-a2da-3c7251f77833"
-                LastKnownName="DateTime"
+                Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
+                LastKnownName="TimeSpan"
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
@@ -133,42 +133,42 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="6d26f74c-aa42-4c30-8324-928256540b0e"
+                  Id="21551d96-f90c-408c-a77b-91d0b62dc75f"
                   name="string brugernavn"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5ec65f5b-54d2-48e6-ab92-2fe575094244"
-                  name="DateTime starttidspunkt"
+                  Id="1003b100-fdaf-47d3-87aa-59f80037217a"
+                  name="TimeSpan starttidspunkt"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="4f115d61-1f77-4751-899a-4e9fbba4dc24"
-                  name="DateTime sluttidspunkt"
+                  Id="bef5997f-6d1b-42fe-990c-fd0596e14fac"
+                  name="TimeSpan sluttidspunkt"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="35bccd8b-50a7-46e2-9641-f2184e1ccda6"
+                  Id="d847b281-211e-4343-a92a-9e8e6af79313"
                   name="int ugedagId"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="8e7f1afb-8deb-4533-9050-e86bf021adcb"
+                  Id="9ecf7a02-c809-46ab-bb0d-3aeb558b4981"
                   name="int ugenummer"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5066c91d-e6ce-45ca-9d3e-e7cfd85bd38a"
+                  Id="945838ac-b0ed-43f2-81da-f9328c43eb88"
                   name="int vagtId"
                   direction="In"
                   isUnique="false" />
@@ -186,42 +186,42 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="1eed33de-3f2f-4553-8ab3-9b24e242ade5"
+                  Id="75b01745-ea12-4e32-b241-00c686a70b9b"
                   name="string brugernavn"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="29c889e9-ccc1-41b5-8d2b-23b0652a295e"
-                  name="DateTime starttidspunkt"
+                  Id="c3705077-4412-487a-8a0a-63d34ffec8f3"
+                  name="TimeSpan starttidspunkt"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="aebd1ec5-7e26-490a-8e1c-2e6e0fde35d3"
-                  name="DateTime sluttidspunkt"
+                  Id="0f65befb-3edc-432b-9adc-1bd713da3f9b"
+                  name="TimeSpan sluttidspunkt"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="80325c9e-4de3-4f04-8b87-7e7d5f5def21"
+                  Id="d9c66988-27e8-4e9d-b1b0-7a1a9153e44c"
                   name="int ugedagId"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="6ca846d7-0566-4a6e-9bc1-d8e7837e3d44"
+                  Id="fb468590-c792-431f-864a-856a0257745b"
                   name="int ugenummer"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e91d7c7b-ce92-4f61-abd3-81bed9870642"
+                  Id="8116e25d-2b25-460c-ad05-ddd25111c088"
                   name="int vagtId"
                   direction="In"
                   isUnique="false" />

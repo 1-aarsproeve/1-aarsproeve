@@ -52,7 +52,7 @@ namespace _1aarsproeve.ViewModel
             _beskeder = new ObservableCollection<Beskeder>();
             BeskedCollection.Add(_beskeder);
 
-            _beskeder.Add(new Beskeder(1, "MUS", new DateTime(), "hgfjjg", new DateTime(), "Daniel Winther"));
+            _beskeder.Add(new Beskeder(1, "MUS", new DateTime(), "hgfjjg", new DateTime(), "Daniel"));
             SkjulKnap = new Visibility();
 
             Stilling();

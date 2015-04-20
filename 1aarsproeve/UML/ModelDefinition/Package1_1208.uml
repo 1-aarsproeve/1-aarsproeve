@@ -13,37 +13,30 @@
         isActiveClass="false">
         <ownedOperationsInternal>
           <operation
-            Id="d23ac530-c900-435b-b1ce-bb21e0597565"
-            name="LoadBeskeder"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="d92a059a-b21d-487d-ab0c-5e4ea4552829"
-            name="LoadVagter"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="c7119930-07ab-4075-acae-28307991d18b"
-            name="LoadBruger"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="7df3db24-f8dd-4618-852d-53dd21b1ce66"
             name="GemDB"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8f727d73-07ba-4f95-82dc-74cf50f17aa6"
+                  name="string api"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3a52f6dd-b9e8-4d9d-ad29-8e4751d01984"
+                  name="object objekt"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="3ed42757-4db9-40fb-bffe-0aee6737e433"
             name="SletDB"
@@ -51,9 +44,62 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7fb32da4-8000-4c75-ab7d-0a9b34840871"
+                  name="string api"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="09992b9e-4e5c-4618-ad10-b0eefb809dcd"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="128a19c7-fecf-4f9c-9006-d748104f9d19"
+            name="LoadDB"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9b3f09cf-a574-410b-a07c-230cc7cd644e"
+                  name="string api"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3bd5151a-6f91-4e0d-a58b-dfb61a35fdab"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="44c753fd-a587-4175-a977-093528b8d226"
+                      LastKnownName="List&lt;T&gt;"
+                      LastKnownLocation="Package1_1208.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="44c753fd-a587-4175-a977-093528b8d226"
+        name="List&lt;T&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -623,8 +623,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
-                LastKnownName="int"
+                Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
+                LastKnownName="TimeSpan"
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
@@ -641,8 +641,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
-                LastKnownName="int"
+                Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
+                LastKnownName="TimeSpan"
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
@@ -824,6 +824,11 @@
       <undefinedType
         Id="eba8afaf-e342-47dc-bdea-e999de4dc6c6"
         name="GeneriskSingleton&lt;T&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
+        name="TimeSpan" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

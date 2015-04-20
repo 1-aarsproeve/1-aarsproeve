@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7fcb9803-f07b-4ed9-9e23-eb7af8e76ede" name="DesignClassDiagram" linkedPackageId="9467ccdf-342a-4c08-8a33-291cddcedd79" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="ea217fd4-93c4-42d0-b7e4-14e5751c1818">
+      <profileInstance Id="1eab03aa-6ea9-415d-a4ee-ecf447c83668" name="CSharpProfile">
+        <elementDefinition Id="8ec30f03-3be4-4f30-9116-465333b6ee59" />
+      </profileInstance>
+      <elementDefinition Id="2069808b-ddf0-45a1-8651-0056c02892eb" />
+    </packageHasProfileInstances>
+  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="07392d45-5266-4b35-a375-9fb16f508317" name="View">
@@ -603,6 +611,12 @@
                     <referencedTypeMoniker Id="9d7c1c37-40fa-4e47-9689-15eabca05e3c" LastKnownName="ObservableCollection&lt;Vagter&gt;" />
                   </type_NamedElement>
                 </property>
+                <property Id="12b1d7b1-e40b-4e4c-ab49-85d2501f33a7" name="EkporterCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9b4b2298-178f-4286-af22-b5ec56436123" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="dc93c020-a066-4ba6-8673-b8c080857d92" LastKnownName="ICommand" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="bada808a-7be1-49ce-a091-63693f0cf9b4" name="NuvaerendeUgedag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -668,6 +682,9 @@
                 </operation>
                 <operation Id="c7da2587-993a-433e-ab84-d09d8ebfc5e8" name="MineVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="53fa0194-c5a9-4a2b-862d-0e654105547f" />
+                </operation>
+                <operation Id="d4f6d7bc-900a-4700-a91a-c952ea76193f" name="Eksporter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="50741ac2-d2cc-4364-b42c-16b6686e8425" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -900,13 +917,13 @@
                 <property Id="b7d531bb-87c3-441c-9ca5-9fc2eb72557f" name="Starttidspunkt" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="504d5095-b7e4-4b54-b96a-ebda3e6ad97b" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
+                    <referencedTypeMoniker Id="5ed1fa18-4409-4c3d-8253-90876e6433c3" LastKnownName="TimeSpan" />
                   </type_NamedElement>
                 </property>
                 <property Id="eae09aeb-d285-4565-ab0d-451daee8c83c" name="Sluttidspunkt" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="a01af9d2-2f3b-4a49-a8ea-b7102248db92" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
+                    <referencedTypeMoniker Id="723a2522-b943-4c01-a08e-a7c9db659842" LastKnownName="TimeSpan" />
                   </type_NamedElement>
                 </property>
                 <property Id="c151020b-e18a-470b-abe5-88e66892ebd5" name="Ugenummer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -962,13 +979,13 @@
                 <property Id="4a24d86a-9807-4d30-85ef-b301807826a8" name="Starttidspunkt" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="3900fe43-a0c3-4ef0-8a6c-2107bf29cb7f" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="d61fa113-3b2e-4404-9bc3-38192fa62170" LastKnownName="DateTime" />
+                    <referencedTypeMoniker Id="a1f9f4aa-a931-48c0-b33e-38e9f81642ac" LastKnownName="TimeSpan" />
                   </type_NamedElement>
                 </property>
                 <property Id="79f50322-cacc-453e-a8bf-97545ed117a3" name="Sluttidspunkt" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="e71c833e-6fe7-43a6-a63b-69e2d1281c42" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="d61fa113-3b2e-4404-9bc3-38192fa62170" LastKnownName="DateTime" />
+                    <referencedTypeMoniker Id="ed3ee94a-6cbd-4399-b7f7-90a139ff8e45" LastKnownName="TimeSpan" />
                   </type_NamedElement>
                 </property>
                 <property Id="10d4f13f-bf60-4528-ab97-3eb0a7acdc41" name="Ugenummer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -995,33 +1012,33 @@
                   <elementDefinition Id="35fe4e86-3606-44c6-8496-7d1b2498cf00" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="98b0acd2-ae5a-47b7-bb29-5a021b03ca4c" name="string brugernavn" direction="In" isUnique="false">
-                        <elementDefinition Id="6d26f74c-aa42-4c30-8324-928256540b0e" />
+                      <parameter Id="4b45aedc-9979-443e-80b4-f93c85cf2a4d" name="string brugernavn" direction="In" isUnique="false">
+                        <elementDefinition Id="21551d96-f90c-408c-a77b-91d0b62dc75f" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="f1aef014-2072-4826-9f69-19c0942efb52" name="DateTime starttidspunkt" direction="In" isUnique="false">
-                        <elementDefinition Id="5ec65f5b-54d2-48e6-ab92-2fe575094244" />
+                      <parameter Id="f59b427b-9700-4c04-b819-7d5a0918c517" name="TimeSpan starttidspunkt" direction="In" isUnique="false">
+                        <elementDefinition Id="1003b100-fdaf-47d3-87aa-59f80037217a" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="28819f82-ff4a-454e-b8dc-ace8b157e267" name="DateTime sluttidspunkt" direction="In" isUnique="false">
-                        <elementDefinition Id="4f115d61-1f77-4751-899a-4e9fbba4dc24" />
+                      <parameter Id="bc098df2-920a-437d-9894-676a1a7c1aee" name="TimeSpan sluttidspunkt" direction="In" isUnique="false">
+                        <elementDefinition Id="bef5997f-6d1b-42fe-990c-fd0596e14fac" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="7f95d490-dc61-4b78-bc96-6967df863d65" name="int ugedagId" direction="In" isUnique="false">
-                        <elementDefinition Id="35bccd8b-50a7-46e2-9641-f2184e1ccda6" />
+                      <parameter Id="124641b4-3bf7-476e-b5b4-fe39e997347a" name="int ugedagId" direction="In" isUnique="false">
+                        <elementDefinition Id="d847b281-211e-4343-a92a-9e8e6af79313" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="eaf94a73-8758-491d-8a86-cc571d8df6ca" name="int ugenummer" direction="In" isUnique="false">
-                        <elementDefinition Id="8e7f1afb-8deb-4533-9050-e86bf021adcb" />
+                      <parameter Id="88d8e982-4594-43e6-bd07-23393fcf5d26" name="int ugenummer" direction="In" isUnique="false">
+                        <elementDefinition Id="9ecf7a02-c809-46ab-bb0d-3aeb558b4981" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="64fe71a5-0e6b-45c9-91e2-dce40ec07908" name="int vagtId" direction="In" isUnique="false">
-                        <elementDefinition Id="5066c91d-e6ce-45ca-9d3e-e7cfd85bd38a" />
+                      <parameter Id="231af37d-4961-480b-82be-e7b6acfc8409" name="int vagtId" direction="In" isUnique="false">
+                        <elementDefinition Id="945838ac-b0ed-43f2-81da-f9328c43eb88" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -1030,33 +1047,33 @@
                   <elementDefinition Id="90850351-f2a8-4d24-9fff-fb279ddc61cf" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="7da24511-a1a6-4a1e-a14e-8b62dc0e44b4" name="string brugernavn" direction="In" isUnique="false">
-                        <elementDefinition Id="1eed33de-3f2f-4553-8ab3-9b24e242ade5" />
+                      <parameter Id="ae910f79-bb94-42e8-b01d-cd046ee81f49" name="string brugernavn" direction="In" isUnique="false">
+                        <elementDefinition Id="75b01745-ea12-4e32-b241-00c686a70b9b" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="728484c0-e4a7-46cb-b46b-f89b086d59b0" name="DateTime starttidspunkt" direction="In" isUnique="false">
-                        <elementDefinition Id="29c889e9-ccc1-41b5-8d2b-23b0652a295e" />
+                      <parameter Id="539168cc-bfad-4a83-b710-ab87813323be" name="TimeSpan starttidspunkt" direction="In" isUnique="false">
+                        <elementDefinition Id="c3705077-4412-487a-8a0a-63d34ffec8f3" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="ff23d16f-ebe2-461d-b981-b730547c3d14" name="DateTime sluttidspunkt" direction="In" isUnique="false">
-                        <elementDefinition Id="aebd1ec5-7e26-490a-8e1c-2e6e0fde35d3" />
+                      <parameter Id="2a57c1ab-038f-4198-9398-bdd004f08277" name="TimeSpan sluttidspunkt" direction="In" isUnique="false">
+                        <elementDefinition Id="0f65befb-3edc-432b-9adc-1bd713da3f9b" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="b203c783-4033-4822-9dc4-2a492ee30e67" name="int ugedagId" direction="In" isUnique="false">
-                        <elementDefinition Id="80325c9e-4de3-4f04-8b87-7e7d5f5def21" />
+                      <parameter Id="b83d3bbc-25b0-4e6b-be96-cf556e55dbdf" name="int ugedagId" direction="In" isUnique="false">
+                        <elementDefinition Id="d9c66988-27e8-4e9d-b1b0-7a1a9153e44c" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="e9d64f59-dfd9-41d4-b2a0-72a4aa0903ef" name="int ugenummer" direction="In" isUnique="false">
-                        <elementDefinition Id="6ca846d7-0566-4a6e-9bc1-d8e7837e3d44" />
+                      <parameter Id="01a747bd-83d2-4d9c-8bc8-6d811911402f" name="int ugenummer" direction="In" isUnique="false">
+                        <elementDefinition Id="fb468590-c792-431f-864a-856a0257745b" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="f4c01cfb-8107-4c3c-a8bf-5ab49706b66a" name="int vagtId" direction="In" isUnique="false">
-                        <elementDefinition Id="e91d7c7b-ce92-4f61-abd3-81bed9870642" />
+                      <parameter Id="6a63c609-731d-4bb5-88bb-8d3435aaaf87" name="int vagtId" direction="In" isUnique="false">
+                        <elementDefinition Id="8116e25d-2b25-460c-ad05-ddd25111c088" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -1271,20 +1288,53 @@
             <class Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" name="PersistencyService" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="75266722-b4cc-4277-8995-8e3fd544ffb5" />
               <ownedOperationsInternal>
-                <operation Id="7600bfcf-4ec7-47c3-aefe-0ce9be1db8fc" name="LoadBeskeder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="d23ac530-c900-435b-b1ce-bb21e0597565" />
-                </operation>
-                <operation Id="d110b321-78f1-4456-973d-2fb5df10d78b" name="LoadVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="d92a059a-b21d-487d-ab0c-5e4ea4552829" />
-                </operation>
-                <operation Id="aba9565b-e6eb-411c-85b3-981c128909f8" name="LoadBruger" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="c7119930-07ab-4075-acae-28307991d18b" />
-                </operation>
                 <operation Id="85149b2c-0724-4ba8-81d3-02379a02346d" name="GemDB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="7df3db24-f8dd-4618-852d-53dd21b1ce66" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b8997446-13f5-402f-be40-ef15abfc1db7" name="string api" direction="In" isUnique="false">
+                        <elementDefinition Id="8f727d73-07ba-4f95-82dc-74cf50f17aa6" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b148a698-8ab1-4edf-9477-77dd8e58c807" name="object objekt" direction="In" isUnique="false">
+                        <elementDefinition Id="3a52f6dd-b9e8-4d9d-ad29-8e4751d01984" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
                 <operation Id="e077c43d-6983-4b1c-9c49-bb9f17919a65" name="SletDB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="3ed42757-4db9-40fb-bffe-0aee6737e433" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="800b6f16-3fb9-4aa2-848a-98f4c9169c19" name="string api" direction="In" isUnique="false">
+                        <elementDefinition Id="7fb32da4-8000-4c75-ab7d-0a9b34840871" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="be6fa82b-2033-4e8b-95a4-fd0c33defe4c" name="int id" direction="In" isUnique="false">
+                        <elementDefinition Id="09992b9e-4e5c-4618-ad10-b0eefb809dcd" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="dc95071e-3733-4e99-8304-db0132f65784" name="LoadDB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="128a19c7-fecf-4f9c-9006-d748104f9d19" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="47076c77-4c5d-478e-bc38-b730a4dccca1" name="string api" direction="In" isUnique="false">
+                        <elementDefinition Id="9b3f09cf-a574-410b-a07c-230cc7cd644e" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c65b7a99-fa61-4b07-9482-406338ca5da6" direction="Return" isUnique="false">
+                        <elementDefinition Id="3bd5151a-6f91-4e0d-a58b-dfb61a35fdab" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="70ea79a5-3e3b-4b87-a766-5f57497675fd" LastKnownName="List&lt;T&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -1522,6 +1572,31 @@
     <packageHasNamedElement>
       <referencedType Id="fc5c730c-85b6-4f7c-912d-4ee58fb7d34e" name="ObservableCollection&lt;Vagter&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;Vagter&gt;">
         <elementDefinition Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="723a2522-b943-4c01-a08e-a7c9db659842" name="TimeSpan" isAbstract="false" isLeaf="false" cachedFullName="TimeSpan">
+        <elementDefinition Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5ed1fa18-4409-4c3d-8253-90876e6433c3" name="TimeSpan" isAbstract="false" isLeaf="false" cachedFullName="TimeSpan">
+        <elementDefinition Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ed3ee94a-6cbd-4399-b7f7-90a139ff8e45" name="TimeSpan" isAbstract="false" isLeaf="false" cachedFullName="TimeSpan">
+        <elementDefinition Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a1f9f4aa-a931-48c0-b33e-38e9f81642ac" name="TimeSpan" isAbstract="false" isLeaf="false" cachedFullName="TimeSpan">
+        <elementDefinition Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="70ea79a5-3e3b-4b87-a766-5f57497675fd" name="List&lt;T&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;T&gt;">
+        <elementDefinition Id="44c753fd-a587-4175-a977-093528b8d226" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

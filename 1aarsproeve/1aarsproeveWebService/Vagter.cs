@@ -12,9 +12,9 @@ namespace _1aarsproeveWebService
         [Key]
         public int VagtId { get; set; }
 
-        public int Starttidspunkt { get; set; }
+        public TimeSpan Starttidspunkt { get; set; }
 
-        public int Sluttidspunkt { get; set; }
+        public TimeSpan Sluttidspunkt { get; set; }
 
         public int Ugenummer { get; set; }
 
