@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6e1562e-d28d-4ca3-9400-5e5cd75c6dfd" name="UseCaseDiagram" linkedPackageId="bebf3999-b5f8-4ef9-837c-533690ac9cb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="f7b9fd0d-bb60-4ed4-a94a-f374308e5ce3">
-      <profileInstance Id="50f1f9bb-1b43-4c8c-b8dc-7c23af667ea8" name="CSharpProfile">
-        <elementDefinition Id="8ec30f03-3be4-4f30-9116-465333b6ee59" />
-      </profileInstance>
-      <elementDefinition Id="2069808b-ddf0-45a1-8651-0056c02892eb" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="b6e1562e-d28d-4ca3-9400-5e5cd75c6dfd" name="UseCaseDiagram" linkedPackageId="bebf3999-b5f8-4ef9-837c-533690ac9cb3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="eefe1b95-ce1b-4f9a-880d-5ffe86b45a1f" name="Bruger" isAbstract="false" isLeaf="false">
@@ -124,6 +116,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="bd6834d9-9c5e-4b79-99d6-86392049adc4" />
+          </association>
+          <association Id="5a30771a-45b8-448d-90a2-da495a0e2ad1" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Eksporter alle vagter" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="289976fe-9135-464f-bae3-edb669d469e8" LastKnownName="Eksporter alle vagter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="585c029f-64c6-469d-b90b-0ddbecc2f485" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d37f1f94-8142-4b12-9534-53d9bae995a5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b6c102e1-5565-4aaa-822f-588a089dc75c" name="Eksporter alle vagter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5ece4af8-908b-4aa1-ac86-dd79f8987b03" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b9895933-1209-4c12-8e9a-df2393758745" />
           </association>
         </targetEnds>
       </actor>
@@ -292,6 +300,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="a24eb30e-bf02-46ae-90d6-6f3b93835c79" />
           </association>
+          <association Id="e78f603d-797b-4c14-9ba4-3b5cffa00791" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Eksporter alle vagter" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="289976fe-9135-464f-bae3-edb669d469e8" LastKnownName="Eksporter alle vagter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a7ddc469-6bee-4e2e-845a-6107a91d6acc" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="39e33a49-812d-4b7a-bb8d-40b61cd862db" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dd83a0c7-241e-427d-8719-2516424adc74" name="Eksporter alle vagter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fd69669b-1ca2-4b6e-a6e3-2c3075b1b806" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="24b58fc2-7394-4d37-94aa-82cf11f75bbb" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -374,6 +398,11 @@
         <elementDefinition Id="d92797c0-d5e1-4d79-9e2c-e5e75ac9f35f" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="289976fe-9135-464f-bae3-edb669d469e8" name="Eksporter alle vagter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4dd1452c-2cde-4766-ae3d-6ce47dc6aef2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="bebf3999-b5f8-4ef9-837c-533690ac9cb3" name="UML">
     <elementDefinition Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1" />
@@ -389,6 +418,12 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f7b9fd0d-bb60-4ed4-a94a-f374308e5ce3">
+        <profileInstance Id="50f1f9bb-1b43-4c8c-b8dc-7c23af667ea8" name="CSharpProfile">
+          <elementDefinition Id="8ec30f03-3be4-4f30-9116-465333b6ee59" />
+        </profileInstance>
+        <elementDefinition Id="2069808b-ddf0-45a1-8651-0056c02892eb" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

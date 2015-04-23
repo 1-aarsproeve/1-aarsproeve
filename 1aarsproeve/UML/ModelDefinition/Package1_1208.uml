@@ -16,7 +16,7 @@
             Id="7df3db24-f8dd-4618-852d-53dd21b1ce66"
             name="GemDB"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
@@ -41,7 +41,7 @@
             Id="3ed42757-4db9-40fb-bffe-0aee6737e433"
             name="SletDB"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
@@ -66,7 +66,7 @@
             Id="128a19c7-fecf-4f9c-9006-d748104f9d19"
             name="LoadDB"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
@@ -90,6 +90,31 @@
                       LastKnownLocation="Package1_1208.uml" />
                   </type_NamedElement>
                 </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="47f323d5-2c32-40a6-b928-ecd68408adb0"
+            name="RedigerDB"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ff5025c6-6d72-48fe-842e-62f5202cf8b4"
+                  name="string api"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc825907-c039-43aa-aa50-e53cefe76d88"
+                  name="object objekt"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>

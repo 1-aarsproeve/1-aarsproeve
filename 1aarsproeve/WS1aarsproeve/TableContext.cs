@@ -5,10 +5,10 @@ namespace WS1aarsproeve
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DataTableContext : DbContext
+    public partial class TableContext : DbContext
     {
-        public DataTableContext()
-            : base("name=DataTableContext")
+        public TableContext()
+            : base("name=TableContext")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }

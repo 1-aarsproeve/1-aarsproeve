@@ -11,11 +11,11 @@ namespace WS1aarsproeve
     {
         [Key]
         [Column(Order = 0)]
-        public TimeSpan Sluttidspunkt { get; set; }
+        public TimeSpan Starttidspunkt { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        public TimeSpan Starttidspunkt { get; set; }
+        public TimeSpan Sluttidspunkt { get; set; }
 
         [Key]
         [Column(Order = 2)]
@@ -26,6 +26,16 @@ namespace WS1aarsproeve
         [Column(Order = 3)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Ugenummer { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int VagtId { get; set; }
+
+        [Key]
+        [Column(Order = 5)]
+        [StringLength(50)]
+        public string Brugernavn { get; set; }
 
         [StringLength(50)]
         public string Navn { get; set; }

@@ -5,10 +5,10 @@ namespace WS1aarsproeve
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DataViewContext : DbContext
+    public partial class ViewContext : DbContext
     {
-        public DataViewContext()
-            : base("name=DataViewContext")
+        public ViewContext()
+            : base("name=ViewContext2")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
@@ -64,12 +64,16 @@ namespace WS1aarsproeve
                 .IsUnicode(false);
 
             modelBuilder.Entity<VagtplanView>()
+                .Property(e => e.Starttidspunkt)
+                .HasPrecision(0);
+
+            modelBuilder.Entity<VagtplanView>()
                 .Property(e => e.Sluttidspunkt)
                 .HasPrecision(0);
 
             modelBuilder.Entity<VagtplanView>()
-                .Property(e => e.Starttidspunkt)
-                .HasPrecision(0);
+                .Property(e => e.Brugernavn)
+                .IsUnicode(false);
 
             modelBuilder.Entity<VagtplanView>()
                 .Property(e => e.Navn)

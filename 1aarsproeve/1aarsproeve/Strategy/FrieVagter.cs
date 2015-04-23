@@ -19,9 +19,9 @@ namespace _1aarsproeve.Strategy
         /// </summary>
         /// <param name="vagtCollection">Angiver hvilken collection der skal sorteres</param>
         /// <param name="ugenummer">Angiver for hvilken uge vagterne skal vises i</param>
-        public async void Sort(ObservableCollection<ObservableCollection<Vagter>> vagtCollection, int ugenummer)
+        public async void Sort(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection, int ugenummer)
         {
-            var vagter = await PersistensFacade<Vagter>.LoadDB("api/Vagters");
+            var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
             for (int i = 0; i < vagtCollection.Count; i++)
             {
                 var query =

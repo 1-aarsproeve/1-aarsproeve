@@ -35,7 +35,7 @@ namespace _1aarsproeve.ViewModel
     /// </summary>
     class VagtplanViewModel : INotifyPropertyChanged
     {
-        private GeneriskSingleton<ObservableCollection<Vagter>> _vagtCollection = GeneriskSingleton<ObservableCollection<Vagter>>.Instance();
+        private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection = GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
         private IVagtSort _vagtsort;
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
@@ -84,31 +84,31 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Alle mandagsvagter
         /// </summary>
-        public ObservableCollection<Vagter> MandagVagter;
+        public ObservableCollection<VagtplanView> MandagVagter;
         /// <summary>
         /// Alle tirsdagsvagter
         /// </summary>
-        public ObservableCollection<Vagter> TirsdagVagter;
+        public ObservableCollection<VagtplanView> TirsdagVagter;
         /// <summary>
         /// Alle onsdagsvagter
         /// </summary>
-        public ObservableCollection<Vagter> OnsdagVagter;
+        public ObservableCollection<VagtplanView> OnsdagVagter;
         /// <summary>
         /// Alle torsdagssvagter
         /// </summary>
-        public ObservableCollection<Vagter> TorsdagVagter;
+        public ObservableCollection<VagtplanView> TorsdagVagter;
         /// <summary>
         /// Alle fredagsvagter
         /// </summary>
-        public ObservableCollection<Vagter> FredagVagter;
+        public ObservableCollection<VagtplanView> FredagVagter;
         /// <summary>
         /// Alle lørdagsvagter
         /// </summary>
-        public ObservableCollection<Vagter> LoerdagVagter;
+        public ObservableCollection<VagtplanView> LoerdagVagter;
         /// <summary>
         /// Alle søndagsvagter
         /// </summary>
-        public ObservableCollection<Vagter> SoendagVagter;
+        public ObservableCollection<VagtplanView> SoendagVagter;
         /// <summary>
         /// ForrigeUgeCommand property
         /// </summary>
@@ -130,13 +130,13 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public ICommand MineVagterCommand { get; set; }
         /// <summary>
-        /// EksporterMineCommand property
-        /// </summary>
-        public ICommand EksporterMineCommand { get; set; }
-        /// <summary>
         /// EksporterAlleCommand property
         /// </summary>
         public ICommand EksporterAlleCommand { get; set; }
+        /// <summary>
+        /// EksporterMineCommand property
+        /// </summary>
+        public ICommand EksporterMineCommand { get; set; }
         /// <summary>
         /// LogUdCommand property
         /// </summary>
@@ -154,13 +154,13 @@ namespace _1aarsproeve.ViewModel
             FindUgenummer("da-DK");
             Ugedage();
 
-            MandagVagter = new ObservableCollection<Vagter>();
-            TirsdagVagter = new ObservableCollection<Vagter>();
-            OnsdagVagter = new ObservableCollection<Vagter>();
-            TorsdagVagter = new ObservableCollection<Vagter>();
-            FredagVagter = new ObservableCollection<Vagter>();
-            LoerdagVagter = new ObservableCollection<Vagter>();
-            SoendagVagter = new ObservableCollection<Vagter>();
+            MandagVagter = new ObservableCollection<VagtplanView>();
+            TirsdagVagter = new ObservableCollection<VagtplanView>();
+            OnsdagVagter = new ObservableCollection<VagtplanView>();
+            TorsdagVagter = new ObservableCollection<VagtplanView>();
+            FredagVagter = new ObservableCollection<VagtplanView>();
+            LoerdagVagter = new ObservableCollection<VagtplanView>();
+            SoendagVagter = new ObservableCollection<VagtplanView>();
 
             VagtCollection.Add(MandagVagter);
             VagtCollection.Add(TirsdagVagter);
@@ -178,21 +178,21 @@ namespace _1aarsproeve.ViewModel
             AlleVagterCommand = new RelayCommand(AlleVagter);
             FrieVagterCommand = new RelayCommand(FrieVagter);
             MineVagterCommand = new RelayCommand(MineVagter);
-            EksporterMineCommand = new RelayCommand(EksporterMineVagter);
             EksporterAlleCommand = new RelayCommand(EksporterAlleVagter);
+            EksporterMineCommand = new RelayCommand(EksporterMineVagter);
             LogUdCommand = new RelayCommand(LogUd);
 
         }
         /// <summary>
-        /// Eksporterer alle mine vagter
+        /// Eksporter alle vagter
         /// </summary>
-        public async void EksporterMineVagter()
+        public async void EksporterAlleVagter()
         {
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            savePicker.FileTypeChoices.Add("vagtplan", new List<string>() { ".ics", ".csv" });
-            savePicker.SuggestedFileName = "vagtplan-mine-uge-" + Ugenummer;
-            
+            savePicker.FileTypeChoices.Add("Filformat", new List<string>() { ".ics", ".csv" });
+            savePicker.SuggestedFileName = "vagtplan-alle-uge-" + Ugenummer;
+
             StorageFile fil = await savePicker.PickSaveFileAsync();
             if (fil != null)
             {
@@ -209,7 +209,7 @@ namespace _1aarsproeve.ViewModel
                     {
                         var query1 =
                             from q in VagtCollection[i]
-                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
                             select new { q.Starttidspunkt, q.Sluttidspunkt };
                         foreach (var item in query1)
                         {
@@ -261,14 +261,14 @@ namespace _1aarsproeve.ViewModel
             }
         }
         /// <summary>
-        /// Eksporter alle vagter
+        /// Eksporterer alle mine vagter
         /// </summary>
-        public async void EksporterAlleVagter()
+        public async void EksporterMineVagter()
         {
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            savePicker.FileTypeChoices.Add("vagtplan", new List<string>() { ".ics", ".csv" });
-            savePicker.SuggestedFileName = "vagtplan-alle-uge-" + Ugenummer;
+            savePicker.FileTypeChoices.Add("Filformat", new List<string>() { ".ics", ".csv" });
+            savePicker.SuggestedFileName = "vagtplan-mine-uge-" + Ugenummer;
 
             StorageFile fil = await savePicker.PickSaveFileAsync();
             if (fil != null)
@@ -286,7 +286,7 @@ namespace _1aarsproeve.ViewModel
                     {
                         var query1 =
                             from q in VagtCollection[i]
-                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
+                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
                             select new { q.Starttidspunkt, q.Sluttidspunkt };
                         foreach (var item in query1)
                         {
@@ -471,7 +471,7 @@ namespace _1aarsproeve.ViewModel
         {
             ClearVagterCollections();
 
-            var vagter = await PersistensFacade<Vagter>.LoadDB("api/Vagters");
+            var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
             for (int i = 0; i < VagtCollection.Count; i++)
             {
                 var query =
@@ -484,6 +484,8 @@ namespace _1aarsproeve.ViewModel
                     VagtCollection[i].Add(item);
                 }
             }
+
+            
         }
 
         #endregion
@@ -531,7 +533,7 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Singleton vagtcollection
         /// </summary>
-        public ObservableCollection<ObservableCollection<Vagter>> VagtCollection
+        public ObservableCollection<ObservableCollection<VagtplanView>> VagtCollection
         {
             get { return _vagtCollection.Collection; }
             set { _vagtCollection.Collection = value; }

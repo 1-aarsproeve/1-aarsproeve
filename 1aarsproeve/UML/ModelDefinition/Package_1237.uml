@@ -7,7 +7,7 @@
     <packageHasNamedElement>
       <class
         Id="378d365c-479a-4062-a6c9-5aa6e37d5fb4"
-        name="DataViewContext"
+        name="ViewContext"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1255,7 +1255,7 @@
     <packageHasNamedElement>
       <class
         Id="181f0c91-aaf9-4b32-95ec-91600045ea10"
-        name="DataTableContext"
+        name="TableContext"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">

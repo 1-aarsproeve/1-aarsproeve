@@ -4,9 +4,8 @@ namespace _1aarsproeve.Model
 {
     public partial class Vagter
     {
-        public Vagter(int vagtId, TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)
+        public Vagter(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)
         {
-            VagtId = vagtId;
             Starttidspunkt = starttidspunkt;
             Sluttidspunkt = sluttidspunkt;
             Ugenummer = ugenummer;

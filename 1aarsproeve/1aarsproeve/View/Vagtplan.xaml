@@ -38,22 +38,24 @@
                     </Interactivity:Interaction.Behaviors>
                 </AppBarButton>
                 <AppBarButton Icon="Download" Label="Eksporter vagter">
-                    <Button.Flyout>
+                    <AppBarButton.Flyout>
                         <MenuFlyout>
-                            <MenuFlyoutItem Text="Eksporter mine vagter" Command="{Binding EksporterMineCommand}"/>
                             <MenuFlyoutItem Text="Eksporter alle vagter" Command="{Binding EksporterAlleCommand}"/>
+                            <MenuFlyoutItem Text="Eksporter mine vagter" Command="{Binding EksporterMineCommand}"/>
                         </MenuFlyout>
-                    </Button.Flyout>
+                    </AppBarButton.Flyout>
                 </AppBarButton>
             </CommandBar.SecondaryCommands>
             <AppBarButton Icon="Calendar" Label="Sorter vagter">
-                <Button.Flyout>
+                <AppBarButton.Flyout>
                     <MenuFlyout>
                         <MenuFlyoutItem Text="Alle Vagter" Command="{Binding AlleVagterCommand}"/>
+                        <MenuFlyoutSeparator/>
+                        
                         <MenuFlyoutItem Text="Frie Vagter" Command="{Binding FrieVagterCommand}"/>
                         <MenuFlyoutItem Text="Mine Vagter" Command="{Binding MineVagterCommand}"/>
                     </MenuFlyout>
-                </Button.Flyout>
+                </AppBarButton.Flyout>
             </AppBarButton>
             <AppBarButton Icon="Back" Label="Log ud" Command="{Binding LogUdCommand}"/>
         </CommandBar>
@@ -157,7 +159,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt.Hours}"/>
                                 <TextBlock Style="{StaticResource AnsatteText}" Text=":"/>
@@ -176,7 +178,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt.Hours}"/>
                                 <TextBlock Style="{StaticResource AnsatteText}" Text=":"/>
@@ -195,7 +197,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt.Hours}"/>
                                 <TextBlock Style="{StaticResource AnsatteText}" Text=":"/>
@@ -214,7 +216,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt.Hours}"/>
                                 <TextBlock Style="{StaticResource AnsatteText}" Text=":"/>
@@ -233,7 +235,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt.Hours}"/>
                                 <TextBlock Style="{StaticResource AnsatteText}" Text=":"/>
@@ -252,7 +254,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt.Hours}"/>
                                 <TextBlock Style="{StaticResource AnsatteText}" Text=":"/>
@@ -271,7 +273,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
-                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Brugernavn}"/>
+                            <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Navn}"/>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Style="{StaticResource AnsatteText}" Text="{Binding Starttidspunkt.Hours}"/>
                                 <TextBlock Style="{StaticResource AnsatteText}" Text=":"/>

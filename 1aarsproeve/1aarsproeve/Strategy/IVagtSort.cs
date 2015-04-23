@@ -14,6 +14,6 @@ namespace _1aarsproeve.Strategy
     /// </summary>
     public interface IVagtSort
     {
-        void Sort(ObservableCollection<ObservableCollection<Vagter>> vagtCollection, int ugenummer);
+        void Sort(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection, int ugenummer);
     }
 }

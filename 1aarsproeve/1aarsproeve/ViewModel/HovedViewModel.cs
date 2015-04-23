@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -21,13 +23,37 @@ namespace _1aarsproeve.ViewModel
     class HovedViewModel
     {
         private GeneriskSingleton<ObservableCollection<Beskeder>> _beskedCollection = GeneriskSingleton<ObservableCollection<Beskeder>>.Instance();
-        private ObservableCollection<Beskeder> _beskeder; 
+        private ObservableCollection<Beskeder> _beskeder;
+        private static HttpClient _client;
+        /// <summary>
+        /// Singleton vagtcollection
+        /// </summary>
         public ObservableCollection<ObservableCollection<Beskeder>> BeskedCollection
         {
             get { return _beskedCollection.Collection; }
             set { _beskedCollection.Collection = value; }
         }
-
+        /// <summary>
+        /// Get til klienten til forbindelsen til databasen
+        /// </summary
+        public static HttpClient Client
+        {
+            get { return _client; }
+        }
+        /// <summary>
+        /// Åbner forbindelsen til database
+        /// </summary>
+        public void AabenForbindelse()
+        {
+            const string serverUrl = "http://localhost:16052";
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.UseDefaultCredentials = true;
+            _client = new HttpClient(handler);
+            _client.BaseAddress = new Uri(serverUrl);
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            
+        }
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
@@ -41,12 +67,15 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public ICommand LogUdCommand { get; set; }
         /// <summary>
+        /// Property til at skjule knapper
+        /// </summary>
+        public Visibility SkjulKnap { get; set; }
+        /// <summary>
         /// Constructor for HovedViewModel
         /// </summary>
-
-        public Visibility SkjulKnap { get; set; }
         public HovedViewModel()
         {
+            AabenForbindelse();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
             _beskeder = new ObservableCollection<Beskeder>();
@@ -58,6 +87,7 @@ namespace _1aarsproeve.ViewModel
             Stilling();
 
             LogUdCommand = new RelayCommand(LogUd);
+            
         }
 
 
@@ -71,7 +101,9 @@ namespace _1aarsproeve.ViewModel
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Login));
         }
-
+        /// <summary>
+        /// Collapser knapper alt efter stilling
+        /// </summary>
         public void Stilling()
         {
             if (Brugernavn != "Daniel")

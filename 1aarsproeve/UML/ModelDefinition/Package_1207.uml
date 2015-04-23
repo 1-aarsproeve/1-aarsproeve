@@ -830,5 +830,3282 @@
         Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
         name="TimeSpan" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="13345136-e18a-4b82-9506-025752d1a57f"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fd73eb61-443a-45cd-b005-ab89372d56df"
+        name="AnsatteView"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="356f1828-9f30-41cc-807c-4676df8268b4"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <targetEnds>
+          <association
+            Id="ba76612d-cada-4fe5-923e-e421ba904474"
+            isDerived="false"
+            sourceEndRoleName="AnsatteView"
+            targetEndRoleName="Adresse"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Adresse references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d95411c9-f8aa-4f35-9bf5-5ab8feed7a15"
+                  name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b764023e-d5f1-4c3d-972e-8998fe1ff7c1"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6e60b621-ba07-4e5f-8f8a-ac00661ddeb5"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16ca1445-a325-4bf4-bd7f-a265d6c91124"
+                  name="Adresse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0c1d0a98-6b8c-4d95-bf45-9ef23f78fe05"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="62111c66-f9cb-4462-8e6e-b1ae09bcebdd"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e230bc47-828b-4baa-a952-5a800102dcf0"
+            isDerived="false"
+            sourceEndRoleName="AnsatteView"
+            targetEndRoleName="Brugernavn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Brugernavn references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e96297b7-e752-4bad-97ee-3d53f383fedc"
+                  name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="83707741-8efc-4538-8a92-f895057444f4"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="134949a6-2fbf-450e-9509-3c39f9c3fc91"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16f8327b-3c80-43ba-b6a8-bbebc84f80eb"
+                  name="Brugernavn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="28a11924-3d1a-426f-8b97-1d6e4cf31ff8"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="da56a950-22cb-4c7d-bfae-22d35c4f374f"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ac5ceb0b-e865-456a-9db6-8f2873644c87"
+            isDerived="false"
+            sourceEndRoleName="AnsatteView"
+            targetEndRoleName="Email"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Email references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d5f9c586-7245-4ede-97f9-a6fe456c002d"
+                  name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f4515d55-eab3-4213-8a23-883956a71bb2"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2687654c-a7b2-40cb-87d2-3b3f7b5a999b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dcc0cb83-7aff-4372-8f58-894fd418dc5a"
+                  name="Email"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a0be15db-650c-4920-99ca-f7b9d73f01b6"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9fb63b35-e57a-4c28-9a23-d752be6c0248"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fe7ab7f4-ec09-40e4-92e3-90219c0c44f3"
+            isDerived="false"
+            sourceEndRoleName="AnsatteView"
+            targetEndRoleName="Mobil"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Mobil references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="edc86294-6d3f-41a6-a0d7-195116afedea"
+                  name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ec4c297f-48d1-4792-b299-3fada3258b35"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b66d2f60-eec4-43ec-86ae-89cc592bad0d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5a9ec4a4-8ee8-4948-9bfa-f446efe7159b"
+                  name="Mobil"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4691a1f1-4414-40a0-b0f4-034f92061f22"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="822147b8-3a73-48db-bb83-163ed3b4adac"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6aaee1ff-430f-4ad9-ba1f-d5c54e6891fd"
+            isDerived="false"
+            sourceEndRoleName="AnsatteView"
+            targetEndRoleName="Navn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Navn references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f5f6400-1db4-4cbe-b946-36e7fe837898"
+                  name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="516baefb-bf20-44dc-a3be-43fdd091623a"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5c1f28ae-a300-4c77-bb93-37a7c2bc8e59"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="40d64027-7653-4f6e-b447-1860db6b3c16"
+                  name="Navn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="82e6d7fb-fb2d-48ab-9b8c-575edc76ed55"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="582098dc-3e0b-43b4-9404-bbef4e6de017"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d1c0f38d-5883-495e-9fd5-548ee954faa7"
+            isDerived="false"
+            sourceEndRoleName="AnsatteView"
+            targetEndRoleName="Password"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Password references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="26671eb4-b5af-4e0b-8195-6af1405f39dc"
+                  name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="efc5b1f3-7fe7-4fe2-acd0-8bf24c34cd70"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="27e715e0-0674-47c8-b0df-36762c93a14a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8519c383-18b5-4088-9e35-49c7f85dccab"
+                  name="Password"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="edbbbcec-756b-4ec2-b9bf-1f44107ace8e"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a5b8c901-86bc-41b2-9d95-d43fe4520320"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7cb75d33-3a9f-4d8e-addf-ab3168fbf966"
+            isDerived="false"
+            sourceEndRoleName="AnsatteView"
+            targetEndRoleName="Postnummer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Postnummer references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8aa22736-a1f8-42e3-905c-f9d5a04559bc"
+                  name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2896778c-8cee-4de8-8c1f-2772870bac51"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="eb4b752a-7f79-4c09-a9af-9699a365fb9f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="47a1ef52-e095-4ca4-9aae-12a1e95c0530"
+                  name="Postnummer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c1218212-979a-4e8b-98c8-5512df4ad174"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fcb7b0cb-9260-47c5-a8f1-cb6631f543fa"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="60e46ac8-b18f-4872-be84-06059088a013"
+            isDerived="false"
+            sourceEndRoleName="AnsatteView"
+            targetEndRoleName="StillingId"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+              LastKnownName="Int32"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property StillingId references type Int32.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ae27ead5-0227-48dc-8e03-dfe01ca03458"
+                  name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3234a51c-7987-4940-8e78-bc5d4d1aca6d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="46136cf8-faed-43cb-bb91-9b321346a5ab"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c511d4b1-765e-419e-9323-f8fea2b34744"
+                  name="StillingId"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d4cbe5cf-c413-41a5-9b11-5714b85dce7a"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="655d6792-4779-4645-a254-4fd9dea5abac"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="4e12deb5-77c2-43dd-9799-460607d011f1"
+            name="Adresse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6e0f4184-43f6-4c37-b762-375426cb3dd8"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView Member%3DAdresse"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f6d93b5c-5047-440a-bced-1014e62fc44b"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce94d4da-060e-488e-a25a-67df070e0a8d">
+                    <propertyInstance
+                      Id="69e7c8f5-842a-49eb-87f6-aa3031cda85b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17cf970c-8005-49de-9ff1-190e25be39fb">
+                    <propertyInstance
+                      Id="dd95eaa7-be7c-4207-8f45-4068332b294a"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45268ea3-f13a-4aee-b9d4-62b5b802f9dc">
+                    <propertyInstance
+                      Id="fafc17fb-adb5-4b1d-b2b6-b759e98672f3"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bd64efd-f15d-4686-a862-f3373cd21898">
+                    <propertyInstance
+                      Id="109d1de9-ff6a-45cc-80b7-db5585171a97"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="283e0a26-d628-42a5-82ab-91abf8408654">
+                    <propertyInstance
+                      Id="1f49ebea-4e33-4b9d-9206-eba078caea53"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1e77b58-4d12-48e8-a60c-024a79f8e391">
+                    <propertyInstance
+                      Id="0e1bd812-3b78-43c7-933e-f2ff88219b38"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39a28440-1764-47f6-99ef-5feab9401449">
+                    <propertyInstance
+                      Id="79fee0c7-3dfa-43d2-ad37-304caa60d41a"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cf7b69b8-f2cc-4d28-9a6c-594da79b3eda"
+            name="Brugernavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c77bc5fd-b818-45b3-9102-48003632e2af"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView Member%3DBrugernavn"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1e360403-3753-42ef-9b74-d887f611b896"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7d13c01-db18-4995-8244-6a7afceee6e4">
+                    <propertyInstance
+                      Id="fdebba97-3b69-4797-8a3a-d9cb2eda4039"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5550c594-875d-4262-ab37-b01775095bfa">
+                    <propertyInstance
+                      Id="d3a18e31-7129-47fb-812e-75a50ffe7ca1"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95ed2b03-3835-404d-8d66-50874e6e8a02">
+                    <propertyInstance
+                      Id="4569ad42-1a1b-4eef-9330-692d0095c0f6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf641535-4b3f-413b-9bb3-3b543b66a42b">
+                    <propertyInstance
+                      Id="64333bb7-a888-4f37-8801-7b2b643e60ec"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a60ef2b3-531b-445d-a6fc-061b8f6bd2ad">
+                    <propertyInstance
+                      Id="a7026c73-568b-4e1d-916f-5730a6994849"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba053594-7008-4d64-b34f-dc31068db07f">
+                    <propertyInstance
+                      Id="a49fef6d-ff2d-443e-9269-e9ecf5ea1d65"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ef57245-aa49-43b6-92a0-68dee44ea22a">
+                    <propertyInstance
+                      Id="6781ecc0-183c-4b02-a981-9d6692ce56a8"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9d7d4c00-71b0-4089-b56f-04d2a16d2cfd"
+            name="Email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="15263413-20a8-4669-a31f-b7497cee3027"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView Member%3DEmail"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3dac8308-707d-49ce-9e7e-8d00b94914f1"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69825d4e-d96b-4854-b0de-12051f34b6d1">
+                    <propertyInstance
+                      Id="ac901a86-4db7-4822-9c4a-8296239c73fb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68845376-59e5-4272-a8ec-51d830c46281">
+                    <propertyInstance
+                      Id="5af848c9-efff-474f-ba58-72920f135703"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0affa88c-ae40-4a3d-baef-6ddb2dabd0fd">
+                    <propertyInstance
+                      Id="2b3b2c07-fd89-420e-bff4-fd712460eb21"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68a4bb2b-5653-4f91-806a-6d78bc30a77d">
+                    <propertyInstance
+                      Id="2d20fe5b-d5d7-4484-9e55-99164a8587e7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54e3bd60-f349-4f14-8791-64f66c44373f">
+                    <propertyInstance
+                      Id="190c8719-56e4-47f6-b8e9-ff3e11334a16"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b90aa343-d8c7-407d-8d5b-773e176a609b">
+                    <propertyInstance
+                      Id="24bbf418-2c0f-4233-852b-82a98e131546"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aaad5617-8ce0-49e2-8cbd-5abb9b67c005">
+                    <propertyInstance
+                      Id="1b803df5-171d-427c-b789-fda0520ed05e"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="978a7d41-067b-491e-ad0e-379b57ed03b6"
+            name="Mobil"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a7d08df2-a3c4-4b9f-8b54-e94a06a34462"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView Member%3DMobil"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="11148ccd-80be-4786-9e1b-3f2b18dc6b33"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f474224a-6263-4109-92d5-6039c2c42adc">
+                    <propertyInstance
+                      Id="37dc7cc6-b6a3-40d8-acc4-dde3e1174f97"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f306844-ad67-4759-8384-bdf7efc240d1">
+                    <propertyInstance
+                      Id="1e41fe45-cb2c-4869-87d9-9c3134a19bbd"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5c44998-5a9b-4e11-9e72-57a820996ddb">
+                    <propertyInstance
+                      Id="a784cd64-bd8c-46ce-a6b1-fbd94bc7ef2d"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1e19e74-3954-4214-95c4-1af21ed17edd">
+                    <propertyInstance
+                      Id="4ecee226-ac17-4a7b-9fc4-fc9e12bb3d60"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a28c4fe-e960-4a11-82e2-204f059e8985">
+                    <propertyInstance
+                      Id="6fde23f4-2011-4a32-92a6-a8409b43418a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9deae29a-2cee-4afc-bf02-7d93172a6332">
+                    <propertyInstance
+                      Id="123c380d-d2fa-43e3-8bfe-45d43d1037fb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80a2f986-515a-4bcf-b4f5-9260456157e4">
+                    <propertyInstance
+                      Id="c3ac1101-428b-49c4-8e58-0727610b0c01"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7eb04d97-ff9a-4e9a-9491-cb13a615c002"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e8574114-c25c-4eb2-95b1-8c6b0fd69003"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView Member%3DNavn"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b8763a6f-6e4e-4191-a675-7d33ce278db4"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84f6db46-ba0d-4cb7-85c0-39dd75f9a500">
+                    <propertyInstance
+                      Id="b93f1ee8-bf2a-4136-be40-a65f49603c49"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8843bb75-5933-40ae-b540-59110350911a">
+                    <propertyInstance
+                      Id="5ed33d2d-ffa5-4c8e-aa8d-e00e728b9193"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c5a97c3-b22c-4126-8038-dff8b704deb3">
+                    <propertyInstance
+                      Id="b9f3eb37-7ce8-40bb-9207-f6c522647ab4"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d33fb695-fb9b-45a4-a425-24e6cc6fa774">
+                    <propertyInstance
+                      Id="318c38c2-2d15-4c36-a9a5-17fbab604275"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28c281c8-ec43-4d4b-9809-0cb904b6e1fa">
+                    <propertyInstance
+                      Id="4e3cc643-54cc-4e8a-9b2e-d17cd13f1f69"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2654cb39-9970-40b0-844e-45788fcb19b2">
+                    <propertyInstance
+                      Id="4d4dd8d6-e7d2-4d6a-958b-d3f198f008dc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="049dd44d-fd13-42e8-9f9d-ac66a43ec02e">
+                    <propertyInstance
+                      Id="754fa1f4-f2e4-4a6f-8793-cdd67872c513"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c6bad21d-88d1-4f9b-bc21-a0095508d407"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d8b89be4-c2c4-46d3-a8bd-8a6a04f4c95b"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView Member%3DPassword"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d40e0c2c-f200-4fe0-ac72-c3aa7d144282"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82d86230-c39f-4d63-934d-4f9b55624de7">
+                    <propertyInstance
+                      Id="cbc1041d-7156-447a-99a4-e570917e198f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f64adf63-aa22-4635-b632-b91de7ab29c9">
+                    <propertyInstance
+                      Id="0287d93c-eba6-4bcd-9125-808013dc1481"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80f7d28e-6702-45d1-b945-d1a1f9679d00">
+                    <propertyInstance
+                      Id="696345ba-420d-424b-a270-b07d20625ec1"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d596b9d8-ed05-47ca-8834-cb07b7a9b862">
+                    <propertyInstance
+                      Id="474bdfae-039f-457e-9f98-cdd1f1317ea5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87ec4a46-cef7-402b-a4ba-383cf1b572eb">
+                    <propertyInstance
+                      Id="0563e415-5078-482e-8d35-4fa3f5724e87"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48877451-d86e-4173-a234-d5c5a9dfb261">
+                    <propertyInstance
+                      Id="8920a923-1640-4ec5-acb9-365620c116e2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d4d4efb-3586-4299-99e3-afb93eb6643a">
+                    <propertyInstance
+                      Id="4737fe34-80f7-4460-a2f3-acedc4eb07f8"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="87e48967-8c7f-4d52-853c-a60b4097b37b"
+            name="Postnummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3c557f4a-8ac9-477d-a11f-5c4951558185"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView Member%3DPostnummer"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8dc25d96-e586-4071-9716-d977e3273ba0"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="193e0080-ca3c-4cae-9fe9-2e30d31eaca2">
+                    <propertyInstance
+                      Id="d0aa2e51-77ae-4045-9202-6f5a175f7012"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89dceb94-3e52-4e5f-ab38-3cfb39bef472">
+                    <propertyInstance
+                      Id="c48575df-a71c-4215-9059-65e2f91efafc"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3364617f-d9eb-4944-bccd-4237944cccc0">
+                    <propertyInstance
+                      Id="20dd4f58-84c0-408f-a2fc-5594406f5af8"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3a41193-c513-424f-8d6f-2acdee44b4e6">
+                    <propertyInstance
+                      Id="673a2e30-9416-4be0-b1aa-761d9ef7e692"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="392e4177-6ba2-4e7b-82f0-f5651736a01f">
+                    <propertyInstance
+                      Id="965cf462-a868-4e43-b58e-6ffe36abadad"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9679079-186d-4819-84c6-4f0865e39a5a">
+                    <propertyInstance
+                      Id="0fdb19cc-a4e8-4755-9e8a-dfdbad978a5c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b0e4154-1de8-4f37-b244-30bcc2810fb5">
+                    <propertyInstance
+                      Id="7024e286-3b90-4ccb-9852-85d7e3510d90"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="40fa9d58-2791-41f8-a3a6-1f6cb8cfa7f6"
+            name="StillingId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f7d859ba-e849-4807-9b39-12bd01bb3510"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DAnsatteView Member%3DStillingId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2a19e63f-759c-4c40-8fdb-06279031d0ea"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b857bbca-6e9e-4d64-afbb-3539f92b544d">
+                    <propertyInstance
+                      Id="6294daf1-3f62-4749-b9e8-44b7757ea515"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fba8e942-901d-4892-abc3-2a81e29b7e48">
+                    <propertyInstance
+                      Id="e9e83bb2-2fec-42fe-b443-077c605b8b0b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69d57abe-55c1-4431-9476-20f6e7b05a1d">
+                    <propertyInstance
+                      Id="e5d913cf-6119-49ed-be9f-3eb94cccf315"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6979029d-1df4-4038-b78b-7e3dbeb0cb12">
+                    <propertyInstance
+                      Id="9a88e757-d973-46ea-898a-45541322e07e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d1dc34c-0826-460b-bc0c-2de9a938009b">
+                    <propertyInstance
+                      Id="00fc8f15-f8fc-494d-b73a-26bf08697807"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87744714-8cbc-4154-94f8-1e67afc096ad">
+                    <propertyInstance
+                      Id="a590d8a8-ce78-4ad1-af79-2ab626ec5c18"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90cc8e0f-4123-45a1-bf11-edf941fe86f8">
+                    <propertyInstance
+                      Id="8c339107-d1b7-46ab-97cd-48b71cb32976"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+                LastKnownName="Int32"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="37bbc963-d42f-478b-b802-74d3721aa6b3"
+        name="VagtplanView"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="be1b964d-04e6-44f9-b102-88e45b3f910a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <targetEnds>
+          <association
+            Id="56b34cf0-c963-4c2c-9d6b-5e9f0a4e889a"
+            isDerived="false"
+            sourceEndRoleName="VagtplanView"
+            targetEndRoleName="Brugernavn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Brugernavn references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b1f880d-184c-4926-a7b1-89ac4a9ff1ee"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3bf43e86-62d9-4ca5-96bc-9fa81e7cb5da"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d84577a0-1131-439a-9964-3ea7db145e2c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d81b3da-3682-4601-8a31-bfcaa112e606"
+                  name="Brugernavn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f893d495-d824-4bc6-ae87-68b11d6b52d1"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c82bb81d-9eb0-47a2-970d-3493a347b338"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="94d1c1bf-aa96-4613-b5bb-55a4460d099e"
+            isDerived="false"
+            sourceEndRoleName="VagtplanView"
+            targetEndRoleName="Navn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Navn references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e8b02ca3-ed5c-494e-9102-8dd369f1971c"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="71422b11-f9b2-4c05-8e53-587aba385aee"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e7fd7955-a3a4-4a94-a60e-1733313e5591"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4bbd7071-f7ed-4fcb-8adf-47411cc60767"
+                  name="Navn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="292b139c-8c62-40b6-a313-5d0ec734f141"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="202a9464-8612-4abc-8dee-3b7a6aef395d"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="974769a6-e3cc-48ed-a356-b8d5e5760ebf"
+            isDerived="false"
+            sourceEndRoleName="VagtplanView"
+            targetEndRoleName="Sluttidspunkt"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="01844391-ee0b-4dcd-8254-b2f0600d87fd"
+              LastKnownName="TimeSpan"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Sluttidspunkt references type TimeSpan.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd3eab3d-ce48-4b48-adb8-bcae60c3b9f0"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="cba8249d-df7c-4d6f-9b39-6c2abfdf2bee"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c39338d7-c606-4151-9d3b-ec5905ef1b4e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="16ff0f53-3449-4869-b0b3-7515c9f12388"
+                  name="Sluttidspunkt"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ccdfd5bf-7d2b-4fbc-8391-f9333a9830a3"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="91b3d882-6b8a-4766-b983-f96697838321"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6c695699-58d6-4b33-ac95-7a595706837a"
+            isDerived="false"
+            sourceEndRoleName="VagtplanView"
+            targetEndRoleName="Starttidspunkt"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="01844391-ee0b-4dcd-8254-b2f0600d87fd"
+              LastKnownName="TimeSpan"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Starttidspunkt references type TimeSpan.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e497f3b-682a-44c7-afe0-61cc21df4d4d"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fe81706e-97de-41e3-998b-6bc63047277c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1f938504-08e0-4587-ba3d-683c38157b12"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7bcf192d-f85d-4bc7-8c33-4624226907f0"
+                  name="Starttidspunkt"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f93c983a-a05d-4980-a763-be4d17027db2"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="baf9f0a9-8679-4e4e-b5e5-314bafe5b164"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8090b221-8c3b-495b-b8cd-70c4d24f952d"
+            isDerived="false"
+            sourceEndRoleName="VagtplanView"
+            targetEndRoleName="UgedagId"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+              LastKnownName="Int32"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property UgedagId references type Int32.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eb836fa4-7518-4b29-a65e-6b377b1b2f0e"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7df901a1-32e5-4850-bcda-ff9e95a13d3e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="933cda68-ddb2-4ee6-a4dd-4d460bf9adb5"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc1d3ce1-a333-4293-a47f-115011606fde"
+                  name="UgedagId"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="87938e85-82b9-47c8-b9a9-6ed185e3b6e0"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ae297b3d-7627-4aac-8462-e318e0d09b20"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5f3983bd-717c-40ca-9c1b-b4734edb69f7"
+            isDerived="false"
+            sourceEndRoleName="VagtplanView"
+            targetEndRoleName="Ugenummer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+              LastKnownName="Int32"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Ugenummer references type Int32.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="de69d4a9-4107-4bdb-9c52-8af1cbb46aeb"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="75c75a0a-2b15-4ce6-a4bc-71b9ee5188d6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b80d3ed1-5477-4780-bebf-1ba7cbb07be0"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="643f4e4c-00ae-478b-83b9-564a04d45283"
+                  name="Ugenummer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9ad54946-e406-4f30-8149-c295f12ba63e"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="dc68974b-be71-47f6-afdb-6b3f237fa00d"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="365efa90-6cef-4c8b-adf1-6033801c93b9"
+            isDerived="false"
+            sourceEndRoleName="VagtplanView"
+            targetEndRoleName="VagtId"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+              LastKnownName="Int32"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property VagtId references type Int32.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce1a3980-735d-4678-b390-b0518edb1b7f"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b6566f3b-c63b-4893-b918-5bac3481c755"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d1f3d755-c8af-4b62-81b9-4fc34727f03b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4c50643-ed47-4e2c-bc7e-209c04ac0b41"
+                  name="VagtId"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a98d28d9-7c81-426c-8645-a24621aad922"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8dadf5ef-ddf9-46b7-9a31-b8aea2eae9f5"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="9bac146f-35ef-4fc6-b8e3-a7bebf79d2dc"
+            name="Brugernavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="bc5155a1-6d17-4ee1-b554-7abfcc474c81"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView Member%3DBrugernavn"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dbbf0333-66a8-4d71-bfdb-1404c81d93a2"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50284789-1958-4172-8543-5a91a3509591">
+                    <propertyInstance
+                      Id="687a1955-133f-4d30-8792-73fe890487f0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9c66db1-a65b-4895-b01c-bafe7a43328e">
+                    <propertyInstance
+                      Id="ef3b7dfa-dece-4c00-bcc5-32e0c2b2e82b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df63e7b6-8b36-43b8-b21c-b6172ae8863d">
+                    <propertyInstance
+                      Id="aabf1d82-5c50-4842-9bb7-92d3c3bfd50b"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a827a41e-8d72-4539-8aea-e2b1b4bf8f4d">
+                    <propertyInstance
+                      Id="483de5c9-6f1d-4360-b1e4-e3ca4d3e8033"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c097d426-1d15-4aba-b006-313a8cdfcb73">
+                    <propertyInstance
+                      Id="51e765c3-e248-4458-a6fc-47866ed5f6ea"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9669e084-df78-46db-b0c1-ba651a17846c">
+                    <propertyInstance
+                      Id="f3b539f4-de0c-4df8-b9bd-397206535802"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b281a35-f20b-41c2-840d-5e7beee3e183">
+                    <propertyInstance
+                      Id="2d1bcf3a-cef4-4488-9c36-cbec711cb9e6"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="520885c6-77df-4717-add2-6b4d0b56f9bb"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c2cdd890-4713-490e-8610-f60111679325"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView Member%3DNavn"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7df210de-92b8-43db-922e-9c40e16d680f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98bf734f-8142-416a-99ee-b99a5e042df5">
+                    <propertyInstance
+                      Id="6f0c7ed9-6f25-4e2c-b9c0-4ebad93792a1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="141e435b-db0e-444c-9376-78e5659d787a">
+                    <propertyInstance
+                      Id="684d1b97-b167-4860-9095-a1ac4b50f39d"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c10b238-9cb0-4947-9465-65782e1966ca">
+                    <propertyInstance
+                      Id="898f0238-4e3e-4165-ae77-172d621dbece"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c264eb75-644d-4da0-870b-28968f2f2c4f">
+                    <propertyInstance
+                      Id="e99d66fe-c7f9-4081-966e-562345e10127"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2dec235-bdb3-434d-95b5-93236d776723">
+                    <propertyInstance
+                      Id="482185ac-a8c4-4285-a4b8-ffed0644d08d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09ae3ee1-22b7-4420-acac-154c8381390e">
+                    <propertyInstance
+                      Id="02bc5be1-371e-419a-9ca5-3f62d68c652e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79e4b71d-0979-460d-b60d-ce08469a4d27">
+                    <propertyInstance
+                      Id="6e2224b1-0363-47cb-a4f3-b1c6bbba9d8e"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a8fe4a56-bfb2-4ea3-9481-2464fcead5dc"
+            name="Sluttidspunkt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a67405a9-9347-48f2-a490-e0be3cb6110c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView Member%3DSluttidspunkt"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9168e108-8ac4-46de-a620-3b079fc749e7"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddd64935-c68d-4067-bf6a-8cad59283317">
+                    <propertyInstance
+                      Id="fc05b563-a708-4e78-85e2-ebe2567994df"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81478613-14c9-4964-b4da-35dd6d89a172">
+                    <propertyInstance
+                      Id="1b99b5e5-e4ca-41c9-9552-2ca12e8c867b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27bfe7ee-1808-4e8c-8601-a30710037a6f">
+                    <propertyInstance
+                      Id="80117131-32c0-4fe5-90b4-461a20ee3af0"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3377ab3b-1d7e-49c4-b3f6-ff8164873e56">
+                    <propertyInstance
+                      Id="2f539b09-89f7-4c6f-8a86-0356423dad8d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e5706eb-cb8a-46a0-a8bf-8f9d40f5355d">
+                    <propertyInstance
+                      Id="e9dafe64-15b8-45fb-ae97-e596441c40f3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2157b5dc-c345-46c4-8927-347060f55998">
+                    <propertyInstance
+                      Id="daeb50df-177b-4c65-ab17-1b037fb16565"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b99483d-d71e-40d3-9d7e-48abb10c6f99">
+                    <propertyInstance
+                      Id="e35f352f-1e4d-4bff-a5c7-5839575e3166"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="01844391-ee0b-4dcd-8254-b2f0600d87fd"
+                LastKnownName="TimeSpan"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bbd89ac6-ac47-4439-afd7-a7b28ef05019"
+            name="Starttidspunkt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="30fe0642-b4d0-43db-a07d-3b2a8750bc87"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView Member%3DStarttidspunkt"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aec7a4b4-f6a5-4750-aaf2-e100977589fa"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b123d41-3bee-4239-9425-6f20165e7a46">
+                    <propertyInstance
+                      Id="cb970ab9-bdb0-4e3c-8a9b-a99a7fcd5278"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd93cd1e-e31f-4b5b-88be-939b3c957b97">
+                    <propertyInstance
+                      Id="034b68cf-8f59-488a-8af5-f0778f889461"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="faed5fc4-3fa7-426e-a2d0-7e0a62ab1417">
+                    <propertyInstance
+                      Id="a978f633-e7d1-45c6-8009-ff2cf8018232"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="72018103-bf9d-481e-b6fe-eeb421495d42">
+                    <propertyInstance
+                      Id="603b1921-265e-453c-a7b9-35334cafa31b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28635ef4-ce69-4e02-9c68-929d15872ead">
+                    <propertyInstance
+                      Id="9df4627f-eb26-477f-99a7-91aec9c37fce"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b308df96-098e-4abc-a98a-aa7e839ea214">
+                    <propertyInstance
+                      Id="d55d7070-05af-4eab-8275-dfcfec68c772"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aba2399b-37b9-4ac8-a774-c9c104574226">
+                    <propertyInstance
+                      Id="e0cff8fb-2b05-42b2-8586-00a584c34179"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="01844391-ee0b-4dcd-8254-b2f0600d87fd"
+                LastKnownName="TimeSpan"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f91e9fea-0a4f-4c4a-8a75-11f88c47c627"
+            name="UgedagId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9c500a53-aa53-4642-bb15-87f691667069"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView Member%3DUgedagId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="68308fb2-5eb4-4f16-8913-fac8b0305001"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a25647b4-b636-465c-9388-956cbad05630">
+                    <propertyInstance
+                      Id="2c37869b-d230-445a-b5db-24e60e9f5298"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e86f63b5-8cc6-40c0-a195-b64f28ece3ab">
+                    <propertyInstance
+                      Id="9da95dfe-b79b-4de2-8304-7b8aa3ff45a3"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd4ad861-3425-4ecb-9649-8a33f3b600d2">
+                    <propertyInstance
+                      Id="3ef0a621-7b87-4f8e-8c59-10a5140699d2"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec2a0ef8-a5e4-42fa-b23b-1e0a95f50624">
+                    <propertyInstance
+                      Id="16c73ef2-8847-4e37-9f86-4349bf62c236"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="222e62a8-55b7-42a0-9228-9207ddc119df">
+                    <propertyInstance
+                      Id="efbbcf7b-aea3-4009-9c6c-4ba010dbcd79"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11c70349-2444-4ac5-8f89-741cac70f5fd">
+                    <propertyInstance
+                      Id="85ea2c0b-b78f-4f49-88dc-ddb47bfd8f66"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15f5b284-d207-4bb6-a262-781d46167847">
+                    <propertyInstance
+                      Id="98480ac0-cdd9-4904-b7d8-92886019d253"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+                LastKnownName="Int32"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8d12fb0f-9261-49cb-859d-1f1dc601918e"
+            name="Ugenummer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="91ab0ab6-1604-434a-a53e-22c107f15678"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView Member%3DUgenummer"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9162f0b0-0d94-4a83-a557-999f3a89c81b"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c447ede8-f279-426c-917a-b7445b9a4934">
+                    <propertyInstance
+                      Id="5ef148c4-e897-4258-a248-69960c1aba14"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76537f28-4c42-45ae-8a98-6042b1eec4dc">
+                    <propertyInstance
+                      Id="da6af549-283d-49d6-8338-a95bce2288ae"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b8a7fac-b1af-4dad-be2c-33f5f288238e">
+                    <propertyInstance
+                      Id="710b5dad-942b-4cb0-a6be-96f1b8d558f7"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32db7d4e-cc16-44ad-9fd7-21d42a51c9ce">
+                    <propertyInstance
+                      Id="16dc42f3-f136-46f5-a8a5-df032b122abc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fae2d42c-e55b-4077-9f66-86d8d808113e">
+                    <propertyInstance
+                      Id="c9c167a6-5f69-4bb7-9e98-77ec0b460285"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4f411d6-7c12-4c65-842c-b24e4771d88f">
+                    <propertyInstance
+                      Id="bdb10028-37c4-4f54-8439-3ffb398d0898"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed489cc6-de29-403c-a570-76c3e4e7052b">
+                    <propertyInstance
+                      Id="b6b3ae8d-c9f9-4e62-b108-9e8eb31f8914"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+                LastKnownName="Int32"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dfb97744-a8d1-4ba8-bf70-535a4c30762a"
+            name="VagtId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ede0cae4-4a22-4855-9c6f-b508eba4c1dc"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView Member%3DVagtId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f86fbbdb-3ac9-45e8-9e41-ca2f9e146803"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="217da867-ad9d-4b90-a20f-893cee9383cf">
+                    <propertyInstance
+                      Id="66ae917d-ed16-4fce-889d-dee391fb7d08"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="813caa9b-441c-41c7-881a-59c630756710">
+                    <propertyInstance
+                      Id="477e9fc7-2db3-47c3-9bc3-12784f3967c2"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68150690-45d8-4a6f-a71d-496fefdc6819">
+                    <propertyInstance
+                      Id="38883141-47d9-4ae7-bb36-d979ae71d5a4"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a72d4b83-a5bc-4541-890c-d10a970e3748">
+                    <propertyInstance
+                      Id="fb8bf808-c5f4-4f5d-a497-51199fa4d319"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2513ffeb-5973-4992-a6c6-40a74e413e0c">
+                    <propertyInstance
+                      Id="2da3d277-dfe0-4864-8708-e3f690889e55"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06b3d5f2-0897-437f-b4d4-602e772ff302">
+                    <propertyInstance
+                      Id="29db88da-1ddd-44af-a45a-2ef222b7a837"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea0a758f-df23-4f6c-b6da-3358bbda20f3">
+                    <propertyInstance
+                      Id="8f6ef0c2-fdc1-4a36-a026-f07318522654"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+                LastKnownName="Int32"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bdd63659-386b-4195-b53a-163405f925f2"
+        name="HovedmenuView"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3e0700f0-79ef-4ad5-bc5d-a73b9f538b9d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <targetEnds>
+          <association
+            Id="f1ecd78a-3d08-43d7-b245-b694230bc580"
+            isDerived="false"
+            sourceEndRoleName="HovedmenuView"
+            targetEndRoleName="BeskedId"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+              LastKnownName="Int32"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property BeskedId references type Int32.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed3bc113-da25-4459-84f9-1dc5e2a5aea5"
+                  name="HovedmenuView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a619dfe3-473c-48fb-b03e-1980fc2ffe36"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="947b3ffa-a179-4da3-b8eb-5ad48dedd835"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="11a1b992-92fd-43a5-8672-a8423089cbaf"
+                  name="BeskedId"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="27935cac-a70e-44ae-be81-66bb3f844594"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="60d88168-f661-48e0-a43d-5f7618b621a4"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fb72a19c-d1b2-4a74-985f-60b3f286fc02"
+            isDerived="false"
+            sourceEndRoleName="HovedmenuView"
+            targetEndRoleName="Beskrivelse"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Beskrivelse references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a5090b6a-d953-4746-978e-972b6122cd3e"
+                  name="HovedmenuView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5c8811d8-ac49-4977-95e5-9331baa1cdcb"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="53c1d049-6294-4018-9323-0fb704b77043"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a8c3165-b952-47a5-b8ba-3bca740e46c3"
+                  name="Beskrivelse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8bf10eec-0864-4dd7-b3a8-c2400fa8f53e"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7204c817-cc5c-4631-9b29-8925dab137f2"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="12676f29-d2c1-4333-9119-7f4993c00b1d"
+            isDerived="false"
+            sourceEndRoleName="HovedmenuView"
+            targetEndRoleName="Brugernavn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Brugernavn references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94f36dc4-bb55-47f3-9c5c-40b8a8525700"
+                  name="HovedmenuView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c1afaef9-c8c9-4e27-bdff-441a73bfca77"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="709a581a-906a-4116-929c-2c86c6a2afea"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0cc5d198-532a-4f10-9cda-656bda7e4fdd"
+                  name="Brugernavn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b9a726b5-da05-46ae-ac38-af53e41957b5"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e3135d45-43cf-447b-9c71-fd52e372d74f"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5d4a9575-557f-4abe-bf8c-585cc84ccfa8"
+            isDerived="false"
+            sourceEndRoleName="HovedmenuView"
+            targetEndRoleName="Dato"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c69a1eb3-4fac-41a0-ab56-9ec597e795bb"
+              LastKnownName="DateTime"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Dato references type DateTime.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c255c320-c4ec-474f-9302-f4f50efbfab4"
+                  name="HovedmenuView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c915c1a7-7b6a-4b75-882f-b4d766057fdc"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a537e100-9399-4be1-979e-aa98eb248774"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4b6099bc-08c6-42b8-ab81-415ce19a722c"
+                  name="Dato"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="79156a5f-3c15-42c3-b826-69f5c4249e62"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="aad6177a-b1de-4565-8c9b-e7ae4724cdbf"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="20817209-e90e-47be-9803-cbcb7e96063a"
+            isDerived="false"
+            sourceEndRoleName="HovedmenuView"
+            targetEndRoleName="Navn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Navn references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="272d1311-c0ac-4394-b6a7-73bc873a6ead"
+                  name="HovedmenuView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d2d553d2-00b4-41d6-8b40-42f8114ac6a4"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9835d8ae-f886-40e1-b250-c0f63fd5bbcf"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e50e256-e49c-4358-9480-0b5c6690c6c8"
+                  name="Navn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="52b21a94-90e7-4d43-9953-363aabc4b4a4"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4ff96c4f-428b-46b4-bc37-8a8c143de63d"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e0280ed5-8e83-41e8-ba4d-90464ddd9f58"
+            isDerived="false"
+            sourceEndRoleName="HovedmenuView"
+            targetEndRoleName="Overskrift"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+              LastKnownName="String"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Overskrift references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="83a211e5-2ac8-46ce-afe8-aa15d9502bdb"
+                  name="HovedmenuView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bc00ce71-b9ca-4ea6-9891-7fc5d1ed9a03"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a1ec5bc6-4d2a-400f-8036-7d650b8797de"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="867e0618-fdf6-40bc-a1ac-236fc8f0bd68"
+                  name="Overskrift"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="39f9f676-faa7-41d2-9a87-0982214b5201"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8601d695-8014-4f87-b2d2-d75aef8857b8"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dcfc2577-51d4-4cda-a0e3-f05b0b64402a"
+            isDerived="false"
+            sourceEndRoleName="HovedmenuView"
+            targetEndRoleName="Udloebsdato"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c69a1eb3-4fac-41a0-ab56-9ec597e795bb"
+              LastKnownName="DateTime"
+              LastKnownLocation="Package1_1234.uml" />
+            <description>Property Udloebsdato references type DateTime.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="73412ec5-1654-4567-ba79-c0934521c5a1"
+                  name="HovedmenuView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="14070238-2462-4fa9-9bec-f6456ecacbc4"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c2f6db5a-b0f6-49cc-a7f3-90a167ec3a41"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="08b316ae-410f-4ab6-b645-90cef1d32dc5"
+                  name="Udloebsdato"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ffe06011-25a3-4f3e-bab7-4b4411fdfd38"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8bcb172c-44b2-4e8b-a919-0156a0a2d92d"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f192d1e9-e8bd-4716-b307-6d0ad649605f"
+            name="BeskedId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b9da9b82-8469-40f6-b53e-1b6b33d33596"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView Member%3DBeskedId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="73255683-3602-4405-8dbe-264d7da57dbf"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4e7cf48-d374-40fc-8174-4261e3ddb143">
+                    <propertyInstance
+                      Id="f665be8f-d6eb-4c0d-b9da-60a5095fadae"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80a4e824-9615-47cb-b487-9ee7bd7330c5">
+                    <propertyInstance
+                      Id="aabc228e-3959-4073-b9ff-4ab4a1107694"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19d28640-cd37-4ca9-8152-962dc9e6212e">
+                    <propertyInstance
+                      Id="16759d99-7071-4632-8d9b-e45c33f98556"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f33f32e1-05ec-47af-bcac-31fecfd672f9">
+                    <propertyInstance
+                      Id="356469c7-fe42-44c4-a45c-fbdb069c0f97"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85228a1a-cb20-45ba-9374-73f3e59cd532">
+                    <propertyInstance
+                      Id="5a1b1918-c2fd-46a5-9dc5-1c97bac4f4ff"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb5aea9f-bdc1-4ed2-bc38-0cda1c3ba445">
+                    <propertyInstance
+                      Id="02f65aa7-3204-47f8-90b3-41ec09b3d7fa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5dbf1ba0-c12a-45ac-85a5-36b8c25c07c9">
+                    <propertyInstance
+                      Id="07d0445b-f281-4687-adfb-97ced647f40f"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
+                LastKnownName="Int32"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="78169d3f-3160-4d8e-9def-775fc3fcdb60"
+            name="Beskrivelse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5be31018-2198-451f-92f5-76b5262468b7"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView Member%3DBeskrivelse"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a1b991c6-861f-4bd2-b3be-a48ecde3bb63"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="206ee0f4-9f44-4e86-8482-e21ef54a2858">
+                    <propertyInstance
+                      Id="19ef40f0-5324-4dd3-963d-7c2f54f3540a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e83b697c-bec0-4562-a70b-c63e4def6386">
+                    <propertyInstance
+                      Id="493d8fde-ad36-4d52-9aef-6aa976239537"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="626215dd-384f-4284-b3d3-dac4bef1d476">
+                    <propertyInstance
+                      Id="f92aedd7-6156-4d7a-9b7a-479ca37f23c7"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea75572c-10c4-4424-8031-fa6e610bbd3e">
+                    <propertyInstance
+                      Id="8ff18250-1596-4e96-b0af-2a35b439540e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9782a16b-76de-408b-878c-be50e57e39a2">
+                    <propertyInstance
+                      Id="5c943063-77cb-4b61-be6e-53911c47a4e3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af578a63-dbcd-45b8-9b94-580a89786388">
+                    <propertyInstance
+                      Id="5a289345-b1a9-400b-800d-20248b18bb3f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6406896-29c2-42b3-92ac-f71ebb3f3c97">
+                    <propertyInstance
+                      Id="b5d9b692-5e4f-4783-91be-964b26014a86"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="897579a4-7405-488a-b305-01f822d3ff66"
+            name="Brugernavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3628185c-cf32-4324-96e1-ba8f8cc8c64c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView Member%3DBrugernavn"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="62a34111-eee7-40f0-a45b-1221aa93e079"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2af64944-de3d-40b4-9fe9-91dfaf6b7e15">
+                    <propertyInstance
+                      Id="e8dcfaae-69ed-403e-8745-3437374b7c24"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="976baa47-77b6-4a5b-ace8-db1e636b8d79">
+                    <propertyInstance
+                      Id="74750313-9267-4a12-adda-266d5b778812"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f7f67e7-33b4-4a12-9656-47eb872c11f6">
+                    <propertyInstance
+                      Id="40798be4-67d2-4e03-89f8-07bdd8346708"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f767b95-22d2-4093-b8d1-a7e71c7f66a9">
+                    <propertyInstance
+                      Id="3e2f2a2e-64e6-4f15-b407-44c214202e1e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d191f85-f566-435c-9f2c-fe6cd0c1ad65">
+                    <propertyInstance
+                      Id="609316ef-fe77-49f3-ad67-5cbab6f21eb7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d98a5c9-6d85-4bd6-a3df-752e542a0d6d">
+                    <propertyInstance
+                      Id="e967ee63-d2b2-46a7-b226-219d95ff3bdd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="edb5596a-5aee-4078-a531-55fa4b5b36b7">
+                    <propertyInstance
+                      Id="dd1cf433-a78c-488c-8102-2be87ce03e3c"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="34b6ec7e-70d3-4213-b2f1-c20c9d977d45"
+            name="Dato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0e5ae285-267e-4e59-9707-64889145a381"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView Member%3DDato"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="391ebed0-9e15-4489-87ce-d5b005f9b0d9"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6754ab5-3dbd-41d0-b0da-1aa7dd20796a">
+                    <propertyInstance
+                      Id="b7c01f37-6f0a-471c-baff-3bf51bbe0c77"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9eb55147-1814-49ed-b656-03361fab2873">
+                    <propertyInstance
+                      Id="5f8ee659-8080-443b-95b8-a1fdddd8bee5"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="786450a2-e3ed-4897-bfb3-040197938f92">
+                    <propertyInstance
+                      Id="aa017f46-a088-4535-b315-8594bead78a9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9389acc-0ade-4979-a8e0-a334e5405ab9">
+                    <propertyInstance
+                      Id="e44eaf81-ea98-4683-aa2b-731e88efd848"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1614c1cf-3ff6-4d17-b7ec-0d3d89c3919d">
+                    <propertyInstance
+                      Id="0490ea1c-e540-4f23-ab29-d235e409265b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5294d9f8-1c23-4061-a3e5-bb1a4cfbe3ea">
+                    <propertyInstance
+                      Id="abd0c1a6-9dba-4924-9b42-38fec7632eb3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b036cdd-eb08-4d60-81dd-d69ace26b6c8">
+                    <propertyInstance
+                      Id="f9624303-f2dd-4990-8ec6-b44178bf6f00"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c69a1eb3-4fac-41a0-ab56-9ec597e795bb"
+                LastKnownName="DateTime"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="176a3e70-e90b-4827-b747-623ca07b1714"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d7422aef-458d-471b-b941-0945e9dc1945"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView Member%3DNavn"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4217f2b2-4eb0-4539-9d8d-2a019e89db0d"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55ba38f7-dadd-413c-a10b-781e294c0fc3">
+                    <propertyInstance
+                      Id="d1482db5-9c39-4ee5-b9c0-402bb5daa0c3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="884395e2-bbc2-4b99-8298-544cb7a8bac2">
+                    <propertyInstance
+                      Id="30486257-67f5-4fcd-b1f3-29869d39c9af"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eea35395-b3c9-4889-a136-bf75033495a3">
+                    <propertyInstance
+                      Id="8617a4d6-0834-4913-9321-3d5c042190ac"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0a805b72-fc29-446a-a24d-c660dfc1dbd4">
+                    <propertyInstance
+                      Id="0afe7e5a-90f7-4cfa-9ead-c2ee70adc973"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a85dd151-9797-439d-a330-409c9e777349">
+                    <propertyInstance
+                      Id="fe64ded0-ddf2-4e26-9bd6-d63df901ccdc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6db8cf40-dedf-4dcc-8e31-b4384bb25b96">
+                    <propertyInstance
+                      Id="c2621eee-84eb-401c-b149-d2638548f1bb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae4a4a85-ece5-4131-9864-b91574b24885">
+                    <propertyInstance
+                      Id="302ba655-3fcc-4ad0-98f2-888c7d32d4e6"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9d2b03f1-a705-4a60-9fe4-dedcb60dff81"
+            name="Overskrift"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c6e06005-7beb-4fc7-8c48-abb71fdce76c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView Member%3DOverskrift"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3082544b-0bb3-43fd-9c65-832f45b5e476"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73964be1-04b5-4c9f-b9a4-3b2a49f0c4bb">
+                    <propertyInstance
+                      Id="2106c9d8-22e1-4b5f-b2a1-857d451b1249"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="439a3ddc-173f-4e09-ba62-ef51a0616e01">
+                    <propertyInstance
+                      Id="02285c1a-502a-464d-8215-b2cfd57bc492"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a99bb1c-5760-4dbb-8f45-ecad3015735b">
+                    <propertyInstance
+                      Id="64dd1966-3410-4192-9c87-a0441748f5c6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c81e76d-aa18-4baf-b325-9fa9438d9229">
+                    <propertyInstance
+                      Id="0d452bc5-42da-48b3-84fc-a6edce4ab3c8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb125418-9b5c-49fa-8d64-9851470243a5">
+                    <propertyInstance
+                      Id="60a637f9-6492-4749-99a6-bf780b8b12e8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01316eb6-f98b-4cf9-b365-2e2654bf3c59">
+                    <propertyInstance
+                      Id="0ba02b51-8a51-478c-971c-753f2c93cc0d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba5694c5-0f15-4bbe-b8fa-5507db66462d">
+                    <propertyInstance
+                      Id="7bc02422-ec47-4541-bdb5-37b862c020dc"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
+                LastKnownName="String"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6e5deaae-58ad-4bda-b51d-13527888d9cb"
+            name="Udloebsdato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d61006a7-1d6d-4314-b6d3-1a66dd4b4041"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView Member%3DUdloebsdato"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="479f0f2b-90f8-4d41-8daa-6797da59343e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f90f33f5-501f-4079-8599-b2de682c137f">
+                    <propertyInstance
+                      Id="5d40e59b-ac51-49e2-a950-cf1ae44a4b9b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="546f309f-a385-4ba2-abea-7afa22eae753">
+                    <propertyInstance
+                      Id="36bf9454-9a9e-4d6d-ba27-799bb7049045"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76f33c18-e940-4a97-99e2-06fe660d9c50">
+                    <propertyInstance
+                      Id="b94ad9af-6c06-41ff-96a3-10b5b2b457e7"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="306a4301-6bc7-4474-a6b4-3fc277db1f35">
+                    <propertyInstance
+                      Id="c3fbeaa7-c388-4db9-9757-30c6769a84b2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7131016-a525-404e-922f-83fbcd97b20a">
+                    <propertyInstance
+                      Id="168a2730-88d5-4d7d-b025-1ae2690a3dec"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab65e6b2-981a-4e7e-b622-465b5c9a4deb">
+                    <propertyInstance
+                      Id="ceb1a5b7-2d41-4472-a1c0-27e46e170fb3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c53e5cd4-da9d-481f-9bcf-c4f79af1ee2a">
+                    <propertyInstance
+                      Id="8cb8123d-a2cc-466f-bf86-712bacbdbbda"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c69a1eb3-4fac-41a0-ab56-9ec597e795bb"
+                LastKnownName="DateTime"
+                LastKnownLocation="Package1_1234.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

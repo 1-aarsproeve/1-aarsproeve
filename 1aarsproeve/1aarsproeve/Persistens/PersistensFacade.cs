@@ -8,44 +8,37 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using _1aarsproeve.Model;
+using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Persistens
 {
+    /// <summary>
+    /// Persistens-klasse der indeholder CRUD-funktioner
+    /// </summary>
+    /// <typeparam name="T">Generisk type</typeparam>
     class PersistensFacade<T>
     {
+        /// <summary>
+        /// Gemmer data i databasen
+        /// </summary>
+        /// <param name="api">Tager API-url som string</param>
+        /// <param name="objekt">Tager objekt som skal gemmes</param>
         public static void GemDB(string api, object objekt)
         {
-            const string serverUrl = "http://localhost:16052";
-            HttpClientHandler handler = new HttpClientHandler();
-            handler.UseDefaultCredentials = true;
-            using (var client = new HttpClient(handler))
-            {
-                client.BaseAddress = new Uri(serverUrl);
-                client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                var response = client.PostAsJsonAsync(api, objekt).Result;
-
-            }
+            HovedViewModel.Client.PostAsJsonAsync(api, objekt);
         }
+        /// <summary>
+        /// Henter data i databasen
+        /// </summary>
+        /// <param name="api">Tager API-url som string</param>
         public static async Task<List<T>> LoadDB(string api)
         {
-            const string serverUrl = "http://localhost:16052/";
-            HttpClientHandler handler = new HttpClientHandler();
-            handler.UseDefaultCredentials = true;
-            using (var client = new HttpClient(handler))
+            var response1 = HovedViewModel.Client.GetAsync(api).Result;
+            if (response1.IsSuccessStatusCode)
             {
-                client.BaseAddress = new Uri(serverUrl);
-                client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                var response = client.GetAsync(api).Result;
-                if (response.IsSuccessStatusCode)
-                {
-                    return response.Content.ReadAsAsync<IEnumerable<T>>().Result.ToList();
-                }
-                return null;
+                return response1.Content.ReadAsAsync<IEnumerable<T>>().Result.ToList();
             }
+            return null;
         }
     }
 }

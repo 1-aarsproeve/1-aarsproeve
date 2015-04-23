@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -294,6 +294,45 @@
                 <memberEnd
                   Id="66c17231-33ea-48fb-b4de-32f6bc9d3947"
                   name="Eksporter mine vagter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b9895933-1209-4c12-8e9a-df2393758745"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Eksporter alle vagter"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4dd1452c-2cde-4766-ae3d-6ce47dc6aef2"
+              LastKnownName="Eksporter alle vagter"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d37f1f94-8142-4b12-9534-53d9bae995a5"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5ece4af8-908b-4aa1-ac86-dd79f8987b03"
+                  name="Eksporter alle vagter"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -694,6 +733,45 @@
                 <memberEnd
                   Id="573cad04-7dc0-4377-b93e-4f2a8d869018"
                   name="Eksporter mine vagter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="24b58fc2-7394-4d37-94aa-82cf11f75bbb"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Eksporter alle vagter"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4dd1452c-2cde-4766-ae3d-6ce47dc6aef2"
+              LastKnownName="Eksporter alle vagter"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39e33a49-812d-4b7a-bb8d-40b61cd862db"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd69669b-1ca2-4b6e-a6e3-2c3075b1b806"
+                  name="Eksporter alle vagter"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2980,6 +3058,25 @@
         name="Eksporter mine vagter"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4dd1452c-2cde-4766-ae3d-6ce47dc6aef2"
+        name="Eksporter alle vagter"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6c6934d2-d1d2-4f35-a362-214c6ca94fe4"
+        LastKnownName="WS1aarsproeve"
+        LastKnownLocation="Package_1059.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="de4408ca-b34e-48ab-bf41-707b028593e1"
+        LastKnownName="_1aarsproeve"
+        LastKnownLocation="Package_1105.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -12,44 +12,44 @@ using WS1aarsproeve;
 
 namespace WS1aarsproeve.Controllers
 {
-    public class VagtersViewController : ApiController
+    public class BeskedersController : ApiController
     {
-        private DataViewContext db = new DataViewContext();
+        private TableContext db = new TableContext();
 
-        // GET: api/VagtersView
-        public IQueryable<Vagter> GetVagters()
+        // GET: api/Beskeders
+        public IQueryable<Beskeder> GetBeskeders()
         {
-            return db.Vagters;
+            return db.Beskeders;
         }
 
-        // GET: api/VagtersView/5
-        [ResponseType(typeof(Vagter))]
-        public IHttpActionResult GetVagter(int id)
+        // GET: api/Beskeders/5
+        [ResponseType(typeof(Beskeder))]
+        public IHttpActionResult GetBeskeder(int id)
         {
-            Vagter vagter = db.Vagters.Find(id);
-            if (vagter == null)
+            Beskeder beskeder = db.Beskeders.Find(id);
+            if (beskeder == null)
             {
                 return NotFound();
             }
 
-            return Ok(vagter);
+            return Ok(beskeder);
         }
 
-        // PUT: api/VagtersView/5
+        // PUT: api/Beskeders/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutVagter(int id, Vagter vagter)
+        public IHttpActionResult PutBeskeder(int id, Beskeder beskeder)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != vagter.VagtId)
+            if (id != beskeder.BeskedId)
             {
                 return BadRequest();
             }
 
-            db.Entry(vagter).State = EntityState.Modified;
+            db.Entry(beskeder).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WS1aarsproeve.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VagterExists(id))
+                if (!BeskederExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace WS1aarsproeve.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/VagtersView
-        [ResponseType(typeof(Vagter))]
-        public IHttpActionResult PostVagter(Vagter vagter)
+        // POST: api/Beskeders
+        [ResponseType(typeof(Beskeder))]
+        public IHttpActionResult PostBeskeder(Beskeder beskeder)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Vagters.Add(vagter);
+            db.Beskeders.Add(beskeder);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = vagter.VagtId }, vagter);
+            return CreatedAtRoute("DefaultApi", new { id = beskeder.BeskedId }, beskeder);
         }
 
-        // DELETE: api/VagtersView/5
-        [ResponseType(typeof(Vagter))]
-        public IHttpActionResult DeleteVagter(int id)
+        // DELETE: api/Beskeders/5
+        [ResponseType(typeof(Beskeder))]
+        public IHttpActionResult DeleteBeskeder(int id)
         {
-            Vagter vagter = db.Vagters.Find(id);
-            if (vagter == null)
+            Beskeder beskeder = db.Beskeders.Find(id);
+            if (beskeder == null)
             {
                 return NotFound();
             }
 
-            db.Vagters.Remove(vagter);
+            db.Beskeders.Remove(beskeder);
             db.SaveChanges();
 
-            return Ok(vagter);
+            return Ok(beskeder);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace WS1aarsproeve.Controllers
             base.Dispose(disposing);
         }
 
-        private bool VagterExists(int id)
+        private bool BeskederExists(int id)
         {
-            return db.Vagters.Count(e => e.VagtId == id) > 0;
+            return db.Beskeders.Count(e => e.BeskedId == id) > 0;
         }
     }
 }

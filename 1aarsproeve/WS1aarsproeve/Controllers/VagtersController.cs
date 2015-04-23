@@ -14,7 +14,7 @@ namespace WS1aarsproeve.Controllers
 {
     public class VagtersController : ApiController
     {
-        private DataTableContext db = new DataTableContext();
+        private TableContext db = new TableContext();
 
         // GET: api/Vagters
         public IQueryable<Vagter> GetVagters()
