@@ -17,7 +17,6 @@ namespace _1aarsproeve.Strategy
     /// <summary>
     /// Strategy klasse der implmenterer IVagtSort interfacet
     /// </summary>
-
     public class MineVagter : IVagtSort
     {
         /// <summary>

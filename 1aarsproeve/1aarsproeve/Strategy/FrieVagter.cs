@@ -12,6 +12,9 @@ using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Strategy
 {
+    /// <summary>
+    /// Strategy klasse der implmenterer IVagtSort interfacet
+    /// </summary>
     public class FrieVagter : IVagtSort
     {
         /// <summary>

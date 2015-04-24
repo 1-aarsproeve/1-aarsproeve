@@ -652,6 +652,7 @@
           <operation
             Id="6d655de5-5bbd-40de-90e5-a048acfcf7fc"
             name="AabenForbindelse"
+            visibility="Private"
             isLeaf="false"
             isStatic="true"
             isAbstract="false"

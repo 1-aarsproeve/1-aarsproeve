@@ -78,7 +78,7 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Åbner forbindelsen til database
         /// </summary>
-        public void AabenForbindelse()
+        private void AabenForbindelse()
         {
             const string serverUrl = "http://localhost:9999/";
             HttpClientHandler handler = new HttpClientHandler();
