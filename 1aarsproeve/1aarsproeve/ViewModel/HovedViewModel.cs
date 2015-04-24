@@ -41,20 +41,6 @@ namespace _1aarsproeve.ViewModel
             get { return _client; }
         }
         /// <summary>
-        /// Åbner forbindelsen til database
-        /// </summary>
-        public void AabenForbindelse()
-        {
-            const string serverUrl = "http://localhost:16052";
-            HttpClientHandler handler = new HttpClientHandler();
-            handler.UseDefaultCredentials = true;
-            _client = new HttpClient(handler);
-            _client.BaseAddress = new Uri(serverUrl);
-            _client.DefaultRequestHeaders.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            
-        }
-        /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
         public ApplicationDataContainer Setting { get; set; }
@@ -81,7 +67,7 @@ namespace _1aarsproeve.ViewModel
             _beskeder = new ObservableCollection<Beskeder>();
             BeskedCollection.Add(_beskeder);
 
-            _beskeder.Add(new Beskeder(1, "MUS", new DateTime(), "hgfjjg", new DateTime(), "Daniel"));
+            _beskeder.Add(new Beskeder(1, "MUS-samtale", new DateTime(), "Så er der fyringsrunde!!", new DateTime(), "Daniel"));
             SkjulKnap = new Visibility();
 
             Stilling();
@@ -89,8 +75,20 @@ namespace _1aarsproeve.ViewModel
             LogUdCommand = new RelayCommand(LogUd);
             
         }
+        /// <summary>
+        /// Åbner forbindelsen til database
+        /// </summary>
+        public void AabenForbindelse()
+        {
+            const string serverUrl = "http://localhost:9999/";
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.UseDefaultCredentials = true;
+            _client = new HttpClient(handler);
+            _client.BaseAddress = new Uri(serverUrl);
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-
+        }
         /// <summary>
         /// Logger brugeren ud
         /// </summary>

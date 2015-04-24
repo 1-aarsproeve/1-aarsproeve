@@ -484,17 +484,16 @@ namespace _1aarsproeve.ViewModel
                     VagtCollection[i].Add(item);
                 }
             }
-
-            
         }
-
         #endregion
-
         /// <summary>
         /// Viser allevagter
         /// </summary>
         public void AlleVagter()
         {
+            Vagter v = new Vagter() {VagtId = 17, Starttidspunkt = new TimeSpan(21, 00, 00), Sluttidspunkt = new TimeSpan(22, 00, 00), Ugenummer = 20, UgedagId = 3, Brugernavn = "Daniel"};
+            PersistensFacade<Vagter>.RedigerDB("api/Vagters/", 17, v);
+
             ClearVagterCollections();
 
             _vagtsort = new AlleVagter();

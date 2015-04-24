@@ -258,9 +258,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>16052</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:16052/</IISUrl>
+          <IISUrl>http://localhost:9999/</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://localhost:16052/</IISAppRootUrl>
+          <IISAppRootUrl>http://localhost:9999/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

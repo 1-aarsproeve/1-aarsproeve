@@ -28,15 +28,34 @@ namespace _1aarsproeve.Persistens
             HovedViewModel.Client.PostAsJsonAsync(api, objekt);
         }
         /// <summary>
+        /// Sletter data i databasen
+        /// </summary>
+        /// <param name="api">Tager API-url som string</param>
+        /// <param name="id">Tager ID som skal slettes</param>
+        public static void DeleteDB(string api, int id)
+        {
+            HovedViewModel.Client.DeleteAsync(api + id);
+        }
+        /// <summary>
+        /// Redigerer data i databasen
+        /// </summary>
+        /// <param name="api">Tager API-url som string</param>
+        /// <param name="id">Tager ID som skal redigeres</param>
+        /// <param name="objekt">Tager objekt som skal redigeres</param>
+        public static void RedigerDB(string api, int id, object objekt)
+        {
+            HovedViewModel.Client.PutAsJsonAsync(api + id, objekt);
+        }
+        /// <summary>
         /// Henter data i databasen
         /// </summary>
         /// <param name="api">Tager API-url som string</param>
         public static async Task<List<T>> LoadDB(string api)
         {
-            var response1 = HovedViewModel.Client.GetAsync(api).Result;
-            if (response1.IsSuccessStatusCode)
+            var response = HovedViewModel.Client.GetAsync(api).Result;
+            if (response.IsSuccessStatusCode)
             {
-                return response1.Content.ReadAsAsync<IEnumerable<T>>().Result.ToList();
+                return response.Content.ReadAsAsync<IEnumerable<T>>().Result.ToList();
             }
             return null;
         }

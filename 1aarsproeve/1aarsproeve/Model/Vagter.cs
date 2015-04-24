@@ -12,6 +12,10 @@ namespace _1aarsproeve.Model
             UgedagId = ugedagId;
             Brugernavn = brugernavn;
         }
+        public Vagter()
+        {
+            
+        }
         public int VagtId { get; set; }
         public TimeSpan Starttidspunkt { get; set; }
         public TimeSpan Sluttidspunkt { get; set; }
