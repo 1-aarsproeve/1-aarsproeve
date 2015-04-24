@@ -104,14 +104,21 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ff5025c6-6d72-48fe-842e-62f5202cf8b4"
+                  Id="390bce7c-b62a-4a61-a82d-d422276b46df"
                   name="string api"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="cc825907-c039-43aa-aa50-e53cefe76d88"
+                  Id="ae95902a-8968-4a2e-874a-335c8bb8ae04"
+                  name="int id"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="29666f6d-a654-4b7e-97b4-6440c01d0a44"
                   name="object objekt"
                   direction="In"
                   isUnique="false" />

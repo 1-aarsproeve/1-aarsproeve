@@ -418,7 +418,7 @@
                 <operation Id="b562b8c5-2a97-4478-abd7-6c2f21a15cdb" name="LogUd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="a31bdacf-5251-48c5-97a1-39aa99182111" />
                 </operation>
-                <operation Id="099b8c54-9baa-4a31-9b44-ca6e73363bed" name="AabenForbindelse" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="099b8c54-9baa-4a31-9b44-ca6e73363bed" name="AabenForbindelse" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="6d655de5-5bbd-40de-90e5-a048acfcf7fc" />
                 </operation>
               </ownedOperationsInternal>
@@ -2745,13 +2745,18 @@
                   <elementDefinition Id="47f323d5-2c32-40a6-b928-ecd68408adb0" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="0befe5ba-c4ec-431e-ab65-80c563c382d8" name="string api" direction="In" isUnique="false">
-                        <elementDefinition Id="ff5025c6-6d72-48fe-842e-62f5202cf8b4" />
+                      <parameter Id="1a6a89d2-80d9-4556-aa3e-e8659fab7bc4" name="string api" direction="In" isUnique="false">
+                        <elementDefinition Id="390bce7c-b62a-4a61-a82d-d422276b46df" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="fd996564-5da3-449c-bbaf-0ccf30fe10b9" name="object objekt" direction="In" isUnique="false">
-                        <elementDefinition Id="cc825907-c039-43aa-aa50-e53cefe76d88" />
+                      <parameter Id="e7eaafd3-873e-45dd-969a-049ffdd3168b" name="int id" direction="In" isUnique="false">
+                        <elementDefinition Id="ae95902a-8968-4a2e-874a-335c8bb8ae04" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f0a76f59-d6b8-4e55-9a10-84c6d2f62ad4" name="object objekt" direction="In" isUnique="false">
+                        <elementDefinition Id="29666f6d-a654-4b7e-97b4-6440c01d0a44" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
