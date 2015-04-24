@@ -177,6 +177,7 @@
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\profil.png" />
     <Content Include="Assets\vagtplan.png" />
+    <Content Include="database.sql" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
