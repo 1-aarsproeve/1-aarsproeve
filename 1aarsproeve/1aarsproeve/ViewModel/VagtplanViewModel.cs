@@ -197,7 +197,7 @@ namespace _1aarsproeve.ViewModel
             if (fil != null)
             {
                 CachedFileManager.DeferUpdates(fil);
-                string vagter = "";
+                string vagter = null;
                 const string emne = "Fakta - vagt";
                 const string sted = "Jyderup";
                 if (fil.FileType.Equals(".ics"))
@@ -227,7 +227,7 @@ namespace _1aarsproeve.ViewModel
                 else
                 {
                     vagter +=
-                        "Subject, Start Date, Start Time, End Date, End Time, Location\n";
+                        "Emne, Startdato, Starttidspunkt, Slutdato, Sluttidspunkt, Placering\n";
                     for (int i = 0; i < VagtCollection.Count; i++)
                     {
                         var query1 =
@@ -274,7 +274,7 @@ namespace _1aarsproeve.ViewModel
             if (fil != null)
             {
                 CachedFileManager.DeferUpdates(fil);
-                string vagter = "";
+                string vagter = null;
                 const string emne = "Fakta - vagt";
                 const string sted = "Jyderup";
                 if (fil.FileType.Equals(".ics"))
@@ -630,11 +630,11 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Ugenummer");
             }
         }
+
+        #region PropertyChanged
         /// <summary>
         /// Implementerer INotifyPropertyChanged interfacet
         /// </summary>
-        #region PropertyChanged
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
