@@ -2,9 +2,6 @@ using System;
 
 namespace _1aarsproeve.Model
 {
-    /// <summary>
-    /// Beskeder Klassen
-    /// </summary>
     public partial class Beskeder
     {
         /// <summary>
@@ -25,29 +22,93 @@ namespace _1aarsproeve.Model
             Udloebsdato = udloebsdato;
             Brugernavn = brugernavn;
         }
+
+        public Beskeder()
+        {
+        }
+
+        public void Checkbeskrivelse(string beskrivelse)
+        {
+            if (string.IsNullOrEmpty(beskrivelse) || beskrivelse.Length < 9 || beskrivelse.Length > 200)
+            {
+                throw new ArgumentException(" fejl i beskrivelse ");
+            }
+        }
+
+        public void CheckBrugernavn(string brugernavn)
+        {
+            if (string.IsNullOrEmpty(brugernavn) || brugernavn.Length > 30)
+            {
+                throw new ArgumentException("brugernavn er forkert");
+            }
+
+        }
+
+        public void Checkoverskrift(string overskrift)
+        {
+            if (string.IsNullOrEmpty(overskrift) || overskrift.Length < 10 || overskrift.Length > 50)
+            {
+                throw new ArgumentException("fejl i overskrift");
+            }
+        }
         /// <summary>
         /// BeskedId Property
         /// </summary>
         public int BeskedId { get; set; }
+
         /// <summary>
         /// Overskrift Property
         /// </summary>
-        public string Overskrift { get; set; }
+        private string _overskrift;
+
+        public string Overskrift
+        {
+            get { return _overskrift; }
+            set
+            {
+                Checkoverskrift(value);
+                _overskrift = value;
+            }
+        }
+
         /// <summary>
         /// Dato Property
         /// </summary>
         public DateTime Dato { get; set; }
+
         /// <summary>
         /// Beskrivelse Property
         /// </summary>
-        public string Beskrivelse { get; set; }
+        private string _beskrivelse;
+
+        public string Beskrivelse
+        {
+            get { return _beskrivelse; }
+            set
+            {
+                Checkbeskrivelse(value);
+                _beskrivelse = value;
+            }
+        }
+
         /// <summary>
         /// Udloebsdato Property
         /// </summary>
         public DateTime Udloebsdato { get; set; }
+
         /// <summary>
         /// Brugernavn Property
         /// </summary>
-        public string Brugernavn { get; set; }
+        private string _brugernavn;
+
+        public string Brugernavn
+        {
+            get { return _brugernavn; }
+            set
+            {
+                CheckBrugernavn(value);
+                _brugernavn = value;
+            }
+        }
     }
 }

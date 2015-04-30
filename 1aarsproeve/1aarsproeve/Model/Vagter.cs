@@ -28,7 +28,16 @@ namespace _1aarsproeve.Model
         /// </summary>
         public Vagter()
         {
-            
+
+        }
+
+        public void CheckBrugernavn(string brugernavn)
+        {
+            if (string.IsNullOrEmpty(brugernavn) || brugernavn.Length > 30)
+            {
+                throw new ArgumentException("brugernavn er forkert");
+            }
+
         }
         /// <summary>
         /// VagtId Property
@@ -53,6 +62,17 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Brugernavn Property
         /// </summary>
-        public string Brugernavn { get; set; }
+
+        private string _brugernavn;
+
+        public string Brugernavn
+        {
+            get { return _brugernavn; }
+            set
+            {
+                CheckBrugernavn(value);
+                _brugernavn = value;
+            }
+        }
     }
 }

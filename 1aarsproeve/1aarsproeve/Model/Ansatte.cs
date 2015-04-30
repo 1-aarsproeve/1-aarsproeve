@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace _1aarsproeve.Model
@@ -5,6 +6,7 @@ namespace _1aarsproeve.Model
     /// <summary>
     /// Ansatte klasse der holder styr systemets brugere
     /// </summary>
+
     public partial class Ansatte
     {
         /// <summary>
@@ -29,34 +31,180 @@ namespace _1aarsproeve.Model
             Postnummer = postnummer;
             StillingId = stillingId;
         }
+
+        public Ansatte()
+        {
+        }
+
+        public void Checkpassword(string password)
+        {
+            if (string.IsNullOrEmpty(password) || password.Length > 30 || password.Length < 6)
+            {
+                throw new ArgumentException("password er forkert");
+            }
+        }
+
+        public void CheckBrugernavn(string brugernavn)
+        {
+            if (string.IsNullOrEmpty(brugernavn) || brugernavn.Length > 30)
+            {
+                throw new ArgumentException("brugernavn er forkert");
+            }
+
+        }
+
+        public void Checknavn(string navn)
+        {
+            if (navn.Length == 0 || navn.Length > 30 || navn.Length < 2)
+            {
+                throw new ArgumentException("navn er forkert");
+            }
+        }
+
+        public void CheckEmail(string email)
+        {
+            if (email.Length == 0 || email.Length > 20 || email.Length < 6)
+            {
+                throw new ArgumentException("email er forkert");
+            }
+
+        }
+
+        public void CheckAdresse(string Adresse)
+        {
+            if (Adresse.Length == 0 || Adresse.Length > 50 || Adresse.Length < 2)
+            {
+                throw new ArgumentException("adresse er for kort ");
+            }
+
+        }
+
+        public void CheckMobil(string mobil)
+        {
+            if (mobil.Length == 0 || mobil.Length > 8 || mobil.Length < 8)
+            {
+                throw new ArgumentException("mobil nummer er for kort");
+            }
+        }
+
+        public void CheckPostnummer(string postnummer)
+        {
+            if (postnummer.Length == 0 || postnummer.Length < 4 || postnummer.Length > 4)
+            {
+                throw new ArgumentException("postnummer skal være 4 tegn");
+            }
+        }
+
         /// <summary>
         /// Brugernavn property
         /// </summary>
-        public string Brugernavn { get; set; }
+        private string _brugernavn;
+
+        public string Brugernavn
+        {
+            get { return _brugernavn; }
+            set
+            {
+                CheckBrugernavn(value);
+                _brugernavn = value;
+            }
+        }
+
+
         /// <summary>
         /// Navn property
         /// </summary>
-        public string Navn { get; set; }
+
+        private string _navn;
+
+        public string Navn
+        {
+            get { return _navn; }
+            set
+            {
+                Checknavn(value);
+                _navn = value;
+            }
+        }
+
         /// <summary>
         /// Password property
         /// </summary>
-        public string Password { get; set; }
+        private string _password;
+
+        public string Password
+        {
+            get { return _password; }
+            set
+            {
+                Checkpassword(value);
+                _password = value;
+            }
+        }
+
         /// <summary>
         /// Email property
-        /// </summary>
-        public string Email { get; set; }
+        /// </summary>  
+        /// 
+
+        private string _email;
+
+        public string Email
+        {
+            get { return _email; }
+            set
+            {
+                CheckEmail(value);
+                _email = value;
+            }
+        }
+
         /// <summary>
         /// Mobil property
         /// </summary>
-        public string Mobil { get; set; }
+        private string _mobil;
+
+        public string Mobil
+        {
+            get { return _mobil; }
+            set
+            {
+                CheckMobil(value);
+                _mobil = value;
+            }
+        }
+
+
         /// <summary>
         /// Adresse property
         /// </summary>
-        public string Adresse { get; set; }
+        private string _Adresse;
+
+        public string Adresse
+        {
+            get { return _Adresse; }
+            set
+            {
+                CheckAdresse(value);
+                _Adresse = value;
+            }
+        }
+
         /// <summary>
         /// Postnummer property
-        /// </summary>
-        public string Postnummer { get; set; }
+        /// </summary>  
+        private string _postnummer;
+
+        public string Postnummer
+        {
+            get { return _postnummer; }
+            set
+            {
+                CheckPostnummer(value);
+                _postnummer = value;
+            }
+        }
+
         /// <summary>
         /// StillingId property
         /// </summary>
