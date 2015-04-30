@@ -63,16 +63,16 @@ namespace _1aarsproeve.Model
 
         public void CheckEmail(string email)
         {
-            if (email.Length == 0 || email.Length > 20 || email.Length < 6)
+            if (email == null || email.Length > 20 || email.Length < 6)
             {
                 throw new ArgumentException("email er forkert");
             }
 
         }
 
-        public void CheckAdresse(string Adresse)
+        public void CheckAdresse(string adresse)
         {
-            if (Adresse.Length == 0 || Adresse.Length > 50 || Adresse.Length < 2)
+            if (adresse == null || adresse.Length > 50 || adresse.Length < 2)
             {
                 throw new ArgumentException("adresse er for kort ");
             }
@@ -81,7 +81,7 @@ namespace _1aarsproeve.Model
 
         public void CheckMobil(string mobil)
         {
-            if (mobil.Length == 0 || mobil.Length > 8 || mobil.Length < 8)
+            if (mobil == null || mobil.Length > 8 || mobil.Length < 8)
             {
                 throw new ArgumentException("mobil nummer er for kort");
             }
@@ -89,7 +89,7 @@ namespace _1aarsproeve.Model
 
         public void CheckPostnummer(string postnummer)
         {
-            if (postnummer.Length == 0 || postnummer.Length < 4 || postnummer.Length > 4)
+            if (postnummer == null || postnummer.Length < 4 || postnummer.Length > 4)
             {
                 throw new ArgumentException("postnummer skal være 4 tegn");
             }

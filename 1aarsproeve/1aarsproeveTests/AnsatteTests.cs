@@ -419,23 +419,23 @@ namespace _1aarsproeveTests
         [TestMethod()]
         public void CheckAdresseTest()
         {
-            string Adresse3 = "a";
-            string Adresse4 = "";
+            string adresse3 = "a";
+            string adresse4 = "";
 
 
 
             for (int i = 0; i < 50; i++)
             {
-                Adresse4 = Adresse4 + "a";
+                adresse4 = adresse4 + "a";
             }
 
 
-            _Ansatte.Adresse = Adresse4;
-            Assert.AreEqual(Adresse4, _Ansatte.Adresse);
+            _Ansatte.Adresse = adresse4;
+            Assert.AreEqual(adresse4, _Ansatte.Adresse);
 
             try
             {
-                _Ansatte.Adresse = Adresse3;
+                _Ansatte.Adresse = adresse3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -449,18 +449,18 @@ namespace _1aarsproeveTests
         public void CheckAdresseTest1()
         {
 
-            string Adresse4 = "";
+            string adresse4 = "";
 
 
 
             for (int i = 0; i < 50; i++)
             {
-                Adresse4 = Adresse4 + "a";
+                adresse4 = adresse4 + "a";
             }
 
 
-            _Ansatte.Adresse = Adresse4;
-            Assert.AreEqual(Adresse4, _Ansatte.Adresse);
+            _Ansatte.Adresse = adresse4;
+            Assert.AreEqual(adresse4, _Ansatte.Adresse);
 
             try
             {
@@ -476,26 +476,26 @@ namespace _1aarsproeveTests
         [TestMethod()]
         public void CheckAdresseTest2()
         {
-            string Adresse3 = "";
-            string Adresse4 = "";
+            string adresse3 = "";
+            string adresse4 = "";
 
             for (int i = 0; i < 51; i++)
             {
-                Adresse3 = Adresse3 + "a";
+                adresse3 = adresse3 + "a";
             }
 
             for (int i = 0; i < 50; i++)
             {
-                Adresse4 = Adresse4 + "a";
+                adresse4 = adresse4 + "a";
             }
 
 
-            _Ansatte.Adresse = Adresse4;
-            Assert.AreEqual(Adresse4, _Ansatte.Adresse);
+            _Ansatte.Adresse = adresse4;
+            Assert.AreEqual(adresse4, _Ansatte.Adresse);
 
             try
             {
-                _Ansatte.Adresse = Adresse3;
+                _Ansatte.Adresse = adresse3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
