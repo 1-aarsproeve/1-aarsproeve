@@ -14,13 +14,13 @@ namespace _1aarsproeveTests
         private Beskeder _beskeder;
 
         [TestInitialize]
-        public void Beforetest()
+        public void BeforeTest()
         {
             _beskeder = new Beskeder();
         }
 
         [TestMethod()]
-        public void CheckbeskrivelseTest()
+        public void CheckBeskrivelseTest()
         {
             string beskrivelse3 = "";
             string beskrivelse4 = "";
@@ -48,7 +48,7 @@ namespace _1aarsproeveTests
         }
 
         [TestMethod()]
-        public void CheckbeskrivelseTest1()
+        public void CheckBeskrivelseTest1()
         {
 
             string beskrivelse4 = "";
@@ -76,7 +76,7 @@ namespace _1aarsproeveTests
         }
 
         [TestMethod()]
-        public void CheckbeskrivelseTest2()
+        public void CheckBeskrivelseTest2()
         {
             string beskrivelse3 = "";
             string beskrivelse4 = "";
@@ -107,7 +107,7 @@ namespace _1aarsproeveTests
             }
         }
         [TestMethod()]
-        public void CheckbeskrivelseTest3()
+        public void CheckBeskrivelseTest3()
         {
             string beskrivelse3 = "";
             string beskrivelse4 = "";
@@ -228,7 +228,7 @@ namespace _1aarsproeveTests
         }
 
         [TestMethod()]
-        public void CheckoverskriftTest()
+        public void CheckOverskriftTest()
         {
 
             string Overskrift3 = "";
@@ -261,7 +261,7 @@ namespace _1aarsproeveTests
         }
 
         [TestMethod()]
-        public void CheckoverskriftTest1()
+        public void CheckOverskriftTest1()
         {
 
             string Overskrift3 = "";
@@ -294,7 +294,7 @@ namespace _1aarsproeveTests
         }
 
         [TestMethod()]
-        public void CheckoverskriftTest2()
+        public void CheckOverskriftTest2()
         {
 
             string Overskrift3 = "";
@@ -321,7 +321,7 @@ namespace _1aarsproeveTests
         }
 
         [TestMethod()]
-        public void CheckoverskriftTest3()
+        public void CheckOverskriftTest3()
         {
 
 

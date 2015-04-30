@@ -10,12 +10,12 @@ namespace _1aarsproeveTests
     [TestClass()]
     public class AnsatteTests
     {
-        private Ansatte _Ansatte;
+        private Ansatte _ansatte;
 
         [TestInitialize]
-        public void Beforetest()
+        public void BeforeTest()
         {
-            _Ansatte = new Ansatte();
+            _ansatte = new Ansatte();
         }
 
         [TestMethod()]
@@ -34,12 +34,12 @@ namespace _1aarsproeveTests
                 navn4 = navn4 + "a";
             }
 
-            _Ansatte.Navn = navn3;
-            Assert.AreEqual(navn3, _Ansatte.Navn);
+            _ansatte.Navn = navn3;
+            Assert.AreEqual(navn3, _ansatte.Navn);
 
             try
             {
-                _Ansatte.Navn = navn4;
+                _ansatte.Navn = navn4;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -62,12 +62,12 @@ namespace _1aarsproeveTests
 
 
 
-            _Ansatte.Navn = navn3;
-            Assert.AreEqual(navn3, _Ansatte.Navn);
+            _ansatte.Navn = navn3;
+            Assert.AreEqual(navn3, _ansatte.Navn);
 
             try
             {
-                _Ansatte.Navn = navn4;
+                _ansatte.Navn = navn4;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -93,12 +93,12 @@ namespace _1aarsproeveTests
                 navn4 = navn4 + "a";
             }
 
-            _Ansatte.Navn = navn3;
-            Assert.AreEqual(navn3, _Ansatte.Navn);
+            _ansatte.Navn = navn3;
+            Assert.AreEqual(navn3, _ansatte.Navn);
 
             try
             {
-                _Ansatte.Navn = navn4;
+                _ansatte.Navn = navn4;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -110,7 +110,7 @@ namespace _1aarsproeveTests
 
 
         [TestMethod()]
-        public void CheckpasswordTest()
+        public void CheckPasswordTest()
         {
             string password1 = "";
 
@@ -122,12 +122,12 @@ namespace _1aarsproeveTests
 
 
 
-            _Ansatte.Password = password1;
-            Assert.AreEqual(password1, _Ansatte.Password);
+            _ansatte.Password = password1;
+            Assert.AreEqual(password1, _ansatte.Password);
 
             try
             {
-                _Ansatte.Password = null;
+                _ansatte.Password = null;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -137,7 +137,7 @@ namespace _1aarsproeveTests
             }
         }
         [TestMethod()]
-        public void CheckpasswordTest1()
+        public void CheckPasswordTest1()
         {
             string password1 = "";
             string password2 = "";
@@ -149,12 +149,12 @@ namespace _1aarsproeveTests
 
 
 
-            _Ansatte.Password = password1;
-            Assert.AreEqual(password1, _Ansatte.Password);
+            _ansatte.Password = password1;
+            Assert.AreEqual(password1, _ansatte.Password);
 
             try
             {
-                _Ansatte.Password = password2;
+                _ansatte.Password = password2;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -165,7 +165,7 @@ namespace _1aarsproeveTests
         }
 
         [TestMethod()]
-        public void CheckpasswordTest2()
+        public void CheckPasswordTest2()
         {
             string password1 = "";
             string password2 = "";
@@ -181,12 +181,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Password = password1;
-            Assert.AreEqual(password1, _Ansatte.Password);
+            _ansatte.Password = password1;
+            Assert.AreEqual(password1, _ansatte.Password);
 
             try
             {
-                _Ansatte.Password = password2;
+                _ansatte.Password = password2;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -197,7 +197,7 @@ namespace _1aarsproeveTests
         }
 
         [TestMethod()]
-        public void CheckpasswordTest3()
+        public void CheckPasswordTest3()
         {
             string password1 = "";
             string password2 = "";
@@ -213,12 +213,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Password = password1;
-            Assert.AreEqual(password1, _Ansatte.Password);
+            _ansatte.Password = password1;
+            Assert.AreEqual(password1, _ansatte.Password);
 
             try
             {
-                _Ansatte.Password = password2;
+                _ansatte.Password = password2;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -241,12 +241,12 @@ namespace _1aarsproeveTests
 
 
 
-            _Ansatte.Brugernavn = brugernavn4;
-            Assert.AreEqual(brugernavn4, _Ansatte.Brugernavn);
+            _ansatte.Brugernavn = brugernavn4;
+            Assert.AreEqual(brugernavn4, _ansatte.Brugernavn);
 
             try
             {
-                _Ansatte.Brugernavn = brugernavn3;
+                _ansatte.Brugernavn = brugernavn3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -269,12 +269,12 @@ namespace _1aarsproeveTests
 
 
 
-            _Ansatte.Brugernavn = brugernavn4;
-            Assert.AreEqual(brugernavn4, _Ansatte.Brugernavn);
+            _ansatte.Brugernavn = brugernavn4;
+            Assert.AreEqual(brugernavn4, _ansatte.Brugernavn);
 
             try
             {
-                _Ansatte.Brugernavn = null;
+                _ansatte.Brugernavn = null;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -301,12 +301,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Brugernavn = brugernavn4;
-            Assert.AreEqual(brugernavn4, _Ansatte.Brugernavn);
+            _ansatte.Brugernavn = brugernavn4;
+            Assert.AreEqual(brugernavn4, _ansatte.Brugernavn);
 
             try
             {
-                _Ansatte.Brugernavn = brugernavn3;
+                _ansatte.Brugernavn = brugernavn3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -334,12 +334,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Email = email4;
-            Assert.AreEqual(email4, _Ansatte.Email);
+            _ansatte.Email = email4;
+            Assert.AreEqual(email4, _ansatte.Email);
 
             try
             {
-                _Ansatte.Email = null;
+                _ansatte.Email = null;
                 
                 Assert.Fail();
             }
@@ -368,12 +368,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Email = email4;
-            Assert.AreEqual(email4, _Ansatte.Email);
+            _ansatte.Email = email4;
+            Assert.AreEqual(email4, _ansatte.Email);
 
             try
             {
-                _Ansatte.Email = email3;
+                _ansatte.Email = email3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -401,12 +401,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Email = email4;
-            Assert.AreEqual(email4, _Ansatte.Email);
+            _ansatte.Email = email4;
+            Assert.AreEqual(email4, _ansatte.Email);
 
             try
             {
-                _Ansatte.Email = email3;
+                _ansatte.Email = email3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -430,12 +430,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Adresse = adresse4;
-            Assert.AreEqual(adresse4, _Ansatte.Adresse);
+            _ansatte.Adresse = adresse4;
+            Assert.AreEqual(adresse4, _ansatte.Adresse);
 
             try
             {
-                _Ansatte.Adresse = adresse3;
+                _ansatte.Adresse = adresse3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -459,12 +459,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Adresse = adresse4;
-            Assert.AreEqual(adresse4, _Ansatte.Adresse);
+            _ansatte.Adresse = adresse4;
+            Assert.AreEqual(adresse4, _ansatte.Adresse);
 
             try
             {
-                _Ansatte.Adresse = null;
+                _ansatte.Adresse = null;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -490,12 +490,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Adresse = adresse4;
-            Assert.AreEqual(adresse4, _Ansatte.Adresse);
+            _ansatte.Adresse = adresse4;
+            Assert.AreEqual(adresse4, _ansatte.Adresse);
 
             try
             {
-                _Ansatte.Adresse = adresse3;
+                _ansatte.Adresse = adresse3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -522,12 +522,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Mobil = telefonnummer4;
-            Assert.AreEqual(telefonnummer4, _Ansatte.Mobil);
+            _ansatte.Mobil = telefonnummer4;
+            Assert.AreEqual(telefonnummer4, _ansatte.Mobil);
 
             try
             {
-                _Ansatte.Mobil = telefonnummer3;
+                _ansatte.Mobil = telefonnummer3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -554,12 +554,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Mobil = telefonnummer4;
-            Assert.AreEqual(telefonnummer4, _Ansatte.Mobil);
+            _ansatte.Mobil = telefonnummer4;
+            Assert.AreEqual(telefonnummer4, _ansatte.Mobil);
 
             try
             {
-                _Ansatte.Mobil = telefonnummer3;
+                _ansatte.Mobil = telefonnummer3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -583,12 +583,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Mobil = telefonnummer4;
-            Assert.AreEqual(telefonnummer4, _Ansatte.Mobil);
+            _ansatte.Mobil = telefonnummer4;
+            Assert.AreEqual(telefonnummer4, _ansatte.Mobil);
 
             try
             {
-                _Ansatte.Mobil = null;
+                _ansatte.Mobil = null;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -615,12 +615,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Postnummer = postnummer4;
-            Assert.AreEqual(postnummer4, _Ansatte.Postnummer);
+            _ansatte.Postnummer = postnummer4;
+            Assert.AreEqual(postnummer4, _ansatte.Postnummer);
 
             try
             {
-                _Ansatte.Postnummer = postnummer3;
+                _ansatte.Postnummer = postnummer3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -647,12 +647,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Postnummer = postnummer4;
-            Assert.AreEqual(postnummer4, _Ansatte.Postnummer);
+            _ansatte.Postnummer = postnummer4;
+            Assert.AreEqual(postnummer4, _ansatte.Postnummer);
 
             try
             {
-                _Ansatte.Postnummer = postnummer3;
+                _ansatte.Postnummer = postnummer3;
                 Assert.Fail();
             }
             catch (ArgumentException e)
@@ -676,12 +676,12 @@ namespace _1aarsproeveTests
             }
 
 
-            _Ansatte.Postnummer = postnummer4;
-            Assert.AreEqual(postnummer4, _Ansatte.Postnummer);
+            _ansatte.Postnummer = postnummer4;
+            Assert.AreEqual(postnummer4, _ansatte.Postnummer);
 
             try
             {
-                _Ansatte.Postnummer = null;
+                _ansatte.Postnummer = null;
                 Assert.Fail();
             }
             catch (ArgumentException e)

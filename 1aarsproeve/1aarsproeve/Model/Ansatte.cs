@@ -36,7 +36,7 @@ namespace _1aarsproeve.Model
         {
         }
 
-        public void Checkpassword(string password)
+        public void CheckPassword(string password)
         {
             if (string.IsNullOrEmpty(password) || password.Length > 30 || password.Length < 6)
             {
@@ -137,7 +137,7 @@ namespace _1aarsproeve.Model
             get { return _password; }
             set
             {
-                Checkpassword(value);
+                CheckPassword(value);
                 _password = value;
             }
         }

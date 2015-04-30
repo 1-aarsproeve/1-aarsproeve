@@ -13,7 +13,7 @@ namespace _1aarsproeveTests
         private Vagter _vagter;
 
         [TestInitialize]
-        public void Beforetest()
+        public void BeforeTest()
         {
             _vagter = new Vagter();
         }

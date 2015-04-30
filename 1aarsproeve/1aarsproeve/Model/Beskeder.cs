@@ -27,9 +27,9 @@ namespace _1aarsproeve.Model
         {
         }
 
-        public void Checkbeskrivelse(string beskrivelse)
+        public void CheckBeskrivelse(string beskrivelse)
         {
-            if (string.IsNullOrEmpty(beskrivelse) || beskrivelse.Length < 9 || beskrivelse.Length > 200)
+            if (string.IsNullOrEmpty(beskrivelse) || beskrivelse.Length < 10 || beskrivelse.Length > 200)
             {
                 throw new ArgumentException(" fejl i beskrivelse ");
             }
@@ -44,7 +44,7 @@ namespace _1aarsproeve.Model
 
         }
 
-        public void Checkoverskrift(string overskrift)
+        public void CheckOverskrift(string overskrift)
         {
             if (string.IsNullOrEmpty(overskrift) || overskrift.Length < 10 || overskrift.Length > 50)
             {
@@ -66,7 +66,7 @@ namespace _1aarsproeve.Model
             get { return _overskrift; }
             set
             {
-                Checkoverskrift(value);
+                CheckOverskrift(value);
                 _overskrift = value;
             }
         }
@@ -86,7 +86,7 @@ namespace _1aarsproeve.Model
             get { return _beskrivelse; }
             set
             {
-                Checkbeskrivelse(value);
+                CheckBeskrivelse(value);
                 _beskrivelse = value;
             }
         }

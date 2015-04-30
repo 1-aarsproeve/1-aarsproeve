@@ -1,4 +1,19 @@
-﻿/* Opretter Stillinger-tabel */
+﻿CREATE VIEW [dbo].[AnsatteView]
+	AS SELECT * FROM [Ansatte]
+	GO
+/* Opretter HovedmenuView */
+CREATE VIEW [dbo].[HovedmenuView]
+	AS  SELECT Beskeder.*, Ansatte.Navn FROM [Beskeder] 
+	JOIN Ansatte ON Beskeder.Brugernavn = Ansatte.Brugernavn
+	WHERE Beskeder.Udloebsdato > GETDATE()
+	GO
+/* Opretter VagtplanView */
+CREATE VIEW [dbo].[VagtplanView]
+	AS SELECT Vagter.Starttidspunkt, Vagter.Sluttidspunkt, Vagter.UgedagId, Vagter.Ugenummer, Vagter.VagtId, Ansatte.Brugernavn, Ansatte.Navn FROM [Vagter]
+	JOIN Ansatte ON Vagter.Brugernavn = Ansatte.Brugernavn
+	GO
+
+/* Opretter Stillinger-tabel */
 CREATE TABLE [dbo].[Stillinger] (
     [StillingId] INT          IDENTITY (1, 1) NOT NULL,
     [Stilling]   VARCHAR (50) NOT NULL,
@@ -69,18 +84,3 @@ CREATE TABLE [dbo].[Beskeder] (
 );
 /* Indsætter i Besked-tabel */
 INSERT INTO Beskeder VALUES ('MUS-samtaler', '2015-04-04', 'Så er der MUS-samtaler!', '2015-05-15', 'Daniel');
-
-/* Opretter AnsatteView */
-GO CREATE VIEW [dbo].[AnsatteView]
-	AS SELECT * FROM [Ansatte]
-
-/* Opretter HovedmenuView */
-GO CREATE VIEW [dbo].[HovedmenuView]
-	AS  SELECT Beskeder.*, Ansatte.Navn FROM [Beskeder] 
-	JOIN Ansatte ON Beskeder.Brugernavn = Ansatte.Brugernavn
-	WHERE Beskeder.Udloebsdato > GETDATE()
-
-/* Opretter VagtplanView */
- GO CREATE VIEW [dbo].[VagtplanView]
-	AS SELECT Vagter.Starttidspunkt, Vagter.Sluttidspunkt, Vagter.UgedagId, Vagter.Ugenummer, Vagter.VagtId, Ansatte.Brugernavn, Ansatte.Navn FROM [Vagter]
-	JOIN Ansatte ON Vagter.Brugernavn = Ansatte.Brugernavn
