@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2692,6 +2692,10 @@
                 Id="468ee44c-6c32-4286-8817-6e08369d146e"
                 LastKnownName="MessageOccurrenceSpecification12"
                 LastKnownLocation="UML.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dee3b7b0-13b9-4849-9de9-0e213ce37099"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="UML.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -2738,7 +2742,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagt"
+                LastKnownName=": Vagter"
                 LastKnownLocation="UML.uml" />
             </coveredLifelines>
             <finish>
@@ -2778,7 +2782,7 @@
             <covered>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagt"
+                LastKnownName=": Vagter"
                 LastKnownLocation="UML.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2798,17 +2802,7 @@
             <covered>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagt"
-                LastKnownLocation="UML.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="254f879c-0cc7-4602-8a0a-8fffdb2fce86"
-            name="MessageOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagt"
+                LastKnownName=": Vagter"
                 LastKnownLocation="UML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2819,6 +2813,16 @@
               <lifelineMoniker
                 Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
                 LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="254f879c-0cc7-4602-8a0a-8fffdb2fce86"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="8d606198-6797-427d-8421-9b80434d084b"
+                LastKnownName=": Vagter"
                 LastKnownLocation="UML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2836,10 +2840,76 @@
             <covered>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagt"
+                LastKnownName=": Vagter"
                 LastKnownLocation="UML.uml" />
             </covered>
           </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="48f54436-1eb2-4b7e-8d40-7254fce15bdb"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="dadadce6-7a11-41c2-b600-1b192410c3b3"
+                LastKnownName=": PersistentFacade"
+                LastKnownLocation="UML.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="0381edd5-d6c0-418b-bac9-3d898e132caf"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="UML.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="be8d1af0-6d2b-4dc4-ab54-e2201f8987ba"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="45163337-faf0-4475-8564-8752c7832ee6"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="UML.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="be8d1af0-6d2b-4dc4-ab54-e2201f8987ba"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="bcdeb915-6a41-4fb9-bf4d-c24e62965be7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="dadadce6-7a11-41c2-b600-1b192410c3b3"
+                LastKnownName=": PersistentFacade"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dee3b7b0-13b9-4849-9de9-0e213ce37099"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
+                LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="45163337-faf0-4475-8564-8752c7832ee6"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="dadadce6-7a11-41c2-b600-1b192410c3b3"
+                LastKnownName=": PersistentFacade"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
             Id="2fb91be6-6c97-403f-a9e0-314cc20a5dca"
             name="ExecutionOccurrenceSpecification6">
@@ -2855,6 +2925,24 @@
               <lifelineMoniker
                 Id="6f83a56c-6306-4b89-bb3c-c4c7f6596a8c"
                 LastKnownName=": VagtHandler"
+                LastKnownLocation="UML.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="0381edd5-d6c0-418b-bac9-3d898e132caf"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a7068c13-fdbb-4eba-b648-da69fbb4d880"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="UML.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="dadadce6-7a11-41c2-b600-1b192410c3b3"
+                LastKnownName=": PersistentFacade"
                 LastKnownLocation="UML.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2895,9 +2983,14 @@
           </lifeline>
           <lifeline
             Id="8d606198-6797-427d-8421-9b80434d084b"
-            name=": Vagt"
+            name=": Vagter"
             isActor="false"
-            lifelineDisplayName=": Vagt">
+            lifelineDisplayName=": Vagter">
+            <represents>
+              <propertyMoniker
+                Id="8288abcc-216b-4b4b-b02b-dce0b7854d5e"
+                LastKnownLocation="UML.uml" />
+            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="a1656977-7381-4209-89d2-8b491b88daff"
@@ -2906,6 +2999,22 @@
               <executionOccurrenceSpecificationMoniker
                 Id="a4fe249f-abcf-462d-84d2-6f0763438b31"
                 LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="UML.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="dadadce6-7a11-41c2-b600-1b192410c3b3"
+            name=": PersistentFacade"
+            isActor="false"
+            lifelineDisplayName=": PersistentFacade">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="be8d1af0-6d2b-4dc4-ab54-e2201f8987ba"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="UML.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0381edd5-d6c0-418b-bac9-3d898e132caf"
+                LastKnownName="ExecutionOccurrenceSpecification10"
                 LastKnownLocation="UML.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -2968,6 +3077,25 @@
                 LastKnownLocation="UML.uml" />
             </receiveEvent>
           </message>
+          <message
+            Id="80dbd06e-15a2-44b0-8c89-17e01b35db04"
+            name="GemDB(api, objekt)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="dee3b7b0-13b9-4849-9de9-0e213ce37099"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="UML.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="45163337-faf0-4475-8564-8752c7832ee6"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="UML.uml" />
+            </receiveEvent>
+          </message>
         </messages>
         <ownedAttributesInternal>
           <property
@@ -2983,6 +3111,22 @@
               <actorMoniker
                 Id="82a6cbc4-25ee-46f4-b121-5638b877aa5a"
                 LastKnownName="Bruger"
+                LastKnownLocation="UML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8288abcc-216b-4b4b-b02b-dce0b7854d5e"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="a7011201-3877-41e5-a2ee-a689b2fa0122"
+                LastKnownName="Vagter"
                 LastKnownLocation="UML.uml" />
             </type_NamedElement>
           </property>
@@ -3077,6 +3221,16 @@
         Id="de4408ca-b34e-48ab-bf41-707b028593e1"
         LastKnownName="_1aarsproeve"
         LastKnownLocation="Package_1105.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="bcdeb915-6a41-4fb9-bf4d-c24e62965be7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a7068c13-fdbb-4eba-b648-da69fbb4d880"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
