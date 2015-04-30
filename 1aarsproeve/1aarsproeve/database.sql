@@ -28,12 +28,12 @@ INSERT INTO Ugedage VALUES ('Søndag');
 /* Opretter Ansatte-tabel */
 CREATE TABLE [dbo].[Ansatte] (
     [Brugernavn] VARCHAR (50) NOT NULL,
-    [Navn]       VARCHAR (50) NULL,
+    [Navn]       VARCHAR (50) NOT NULL,
     [Password]   VARCHAR (50) NOT NULL,
-    [Email]      VARCHAR (50) NULL,
-    [Mobil]      VARCHAR (50) NULL,
-    [Adresse]    VARCHAR (50) NULL,
-    [Postnummer] VARCHAR (50) NULL,
+    [Email]      VARCHAR (50) NOT NULL,
+    [Mobil]      VARCHAR (50) NOT NULL,
+    [Adresse]    VARCHAR (50) NOT NULL,
+    [Postnummer] VARCHAR (50) NOT NULL,
     [StillingId] INT          DEFAULT ((2)) NOT NULL,
     PRIMARY KEY CLUSTERED ([Brugernavn] ASC),
     CONSTRAINT [FK_Ansatte_Roller] FOREIGN KEY ([StillingId]) REFERENCES [dbo].[Stillinger] ([StillingId])
@@ -59,9 +59,9 @@ INSERT INTO Vagter VALUES ('10:00', '16:00', 18, 1, 'Daniel');
 /* Opretter Beskeder-tabel */
 CREATE TABLE [dbo].[Beskeder] (
     [BeskedId]    INT          IDENTITY (1, 1) NOT NULL,
-    [Overskrift]  VARCHAR (50) NULL,
+    [Overskrift]  VARCHAR (50) NOT NULL,
     [Dato]        DATE         NOT NULL,
-    [Beskrivelse] TEXT         NULL,
+    [Beskrivelse] TEXT         NOT NULL,
     [Udloebsdato] DATE         NOT NULL,
     [Brugernavn]  VARCHAR (50) NOT NULL,
     PRIMARY KEY CLUSTERED ([BeskedId] ASC),

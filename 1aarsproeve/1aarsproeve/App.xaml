@@ -222,6 +222,24 @@
             <Setter Property="BorderBrush" Value="White"/>
             <Setter Property="Margin" Value="0 5"/>
         </Style>
+
+        <Style x:Key="GenerelTextbox" TargetType="TextBox">
+            <Setter Property="Margin" Value="0 0 0 10"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#FFDADADA"/>
+            <Setter Property="Padding" Value="10 10 10 5"/>
+        </Style>
+
+        <Style x:Key="GenerelTimePicker" TargetType="TimePicker">
+            <Setter Property="Margin" Value="0 0 0 10"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="Background" Value="#FFDADADA"/>
+            <Setter Property="Padding" Value="50 10 10 5"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        </Style>
+
         <Style x:Key="UgedagText" TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
@@ -271,13 +289,7 @@
             <Setter Property="Foreground" Value="Gray"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
         </Style>
-        <Style x:Key="GenerelTextbox" TargetType="TextBox">
-            <Setter Property="Margin" Value="0 0 0 10"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Background" Value="#FFDADADA"/>
-            <Setter Property="Padding" Value="10 10 10 5"/>
-        </Style>
+
         <Style x:Key="GenerelPasswordbox" TargetType="PasswordBox">
             <Setter Property="Margin" Value="0 0 0 10"/>
             <Setter Property="Height" Value="50"/>
@@ -293,8 +305,6 @@
             <Setter Property="Background" Value="#FFB81323"/>
             <Setter Property="FontSize" Value="15"/>
         </Style>
-       
-
         <Style x:Key="GenerelCombobox" TargetType="ComboBox">
             <Setter Property="Background" Value="#FFDADADA"/>
             <Setter Property="Height" Value="50"/>

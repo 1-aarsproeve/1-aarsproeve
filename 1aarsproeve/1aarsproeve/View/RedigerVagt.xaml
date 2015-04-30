@@ -14,9 +14,9 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Rediger vagt</x:String>
     </Page.Resources>
-    <Page.DataContext>
+    <!--<Page.DataContext>
         <ViewModel:VagtplanViewModel/>
-    </Page.DataContext>
+    </Page.DataContext>-->
 
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">
@@ -60,14 +60,22 @@
         <Grid Margin="300 40" Grid.Row="1">
             <StackPanel Margin="100 0">
                 <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Starttidspunkt"/>
-                    <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Sluttidspunkt" Grid.Column="1"/>
+                    <TextBlock FontSize="20" Foreground="Gray" Text="Starttidspunkt" HorizontalAlignment="Center" />
+                    <TextBlock FontSize="20" Foreground="Gray" Text="Sluttidspunkt" Grid.Column="1" HorizontalAlignment="Center" />
+                    <TimePicker Style="{StaticResource GenerelTimePicker}" Grid.Row="1" ClockIdentifier="24HourClock" />
+                    <TimePicker Style="{StaticResource GenerelTimePicker}" Grid.Row="1" Grid.Column="1" ClockIdentifier="24HourClock"/>
                 </Grid>
                 <ComboBox Style="{StaticResource GenerelCombobox}" PlaceholderText="Vælg ansat"/>
+                <ComboBox Style="{StaticResource GenerelCombobox}" PlaceholderText="Vælg ugenummer"/>
+                <ComboBox Style="{StaticResource GenerelCombobox}" PlaceholderText="Vælg ugedag"/>
                 <Button Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Rediger vagt"/>
             </StackPanel>
         </Grid>
