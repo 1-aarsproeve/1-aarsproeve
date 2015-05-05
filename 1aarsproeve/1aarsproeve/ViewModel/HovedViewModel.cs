@@ -73,20 +73,30 @@ namespace _1aarsproeve.ViewModel
             Stilling();
 
             LogUdCommand = new RelayCommand(LogUd);
-            
+
         }
         /// <summary>
         /// Åbner forbindelsen til database
         /// </summary>
         private void AabenForbindelse()
         {
-            const string serverUrl = "http://localhost:9999/";
-            HttpClientHandler handler = new HttpClientHandler();
-            handler.UseDefaultCredentials = true;
-            _client = new HttpClient(handler);
-            _client.BaseAddress = new Uri(serverUrl);
-            _client.DefaultRequestHeaders.Clear();
-            _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            try
+            {
+                const string serverUrl = "http://localhost:9999/";
+                HttpClientHandler handler = new HttpClientHandler();
+                handler.UseDefaultCredentials = true;
+                _client = new HttpClient(handler);
+                _client.BaseAddress = new Uri(serverUrl);
+                _client.DefaultRequestHeaders.Clear();
+                _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            }
+            catch (Exception)
+            {
+
+                MessageDialog m = new MessageDialog("Der kunne ikke oprettes forbindelse til databasen.", "Fejl!");
+                m.ShowAsync();
+            }
 
         }
         /// <summary>
@@ -105,7 +115,7 @@ namespace _1aarsproeve.ViewModel
         public void Stilling()
         {
             if (Brugernavn != "Daniel")
-            {    
+            {
                 SkjulKnap = Visibility.Collapsed;
             }
         }

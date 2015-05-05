@@ -147,7 +147,7 @@ namespace _1aarsproeve.ViewModel
         public VagtplanViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
-            Brugernavn = (string) Setting.Values["Brugernavn"];
+            Brugernavn = (string)Setting.Values["Brugernavn"];
 
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
 
@@ -210,14 +210,14 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
-                            select new { q.Starttidspunkt, q.Sluttidspunkt };
+                            select new { q.Starttidspunkt, q.Sluttidspunkt, q.Navn };
                         foreach (var item in query1)
                         {
                             vagter +=
                                 "BEGIN:VEVENT\n" +
                                 "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Starttidspunkt.ToString("hhmmss") + "\n" +
                                 "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Sluttidspunkt.ToString("hhmmss") + "\n" +
-                                "SUMMARY:" + emne + "\n" +
+                                "SUMMARY:" + emne + " | " + item.Navn + "\n" +
                                 "LOCATION:" + sted + "\n" +
                                 "END:VEVENT\n\n";
                         }
@@ -227,17 +227,17 @@ namespace _1aarsproeve.ViewModel
                 else
                 {
                     vagter +=
-                        "Emne, Startdato, Starttidspunkt, Slutdato, Sluttidspunkt, Placering\n";
+                    "Emne, Startdato, Starttidspunkt, Slutdato, Sluttidspunkt, Placering\n";
                     for (int i = 0; i < VagtCollection.Count; i++)
                     {
                         var query1 =
                             from q in VagtCollection[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
-                            select new { q.Starttidspunkt, q.Sluttidspunkt };
+                            select new { q.Starttidspunkt, q.Sluttidspunkt, q.Navn };
                         foreach (var item in query1)
                         {
                             vagter +=
-                                emne +
+                                emne + " | " + item.Navn +
                                 ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Starttidspunkt +
                                 ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
@@ -304,7 +304,7 @@ namespace _1aarsproeve.ViewModel
                 else
                 {
                     vagter +=
-                        "Subject, Start Date, Start Time, End Date, End Time, Location\n";
+                    "Subject, Start Date, Start Time, End Date, End Time, Location\n";
                     for (int i = 0; i < VagtCollection.Count; i++)
                     {
                         var query1 =
@@ -475,10 +475,10 @@ namespace _1aarsproeve.ViewModel
             for (int i = 0; i < VagtCollection.Count; i++)
             {
                 var query =
-                    from q in vagter
-                    where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
-                    orderby q.Starttidspunkt ascending
-                    select q;
+                        from q in vagter
+                        where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
+                        orderby q.Starttidspunkt ascending
+                        select q;
                 foreach (var item in query)
                 {
                     VagtCollection[i].Add(item);

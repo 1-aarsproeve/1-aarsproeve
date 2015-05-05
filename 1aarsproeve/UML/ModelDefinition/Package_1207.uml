@@ -711,8 +711,9 @@
           <property
             Id="4199e0b6-d3cf-4604-b724-77e541a5fdbf"
             name="_instance"
+            visibility="Private"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isReadOnly="false"
             isUnique="false"
             isDerived="false"
@@ -732,7 +733,7 @@
             Id="b3847214-e87c-4a02-b2eb-98af48d1b46a"
             name="Instance : GeneriskSingleton&lt;T&gt;"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />

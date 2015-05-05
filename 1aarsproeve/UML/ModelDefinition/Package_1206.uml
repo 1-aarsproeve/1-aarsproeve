@@ -1482,7 +1482,7 @@
             isQuery="false" />
           <operation
             Id="ab67411b-350f-4c0c-bd31-10f5d541657a"
-            name="AlleVagter"
+            name="EksporterMineVagter"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1506,7 +1506,7 @@
             isQuery="false" />
           <operation
             Id="50741ac2-d2cc-4364-b42c-16b6686e8425"
-            name="Eksporter"
+            name="EksporterAlleVagter"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

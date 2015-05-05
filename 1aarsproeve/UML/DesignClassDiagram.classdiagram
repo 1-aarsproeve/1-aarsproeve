@@ -723,7 +723,7 @@
                 <operation Id="14347753-8c9e-4416-af2b-7709bb25f1e2" name="Ugedage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="f364d60c-e91e-4355-a21f-6940a5123f68" />
                 </operation>
-                <operation Id="b6fe8a39-57d1-430f-8aab-fab00358eed3" name="AlleVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="b6fe8a39-57d1-430f-8aab-fab00358eed3" name="EksporterMineVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="ab67411b-350f-4c0c-bd31-10f5d541657a" />
                 </operation>
                 <operation Id="dbf50b29-f58e-4b28-9d07-69fe2b22ec4c" name="FrieVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -732,7 +732,7 @@
                 <operation Id="c7da2587-993a-433e-ab84-d09d8ebfc5e8" name="MineVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="53fa0194-c5a9-4a2b-862d-0e654105547f" />
                 </operation>
-                <operation Id="d4f6d7bc-900a-4700-a91a-c952ea76193f" name="Eksporter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="d4f6d7bc-900a-4700-a91a-c952ea76193f" name="EksporterAlleVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="50741ac2-d2cc-4364-b42c-16b6686e8425" />
                 </operation>
               </ownedOperationsInternal>
@@ -994,15 +994,15 @@
                     <referencedTypeMoniker Id="531da8f9-7795-4f92-88b5-ebf39085414a" LastKnownName="ObservableCollection&lt;T&gt;" />
                   </type_NamedElement>
                 </property>
-                <property Id="ca382eeb-534e-4801-a64f-4d83852fd27f" name="_instance" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="ca382eeb-534e-4801-a64f-4d83852fd27f" name="_instance" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="4199e0b6-d3cf-4604-b724-77e541a5fdbf" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="39266fdf-5033-444d-b9bd-975dbf1687f6" LastKnownName="GeneriskSingleton&lt;T&gt;" />
+                    <referencedTypeMoniker Id="44aa2f61-c5fd-4667-a17e-3f623692b54d" LastKnownName="GeneriskSingleton&lt;T&gt;" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="92a74881-0f04-4d46-8c1a-75efb5833b85" name="Instance : GeneriskSingleton&lt;T&gt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="92a74881-0f04-4d46-8c1a-75efb5833b85" name="Instance : GeneriskSingleton&lt;T&gt;" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="b3847214-e87c-4a02-b2eb-98af48d1b46a" />
                 </operation>
               </ownedOperationsInternal>
@@ -2985,11 +2985,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="39266fdf-5033-444d-b9bd-975dbf1687f6" name="GeneriskSingleton&lt;T&gt;" isAbstract="false" isLeaf="false" cachedFullName="GeneriskSingleton&lt;T&gt;">
-        <elementDefinition Id="eba8afaf-e342-47dc-bdea-e999de4dc6c6" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="9d7c1c37-40fa-4e47-9689-15eabca05e3c" name="ObservableCollection&lt;Vagter&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;Vagter&gt;">
         <elementDefinition Id="39bec9ab-8595-4c93-8ed7-bf22668c2bf5" />
       </referencedType>
@@ -3047,6 +3042,11 @@
     <packageHasNamedElement>
       <referencedType Id="8c23fc41-457d-47b8-aa67-6afc01cfa94e" name="HttpClient" isAbstract="false" isLeaf="false" cachedFullName="HttpClient">
         <elementDefinition Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="44aa2f61-c5fd-4667-a17e-3f623692b54d" name="GeneriskSingleton&lt;T&gt;" isAbstract="false" isLeaf="false" cachedFullName="GeneriskSingleton&lt;T&gt;">
+        <elementDefinition Id="eba8afaf-e342-47dc-bdea-e999de4dc6c6" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
