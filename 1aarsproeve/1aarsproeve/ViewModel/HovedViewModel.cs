@@ -94,7 +94,7 @@ namespace _1aarsproeve.ViewModel
             catch (Exception)
             {
 
-                MessageDialog m = new MessageDialog("Der kunne ikke oprettes forbindelse til databasen.", "Fejl!");
+                MessageDialog m = new MessageDialog("Der kunne ikke oprettes forbindelse til databasen", "Fejl!");
                 m.ShowAsync();
             }
 

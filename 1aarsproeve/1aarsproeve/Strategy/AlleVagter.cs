@@ -25,19 +25,28 @@ namespace _1aarsproeve.Strategy
         /// <param name="ugenummer">Angiver for hvilken uge vagterne skal vises i</param>
         public async void Sort(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection, int ugenummer)
         {
-            var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
-            for (int i = 0; i < vagtCollection.Count; i++)
+            try
             {
-                var query =
-                    from q in vagter
-                    where q.UgedagId == i + 1 && q.Ugenummer == ugenummer
-                    orderby q.Starttidspunkt ascending
-                    select q;
-                foreach (var item in query)
+                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
+                for (int i = 0; i < vagtCollection.Count; i++)
                 {
-                    vagtCollection[i].Add(item);
+                    var query =
+                        from q in vagter
+                        where q.UgedagId == i + 1 && q.Ugenummer == ugenummer
+                        orderby q.Starttidspunkt ascending
+                        select q;
+                    foreach (var item in query)
+                    {
+                        vagtCollection[i].Add(item);
+                    }
                 }
             }
+            catch (Exception)
+            {
+                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                m.ShowAsync();
+            }
+            
         }
     }
 }

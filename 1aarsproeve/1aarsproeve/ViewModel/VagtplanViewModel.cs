@@ -471,18 +471,26 @@ namespace _1aarsproeve.ViewModel
         {
             ClearVagterCollections();
 
-            var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
-            for (int i = 0; i < VagtCollection.Count; i++)
+            try
             {
-                var query =
+                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
+                for (int i = 0; i < VagtCollection.Count; i++)
+                {
+                    var query =
                         from q in vagter
                         where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
                         orderby q.Starttidspunkt ascending
                         select q;
-                foreach (var item in query)
-                {
-                    VagtCollection[i].Add(item);
+                    foreach (var item in query)
+                    {
+                        VagtCollection[i].Add(item);
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen",  "Fejl!");
+                m.ShowAsync();
             }
         }
         #endregion

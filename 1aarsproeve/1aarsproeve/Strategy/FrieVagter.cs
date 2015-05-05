@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using _1aarsproeve.Model;
 using _1aarsproeve.Persistens;
 using _1aarsproeve.ViewModel;
@@ -24,18 +25,26 @@ namespace _1aarsproeve.Strategy
         /// <param name="ugenummer">Angiver for hvilken uge vagterne skal vises i</param>
         public async void Sort(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection, int ugenummer)
         {
-            var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
-            for (int i = 0; i < vagtCollection.Count; i++)
+            try
             {
-                var query =
-                    from q in vagter
-                    where q.UgedagId == i + 1 && q.Ugenummer == ugenummer && q.Brugernavn == "Ubemandet"
-                    orderby q.Starttidspunkt ascending
-                    select q;
-                foreach (var item in query)
+                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
+                for (int i = 0; i < vagtCollection.Count; i++)
                 {
-                    vagtCollection[i].Add(item);
+                    var query =
+                        from q in vagter
+                        where q.UgedagId == i + 1 && q.Ugenummer == ugenummer && q.Brugernavn == "Ubemandet"
+                        orderby q.Starttidspunkt ascending
+                        select q;
+                    foreach (var item in query)
+                    {
+                        vagtCollection[i].Add(item);
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                m.ShowAsync();
             }
         }
     }
