@@ -164,6 +164,7 @@
     <Compile Include="Controllers\BeskedersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HovedmenuViewsController.cs" />
+    <Compile Include="Controllers\UgedagesController.cs" />
     <Compile Include="Controllers\VagtersController.cs" />
     <Compile Include="Controllers\VagtplanViewsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

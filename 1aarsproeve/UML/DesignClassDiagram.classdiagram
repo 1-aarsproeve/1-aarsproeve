@@ -2487,8 +2487,8 @@
                   <elementDefinition Id="20a00673-c306-4e5f-bff9-fa0097c957cb" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="66cdf3ac-4b76-4375-b59f-ca703469d948" name="Vagt vagt" direction="In" isUnique="false">
-                        <elementDefinition Id="b482f903-8bdd-47a0-8539-00c3cc83adad" />
+                      <parameter Id="73b0ac71-a83a-4096-befa-80e03dfaefde" name="Vagter vagt" direction="In" isUnique="false">
+                        <elementDefinition Id="9595d269-7c88-4844-b9f1-b313508a2e1f" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>

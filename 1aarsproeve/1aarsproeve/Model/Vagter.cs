@@ -7,6 +7,7 @@ namespace _1aarsproeve.Model
     /// </summary>
     public partial class Vagter
     {
+        private string _brugernavn;
         /// <summary>
         /// Vagter Konstruktør
         /// </summary>
@@ -63,14 +64,12 @@ namespace _1aarsproeve.Model
         /// Brugernavn Property
         /// </summary>
 
-        private string _brugernavn;
-
         public string Brugernavn
         {
             get { return _brugernavn; }
             set
             {
-                CheckBrugernavn(value);
+                //CheckBrugernavn(value);
                 _brugernavn = value;
             }
         }

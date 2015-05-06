@@ -25,5 +25,13 @@ namespace _1aarsproeve.Model
         /// Ugedag Property
         /// </summary>
         public string Ugedag { get; set; }
+        /// <summary>
+        /// Viser Ugedag
+        /// </summary>
+        /// <returns>Returnerer ToString Ugedag</returns>
+        public override string ToString()
+        {
+            return Ugedag;
+        }
     }
 }

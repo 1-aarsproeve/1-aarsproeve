@@ -23,6 +23,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using _1aarsproeve.Annotations;
 using _1aarsproeve.Common;
+using _1aarsproeve.Handler;
 using _1aarsproeve.Model;
 using _1aarsproeve.Strategy;
 using _1aarsproeve.View;
@@ -33,7 +34,7 @@ namespace _1aarsproeve.ViewModel
     /// <summary>
     /// DataContext klasse til Views: OpretVagt, RedigerVagt, Vagtplan
     /// </summary>
-    class VagtplanViewModel : INotifyPropertyChanged
+    public class VagtplanViewModel : INotifyPropertyChanged
     {
         private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection = GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
         private IVagtSort _vagtsort;
@@ -142,6 +143,36 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public ICommand LogUdCommand { get; set; }
         /// <summary>
+        /// VagtId Property
+        /// </summary>
+        public int VagtId { get; set; }
+        /// <summary>
+        /// Starttidspunkt Property
+        /// </summary>
+        public TimeSpan Starttidspunkt { get; set; }
+        /// <summary>
+        /// Sluttidspunkt Property
+        /// </summary>
+        public TimeSpan Sluttidspunkt { get; set; }
+        /// <summary>
+        /// Ugenummer Property
+        /// </summary>
+        public int Ugenummer1 { get; set; }
+        /// <summary>
+        /// UgedagId Property
+        /// </summary>
+        public int UgedagId { get; set; }
+
+
+        public List<string> AnsatteListe { get; set; }
+        public string A { get; set; }
+        public List<int> UgenumreListe { get; set; }
+        public int U { get; set; }
+        public List<Ugedage> UgedageListe { get; set; }
+        public Ugedage U1 { get; set; }
+        private ICommand _opretVagtCommand;
+        public VagtHandler Handler { get; set; }
+        /// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
         public VagtplanViewModel()
@@ -182,7 +213,38 @@ namespace _1aarsproeve.ViewModel
             EksporterMineCommand = new RelayCommand(EksporterMineVagter);
             LogUdCommand = new RelayCommand(LogUd);
 
+            Handler = new VagtHandler(this);
+
+            AnsatteListe = new List<string>();
+            UgedageListe = new List<Ugedage>();
+            UgenumreListe = new List<int>();
+
+            var a = PersistensFacade<Ansatte>.LoadDB("api/Ansattes").Result;
+            foreach (var item in a)
+            {
+                AnsatteListe.Add(item.Navn);
+            }
+            var u = PersistensFacade<Ugedage>.LoadDB("api/Ugedages").Result;
+            foreach (var item in u)
+            {
+                UgedageListe.Add(item);
+            }
+            for (int i = 1; i <= 52; i++)
+            {
+                UgenumreListe.Add(i);
+            }
         }
+
+        public ICommand OpretVagtCommand
+        {
+            get
+            {
+                _opretVagtCommand = new RelayCommand(Handler.OpretVagt);
+                return _opretVagtCommand;
+            }
+            set { _opretVagtCommand = value; }
+        }
+
         /// <summary>
         /// Eksporter alle vagter
         /// </summary>
@@ -518,6 +580,7 @@ namespace _1aarsproeve.ViewModel
         /// Viser mine vagter
         /// </summary>
         public void MineVagter()
+
         {
             ClearVagterCollections();
 
