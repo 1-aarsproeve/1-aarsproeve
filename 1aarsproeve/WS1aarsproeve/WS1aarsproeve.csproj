@@ -125,7 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ansatte.cs" />
-    <Compile Include="AnsatteView.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -160,7 +159,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Beskeder.cs" />
     <Compile Include="Controllers\AnsattesController.cs" />
-    <Compile Include="Controllers\AnsatteViewsController.cs" />
     <Compile Include="Controllers\BeskedersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HovedmenuViewsController.cs" />

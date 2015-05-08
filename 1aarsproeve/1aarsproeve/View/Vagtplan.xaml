@@ -49,11 +49,29 @@
             <AppBarButton Icon="Calendar" Label="Sorter vagter">
                 <AppBarButton.Flyout>
                     <MenuFlyout>
-                        <MenuFlyoutItem Text="Alle Vagter" Command="{Binding AlleVagterCommand}"/>
+                        <MenuFlyoutItem Text="Alle vagter" Command="{Binding SortCommand}">
+                            <Interactivity:Interaction.Behaviors>
+                                <Core:EventTriggerBehavior EventName="Click">
+                                    <Core:InvokeCommandAction Command="{Binding AlleVagterCommand, Mode=TwoWay}"/>
+                                </Core:EventTriggerBehavior>
+                            </Interactivity:Interaction.Behaviors>
+                        </MenuFlyoutItem>
                         <MenuFlyoutSeparator/>
                         
-                        <MenuFlyoutItem Text="Frie Vagter" Command="{Binding FrieVagterCommand}"/>
-                        <MenuFlyoutItem Text="Mine Vagter" Command="{Binding MineVagterCommand}"/>
+                        <MenuFlyoutItem Text="Frie vagter" Command="{Binding SortCommand}">
+                            <Interactivity:Interaction.Behaviors>
+                                <Core:EventTriggerBehavior EventName="Click">
+                                    <Core:InvokeCommandAction Command="{Binding FrieVagterCommand, Mode=TwoWay}"/>
+                                </Core:EventTriggerBehavior>
+                            </Interactivity:Interaction.Behaviors>
+                        </MenuFlyoutItem>
+                        <MenuFlyoutItem Text="Mine vagter" Command="{Binding SortCommand}">
+                            <Interactivity:Interaction.Behaviors>
+                                <Core:EventTriggerBehavior EventName="Click">
+                                    <Core:InvokeCommandAction Command="{Binding MineVagterCommand, Mode=TwoWay}"/>
+                                </Core:EventTriggerBehavior>
+                            </Interactivity:Interaction.Behaviors>
+                        </MenuFlyoutItem>
                     </MenuFlyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
@@ -128,13 +146,14 @@
                 </HyperlinkButton.Background>
             </HyperlinkButton>
             <Border Style="{StaticResource DatoBorder}" Grid.Column="0" Grid.Row="2" Background="{Binding MandagFarve}" />
+
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="0" Grid.Row="1" Text="Mandag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="0" Grid.Row="2" Text="{Binding Mandag}"/>
 
             <Border Style="{StaticResource DatoBorder}" Grid.Column="1" Grid.Row="2" Background="{Binding TirsdagFarve}" />
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="1" Grid.Row="1" Text="Tirsdag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="1" Grid.Row="2" Text="{Binding Tirsdag}"/>
-
+            
             <Border Style="{StaticResource DatoBorder}" Grid.Column="2" Grid.Row="2" Background="{Binding OnsdagFarve}" />
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="2" Grid.Row="1" Text="Onsdag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="2" Grid.Row="2" Text="{Binding Onsdag}"/>

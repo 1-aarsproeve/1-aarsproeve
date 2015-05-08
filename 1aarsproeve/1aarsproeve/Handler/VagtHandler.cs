@@ -10,54 +10,41 @@ using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Handler
 {
+    /// <summary>
+    /// Handler-klasser der håndterer vagtplanens operationer
+    /// </summary>
     public class VagtHandler
     {
         /// <summary>
-        /// VagtId Property
+        /// VagtplanViewModel property
         /// </summary>
-        public int VagtId { get; set; }
-        /// <summary>
-        /// Starttidspunkt Property
-        /// </summary>
-        public TimeSpan Starttidspunkt { get; set; }
-        /// <summary>
-        /// Sluttidspunkt Property
-        /// </summary>
-        public TimeSpan Sluttidspunkt { get; set; }
-        /// <summary>
-        /// Ugenummer Property
-        /// </summary>
-        public int UgenumreListe { get; set; }
-        /// <summary>
-        /// UgedagId Property
-        /// </summary>
-        public int UgedagId { get; set; }
-        /// <summary>
-        /// Brugernavn Property
-        /// </summary>
-        public string Brugernavn { get; set; }
-
         public VagtplanViewModel VagtplanViewModel { get; set; }
-
-
+        /// <summary>
+        /// VagtHandler konstruktør
+        /// </summary>
+        /// <param name="vagtplanViewModel">VagtplanViewModel objekt parameter</param>
         public VagtHandler(VagtplanViewModel vagtplanViewModel)
         {
             VagtplanViewModel = vagtplanViewModel;
         }
-
+        /// <summary>
+        /// Opretter ny vagt
+        /// </summary>
         public void OpretVagt()
         {
-            PersistensFacade<Vagter>.GemDB("api/Vagters", new Vagter(VagtplanViewModel.Starttidspunkt, VagtplanViewModel.Sluttidspunkt, VagtplanViewModel.U, VagtplanViewModel.U1.UgedagId, VagtplanViewModel.A));
+            PersistensFacade<Vagter>.GemDB("api/Vagters", new Vagter(VagtplanViewModel.Starttidspunkt, VagtplanViewModel.Sluttidspunkt, VagtplanViewModel.Ugenumre, VagtplanViewModel.Ugedag.UgedagId, VagtplanViewModel.Ansat.Brugernavn));
         }
-
-        public void RedigerVagt(string brugernavn, TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugedagId,
-            int ugenummer, int vagtId)
+        /// <summary>
+        /// Redigere i eksisterende vagt
+        /// </summary>
+        public void RedigerVagt()
         {
-            
+            PersistensFacade<Vagter>.RedigerDB("api/Vagters", 1, new Vagter());
         }
-
-        public void
-        SletVagt(Vagter vagt)
+        /// <summary>
+        /// Sletter valgte vagt
+        /// </summary>
+        public void SletVagt()
         {
             PersistensFacade<Vagter>.SletDB("api/Vagters/",  1);
         }

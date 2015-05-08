@@ -130,6 +130,11 @@ namespace _1aarsproeve.ViewModel
         /// MineVagterCommand property
         /// </summary>
         public ICommand MineVagterCommand { get; set; }
+        private Action<ObservableCollection<ObservableCollection<VagtplanView>>> _sorting;
+        /// <summary>
+        /// SortCommand property
+        /// </summary>
+        public ICommand SortCommand { get; set; }
         /// <summary>
         /// EksporterAlleCommand property
         /// </summary>
@@ -143,10 +148,6 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public ICommand LogUdCommand { get; set; }
         /// <summary>
-        /// VagtId Property
-        /// </summary>
-        public int VagtId { get; set; }
-        /// <summary>
         /// Starttidspunkt Property
         /// </summary>
         public TimeSpan Starttidspunkt { get; set; }
@@ -155,23 +156,38 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public TimeSpan Sluttidspunkt { get; set; }
         /// <summary>
-        /// Ugenummer Property
-        /// </summary>
-        public int Ugenummer1 { get; set; }
-        /// <summary>
         /// UgedagId Property
         /// </summary>
         public int UgedagId { get; set; }
-
-
-        public List<string> AnsatteListe { get; set; }
-        public string A { get; set; }
+        /// <summary>
+        /// AnsatteListe property
+        /// </summary>
+        public List<Ansatte> AnsatteListe { get; set; }
+        /// <summary>
+        /// Ansat property
+        /// </summary>
+        public Ansatte Ansat { get; set; }
+        /// <summary>
+        /// UgenumreListe property
+        /// </summary>
         public List<int> UgenumreListe { get; set; }
-        public int U { get; set; }
+        /// <summary>
+        /// Ugenumre property
+        /// </summary>
+        public int Ugenumre { get; set; }
+        /// <summary>
+        /// UgedageListe property
+        /// </summary>
         public List<Ugedage> UgedageListe { get; set; }
-        public Ugedage U1 { get; set; }
+        /// <summary>
+        /// Ugedag property
+        /// </summary>
+        public Ugedage Ugedag { get; set; }
+        /// <summary>
+        /// VagtHandler property
+        /// </summary>
+        public VagtHandler VagtHandler { get; set; }
         private ICommand _opretVagtCommand;
-        public VagtHandler Handler { get; set; }
         /// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
@@ -213,16 +229,16 @@ namespace _1aarsproeve.ViewModel
             EksporterMineCommand = new RelayCommand(EksporterMineVagter);
             LogUdCommand = new RelayCommand(LogUd);
 
-            Handler = new VagtHandler(this);
+            VagtHandler = new VagtHandler(this);
 
-            AnsatteListe = new List<string>();
+            AnsatteListe = new List<Ansatte>();
             UgedageListe = new List<Ugedage>();
             UgenumreListe = new List<int>();
 
             var a = PersistensFacade<Ansatte>.LoadDB("api/Ansattes").Result;
             foreach (var item in a)
             {
-                AnsatteListe.Add(item.Navn);
+                AnsatteListe.Add(item);
             }
             var u = PersistensFacade<Ugedage>.LoadDB("api/Ugedages").Result;
             foreach (var item in u)
@@ -233,18 +249,111 @@ namespace _1aarsproeve.ViewModel
             {
                 UgenumreListe.Add(i);
             }
+            _sorting = AlleVagter;
+            SortCommand = new RelayCommand(() => _sorting(VagtCollection));
+            AlleVagterCommand = new RelayCommand(() => _sorting = AlleVagter);
+            FrieVagterCommand = new RelayCommand(() => _sorting = FrieVagter);
+            MineVagterCommand = new RelayCommand(() => _sorting = MineVagter);
         }
-
+        /// <summary>
+        /// Henter alle vagter
+        /// </summary>
+        /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
+        public async void AlleVagter(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection)
+        {
+            ClearVagterCollections();
+            try
+            {
+                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
+                for (int i = 0; i < vagtCollection.Count; i++)
+                {
+                    var query =
+                        from q in vagter
+                        where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
+                        orderby q.Starttidspunkt ascending
+                        select q;
+                    foreach (var item in query)
+                    {
+                        vagtCollection[i].Add(item);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                m.ShowAsync();
+            }
+        }
+        /// <summary>
+        /// Henter frie vagter
+        /// </summary>
+        /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
+        public async void FrieVagter(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection)
+        {
+            ClearVagterCollections();
+            try
+            {
+                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
+                for (int i = 0; i < vagtCollection.Count; i++)
+                {
+                    var query =
+                        from q in vagter
+                        where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == "Ubemandet"
+                        orderby q.Starttidspunkt ascending
+                        select q;
+                    foreach (var item in query)
+                    {
+                        vagtCollection[i].Add(item);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                m.ShowAsync();
+            }
+        }
+        /// <summary>
+        /// Henter mine vagter
+        /// </summary>
+        /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
+        public async void MineVagter(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection)
+        {
+            ClearVagterCollections();
+            try
+            {
+                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
+                for (int i = 0; i < vagtCollection.Count; i++)
+                {
+                    var query =
+                        from q in vagter
+                        where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                        orderby q.Starttidspunkt ascending
+                        select q;
+                    foreach (var item in query)
+                    {
+                        vagtCollection[i].Add(item);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                m.ShowAsync();
+            }
+        }
+        /// <summary>
+        /// OpretVagtCommand property
+        /// </summary>
         public ICommand OpretVagtCommand
         {
             get
             {
-                _opretVagtCommand = new RelayCommand(Handler.OpretVagt);
+                _opretVagtCommand = new RelayCommand(VagtHandler.OpretVagt);
                 return _opretVagtCommand;
             }
             set { _opretVagtCommand = value; }
         }
-
         /// <summary>
         /// Eksporter alle vagter
         /// </summary>
@@ -265,8 +374,8 @@ namespace _1aarsproeve.ViewModel
                 if (fil.FileType.Equals(".ics"))
                 {
                     vagter +=
-                     "BEGIN:VCALENDAR\n" +
-                     "VERSION:2.0\n\n";
+                        "BEGIN:VCALENDAR\n" +
+                        "VERSION:2.0\n\n";
                     for (int i = 0; i < VagtCollection.Count; i++)
                     {
                         var query1 =
@@ -289,7 +398,7 @@ namespace _1aarsproeve.ViewModel
                 else
                 {
                     vagter +=
-                    "Emne, Startdato, Starttidspunkt, Slutdato, Sluttidspunkt, Placering\n";
+                        "Emne, Startdato, Starttidspunkt, Slutdato, Sluttidspunkt, Placering\n";
                     for (int i = 0; i < VagtCollection.Count; i++)
                     {
                         var query1 =
@@ -342,8 +451,8 @@ namespace _1aarsproeve.ViewModel
                 if (fil.FileType.Equals(".ics"))
                 {
                     vagter +=
-                     "BEGIN:VCALENDAR\n" +
-                     "VERSION:2.0\n\n";
+                        "BEGIN:VCALENDAR\n" +
+                        "VERSION:2.0\n\n";
                     for (int i = 0; i < VagtCollection.Count; i++)
                     {
                         var query1 =
@@ -366,7 +475,7 @@ namespace _1aarsproeve.ViewModel
                 else
                 {
                     vagter +=
-                    "Subject, Start Date, Start Time, End Date, End Time, Location\n";
+                        "Subject, Start Date, Start Time, End Date, End Time, Location\n";
                     for (int i = 0; i < VagtCollection.Count; i++)
                     {
                         var query1 =
@@ -452,7 +561,6 @@ namespace _1aarsproeve.ViewModel
             Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("d. MMMM", new CultureInfo("da-DK"));
             Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("d. MMMM", new CultureInfo("da-DK"));
         }
-
         /// <summary>
         /// Angiver farve på nuværende ugedag
         /// </summary>
@@ -701,7 +809,6 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Ugenummer");
             }
         }
-
         #region PropertyChanged
         /// <summary>
         /// Implementerer INotifyPropertyChanged interfacet
@@ -714,7 +821,6 @@ namespace _1aarsproeve.ViewModel
             var handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
-
         #endregion
     }
 }

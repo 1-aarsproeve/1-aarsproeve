@@ -12,7 +12,9 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using _1aarsproeve.Common;
+using _1aarsproeve.Handler;
 using _1aarsproeve.Model;
+using _1aarsproeve.Persistens;
 using _1aarsproeve.View;
 
 namespace _1aarsproeve.ViewModel
@@ -20,15 +22,18 @@ namespace _1aarsproeve.ViewModel
     /// <summary>
     /// DataContext klasse til Views: Hovedmenu, SkrivBesked
     /// </summary>
-    class HovedViewModel
+    public class HovedViewModel
     {
-        private GeneriskSingleton<ObservableCollection<Beskeder>> _beskedCollection = GeneriskSingleton<ObservableCollection<Beskeder>>.Instance();
-        private ObservableCollection<Beskeder> _beskeder;
+        private GeneriskSingleton<ObservableCollection<HovedmenuView>> _beskedCollection = GeneriskSingleton<ObservableCollection<HovedmenuView>>.Instance();
+        /// <summary>
+        /// ObservableCollection med Beskeder
+        /// </summary>
+        public ObservableCollection<HovedmenuView> BeskederC { get; set; }
         private static HttpClient _client;
         /// <summary>
         /// Singleton vagtcollection
         /// </summary>
-        public ObservableCollection<ObservableCollection<Beskeder>> BeskedCollection
+        public ObservableCollection<ObservableCollection<HovedmenuView>> BeskedCollection
         {
             get { return _beskedCollection.Collection; }
             set { _beskedCollection.Collection = value; }
@@ -56,6 +61,15 @@ namespace _1aarsproeve.ViewModel
         /// Property til at skjule knapper
         /// </summary>
         public Visibility SkjulKnap { get; set; }
+        private ICommand _skrivBeskedCommand;
+        /// <summary>
+        /// Hovedhandler property
+        /// </summary>
+        public HovedHandler HovedHandler { get; set; }
+        /// <summary>
+        /// Besked property
+        /// </summary>
+        public Beskeder Besked { get; set; }
         /// <summary>
         /// Constructor for HovedViewModel
         /// </summary>
@@ -64,16 +78,37 @@ namespace _1aarsproeve.ViewModel
             AabenForbindelse();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            _beskeder = new ObservableCollection<Beskeder>();
-            BeskedCollection.Add(_beskeder);
 
-            _beskeder.Add(new Beskeder(1, "MUS-samtale", new DateTime(), "Så er der fyringsrunde!!", new DateTime(), "Daniel"));
+            BeskederC = new ObservableCollection<HovedmenuView>();
+            BeskedCollection.Add(BeskederC);
+
+            BeskedCollection[0].Clear();
+            var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
+            foreach (var item in query)
+            {
+                BeskedCollection[0].Add(item);
+            }
+            
             SkjulKnap = new Visibility();
 
             Stilling();
 
             LogUdCommand = new RelayCommand(LogUd);
-
+            Besked = new Beskeder();
+            HovedHandler = new HovedHandler(this);
+        }
+        /// <summary>
+        /// SkrivBesked command
+        /// </summary>
+        public ICommand SkrivBeskedCommand
+        {
+            get
+            {
+                if (_skrivBeskedCommand == null)
+                    _skrivBeskedCommand = new RelayCommand(HovedHandler.SkrivBesked);
+                return _skrivBeskedCommand;
+            }
+            set { _skrivBeskedCommand = value; }
         }
         /// <summary>
         /// Åbner forbindelsen til database
@@ -96,7 +131,6 @@ namespace _1aarsproeve.ViewModel
                 MessageDialog m = new MessageDialog("Der kunne ikke oprettes forbindelse til databasen", "Fejl!");
                 m.ShowAsync();
             }
-
         }
         /// <summary>
         /// Logger brugeren ud

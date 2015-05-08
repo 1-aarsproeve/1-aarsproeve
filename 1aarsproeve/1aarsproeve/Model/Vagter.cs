@@ -31,7 +31,7 @@ namespace _1aarsproeve.Model
         {
 
         }
-
+        
         public void CheckBrugernavn(string brugernavn)
         {
             if (string.IsNullOrEmpty(brugernavn) || brugernavn.Length > 30)
@@ -69,7 +69,7 @@ namespace _1aarsproeve.Model
             get { return _brugernavn; }
             set
             {
-                //CheckBrugernavn(value);
+                CheckBrugernavn(value);
                 _brugernavn = value;
             }
         }

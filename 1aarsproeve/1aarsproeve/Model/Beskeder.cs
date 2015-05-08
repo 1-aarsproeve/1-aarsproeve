@@ -2,6 +2,9 @@ using System;
 
 namespace _1aarsproeve.Model
 {
+    /// <summary>
+    /// Besked klasse der holder styr på fællesbeskeder
+    /// </summary>
     public partial class Beskeder
     {
         /// <summary>
@@ -22,7 +25,9 @@ namespace _1aarsproeve.Model
             Udloebsdato = udloebsdato;
             Brugernavn = brugernavn;
         }
-
+        /// <summary>
+        /// Default konstruktør
+        /// </summary>
         public Beskeder()
         {
         }
@@ -55,12 +60,10 @@ namespace _1aarsproeve.Model
         /// BeskedId Property
         /// </summary>
         public int BeskedId { get; set; }
-
+        private string _overskrift;
         /// <summary>
         /// Overskrift Property
         /// </summary>
-        private string _overskrift;
-
         public string Overskrift
         {
             get { return _overskrift; }
@@ -75,12 +78,10 @@ namespace _1aarsproeve.Model
         /// Dato Property
         /// </summary>
         public DateTime Dato { get; set; }
-
+        private string _beskrivelse;
         /// <summary>
         /// Beskrivelse Property
         /// </summary>
-        private string _beskrivelse;
-
         public string Beskrivelse
         {
             get { return _beskrivelse; }
@@ -95,12 +96,10 @@ namespace _1aarsproeve.Model
         /// Udloebsdato Property
         /// </summary>
         public DateTime Udloebsdato { get; set; }
-
+        private string _brugernavn;
         /// <summary>
         /// Brugernavn Property
         /// </summary>
-        private string _brugernavn;
-
         public string Brugernavn
         {
             get { return _brugernavn; }

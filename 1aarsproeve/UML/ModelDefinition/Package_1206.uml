@@ -605,7 +605,7 @@
           </property>
           <property
             Id="215d879e-c538-409d-a66f-6b6c62edc74a"
-            name="OpretBeskedCommand"
+            name="SkrivBeskedCommand"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -636,6 +636,42 @@
               <undefinedTypeMoniker
                 Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed"
                 LastKnownName="HttpClient"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a77eb705-1422-40d0-aa4b-1c5b62c630df"
+            name="ObservableCollection&lt;ObservableCollection&lt;HovedmenuView&gt;&gt;"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="eb27cd4c-5b5f-4dec-a4bc-ff309336dba3"
+                LastKnownName="BeskedCollection"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="10829db4-33c5-41f7-8f94-2ec756b8c6fa"
+            name="SkjulKnap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="dfde202c-2247-4b77-882f-063e00a84fc6"
+                LastKnownName="Visibility"
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
@@ -1373,6 +1409,205 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="22fced07-7e0b-47f0-a5af-06f24ff5d93b"
+            name="Sluttidspunkt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
+                LastKnownName="TimeSpan"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e28208cc-49c7-4ad3-83ca-547d92fc3aca"
+            name="Starttidspunkt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
+                LastKnownName="TimeSpan"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b095cb29-ae4f-4f50-a823-3c82087fde4b"
+            name="OpretVagtCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f4f380b1-ca54-4220-ae3e-c5af5bd7626e"
+            name="_sorting"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="dd2a6186-db7f-4b0d-a4fd-68ab697528d8"
+                LastKnownName="Action&lt;ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c80e969c-b52d-4ea8-9303-49d9b4f4a115"
+            name="ForrigeUgeCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f107565c-68fe-497c-8fac-e61bbe9c9d13"
+            name="NaesteUgeCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="802c75b6-917d-49c4-8fc1-c74385400265"
+            name="AlleVagterCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="03fedd84-ba59-41fd-ae5e-7de3d7979ee0"
+            name="FrieVagterCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bd243f18-1ff3-448d-a5a5-90b4da836657"
+            name="MineVagterCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ca8126ef-b5eb-4d1f-a8e4-4ec3eef9ebfa"
+            name="SortCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2e3e3bdb-ced2-4751-b4c1-aed608382367"
+            name="VagtCollection"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0b6a9821-66c1-47cc-aec4-e1cbf1783aaa"
+                LastKnownName="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1495,7 +1730,17 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b5c9e56c-a879-4555-a815-3f8103cbfcba"
+                  name="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="53fa0194-c5a9-4a2b-862d-0e654105547f"
             name="MineVagter"
@@ -1512,6 +1757,42 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="731cffd0-a51d-48bc-967c-34a0cdb08dac"
+            name="AlleVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8a36e2b2-7eb8-4216-9b09-939172155013"
+                  name="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1e1001f5-8b37-4429-a59f-dcd60536802f"
+            name="MineVagter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="94de9ac1-ddcd-427a-8bfe-f2430e8b0cc7"
+                  name="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1549,6 +1830,26 @@
       <undefinedType
         Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed"
         name="HttpClient" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="dd2a6186-db7f-4b0d-a4fd-68ab697528d8"
+        name="Action&lt;ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0b6a9821-66c1-47cc-aec4-e1cbf1783aaa"
+        name="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="eb27cd4c-5b5f-4dec-a4bc-ff309336dba3"
+        name="BeskedCollection" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="dfde202c-2247-4b77-882f-063e00a84fc6"
+        name="Visibility" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

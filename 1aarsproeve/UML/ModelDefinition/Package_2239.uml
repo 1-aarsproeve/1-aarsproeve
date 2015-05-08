@@ -3,6 +3,12 @@
   dslVersion="1.0.0.0"
   Id="d45ed390-3c0c-4cd6-bb42-abdc69ca9629"
   name="Strategy" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="e4c4a000-9e8d-4049-823b-a551c618e2ef">
+      <body>Denne package skal slettes i koden og DCD</body>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <packageHasNamedElement>
       <Interface

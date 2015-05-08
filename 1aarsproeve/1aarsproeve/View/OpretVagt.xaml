@@ -73,9 +73,9 @@
                     <TimePicker Style="{StaticResource GenerelTimePicker}" Grid.Row="1" ClockIdentifier="24HourClock" Time="{Binding Starttidspunkt, Mode=TwoWay}" />
                     <TimePicker Style="{StaticResource GenerelTimePicker}" Grid.Row="1" Grid.Column="1" ClockIdentifier="24HourClock" Time="{Binding Sluttidspunkt, Mode=TwoWay}"/>
                 </Grid>
-                <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding AnsatteListe, Mode=TwoWay}" SelectedItem="{Binding A, Mode=TwoWay}" PlaceholderText="Vælg ansat"/>
-                <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding UgenumreListe, Mode=TwoWay}" SelectedItem="{Binding U, Mode=TwoWay}" PlaceholderText="Vælg ugenummer"/>
-                <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding UgedageListe, Mode=TwoWay}" SelectedItem="{Binding U1, Mode=TwoWay}" PlaceholderText="Vælg ugedag"/>
+                <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding AnsatteListe, Mode=TwoWay}" SelectedItem="{Binding Ansat, Mode=TwoWay}" PlaceholderText="Vælg ansat"/>
+                <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding UgenumreListe, Mode=TwoWay}" SelectedItem="{Binding Ugenumre, Mode=TwoWay}" PlaceholderText="Vælg ugenummer"/>
+                <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding UgedageListe, Mode=TwoWay}" SelectedItem="{Binding Ugedag, Mode=TwoWay}" PlaceholderText="Vælg ugedag"/>
                 <Button Command="{Binding OpretVagtCommand}" Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Opret vagt"/>
             </StackPanel>
         </Grid>

@@ -39,4 +39,3 @@ namespace _1aarsproeve.Model
         public string Navn { get; set; }
     }
 }
-

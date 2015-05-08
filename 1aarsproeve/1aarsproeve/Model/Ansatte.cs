@@ -4,9 +4,8 @@ using System.Collections.Generic;
 namespace _1aarsproeve.Model
 {
     /// <summary>
-    /// Ansatte klasse der holder styr systemets brugere
+    /// Ansatte klasse der holder styr på systemets brugere
     /// </summary>
-
     public partial class Ansatte
     {
         /// <summary>
@@ -31,11 +30,12 @@ namespace _1aarsproeve.Model
             Postnummer = postnummer;
             StillingId = stillingId;
         }
-
+        /// <summary>
+        /// Default konstruktør
+        /// </summary>
         public Ansatte()
         {
         }
-
         public void CheckPassword(string password)
         {
             if (string.IsNullOrEmpty(password) || password.Length > 30 || password.Length < 6)
@@ -94,12 +94,10 @@ namespace _1aarsproeve.Model
                 throw new ArgumentException("postnummer skal være 4 tegn");
             }
         }
-
+        private string _brugernavn;
         /// <summary>
         /// Brugernavn property
         /// </summary>
-        private string _brugernavn;
-
         public string Brugernavn
         {
             get { return _brugernavn; }
@@ -127,11 +125,10 @@ namespace _1aarsproeve.Model
             }
         }
 
+        private string _password;
         /// <summary>
         /// Password property
         /// </summary>
-        private string _password;
-
         public string Password
         {
             get { return _password; }
@@ -142,13 +139,10 @@ namespace _1aarsproeve.Model
             }
         }
 
+        private string _email;
         /// <summary>
         /// Email property
         /// </summary>  
-        /// 
-
-        private string _email;
-
         public string Email
         {
             get { return _email; }
@@ -158,12 +152,10 @@ namespace _1aarsproeve.Model
                 _email = value;
             }
         }
-
+        private string _mobil;
         /// <summary>
         /// Mobil property
         /// </summary>
-        private string _mobil;
-
         public string Mobil
         {
             get { return _mobil; }
@@ -174,12 +166,10 @@ namespace _1aarsproeve.Model
             }
         }
 
-
+        private string _Adresse;
         /// <summary>
         /// Adresse property
         /// </summary>
-        private string _Adresse;
-
         public string Adresse
         {
             get { return _Adresse; }
@@ -189,12 +179,10 @@ namespace _1aarsproeve.Model
                 _Adresse = value;
             }
         }
-
+        private string _postnummer;
         /// <summary>
         /// Postnummer property
         /// </summary>  
-        private string _postnummer;
-
         public string Postnummer
         {
             get { return _postnummer; }
@@ -209,5 +197,13 @@ namespace _1aarsproeve.Model
         /// StillingId property
         /// </summary>
         public int StillingId { get; set; }
+        /// <summary>
+        /// Viser Ansatte
+        /// </summary>
+        /// <returns>Returnerer ToString Ansatte</returns>
+        public override string ToString()
+        {
+            return Navn;
+        }
     }
 }
