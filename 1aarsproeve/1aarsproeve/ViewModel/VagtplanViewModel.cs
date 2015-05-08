@@ -21,6 +21,7 @@ using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using Eventmaker.Common;
 using _1aarsproeve.Annotations;
 using _1aarsproeve.Common;
 using _1aarsproeve.Handler;
@@ -191,6 +192,9 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
+        public static Vagter SelectedVagter { get; set; }
+        private ICommand _sletVagtCommand;
+        private ICommand _selectedVagterCommand;
         public VagtplanViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
@@ -222,14 +226,12 @@ namespace _1aarsproeve.ViewModel
             ForrigeUgeCommand = new RelayCommand(ForrigeUge);
             NaesteUgeCommand = new RelayCommand(NaesteUge);
 
-            AlleVagterCommand = new RelayCommand(AlleVagter);
-            FrieVagterCommand = new RelayCommand(FrieVagter);
-            MineVagterCommand = new RelayCommand(MineVagter);
             EksporterAlleCommand = new RelayCommand(EksporterAlleVagter);
             EksporterMineCommand = new RelayCommand(EksporterMineVagter);
             LogUdCommand = new RelayCommand(LogUd);
 
             VagtHandler = new VagtHandler(this);
+            SelectedVagterCommand = new RelayArgCommand<Vagter>(v => VagtHandler.SetSelectedVagt(v));
 
             AnsatteListe = new List<Ansatte>();
             UgedageListe = new List<Ugedage>();
@@ -353,6 +355,20 @@ namespace _1aarsproeve.ViewModel
                 return _opretVagtCommand;
             }
             set { _opretVagtCommand = value; }
+        }
+        public ICommand SelectedVagterCommand
+        {
+            get { return _selectedVagterCommand; }
+            set { _selectedVagterCommand = value; }
+        }
+        public ICommand SletVagtCommand
+        {
+            get
+            {
+                _sletVagtCommand = new RelayCommand(VagtHandler.SletVagt);
+                return _sletVagtCommand;
+            }
+            set { _sletVagtCommand = value; }
         }
         /// <summary>
         /// Eksporter alle vagter
@@ -659,42 +675,11 @@ namespace _1aarsproeve.ViewModel
             }
             catch (Exception)
             {
-                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen",  "Fejl!");
+                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
                 m.ShowAsync();
             }
         }
         #endregion
-        /// <summary>
-        /// Viser allevagter
-        /// </summary>
-        public void AlleVagter()
-        {
-            ClearVagterCollections();
-
-            _vagtsort = new AlleVagter();
-            _vagtsort.Sort(VagtCollection, Ugenummer);
-        }
-        /// <summary>
-        /// Viser frie vagter
-        /// </summary>
-        public void FrieVagter()
-        {
-            ClearVagterCollections();
-
-            _vagtsort = new FrieVagter();
-            _vagtsort.Sort(VagtCollection, Ugenummer);
-        }
-        /// <summary>
-        /// Viser mine vagter
-        /// </summary>
-        public void MineVagter()
-
-        {
-            ClearVagterCollections();
-
-            _vagtsort = new MineVagter();
-            _vagtsort.Sort(VagtCollection, Ugenummer);
-        }
         /// <summary>
         /// Logger brugeren ud
         /// </summary>

@@ -32,7 +32,7 @@ namespace _1aarsproeve.Persistens
         /// </summary>
         /// <param name="api">Tager API-url som string</param>
         /// <param name="id">Tager ID som skal slettes</param>
-        public static void SletDB(string api, int id)
+        public static void SletDB(string api, object id)
         {
             HovedViewModel.Client.DeleteAsync(api + id);
         }

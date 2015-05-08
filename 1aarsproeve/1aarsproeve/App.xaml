@@ -282,6 +282,7 @@
         <Style x:Key="BeskederOverskrift" TargetType="TextBlock">
             <Setter Property="FontSize" Value="50"/>
             <Setter Property="Foreground" Value="DimGray"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
         </Style>
         <Style x:Key="BeskederForfatterDatoBeskrivelse" TargetType="TextBlock">
             <Setter Property="FontSize" Value="18"/>

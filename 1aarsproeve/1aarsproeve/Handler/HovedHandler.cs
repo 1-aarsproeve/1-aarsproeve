@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using _1aarsproeve.Model;
 using _1aarsproeve.Persistens;
+using _1aarsproeve.View;
 using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Handler
@@ -33,6 +36,9 @@ namespace _1aarsproeve.Handler
         public void SkrivBesked()
         {
             PersistensFacade<Beskeder>.GemDB("api/Beskeders", new Beskeder() {Overskrift = HovedViewModel.Besked.Overskrift, Dato = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse = HovedViewModel.Besked.Beskrivelse, Udloebsdato = new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), Brugernavn = HovedViewModel.Brugernavn});
+
+            MessageDialog m = new MessageDialog("Beskeden blev oprettet", "Succes!");
+            m.ShowAsync();
         }
     }
 }
