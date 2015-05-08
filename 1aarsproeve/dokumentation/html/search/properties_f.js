@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['ugedagecollection',['UgedageCollection',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a2c5e8d56bdec0db35b7e4c4d3f5a8bcb',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['ugenummer',['Ugenummer',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a34eaf9433fb67fa445834864cc4117d4',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['uriparameters',['UriParameters',['../class__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model.html#a13910e263edc19222bbb60615d1f80be',1,'_1aarsproeveWebService::Areas::HelpPage::Models::HelpPageApiModel']]]
+  ['tirsdag',['Tirsdag',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a504d0377b323ec2af99d27a0b586924a',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['tirsdagfarve',['TirsdagFarve',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#adc98e55c2f01916b7581f1ef865a70bc',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['torsdag',['Torsdag',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a8ae90390ac0ead14c7542bb1b735ec75',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['torsdagfarve',['TorsdagFarve',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a88d17bbfb35c27d773321581f4cfd5df',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]]
 ];

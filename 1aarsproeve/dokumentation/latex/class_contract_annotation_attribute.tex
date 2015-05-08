@@ -1,0 +1,63 @@
+\hypertarget{class_contract_annotation_attribute}{}\section{Contract\+Annotation\+Attribute Class Reference}
+\label{class_contract_annotation_attribute}\index{Contract\+Annotation\+Attribute@{Contract\+Annotation\+Attribute}}
+
+
+Describes dependency between method input and output  
+
+
+Inheritance diagram for Contract\+Annotation\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_contract_annotation_attribute}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_contract_annotation_attribute_a635552c48df4e94f26deb7598f7a5028}{}{\bfseries Contract\+Annotation\+Attribute} (\mbox{[}Not\+Null\mbox{]} string contract)\label{class_contract_annotation_attribute_a635552c48df4e94f26deb7598f7a5028}
+
+\item 
+\hypertarget{class_contract_annotation_attribute_a886eedce3d8c7a269549a3293a2bfd99}{}{\bfseries Contract\+Annotation\+Attribute} (\mbox{[}Not\+Null\mbox{]} string contract, bool force\+Full\+States)\label{class_contract_annotation_attribute_a886eedce3d8c7a269549a3293a2bfd99}
+
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_contract_annotation_attribute_a19445968a4365371890d047311eaa1c4}{}string {\bfseries Contract}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\label{class_contract_annotation_attribute_a19445968a4365371890d047311eaa1c4}
+
+\item 
+\hypertarget{class_contract_annotation_attribute_a329c6f99fe2ed0c08df3898586cbf965}{}bool {\bfseries Force\+Full\+States}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\label{class_contract_annotation_attribute_a329c6f99fe2ed0c08df3898586cbf965}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describes dependency between method input and output 
+
+$<$syntax$>$ 
+
+Function Definition Table syntax\+:
+
+
+\begin{DoxyItemize}
+\item F\+D\+T \+:\+:= F\+D\+T\+Row \mbox{[};F\+D\+T\+Row\mbox{]}$\ast$ 
+\item F\+D\+T\+Row \+:\+:= Input =$>$ Output $\vert$ Output $<$= Input 
+\item Input \+:\+:= Parameter\+Name\+: Value \mbox{[}, Input\mbox{]}$\ast$ 
+\item Output \+:\+:= \mbox{[}Parameter\+Name\+: Value\mbox{]}$\ast$ \{halt$\vert$stop$\vert$void$\vert$nothing$\vert$\+Value\} 
+\item Value \+:\+:= true $\vert$ false $\vert$ null $\vert$ notnull $\vert$ canbenull 
+\end{DoxyItemize}If method has single input parameter, it\textquotesingle{}s name could be omitted.~\newline
+ Using {\ttfamily halt} (or {\ttfamily void}/{\ttfamily nothing}, which is the same) for method output means that the methos doesn\textquotesingle{}t return normally.~\newline
+ {\ttfamily canbenull} annotation is only applicable for output parameters.~\newline
+ You can use multiple {\ttfamily \mbox{[}Contract\+Annotation\mbox{]}} for each F\+D\+T row, or use single attribute with rows separated by semicolon.~\newline
+ $<$/syntax$>$ $<$examples$>$
+\begin{DoxyItemize}
+\item {\ttfamily  \mbox{[}Contract\+Annotation(\char`\"{}=$>$ halt\char`\"{})\mbox{]} public void Termination\+Method() } 
+\item {\ttfamily  \mbox{[}Contract\+Annotation(\char`\"{}halt \&lt;= condition\+: false\char`\"{})\mbox{]} public void Assert(bool condition, string text) // regular assertion method } 
+\item {\ttfamily  \mbox{[}Contract\+Annotation(\char`\"{}s\+:null =$>$ true\char`\"{})\mbox{]} public bool Is\+Null\+Or\+Empty(string s) // string.\+Is\+Null\+Or\+Empty() } 
+\item {\ttfamily  // A method that returns null if the parameter is null, // and not null if the parameter is not null \mbox{[}Contract\+Annotation(\char`\"{}null =$>$ null; notnull =$>$ notnull\char`\"{})\mbox{]} public object Transform(object data) } 
+\item {\ttfamily  \mbox{[}Contract\+Annotation(\char`\"{}s\+:null=$>$false; =$>$true,result\+:notnull; =$>$false, result\+:null\char`\"{})\mbox{]} public bool Try\+Parse(string s, out Person result) } 
+\end{DoxyItemize}$<$/examples$>$ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/1-\/aarsproeve/1aarsproeve/1aarsproeve/\+Properties/Annotations.\+cs\end{DoxyCompactItemize}

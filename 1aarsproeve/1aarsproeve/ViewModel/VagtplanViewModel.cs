@@ -189,12 +189,19 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public VagtHandler VagtHandler { get; set; }
         private ICommand _opretVagtCommand;
+        private ICommand _redigerVagtCommand;
+        private ICommand _sletVagtCommand;
+        /// <summary>
+        /// SelectedVagter static property
+        /// </summary>
+        public static Vagter SelectedVagter { get; set; }
+        /// <summary>
+        /// SelectedVagter command
+        /// </summary>
+        public ICommand SelectedVagterCommand { get; set; }
         /// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
-        public static Vagter SelectedVagter { get; set; }
-        private ICommand _sletVagtCommand;
-        private ICommand _selectedVagterCommand;
         public VagtplanViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
@@ -231,8 +238,7 @@ namespace _1aarsproeve.ViewModel
             LogUdCommand = new RelayCommand(LogUd);
 
             VagtHandler = new VagtHandler(this);
-            SelectedVagterCommand = new RelayArgCommand<Vagter>(v => VagtHandler.SetSelectedVagt(v));
-
+            
             AnsatteListe = new List<Ansatte>();
             UgedageListe = new List<Ugedage>();
             UgenumreListe = new List<int>();
@@ -256,6 +262,8 @@ namespace _1aarsproeve.ViewModel
             AlleVagterCommand = new RelayCommand(() => _sorting = AlleVagter);
             FrieVagterCommand = new RelayCommand(() => _sorting = FrieVagter);
             MineVagterCommand = new RelayCommand(() => _sorting = MineVagter);
+
+            SelectedVagterCommand = new RelayArgCommand<Vagter>(v => VagtHandler.SetSelectedVagt(v));
         }
         /// <summary>
         /// Henter alle vagter
@@ -356,11 +364,21 @@ namespace _1aarsproeve.ViewModel
             }
             set { _opretVagtCommand = value; }
         }
-        public ICommand SelectedVagterCommand
+        /// <summary>
+        /// RedigerVagtCommand property
+        /// </summary>
+        public ICommand RedigerVagtCommand
         {
-            get { return _selectedVagterCommand; }
-            set { _selectedVagterCommand = value; }
+            get
+            {
+                _redigerVagtCommand = new RelayCommand(VagtHandler.RedigerVagt);
+                return _redigerVagtCommand;
+            }
+            set { _redigerVagtCommand = value; }
         }
+        /// <summary>
+        /// SletVagtCommand property
+        /// </summary>
         public ICommand SletVagtCommand
         {
             get

@@ -48,7 +48,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void RedigerVagt()
         {
-            PersistensFacade<Vagter>.RedigerDB("api/Vagters", 1, new Vagter());
+            PersistensFacade<Vagter>.RedigerDB("api/Vagters/", 2, new Vagter() { VagtId = 2, Starttidspunkt = VagtplanViewModel.Starttidspunkt, Sluttidspunkt = VagtplanViewModel.Sluttidspunkt, Ugenummer = VagtplanViewModel.Ugenumre, UgedagId = VagtplanViewModel.Ugedag.UgedagId, Brugernavn = VagtplanViewModel.Ansat.Brugernavn } );
 
             MessageDialog m = new MessageDialog("Vagten blev redigeret", "Succes!");
             m.ShowAsync();
@@ -58,6 +58,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public async void SletVagt()
         {
+
             // Create the message dialog and set its content
             var messageDialog = new MessageDialog("Are you sure you want to Delete the Event: " + VagtplanViewModel.SelectedVagter.VagtId + " ?");
 

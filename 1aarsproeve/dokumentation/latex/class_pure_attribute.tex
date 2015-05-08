@@ -1,0 +1,31 @@
+\hypertarget{class_pure_attribute}{}\section{Pure\+Attribute Class Reference}
+\label{class_pure_attribute}\index{Pure\+Attribute@{Pure\+Attribute}}
+
+
+Indicates that a method does not make any observable state changes. The same as {\ttfamily System.\+Diagnostics.\+Contracts.\+Pure\+Attribute}  
+
+
+Inheritance diagram for Pure\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pure_attribute}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+Indicates that a method does not make any observable state changes. The same as {\ttfamily System.\+Diagnostics.\+Contracts.\+Pure\+Attribute} 
+
+
+\begin{DoxyCode}
+[Pure] \textcolor{keyword}{private} \textcolor{keywordtype}{int} Multiply(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y) \{ \textcolor{keywordflow}{return} x * y; \}
+\textcolor{keyword}{public} \textcolor{keywordtype}{void} Foo() \{
+  \textcolor{keyword}{const} \textcolor{keywordtype}{int} a = 2, b = 2;
+  Multiply(a, b); \textcolor{comment}{// Waring: Return value of pure method is not used}
+\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/1-\/aarsproeve/1aarsproeve/1aarsproeve/\+Properties/Annotations.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+\hypertarget{class__1aarsproeve_1_1_annotations_1_1_can_be_null_attribute}{}\section{\+\_\+1aarsproeve.\+Annotations.\+Can\+Be\+Null\+Attribute Class Reference}
+\label{class__1aarsproeve_1_1_annotations_1_1_can_be_null_attribute}\index{\+\_\+1aarsproeve.\+Annotations.\+Can\+Be\+Null\+Attribute@{\+\_\+1aarsproeve.\+Annotations.\+Can\+Be\+Null\+Attribute}}
+
+
+Indicates that the value of the marked element could be {\ttfamily null} sometimes, so the check for {\ttfamily null} is necessary before its usage  
+
+
+Inheritance diagram for \+\_\+1aarsproeve.\+Annotations.\+Can\+Be\+Null\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class__1aarsproeve_1_1_annotations_1_1_can_be_null_attribute}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+Indicates that the value of the marked element could be {\ttfamily null} sometimes, so the check for {\ttfamily null} is necessary before its usage 
+
+
+\begin{DoxyCode}
+[CanBeNull] \textcolor{keyword}{public} \textcolor{keywordtype}{object} Test() \{ \textcolor{keywordflow}{return} null; \}
+\textcolor{keyword}{public} \textcolor{keywordtype}{void} UseTest() \{
+  var p = Test();
+  var s = p.ToString(); \textcolor{comment}{// Warning: Possible 'System.NullReferenceException'}
+\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/1-\/aarsproeve/1aarsproeve/1aarsproeve/\+Properties/Annotations.\+cs\end{DoxyCompactItemize}

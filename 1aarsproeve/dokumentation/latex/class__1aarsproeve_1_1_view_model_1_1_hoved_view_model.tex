@@ -11,16 +11,33 @@ Data\+Context klasse til Views\+: Hovedmenu, Skriv\+Besked
 \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ad1f93a3cec1e8f3b2272a4e92adb2815}{Hoved\+View\+Model} ()
 \begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model}{Hoved\+View\+Model} \end{DoxyCompactList}\item 
 void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ab9eeed2082ee607e4243559b1750eb8e}{Log\+Ud} ()
-\begin{DoxyCompactList}\small\item\em Logger brugeren ud \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Logger brugeren ud \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_accaf70389376abb55df383d44edd5842}{Stilling} ()
+\begin{DoxyCompactList}\small\item\em Collapser knapper alt efter stilling \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_hovedmenu_view}{Hovedmenu\+View} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a75cca0494e9b39bb827eb182f927cea5}{Beskeder\+C}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Observable\+Collection med Beskeder \end{DoxyCompactList}\item 
+Observable\+Collection$<$ Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_hovedmenu_view}{Hovedmenu\+View} $>$ $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ac123bfcd71b56f5aba5a60f18d42f5b6}{Besked\+Collection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Singleton vagtcollection \end{DoxyCompactList}\item 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a199de2473d17139ea8423ba05fba12e8}{}static Http\+Client \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a199de2473d17139ea8423ba05fba12e8}{Client}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a199de2473d17139ea8423ba05fba12e8}
+
+\begin{DoxyCompactList}\small\item\em Get til klienten til forbindelsen til databasen $<$/summary \end{DoxyCompactList}\item 
 Application\+Data\+Container \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_afbb2eb2f33bdb6defe9979b80c6e79ff}{Setting}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Gør det muligt at gemme værdier i local storage \end{DoxyCompactList}\item 
 string \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a48f0c876a1e3cd598fe3c4c7c65a760d}{Brugernavn}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Brugernavn property \end{DoxyCompactList}\item 
 I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ae541527e8e9063cc3337b229b93c7e48}{Log\+Ud\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Logger brugeren ud \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Logger brugeren ud \end{DoxyCompactList}\item 
+Visibility \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ab292f28c3e469ad73d6d6e648f3096f0}{Skjul\+Knap}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property til at skjule knapper \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_handler_1_1_hoved_handler}{Hoved\+Handler} \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_aaeba819c1330608f58f968d670367c47}{Hoved\+Handler}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Hovedhandler property \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_model_1_1_beskeder}{Beskeder} \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ad0bb692f6eaf30a6d71f76da7d23a512}{Besked}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Besked property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a72688ca49a29be5fc3fa18d16449387e}{Skriv\+Besked\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Skriv\+Besked command \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -54,15 +71,54 @@ Constructor for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_hoved_view_mode
 
 Logger brugeren ud 
 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_accaf70389376abb55df383d44edd5842}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Stilling@{Stilling}}
+\index{Stilling@{Stilling}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
+\subsubsection[{Stilling}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Hoved\+View\+Model.\+Stilling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_accaf70389376abb55df383d44edd5842}
+
+
+Collapser knapper alt efter stilling 
+
 
 
 \subsection{Property Documentation}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ad0bb692f6eaf30a6d71f76da7d23a512}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Besked@{Besked}}
+\index{Besked@{Besked}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
+\subsubsection[{Besked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Beskeder} \+\_\+1aarsproeve.\+View\+Model.\+Hoved\+View\+Model.\+Besked\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ad0bb692f6eaf30a6d71f76da7d23a512}
+
+
+Besked property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ac123bfcd71b56f5aba5a60f18d42f5b6}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Besked\+Collection@{Besked\+Collection}}
+\index{Besked\+Collection@{Besked\+Collection}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
+\subsubsection[{Besked\+Collection}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<$Observable\+Collection$<${\bf Hovedmenu\+View}$>$ $>$ \+\_\+1aarsproeve.\+View\+Model.\+Hoved\+View\+Model.\+Besked\+Collection\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ac123bfcd71b56f5aba5a60f18d42f5b6}
+
+
+Singleton vagtcollection 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a75cca0494e9b39bb827eb182f927cea5}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Beskeder\+C@{Beskeder\+C}}
+\index{Beskeder\+C@{Beskeder\+C}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
+\subsubsection[{Beskeder\+C}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Hovedmenu\+View}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Hoved\+View\+Model.\+Beskeder\+C\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a75cca0494e9b39bb827eb182f927cea5}
+
+
+Observable\+Collection med Beskeder 
+
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a48f0c876a1e3cd598fe3c4c7c65a760d}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Brugernavn@{Brugernavn}}
 \index{Brugernavn@{Brugernavn}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
 \subsubsection[{Brugernavn}]{\setlength{\rightskip}{0pt plus 5cm}string \+\_\+1aarsproeve.\+View\+Model.\+Hoved\+View\+Model.\+Brugernavn\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a48f0c876a1e3cd598fe3c4c7c65a760d}
 
 
 Brugernavn property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_aaeba819c1330608f58f968d670367c47}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Hoved\+Handler@{Hoved\+Handler}}
+\index{Hoved\+Handler@{Hoved\+Handler}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
+\subsubsection[{Hoved\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hoved\+Handler} \+\_\+1aarsproeve.\+View\+Model.\+Hoved\+View\+Model.\+Hoved\+Handler\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_aaeba819c1330608f58f968d670367c47}
+
+
+Hovedhandler property 
 
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ae541527e8e9063cc3337b229b93c7e48}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Log\+Ud\+Command@{Log\+Ud\+Command}}
 \index{Log\+Ud\+Command@{Log\+Ud\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
@@ -77,6 +133,20 @@ Logger brugeren ud
 
 
 Gør det muligt at gemme værdier i local storage 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ab292f28c3e469ad73d6d6e648f3096f0}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Skjul\+Knap@{Skjul\+Knap}}
+\index{Skjul\+Knap@{Skjul\+Knap}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
+\subsubsection[{Skjul\+Knap}]{\setlength{\rightskip}{0pt plus 5cm}Visibility \+\_\+1aarsproeve.\+View\+Model.\+Hoved\+View\+Model.\+Skjul\+Knap\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_ab292f28c3e469ad73d6d6e648f3096f0}
+
+
+Property til at skjule knapper 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a72688ca49a29be5fc3fa18d16449387e}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}!Skriv\+Besked\+Command@{Skriv\+Besked\+Command}}
+\index{Skriv\+Besked\+Command@{Skriv\+Besked\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Hoved\+View\+Model}}
+\subsubsection[{Skriv\+Besked\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Hoved\+View\+Model.\+Skriv\+Besked\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_hoved_view_model_a72688ca49a29be5fc3fa18d16449387e}
+
+
+Skriv\+Besked command 
 
 
 

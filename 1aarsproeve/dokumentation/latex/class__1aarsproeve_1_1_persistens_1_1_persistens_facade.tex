@@ -1,0 +1,112 @@
+\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade}{}\section{\+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade$<$ T $>$ Class Template Reference}
+\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade}\index{\+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade$<$ T $>$@{\+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade$<$ T $>$}}
+
+
+Persistens-\/klasse der indeholder C\+R\+U\+D-\/funktioner  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a58be4f9dca4d750397b687f82a75b242}{Gem\+D\+B} (string api, object objekt)
+\begin{DoxyCompactList}\small\item\em Gemmer data i databasen \end{DoxyCompactList}\item 
+static void \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a774ffeccb48cea0195fb2f42a9612e67}{Slet\+D\+B} (string api, object id)
+\begin{DoxyCompactList}\small\item\em Sletter data i databasen \end{DoxyCompactList}\item 
+static void \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_abf4034a829e5a233ef61fa7315220a98}{Rediger\+D\+B} (string api, int id, object objekt)
+\begin{DoxyCompactList}\small\item\em Redigerer data i databasen \end{DoxyCompactList}\item 
+static async Task$<$ List$<$ T $>$ $>$ \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a282e4349d842d409431aebceaa12f978}{Load\+D\+B} (string api)
+\begin{DoxyCompactList}\small\item\em Henter data i databasen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Persistens-\/klasse der indeholder C\+R\+U\+D-\/funktioner 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Generisk type\\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a58be4f9dca4d750397b687f82a75b242}{}\index{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}!Gem\+D\+B@{Gem\+D\+B}}
+\index{Gem\+D\+B@{Gem\+D\+B}!\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}}
+\subsubsection[{Gem\+D\+B}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade}$<$ T $>$.Gem\+D\+B (
+\begin{DoxyParamCaption}
+\item[{string}]{api, }
+\item[{object}]{objekt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a58be4f9dca4d750397b687f82a75b242}
+
+
+Gemmer data i databasen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em api} & Tager A\+P\+I-\/url som string\\
+\hline
+{\em objekt} & Tager objekt som skal gemmes\\
+\hline
+\end{DoxyParams}
+\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a282e4349d842d409431aebceaa12f978}{}\index{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}!Load\+D\+B@{Load\+D\+B}}
+\index{Load\+D\+B@{Load\+D\+B}!\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}}
+\subsubsection[{Load\+D\+B}]{\setlength{\rightskip}{0pt plus 5cm}static async Task$<$List$<$T$>$ $>$ {\bf \+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade}$<$ T $>$.Load\+D\+B (
+\begin{DoxyParamCaption}
+\item[{string}]{api}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a282e4349d842d409431aebceaa12f978}
+
+
+Henter data i databasen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em api} & Tager A\+P\+I-\/url som string\\
+\hline
+\end{DoxyParams}
+\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_abf4034a829e5a233ef61fa7315220a98}{}\index{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}!Rediger\+D\+B@{Rediger\+D\+B}}
+\index{Rediger\+D\+B@{Rediger\+D\+B}!\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}}
+\subsubsection[{Rediger\+D\+B}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade}$<$ T $>$.Rediger\+D\+B (
+\begin{DoxyParamCaption}
+\item[{string}]{api, }
+\item[{int}]{id, }
+\item[{object}]{objekt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_abf4034a829e5a233ef61fa7315220a98}
+
+
+Redigerer data i databasen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em api} & Tager A\+P\+I-\/url som string\\
+\hline
+{\em id} & Tager I\+D som skal redigeres\\
+\hline
+{\em objekt} & Tager objekt som skal redigeres\\
+\hline
+\end{DoxyParams}
+\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a774ffeccb48cea0195fb2f42a9612e67}{}\index{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}!Slet\+D\+B@{Slet\+D\+B}}
+\index{Slet\+D\+B@{Slet\+D\+B}!\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}}
+\subsubsection[{Slet\+D\+B}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade}$<$ T $>$.Slet\+D\+B (
+\begin{DoxyParamCaption}
+\item[{string}]{api, }
+\item[{object}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a774ffeccb48cea0195fb2f42a9612e67}
+
+
+Sletter data i databasen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em api} & Tager A\+P\+I-\/url som string\\
+\hline
+{\em id} & Tager I\+D som skal slettes\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/1-\/aarsproeve/1aarsproeve/1aarsproeve/\+Persistens/Persistens\+Facade.\+cs\end{DoxyCompactItemize}

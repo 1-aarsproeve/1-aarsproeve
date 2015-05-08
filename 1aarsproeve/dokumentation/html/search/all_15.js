@@ -1,7 +1,25 @@
 var searchData=
 [
+  ['vagtcollection',['VagtCollection',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a9e4c70e38d1e11a24616387ee8188381',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['vagter',['Vagter',['../class_w_s1aarsproeve_1_1_vagter.html',1,'WS1aarsproeve']]],
+  ['vagter',['Vagter',['../class__1aarsproeve_web_service_1_1_vagter.html',1,'_1aarsproeveWebService']]],
+  ['vagter',['Vagter',['../class__1aarsproeve_1_1_model_1_1_vagter.html#ab4fc68c66859f33e698f018c44e87867',1,'_1aarsproeve.Model.Vagter.Vagter(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)'],['../class__1aarsproeve_1_1_model_1_1_vagter.html#a6b576339d63375e4f5df2da892d3abd0',1,'_1aarsproeve.Model.Vagter.Vagter()']]],
+  ['vagter',['Vagter',['../class__1aarsproeve_1_1_model_1_1_vagter.html',1,'_1aarsproeve::Model']]],
+  ['vagterscontroller',['VagtersController',['../class_w_s1aarsproeve_1_1_controllers_1_1_vagters_controller.html',1,'WS1aarsproeve::Controllers']]],
+  ['vagterscontroller',['VagtersController',['../class__1aarsproeve_web_service_1_1_controllers_1_1_vagters_controller.html',1,'_1aarsproeveWebService::Controllers']]],
+  ['vagtersviewcontroller',['VagtersViewController',['../class__1aarsproeve_web_service_1_1_controllers_1_1_vagters_view_controller.html',1,'_1aarsproeveWebService::Controllers']]],
+  ['vagtertests',['VagterTests',['../class__1aarsproeve_tests_1_1_vagter_tests.html',1,'_1aarsproeveTests']]],
+  ['vagthandler',['VagtHandler',['../class__1aarsproeve_1_1_handler_1_1_vagt_handler.html',1,'_1aarsproeve::Handler']]],
+  ['vagthandler',['VagtHandler',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#acdf9517320f79372aaed5c644df493aa',1,'_1aarsproeve.ViewModel.VagtplanViewModel.VagtHandler()'],['../class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#a030580ed58226bf1741303da667a7954',1,'_1aarsproeve.Handler.VagtHandler.VagtHandler()']]],
+  ['vagtid',['VagtId',['../class__1aarsproeve_1_1_model_1_1_vagter.html#a4582f5e8d8afcf4a96a3ec69ce10a69c',1,'_1aarsproeve.Model.Vagter.VagtId()'],['../class__1aarsproeve_1_1_model_1_1_vagtplan_view.html#a2255fed674c028434296baa136be598e',1,'_1aarsproeve.Model.VagtplanView.VagtId()']]],
   ['vagtplan',['Vagtplan',['../class__1aarsproeve_1_1_view_1_1_vagtplan.html',1,'_1aarsproeve::View']]],
-  ['vagtplanviewmodel',['VagtplanViewModel',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a9cd0dee8f4da04199f5fd0dde63cbcda',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['vagtplanview',['VagtplanView',['../class_w_s1aarsproeve_1_1_vagtplan_view.html',1,'WS1aarsproeve']]],
+  ['vagtplanview',['VagtplanView',['../class__1aarsproeve_web_service_1_1_vagtplan_view.html',1,'_1aarsproeveWebService']]],
+  ['vagtplanview',['VagtplanView',['../class__1aarsproeve_1_1_model_1_1_vagtplan_view.html',1,'_1aarsproeve::Model']]],
   ['vagtplanviewmodel',['VagtplanViewModel',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html',1,'_1aarsproeve::ViewModel']]],
-  ['valuescontroller',['ValuesController',['../class__1aarsproeve_web_service_1_1_controllers_1_1_values_controller.html',1,'_1aarsproeveWebService::Controllers']]]
+  ['vagtplanviewmodel',['VagtplanViewModel',['../class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#ac7a38ad84077edb90a6dc695e05c756e',1,'_1aarsproeve::Handler::VagtHandler']]],
+  ['vagtplanviewscontroller',['VagtplanViewsController',['../class_w_s1aarsproeve_1_1_controllers_1_1_vagtplan_views_controller.html',1,'WS1aarsproeve::Controllers']]],
+  ['valueproviderattribute',['ValueProviderAttribute',['../class_value_provider_attribute.html',1,'']]],
+  ['valuescontroller',['ValuesController',['../class_w_s1aarsproeve_1_1_controllers_1_1_values_controller.html',1,'WS1aarsproeve::Controllers']]],
+  ['viewcontext',['ViewContext',['../class_w_s1aarsproeve_1_1_view_context.html',1,'WS1aarsproeve']]]
 ];

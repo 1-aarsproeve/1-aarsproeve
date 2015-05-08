@@ -5,29 +5,67 @@
 Data\+Context klasse til Views\+: Opret\+Vagt, Rediger\+Vagt, Vagtplan  
 
 
+Inheritance diagram for \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a9cd0dee8f4da04199f5fd0dde63cbcda}{Vagtplan\+View\+Model} ()
-\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model}{Vagtplan\+View\+Model} \end{DoxyCompactList}\item 
+async void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5684a550b7bd58a6c374c3a015764042}{Alle\+Vagter} (Observable\+Collection$<$ Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$$>$ vagt\+Collection)
+\begin{DoxyCompactList}\small\item\em Henter alle vagter \end{DoxyCompactList}\item 
+async void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae72f0ee8b095efbd7ec2d0d57c114dde}{Frie\+Vagter} (Observable\+Collection$<$ Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$$>$ vagt\+Collection)
+\begin{DoxyCompactList}\small\item\em Henter frie vagter \end{DoxyCompactList}\item 
+async void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a1b79a60eb43f6670947298208e38692c}{Mine\+Vagter} (Observable\+Collection$<$ Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$$>$ vagt\+Collection)
+\begin{DoxyCompactList}\small\item\em Henter mine vagter \end{DoxyCompactList}\item 
+async void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aded65e8a981ff4dd63e1a583ef3da9cd}{Eksporter\+Alle\+Vagter} ()
+\begin{DoxyCompactList}\small\item\em Eksporter alle vagter \end{DoxyCompactList}\item 
+async void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a716adb448b19801ef8f78002e2ea6409}{Eksporter\+Mine\+Vagter} ()
+\begin{DoxyCompactList}\small\item\em Eksporterer alle mine vagter \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aab7593de820ec5b6e735edc002af4f14}{Clear\+Vagter\+Collections} ()
+\begin{DoxyCompactList}\small\item\em Clear alle collections \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae298778e1242b354d4ccd8fa69274ee3}{Forrige\+Uge} ()
+\begin{DoxyCompactList}\small\item\em Henter vagter for forrige uge \end{DoxyCompactList}\item 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a2a3d1685dda9a4d337820ca42e8e524a}{}void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a2a3d1685dda9a4d337820ca42e8e524a}{Naeste\+Uge} ()\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a2a3d1685dda9a4d337820ca42e8e524a}
+
+\begin{DoxyCompactList}\small\item\em Henter vagter for næste uge $<$/summary \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_af345ce712696e7401e284d71323e9619}{Ugedage} ()
+\begin{DoxyCompactList}\small\item\em Sætter datoerne for hver ugedag \end{DoxyCompactList}\item 
 void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a584ab28ecfddbb2248d7b55a3ed10a34}{Nuvaerende\+Ugedag} (Solid\+Color\+Brush brush, Solid\+Color\+Brush brush\+Original)
 \begin{DoxyCompactList}\small\item\em Angiver farve på nuværende ugedag \end{DoxyCompactList}\item 
 void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5e3b5ba40e74748da6c018f8547d8baa}{Find\+Ugenummer} (string kultur\+Info)
-\begin{DoxyCompactList}\small\item\em Finder ugenummer \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Finder nuværende ugenummer \end{DoxyCompactList}\item 
 Date\+Time \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a8b8894a622f861e335c3e171a4ba93bc}{Foerste\+Dag\+Paa\+Uge} (int uge\+Paa\+Aaret)
 \begin{DoxyCompactList}\small\item\em Finder første dag på ugen \end{DoxyCompactList}\item 
-void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ad4620a85449f88c843d594dfb7e2f5fa}{Initialiser\+Ugedage} ()
-\begin{DoxyCompactList}\small\item\em Initialisere ugedage \end{DoxyCompactList}\item 
-void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5616979ee0bb0fe1904d965f2b688560}{Initialiser\+Ansatte} ()
-\begin{DoxyCompactList}\small\item\em Initialisere ansatte \end{DoxyCompactList}\item 
-void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a1e49e7514900058b5cd36e4991e08b23}{Alle\+Vagter} ()
-\begin{DoxyCompactList}\small\item\em Viser allevagter \end{DoxyCompactList}\item 
-void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aac01e39a92807c54f6718d4be4aeabc2}{Frie\+Vagter} ()
-\begin{DoxyCompactList}\small\item\em Viser frie vagter \end{DoxyCompactList}\item 
-void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a94fda6c42d4819fa2af8af5e2c22eff1}{Mine\+Vagter} ()
-\begin{DoxyCompactList}\small\item\em Viser mine vagter \end{DoxyCompactList}\item 
+async void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa6d918d8d3f79ae33e12ac5a357efd83}{Initialiser\+Vagter} ()
+\begin{DoxyCompactList}\small\item\em Initialisere vagter \end{DoxyCompactList}\item 
 void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a543ec6d690130a11d074bc58ba9f1552}{Log\+Ud} ()
 \begin{DoxyCompactList}\small\item\em Logger brugeren ud \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aab4a9280616fcd59a1d012cb12bd8195}{Mandag\+Vagter}
+\begin{DoxyCompactList}\small\item\em Alle mandagsvagter \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a7d6c62127834e177525b22eb6ddd2ab6}{Tirsdag\+Vagter}
+\begin{DoxyCompactList}\small\item\em Alle tirsdagsvagter \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4ea415eb2f1e6f7e82e4018e276d1197}{Onsdag\+Vagter}
+\begin{DoxyCompactList}\small\item\em Alle onsdagsvagter \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a85143514a9445a534a3518738e53df82}{Torsdag\+Vagter}
+\begin{DoxyCompactList}\small\item\em Alle torsdagssvagter \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a3955ea1d063e57b61586ae4d2a46ea26}{Fredag\+Vagter}
+\begin{DoxyCompactList}\small\item\em Alle fredagsvagter \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a8610e77bb66663a939068e98f2714df0}{Loerdag\+Vagter}
+\begin{DoxyCompactList}\small\item\em Alle lørdagsvagter \end{DoxyCompactList}\item 
+Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa31e5b366c76da7a1a64ef568af2764c}{Soendag\+Vagter}
+\begin{DoxyCompactList}\small\item\em Alle søndagsvagter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa8227bf3edebc8faf6c6d4b622348f46}{}virtual void {\bfseries On\+Property\+Changed} (\mbox{[}Caller\+Member\+Name\mbox{]} string property\+Name=null)\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa8227bf3edebc8faf6c6d4b622348f46}
+
+\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,8 +87,56 @@ Brush \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a185e
 \begin{DoxyCompactList}\small\item\em Sætter lørdag til bestemt farve \end{DoxyCompactList}\item 
 Brush \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa6afb148e3e73f41c510862b157affb0}{Soendag\+Farve}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Sætter søndag til bestemt farve \end{DoxyCompactList}\item 
-int \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a34eaf9433fb67fa445834864cc4117d4}{Ugenummer}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Ugenummer property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a0b3b612ac629f20f80c28bc6560da7a1}{Forrige\+Uge\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Forrige\+Uge\+Command property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4f463fb1507859004e80b064e43bfeaf}{Naeste\+Uge\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Naeste\+Uge\+Command property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a9ff1365b62555d179cf34a5e11a6d5fc}{Alle\+Vagter\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Alle\+Vagter\+Command property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ac17a43f67342176e4a94bea072876d9c}{Frie\+Vagter\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Frie\+Vagter\+Command property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_abded4dcbd3699986defbf179b9d52001}{Mine\+Vagter\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Mine\+Vagter\+Command property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa57320a9de71c8c0cd393e0fc2dd8eca}{Sort\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sort\+Command property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aaacfd0f73f0fe5a3784fda8f7fb0c045}{Eksporter\+Alle\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Eksporter\+Alle\+Command property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4606860561c41d7330663950515cf369}{Eksporter\+Mine\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Eksporter\+Mine\+Command property \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aadc2e0233944328d65644e49b449f89b}{Log\+Ud\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Log\+Ud\+Command property \end{DoxyCompactList}\item 
+Time\+Span \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae31fb2b4cede10a3f44a5e417d83dee0}{Starttidspunkt}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Starttidspunkt Property \end{DoxyCompactList}\item 
+Time\+Span \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a049f0c84ca19cb72078132b243bf9023}{Sluttidspunkt}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sluttidspunkt Property \end{DoxyCompactList}\item 
+int \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a94321a32a1dd0246061c640e105540a7}{Ugedag\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ugedag\+Id Property \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_ansatte}{Ansatte} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a0b9bae0b2b02b911646cfa98f2d5a6e8}{Ansatte\+Liste}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ansatte\+Liste property \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_model_1_1_ansatte}{Ansatte} \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_acfc1e3ec69784426fcdecb303c0c1f94}{Ansat}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ansat property \end{DoxyCompactList}\item 
+List$<$ int $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_af852f26329ee256810f5fb02f8c5ac1d}{Ugenumre\+Liste}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ugenumre\+Liste property \end{DoxyCompactList}\item 
+int \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ab6e58a1f61f376d8c31d27b8a17233af}{Ugenumre}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ugenumre property \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_ugedage}{Ugedage} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a288c70ed7f7ad254c50079c4fc33b855}{Ugedage\+Liste}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ugedage\+Liste property \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_model_1_1_ugedage}{Ugedage} \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ab6066f6ae85c31a626884095e201c989}{Ugedag}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ugedag property \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler}{Vagt\+Handler} \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_acdf9517320f79372aaed5c644df493aa}{Vagt\+Handler}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Vagt\+Handler property \end{DoxyCompactList}\item 
+static \hyperlink{class__1aarsproeve_1_1_model_1_1_vagter}{Vagter} \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aac1978ee8c25f05b536fd23f5faa44da}{Selected\+Vagter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model}{Vagtplan\+View\+Model} \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a76a5f40943fb46d05fdc59d4d786d206}{Opret\+Vagt\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Opret\+Vagt\+Command property \end{DoxyCompactList}\item 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa46683f207146cac5e2d09555727d8f9}{}I\+Command {\bfseries Selected\+Vagter\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa46683f207146cac5e2d09555727d8f9}
+
+\item 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a68e39a09c13e2544fdd3dd2c4dff1649}{}I\+Command {\bfseries Slet\+Vagt\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a68e39a09c13e2544fdd3dd2c4dff1649}
+
+\item 
+Observable\+Collection$<$ Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_vagtplan_view}{Vagtplan\+View} $>$ $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a9e4c70e38d1e11a24616387ee8188381}{Vagt\+Collection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Singleton vagtcollection \end{DoxyCompactList}\item 
 string \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa78a723e55f22d0579a6a5cc0086a2fc}{Mandag}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Mandag property \end{DoxyCompactList}\item 
 string \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a504d0377b323ec2af99d27a0b586924a}{Tirsdag}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -65,16 +151,13 @@ string \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa75
 \begin{DoxyCompactList}\small\item\em Lørdag property \end{DoxyCompactList}\item 
 string \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_abdd4c1e28095f4c2660a5ad71bab51ee}{Soendag}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Søndag property \end{DoxyCompactList}\item 
-Observable\+Collection$<$ Ugedage $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a2c5e8d56bdec0db35b7e4c4d3f5a8bcb}{Ugedage\+Collection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Collection af ugedage \end{DoxyCompactList}\item 
-I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a9ff1365b62555d179cf34a5e11a6d5fc}{Alle\+Vagter\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Alle\+Vagter\+Command property \end{DoxyCompactList}\item 
-I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ac17a43f67342176e4a94bea072876d9c}{Frie\+Vagter\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Frie\+Vagter\+Command property \end{DoxyCompactList}\item 
-I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_abded4dcbd3699986defbf179b9d52001}{Mine\+Vagter\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Mine\+Vagter\+Command property \end{DoxyCompactList}\item 
-I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aadc2e0233944328d65644e49b449f89b}{Log\+Ud\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Log\+Ud\+Command property \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a34eaf9433fb67fa445834864cc4117d4}{Ugenummer}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ugenummer property \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Property\+Changed\+Event\+Handler \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ac94848da2b60b3f4199b22427f3cf101}{Property\+Changed}
+\begin{DoxyCompactList}\small\item\em Implementerer I\+Notify\+Property\+Changed interfacet \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -82,31 +165,55 @@ Data\+Context klasse til Views\+: Opret\+Vagt, Rediger\+Vagt, Vagtplan
 
 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a9cd0dee8f4da04199f5fd0dde63cbcda}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Vagtplan\+View\+Model@{Vagtplan\+View\+Model}}
-\index{Vagtplan\+View\+Model@{Vagtplan\+View\+Model}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
-\subsubsection[{Vagtplan\+View\+Model}]{\setlength{\rightskip}{0pt plus 5cm}\+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Vagtplan\+View\+Model (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a9cd0dee8f4da04199f5fd0dde63cbcda}
-
-
-Constructor for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model}{Vagtplan\+View\+Model} 
-
-
-
 \subsection{Member Function Documentation}
-\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a1e49e7514900058b5cd36e4991e08b23}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Alle\+Vagter@{Alle\+Vagter}}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5684a550b7bd58a6c374c3a015764042}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Alle\+Vagter@{Alle\+Vagter}}
 \index{Alle\+Vagter@{Alle\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
-\subsubsection[{Alle\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Alle\+Vagter (
+\subsubsection[{Alle\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}async void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Alle\+Vagter (
+\begin{DoxyParamCaption}
+\item[{Observable\+Collection$<$ Observable\+Collection$<$ {\bf Vagtplan\+View} $>$$>$}]{vagt\+Collection}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5684a550b7bd58a6c374c3a015764042}
+
+
+Henter alle vagter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vagt\+Collection} & Tager vagtcollection som parameter\\
+\hline
+\end{DoxyParams}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aab7593de820ec5b6e735edc002af4f14}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Clear\+Vagter\+Collections@{Clear\+Vagter\+Collections}}
+\index{Clear\+Vagter\+Collections@{Clear\+Vagter\+Collections}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Clear\+Vagter\+Collections}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Clear\+Vagter\+Collections (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a1e49e7514900058b5cd36e4991e08b23}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aab7593de820ec5b6e735edc002af4f14}
 
 
-Viser allevagter 
+Clear alle collections 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aded65e8a981ff4dd63e1a583ef3da9cd}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Eksporter\+Alle\+Vagter@{Eksporter\+Alle\+Vagter}}
+\index{Eksporter\+Alle\+Vagter@{Eksporter\+Alle\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Eksporter\+Alle\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}async void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Eksporter\+Alle\+Vagter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aded65e8a981ff4dd63e1a583ef3da9cd}
+
+
+Eksporter alle vagter 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a716adb448b19801ef8f78002e2ea6409}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Eksporter\+Mine\+Vagter@{Eksporter\+Mine\+Vagter}}
+\index{Eksporter\+Mine\+Vagter@{Eksporter\+Mine\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Eksporter\+Mine\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}async void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Eksporter\+Mine\+Vagter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a716adb448b19801ef8f78002e2ea6409}
+
+
+Eksporterer alle mine vagter 
 
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5e3b5ba40e74748da6c018f8547d8baa}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Find\+Ugenummer@{Find\+Ugenummer}}
 \index{Find\+Ugenummer@{Find\+Ugenummer}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
@@ -117,11 +224,11 @@ Viser allevagter
 )}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5e3b5ba40e74748da6c018f8547d8baa}
 
 
-Finder ugenummer 
+Finder nuværende ugenummer 
 
 
 \begin{DoxyParams}{Parameters}
-{\em kultur\+Info} & Angiver hvilket land man er i\\
+{\em kultur\+Info} & Angiver hvilket land\\
 \hline
 \end{DoxyParams}
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a8b8894a622f861e335c3e171a4ba93bc}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Foerste\+Dag\+Paa\+Uge@{Foerste\+Dag\+Paa\+Uge}}
@@ -143,38 +250,43 @@ Finder første dag på ugen
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aac01e39a92807c54f6718d4be4aeabc2}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Frie\+Vagter@{Frie\+Vagter}}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae298778e1242b354d4ccd8fa69274ee3}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Forrige\+Uge@{Forrige\+Uge}}
+\index{Forrige\+Uge@{Forrige\+Uge}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Forrige\+Uge}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Forrige\+Uge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae298778e1242b354d4ccd8fa69274ee3}
+
+
+Henter vagter for forrige uge 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae72f0ee8b095efbd7ec2d0d57c114dde}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Frie\+Vagter@{Frie\+Vagter}}
 \index{Frie\+Vagter@{Frie\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
-\subsubsection[{Frie\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Frie\+Vagter (
+\subsubsection[{Frie\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}async void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Frie\+Vagter (
+\begin{DoxyParamCaption}
+\item[{Observable\+Collection$<$ Observable\+Collection$<$ {\bf Vagtplan\+View} $>$$>$}]{vagt\+Collection}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae72f0ee8b095efbd7ec2d0d57c114dde}
+
+
+Henter frie vagter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vagt\+Collection} & Tager vagtcollection som parameter\\
+\hline
+\end{DoxyParams}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa6d918d8d3f79ae33e12ac5a357efd83}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Initialiser\+Vagter@{Initialiser\+Vagter}}
+\index{Initialiser\+Vagter@{Initialiser\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Initialiser\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}async void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Initialiser\+Vagter (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aac01e39a92807c54f6718d4be4aeabc2}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa6d918d8d3f79ae33e12ac5a357efd83}
 
 
-Viser frie vagter 
-
-\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5616979ee0bb0fe1904d965f2b688560}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Initialiser\+Ansatte@{Initialiser\+Ansatte}}
-\index{Initialiser\+Ansatte@{Initialiser\+Ansatte}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
-\subsubsection[{Initialiser\+Ansatte}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Initialiser\+Ansatte (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a5616979ee0bb0fe1904d965f2b688560}
-
-
-Initialisere ansatte 
-
-\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ad4620a85449f88c843d594dfb7e2f5fa}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Initialiser\+Ugedage@{Initialiser\+Ugedage}}
-\index{Initialiser\+Ugedage@{Initialiser\+Ugedage}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
-\subsubsection[{Initialiser\+Ugedage}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Initialiser\+Ugedage (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ad4620a85449f88c843d594dfb7e2f5fa}
-
-
-Initialisere ugedage 
+Initialisere vagter 
 
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a543ec6d690130a11d074bc58ba9f1552}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Log\+Ud@{Log\+Ud}}
 \index{Log\+Ud@{Log\+Ud}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
@@ -187,17 +299,22 @@ Initialisere ugedage
 
 Logger brugeren ud 
 
-\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a94fda6c42d4819fa2af8af5e2c22eff1}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Mine\+Vagter@{Mine\+Vagter}}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a1b79a60eb43f6670947298208e38692c}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Mine\+Vagter@{Mine\+Vagter}}
 \index{Mine\+Vagter@{Mine\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
-\subsubsection[{Mine\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Mine\+Vagter (
+\subsubsection[{Mine\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}async void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Mine\+Vagter (
 \begin{DoxyParamCaption}
-{}
+\item[{Observable\+Collection$<$ Observable\+Collection$<$ {\bf Vagtplan\+View} $>$$>$}]{vagt\+Collection}
 \end{DoxyParamCaption}
-)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a94fda6c42d4819fa2af8af5e2c22eff1}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a1b79a60eb43f6670947298208e38692c}
 
 
-Viser mine vagter 
+Henter mine vagter 
 
+
+\begin{DoxyParams}{Parameters}
+{\em vagt\+Collection} & Tager vagtcollection som parameter\\
+\hline
+\end{DoxyParams}
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a584ab28ecfddbb2248d7b55a3ed10a34}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Nuvaerende\+Ugedag@{Nuvaerende\+Ugedag}}
 \index{Nuvaerende\+Ugedag@{Nuvaerende\+Ugedag}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
 \subsubsection[{Nuvaerende\+Ugedag}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Nuvaerende\+Ugedag (
@@ -212,11 +329,74 @@ Angiver farve på nuværende ugedag
 
 
 \begin{DoxyParams}{Parameters}
-{\em brush} & Angiver en farve, som er i dag\\
+{\em brush} & Angiver farven som bliver vist på i dags ugedag\\
 \hline
-{\em brush\+Original} & Angiver en farve, som ikke er i dag\\
+{\em brush\+Original} & Angiver farven som bliver vist på de ugedage som ikke er i dag\\
 \hline
 \end{DoxyParams}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_af345ce712696e7401e284d71323e9619}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ugedage@{Ugedage}}
+\index{Ugedage@{Ugedage}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Ugedage}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ugedage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_af345ce712696e7401e284d71323e9619}
+
+
+Sætter datoerne for hver ugedag 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a3955ea1d063e57b61586ae4d2a46ea26}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Fredag\+Vagter@{Fredag\+Vagter}}
+\index{Fredag\+Vagter@{Fredag\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Fredag\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Vagtplan\+View}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Fredag\+Vagter}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a3955ea1d063e57b61586ae4d2a46ea26}
+
+
+Alle fredagsvagter 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a8610e77bb66663a939068e98f2714df0}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Loerdag\+Vagter@{Loerdag\+Vagter}}
+\index{Loerdag\+Vagter@{Loerdag\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Loerdag\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Vagtplan\+View}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Loerdag\+Vagter}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a8610e77bb66663a939068e98f2714df0}
+
+
+Alle lørdagsvagter 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aab4a9280616fcd59a1d012cb12bd8195}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Mandag\+Vagter@{Mandag\+Vagter}}
+\index{Mandag\+Vagter@{Mandag\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Mandag\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Vagtplan\+View}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Mandag\+Vagter}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aab4a9280616fcd59a1d012cb12bd8195}
+
+
+Alle mandagsvagter 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4ea415eb2f1e6f7e82e4018e276d1197}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Onsdag\+Vagter@{Onsdag\+Vagter}}
+\index{Onsdag\+Vagter@{Onsdag\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Onsdag\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Vagtplan\+View}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Onsdag\+Vagter}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4ea415eb2f1e6f7e82e4018e276d1197}
+
+
+Alle onsdagsvagter 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa31e5b366c76da7a1a64ef568af2764c}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Soendag\+Vagter@{Soendag\+Vagter}}
+\index{Soendag\+Vagter@{Soendag\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Soendag\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Vagtplan\+View}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Soendag\+Vagter}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa31e5b366c76da7a1a64ef568af2764c}
+
+
+Alle søndagsvagter 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a7d6c62127834e177525b22eb6ddd2ab6}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Tirsdag\+Vagter@{Tirsdag\+Vagter}}
+\index{Tirsdag\+Vagter@{Tirsdag\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Tirsdag\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Vagtplan\+View}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Tirsdag\+Vagter}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a7d6c62127834e177525b22eb6ddd2ab6}
+
+
+Alle tirsdagsvagter 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a85143514a9445a534a3518738e53df82}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Torsdag\+Vagter@{Torsdag\+Vagter}}
+\index{Torsdag\+Vagter@{Torsdag\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Torsdag\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Vagtplan\+View}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Torsdag\+Vagter}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a85143514a9445a534a3518738e53df82}
+
+
+Alle torsdagssvagter 
+
 
 
 \subsection{Property Documentation}
@@ -227,12 +407,47 @@ Angiver farve på nuværende ugedag
 
 Alle\+Vagter\+Command property 
 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_acfc1e3ec69784426fcdecb303c0c1f94}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ansat@{Ansat}}
+\index{Ansat@{Ansat}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Ansat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ansatte} \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ansat\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_acfc1e3ec69784426fcdecb303c0c1f94}
+
+
+Ansat property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a0b9bae0b2b02b911646cfa98f2d5a6e8}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ansatte\+Liste@{Ansatte\+Liste}}
+\index{Ansatte\+Liste@{Ansatte\+Liste}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Ansatte\+Liste}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Ansatte}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ansatte\+Liste\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a0b9bae0b2b02b911646cfa98f2d5a6e8}
+
+
+Ansatte\+Liste property 
+
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a2bb8421c370d9ff0ff1776a1c239ba4e}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Brugernavn@{Brugernavn}}
 \index{Brugernavn@{Brugernavn}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
 \subsubsection[{Brugernavn}]{\setlength{\rightskip}{0pt plus 5cm}string \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Brugernavn\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a2bb8421c370d9ff0ff1776a1c239ba4e}
 
 
 Brugernavn property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aaacfd0f73f0fe5a3784fda8f7fb0c045}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Eksporter\+Alle\+Command@{Eksporter\+Alle\+Command}}
+\index{Eksporter\+Alle\+Command@{Eksporter\+Alle\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Eksporter\+Alle\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Eksporter\+Alle\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aaacfd0f73f0fe5a3784fda8f7fb0c045}
+
+
+Eksporter\+Alle\+Command property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4606860561c41d7330663950515cf369}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Eksporter\+Mine\+Command@{Eksporter\+Mine\+Command}}
+\index{Eksporter\+Mine\+Command@{Eksporter\+Mine\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Eksporter\+Mine\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Eksporter\+Mine\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4606860561c41d7330663950515cf369}
+
+
+Eksporter\+Mine\+Command property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a0b3b612ac629f20f80c28bc6560da7a1}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Forrige\+Uge\+Command@{Forrige\+Uge\+Command}}
+\index{Forrige\+Uge\+Command@{Forrige\+Uge\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Forrige\+Uge\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Forrige\+Uge\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a0b3b612ac629f20f80c28bc6560da7a1}
+
+
+Forrige\+Uge\+Command property 
 
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a7da74e228f974d9756603957477f65da}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Fredag@{Fredag}}
 \index{Fredag@{Fredag}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
@@ -297,6 +512,13 @@ Sætter mandag til bestemt farve
 
 Mine\+Vagter\+Command property 
 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4f463fb1507859004e80b064e43bfeaf}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Naeste\+Uge\+Command@{Naeste\+Uge\+Command}}
+\index{Naeste\+Uge\+Command@{Naeste\+Uge\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Naeste\+Uge\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Naeste\+Uge\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4f463fb1507859004e80b064e43bfeaf}
+
+
+Naeste\+Uge\+Command property 
+
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4d544dfd8109650066d5e9d25642c352}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Onsdag@{Onsdag}}
 \index{Onsdag@{Onsdag}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
 \subsubsection[{Onsdag}]{\setlength{\rightskip}{0pt plus 5cm}string \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Onsdag\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a4d544dfd8109650066d5e9d25642c352}
@@ -311,12 +533,33 @@ Onsdag property
 
 Sætter onsdag til bestemt farve 
 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a76a5f40943fb46d05fdc59d4d786d206}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Opret\+Vagt\+Command@{Opret\+Vagt\+Command}}
+\index{Opret\+Vagt\+Command@{Opret\+Vagt\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Opret\+Vagt\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Opret\+Vagt\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a76a5f40943fb46d05fdc59d4d786d206}
+
+
+Opret\+Vagt\+Command property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aac1978ee8c25f05b536fd23f5faa44da}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Selected\+Vagter@{Selected\+Vagter}}
+\index{Selected\+Vagter@{Selected\+Vagter}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Selected\+Vagter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vagter} \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Selected\+Vagter\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aac1978ee8c25f05b536fd23f5faa44da}
+
+
+Constructor for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model}{Vagtplan\+View\+Model} 
+
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa5e675ea6389cdc802698037ced2e091}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Setting@{Setting}}
 \index{Setting@{Setting}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
 \subsubsection[{Setting}]{\setlength{\rightskip}{0pt plus 5cm}Application\+Data\+Container \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Setting\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa5e675ea6389cdc802698037ced2e091}
 
 
 Gør det muligt at gemme værdier i local storage 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a049f0c84ca19cb72078132b243bf9023}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Sluttidspunkt@{Sluttidspunkt}}
+\index{Sluttidspunkt@{Sluttidspunkt}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Sluttidspunkt}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Span \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Sluttidspunkt\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a049f0c84ca19cb72078132b243bf9023}
+
+
+Sluttidspunkt Property 
 
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_abdd4c1e28095f4c2660a5ad71bab51ee}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Soendag@{Soendag}}
 \index{Soendag@{Soendag}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
@@ -331,6 +574,20 @@ Søndag property
 
 
 Sætter søndag til bestemt farve 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa57320a9de71c8c0cd393e0fc2dd8eca}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Sort\+Command@{Sort\+Command}}
+\index{Sort\+Command@{Sort\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Sort\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Sort\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_aa57320a9de71c8c0cd393e0fc2dd8eca}
+
+
+Sort\+Command property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae31fb2b4cede10a3f44a5e417d83dee0}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Starttidspunkt@{Starttidspunkt}}
+\index{Starttidspunkt@{Starttidspunkt}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Starttidspunkt}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Span \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Starttidspunkt\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ae31fb2b4cede10a3f44a5e417d83dee0}
+
+
+Starttidspunkt Property 
 
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a504d0377b323ec2af99d27a0b586924a}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Tirsdag@{Tirsdag}}
 \index{Tirsdag@{Tirsdag}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
@@ -360,12 +617,26 @@ Torsdag property
 
 Sætter torsdag til bestemt farve 
 
-\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a2c5e8d56bdec0db35b7e4c4d3f5a8bcb}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ugedage\+Collection@{Ugedage\+Collection}}
-\index{Ugedage\+Collection@{Ugedage\+Collection}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
-\subsubsection[{Ugedage\+Collection}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<$Ugedage$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ugedage\+Collection\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a2c5e8d56bdec0db35b7e4c4d3f5a8bcb}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ab6066f6ae85c31a626884095e201c989}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ugedag@{Ugedag}}
+\index{Ugedag@{Ugedag}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Ugedag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ugedage} \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ugedag\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ab6066f6ae85c31a626884095e201c989}
 
 
-Collection af ugedage 
+Ugedag property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a288c70ed7f7ad254c50079c4fc33b855}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ugedage\+Liste@{Ugedage\+Liste}}
+\index{Ugedage\+Liste@{Ugedage\+Liste}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Ugedage\+Liste}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Ugedage}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ugedage\+Liste\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a288c70ed7f7ad254c50079c4fc33b855}
+
+
+Ugedage\+Liste property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a94321a32a1dd0246061c640e105540a7}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ugedag\+Id@{Ugedag\+Id}}
+\index{Ugedag\+Id@{Ugedag\+Id}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Ugedag\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ugedag\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a94321a32a1dd0246061c640e105540a7}
+
+
+Ugedag\+Id Property 
 
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a34eaf9433fb67fa445834864cc4117d4}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ugenummer@{Ugenummer}}
 \index{Ugenummer@{Ugenummer}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
@@ -373,6 +644,44 @@ Collection af ugedage
 
 
 Ugenummer property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ab6e58a1f61f376d8c31d27b8a17233af}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ugenumre@{Ugenumre}}
+\index{Ugenumre@{Ugenumre}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Ugenumre}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ugenumre\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ab6e58a1f61f376d8c31d27b8a17233af}
+
+
+Ugenumre property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_af852f26329ee256810f5fb02f8c5ac1d}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Ugenumre\+Liste@{Ugenumre\+Liste}}
+\index{Ugenumre\+Liste@{Ugenumre\+Liste}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Ugenumre\+Liste}]{\setlength{\rightskip}{0pt plus 5cm}List$<$int$>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Ugenumre\+Liste\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_af852f26329ee256810f5fb02f8c5ac1d}
+
+
+Ugenumre\+Liste property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a9e4c70e38d1e11a24616387ee8188381}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Vagt\+Collection@{Vagt\+Collection}}
+\index{Vagt\+Collection@{Vagt\+Collection}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Vagt\+Collection}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<$Observable\+Collection$<${\bf Vagtplan\+View}$>$ $>$ \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Vagt\+Collection\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_a9e4c70e38d1e11a24616387ee8188381}
+
+
+Singleton vagtcollection 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_acdf9517320f79372aaed5c644df493aa}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Vagt\+Handler@{Vagt\+Handler}}
+\index{Vagt\+Handler@{Vagt\+Handler}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Vagt\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vagt\+Handler} \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Vagt\+Handler\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_acdf9517320f79372aaed5c644df493aa}
+
+
+Vagt\+Handler property 
+
+
+
+\subsection{Event Documentation}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ac94848da2b60b3f4199b22427f3cf101}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}!Property\+Changed@{Property\+Changed}}
+\index{Property\+Changed@{Property\+Changed}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Vagtplan\+View\+Model}}
+\subsubsection[{Property\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}Property\+Changed\+Event\+Handler \+\_\+1aarsproeve.\+View\+Model.\+Vagtplan\+View\+Model.\+Property\+Changed}\label{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model_ac94848da2b60b3f4199b22427f3cf101}
+
+
+Implementerer I\+Notify\+Property\+Changed interfacet 
 
 
 

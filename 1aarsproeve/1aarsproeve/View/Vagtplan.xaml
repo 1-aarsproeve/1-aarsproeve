@@ -174,7 +174,7 @@
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="6" Grid.Row="1" Text="Søndag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="6" Grid.Row="2" Text="{Binding Soendag}"/>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[0]}" Grid.Row="3" Grid.Column="0">
+            <ListView x:Name="listView" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[0]}" Grid.Row="3" Grid.Column="0">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
                         <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>
