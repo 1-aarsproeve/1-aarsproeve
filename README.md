@@ -1,4 +1,4 @@
-<img style="background-color: red;" src="https://github.com/1-aarsproeve/1-aarsproeve/blob/master/1aarsproeve/1aarsproeve/Assets/SplashScreen.scale-100.png" />
+![alt text](http://i58.tinypic.com/vredxi.png "Shift Me")
 # 1. årsprøve
 Projektopgave for 1. årsprøve på 2. semester - datamatiker-uddannelsen hos Erhvervsakademi Sjælland Campus Roskilde.
 
