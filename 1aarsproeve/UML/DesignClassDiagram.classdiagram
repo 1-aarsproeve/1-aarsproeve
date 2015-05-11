@@ -199,23 +199,13 @@
           <packageHasNamedElement>
             <class Id="13358d3b-7d51-4fa2-8978-bb05d72660b6" name="BrugerViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="2e8faa2a-4c01-46c0-ac66-b329a88a20e7" />
-              <targetEnds>
-                <association Id="f0772ba7-9e83-4fde-ad69-c9054fd0c64c" isDerived="false" sourceEndRoleName="BrugerViewModel" targetEndRoleName="PersistencyService" isLeaf="false" isAbstract="false">
+              <suppliersInternal>
+                <dependency Id="e0048fdd-57fa-47ec-b9a7-3ef35b0db0e0">
                   <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistensFacade" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="7a0c2317-f5ff-4e75-8bd0-d9c4af5a99c8" name="BrugerViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="72a05a02-32a3-4834-869c-c25101116ec0" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="45d4fee7-7ed7-408d-86c4-599d45c5f0b6" name="PersistencyService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="c938e4e2-5064-442f-81e3-896aaf1244c9" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="f11a70e1-7717-4ffc-a3b6-c491b227c23c" />
-                </association>
+                  <elementDefinition Id="c645c356-8fec-466e-9064-94ac83ba638c" />
+                </dependency>
+              </suppliersInternal>
+              <targetEnds>
                 <association Id="2a68a244-9906-4d61-ba0c-a13fcbee3858" isDerived="false" sourceEndRoleName="BrugerViewModel" targetEndRoleName="BrugerHandler" isLeaf="false" isAbstract="false">
                   <classMoniker Id="f955b269-40d3-4c41-b311-421a33b1ee72" LastKnownName="BrugerHandler" />
                   <relationshipOwnedElementsInternal>
@@ -286,6 +276,24 @@
                     <referencedTypeMoniker Id="dc93c020-a066-4ba6-8673-b8c080857d92" LastKnownName="ICommand" />
                   </type_NamedElement>
                 </property>
+                <property Id="aee7aa7f-2419-4889-b1ef-14a229f130f4" name="StillingerListe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c28ae553-8b42-4ff8-baf0-38bb0ae85674" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="82c329a9-51a7-4403-b08e-272d9eb1241d" LastKnownName="List&lt;Stillinger&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="68fa8f40-8975-4d69-8123-e85bf3a11921" name="AnsatteCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bbef6d7f-0301-4aeb-87dd-c8fab57b3bc1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0af0e69c-7f47-4b78-80ab-44ef4001f10f" LastKnownName="ObservableCollection&lt;Ansatte&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="7cd7d48a-ae4d-4bb4-87a2-c18e3d1965d3" name="Password" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="500c313d-238f-47c6-b5b6-080c78724062" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="67aa904b-5f75-42eb-be14-bed5e9ec18bb" name="LogInd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -300,23 +308,13 @@
           <packageHasNamedElement>
             <class Id="367c21c9-5893-4eb1-a167-96d7d1f20c1b" name="HovedViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="2dbedc47-cc83-4a71-8064-058414ae393d" />
-              <targetEnds>
-                <association Id="27ee01c9-70eb-477c-8e0b-665b1ac9ca3b" isDerived="false" sourceEndRoleName="HovedViewModel" targetEndRoleName="PersistencyService" isLeaf="false" isAbstract="false">
+              <suppliersInternal>
+                <dependency Id="05e99f16-2d5b-4d8e-b36c-2db4e46e279b">
                   <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistensFacade" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="eed0630c-99db-4388-b7bd-1a919c4e6b3c" name="HovedViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="7ff3d615-c264-46e1-a053-7e7aec058d1a" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="54af60be-f7a7-495f-876d-56670b8a3cbe" name="PersistencyService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="5d7a1dda-a8e8-4c80-8686-7076f3830814" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="2f67ea10-ee67-41e2-8d27-58d87e7655dc" />
-                </association>
+                  <elementDefinition Id="0a7ad4cc-c1a8-4515-9d89-d2fdc43040bb" />
+                </dependency>
+              </suppliersInternal>
+              <targetEnds>
                 <association Id="0b9afb56-9942-4db8-9eff-198c91ee97b0" isDerived="false" sourceEndRoleName="HovedViewModel" targetEndRoleName="HovedHandler" isLeaf="false" isAbstract="false">
                   <classMoniker Id="03c435ec-57b1-474f-a462-bec3ea5bb16e" LastKnownName="HovedHandler" />
                   <relationshipOwnedElementsInternal>
@@ -417,12 +415,21 @@
                 <operation Id="099b8c54-9baa-4a31-9b44-ca6e73363bed" name="AabenForbindelse" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="6d655de5-5bbd-40de-90e5-a048acfcf7fc" />
                 </operation>
+                <operation Id="13316366-8319-4e7a-ad73-e304f38559ef" name="Stilling" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="35f49cb5-613a-44f7-a459-e5ba0a90e0fd" />
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
             <class Id="cd58a3dc-c644-46b9-9bf1-e19766e2813e" name="VagtplanViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="00e0a4c0-df76-4395-9531-acd74228ec16" />
+              <suppliersInternal>
+                <dependency Id="e19c2c62-ebe1-4fdb-a95e-be5ee0920b27">
+                  <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistensFacade" />
+                  <elementDefinition Id="99a18a69-30fb-48db-8f70-011ad3e24585" />
+                </dependency>
+              </suppliersInternal>
               <targetEnds>
                 <association Id="9d49134a-eb67-49f7-83f0-2c62fe6ddc26" isDerived="false" sourceEndRoleName="GeneriskSingleton" targetEndRoleName="GeneriskSingleton" isLeaf="false" isAbstract="false">
                   <classMoniker Id="c193246b-d71a-488c-8fc4-455f32efb89f" LastKnownName="GeneriskSingleton" />
@@ -439,22 +446,6 @@
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="25deaabf-ddff-4b5c-804d-a0ac2482da1d" />
-                </association>
-                <association Id="00e4cdfd-a9a8-4e14-bd35-926e9872250f" isDerived="false" sourceEndRoleName="VagtplanViewModel" targetEndRoleName="PersistencyService" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistensFacade" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="b3e26168-f099-4bfd-ad31-eb7f3a725a86" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="39a786c0-6852-4fb3-9da4-2583e5025504" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="17d58868-a647-4dcf-8d17-58a5c21800a3" name="PersistencyService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="2956ee0b-f213-48ef-ad92-4868d1e8a3d2" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="76569f83-d1be-4462-8131-2c41f5c606f5" />
                 </association>
                 <association Id="505c9b1e-8ee9-426a-837d-bf36eaf227e0" isDerived="false" sourceEndRoleName="VagtplanViewModel" targetEndRoleName="VagtHandler" isLeaf="false" isAbstract="false">
                   <classMoniker Id="aa66de72-9656-4842-9d58-2a96b46d1115" LastKnownName="VagtHandler" />
@@ -712,6 +703,12 @@
                     <referencedTypeMoniker Id="433723bc-96f8-4c12-85f0-f060ffb73516" LastKnownName="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;" />
                   </type_NamedElement>
                 </property>
+                <property Id="37b0a271-936d-4733-bb3a-f2cac0fced19" name="SkjulKnap" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e1038694-9f1d-4074-9627-55706001582d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b0ca9c7e-689c-44a2-b443-6514f69d3a9d" LastKnownName="Visibility" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="bada808a-7be1-49ce-a091-63693f0cf9b4" name="NuvaerendeUgedag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -807,6 +804,9 @@
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
+                </operation>
+                <operation Id="f77f1e9b-566b-49b5-975d-8f73445804d7" name="Stilling" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5f30fd2a-0064-40d6-a3ce-d6a5160c0e34" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -1972,7 +1972,7 @@
             <class Id="03c435ec-57b1-474f-a462-bec3ea5bb16e" name="HovedHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="baebe904-fc14-416b-b906-fd924b6dcb45" />
               <ownedOperationsInternal>
-                <operation Id="e5036d8c-346a-4079-ad2b-1d42b92d97d8" name="OpretBesked" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="e5036d8c-346a-4079-ad2b-1d42b92d97d8" name="SkrivBesked" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="8225488c-c488-45af-80bf-2d6df7654daf" />
                 </operation>
               </ownedOperationsInternal>
@@ -2244,6 +2244,16 @@
     <packageHasNamedElement>
       <referencedType Id="830eaa46-22be-495e-bd29-1737c8d65af9" name="ICommand" isAbstract="false" isLeaf="false" cachedFullName="ICommand">
         <elementDefinition Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="82c329a9-51a7-4403-b08e-272d9eb1241d" name="List&lt;Stillinger&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Stillinger&gt;">
+        <elementDefinition Id="6cbdd4d0-d082-4eb5-8fef-bad9d1862ec2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0af0e69c-7f47-4b78-80ab-44ef4001f10f" name="ObservableCollection&lt;Ansatte&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;Ansatte&gt;">
+        <elementDefinition Id="784c7a10-af89-4440-b781-d2b13a8bd947" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

@@ -29,7 +29,7 @@ namespace _1aarsproeve.ViewModel
         private string _brugernavn;
         private string _password;
         private static HttpClient _client;
-        private List<Stillinger> _stillingerList;
+        private List<Stillinger> _stillingerListe;
         private ICommand _opretBrugerCommand;
         private ICommand _redigerBrugerCommand;
         private ICommand _logindCommand;
@@ -82,10 +82,10 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Liste med stillinger
         /// </summary>
-        public List<Stillinger> StillingerList
+        public List<Stillinger> StillingerListe
         {
-            get { return _stillingerList; }
-            set { _stillingerList = value; }
+            get { return _stillingerListe; }
+            set { _stillingerListe = value; }
         }
         /// <summary>
         /// Logger brugeren ind
@@ -161,27 +161,21 @@ namespace _1aarsproeve.ViewModel
             AabenForbindelse();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            StillingerList = new List<Stillinger>();
+            StillingerListe = new List<Stillinger>();
 
             Brugernavn = "Daniel";
             Password = "123456";
 
-            InitialiserStillinger();
-            Ansat = new Ansatte();
-            BrugerHandler = new BrugerHandler(this);
-        }
-        /// <summary>
-        /// Initialsiere stillinger
-        /// </summary>
-        public void InitialiserStillinger()
-        {
             var responce = PersistensFacade<Stillinger>.LoadDB("api/Stillingers");
             var query = from q in responce.Result
                         select q;
             foreach (var itemStillinger in query)
             {
-                StillingerList.Add(itemStillinger);
+                StillingerListe.Add(itemStillinger);
             }
+
+            Ansat = new Ansatte();
+            BrugerHandler = new BrugerHandler(this);
         }
         /// <summary>
         /// Åbner forbindelsen til database

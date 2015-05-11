@@ -17,6 +17,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="c645c356-8fec-466e-9064-94ac83ba638c">
+            <classMoniker
+              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
+              LastKnownName="PersistensFacade"
+              LastKnownLocation="Package1_1208.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="8f8d481c-ac78-4021-aefe-921de68ffd7e"
@@ -47,45 +56,6 @@
                 <memberEnd
                   Id="7a9fbc1f-14ab-4d93-a73c-264c7b6bc966"
                   name="BrugerSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="f11a70e1-7717-4ffc-a3b6-c491b227c23c"
-            isDerived="false"
-            sourceEndRoleName="BrugerViewModel"
-            targetEndRoleName="PersistencyService"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
-              LastKnownName="PersistencyService"
-              LastKnownLocation="Package1_1208.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="72a05a02-32a3-4834-869c-c25101116ec0"
-                  name="BrugerViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c938e4e2-5064-442f-81e3-896aaf1244c9"
-                  name="PersistencyService"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -323,6 +293,60 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="c28ae553-8b42-4ff8-baf0-38bb0ae85674"
+            name="StillingerListe"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="6cbdd4d0-d082-4eb5-8fef-bad9d1862ec2"
+                LastKnownName="List&lt;Stillinger&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bbef6d7f-0301-4aeb-87dd-c8fab57b3bc1"
+            name="AnsatteCollection"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="784c7a10-af89-4440-b781-d2b13a8bd947"
+                LastKnownName="ObservableCollection&lt;Ansatte&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="500c313d-238f-47c6-b5b6-080c78724062"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -351,6 +375,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="0a7ad4cc-c1a8-4515-9d89-d2fdc43040bb">
+            <classMoniker
+              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
+              LastKnownName="PersistensFacade"
+              LastKnownLocation="Package1_1208.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="b9328fe9-2b9a-40c4-a313-b418cd442eda"
@@ -381,45 +414,6 @@
                 <memberEnd
                   Id="22bcbef3-a54c-4693-84b7-c0e16179d22e"
                   name="HovedSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="2f67ea10-ee67-41e2-8d27-58d87e7655dc"
-            isDerived="false"
-            sourceEndRoleName="HovedViewModel"
-            targetEndRoleName="PersistencyService"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
-              LastKnownName="PersistencyService"
-              LastKnownLocation="Package1_1208.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7ff3d615-c264-46e1-a053-7e7aec058d1a"
-                  name="HovedViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="5d7a1dda-a8e8-4c80-8686-7076f3830814"
-                  name="PersistencyService"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -694,6 +688,14 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="35f49cb5-613a-44f7-a459-e5ba0a90e0fd"
+            name="Stilling"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -704,6 +706,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="99a18a69-30fb-48db-8f70-011ad3e24585">
+            <classMoniker
+              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
+              LastKnownName="PersistensFacade"
+              LastKnownLocation="Package1_1208.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="25deaabf-ddff-4b5c-804d-a0ac2482da1d"
@@ -773,45 +784,6 @@
                 <memberEnd
                   Id="810a79d3-24c4-491b-ae3e-359cc8782b25"
                   name="BrugerSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="76569f83-d1be-4462-8131-2c41f5c606f5"
-            isDerived="false"
-            sourceEndRoleName="VagtplanViewModel"
-            targetEndRoleName="PersistencyService"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
-              LastKnownName="PersistencyService"
-              LastKnownLocation="Package1_1208.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="39a786c0-6852-4fb3-9da4-2583e5025504"
-                  name="VagtplanViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="2956ee0b-f213-48ef-ad92-4868d1e8a3d2"
-                  name="PersistencyService"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1608,6 +1580,24 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="e1038694-9f1d-4074-9627-55706001582d"
+            name="SkjulKnap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="dfde202c-2247-4b77-882f-063e00a84fc6"
+                LastKnownName="Visibility"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1793,6 +1783,14 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="5f30fd2a-0064-40d6-a3ce-d6a5160c0e34"
+            name="Stilling"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1850,6 +1848,21 @@
       <undefinedType
         Id="dfde202c-2247-4b77-882f-063e00a84fc6"
         name="Visibility" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6cbdd4d0-d082-4eb5-8fef-bad9d1862ec2"
+        name="List&lt;Stillinger&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="bcbc8ab6-535c-47c4-b7d0-261fd09b86e9"
+        name="ObservableCollection&lt;Stillinger&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="784c7a10-af89-4440-b781-d2b13a8bd947"
+        name="ObservableCollection&lt;Ansatte&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -49,7 +49,7 @@
         <ownedOperationsInternal>
           <operation
             Id="8225488c-c488-45af-80bf-2d6df7654daf"
-            name="OpretBesked"
+            name="SkrivBesked"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
