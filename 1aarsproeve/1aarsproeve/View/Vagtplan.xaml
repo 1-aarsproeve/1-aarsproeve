@@ -22,15 +22,15 @@
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">
             <CommandBar.SecondaryCommands>
-                <AppBarButton Icon="Delete" Label="Slet vagt" Command="{Binding SletVagtCommand}"/>
-                <AppBarButton Icon="Edit" Label="Rediger vagt">
+                <AppBarButton Visibility="{Binding SkjulKnap}" Icon="Delete" Label="Slet vagt" Command="{Binding SletVagtCommand}"/>
+                <AppBarButton Visibility="{Binding SkjulKnap}" Icon="Edit" Label="Rediger vagt">
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.RedigerVagt"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </AppBarButton>
-                <AppBarButton Icon="Add" Label="Opret vagt">
+                <AppBarButton Visibility="{Binding SkjulKnap}" Icon="Add" Label="Opret vagt">
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.OpretVagt"/>
@@ -174,7 +174,7 @@
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="6" Grid.Row="1" Text="Søndag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="6" Grid.Row="2" Text="{Binding Soendag}"/>
 
-            <ListView x:Name="listView" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[0]}" SelectedItem="{Binding SelectedVagter, Mode=TwoWay}" Grid.Row="3" Grid.Column="0">
+            <ListView x:Name="listView" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[0]}" SelectedItem="{Binding SelectedVagter.VagtId, Mode=TwoWay}" Grid.Row="3" Grid.Column="0">
                 <!--<Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
                         <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>

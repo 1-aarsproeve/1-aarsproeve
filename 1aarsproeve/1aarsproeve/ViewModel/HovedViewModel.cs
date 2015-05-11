@@ -71,9 +71,12 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public Beskeder Besked { get; set; }
         /// <summary>
-        /// Constructor for HovedViewModel
+        /// StillingId property
         /// </summary>
         public int StillingsId { get; set; }
+        /// <summary>
+        /// Constructor for HovedViewModel
+        /// </summary>
         public HovedViewModel()
         {
             AabenForbindelse();
@@ -150,7 +153,7 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void Stilling()
         {
-            if (StillingsId != 2)
+            if (StillingsId != 1)
             {
                 SkjulKnap = Visibility.Collapsed;
             }

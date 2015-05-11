@@ -189,22 +189,29 @@ namespace _1aarsproeve.ViewModel
         private ICommand _opretVagtCommand;
         private ICommand _redigerVagtCommand;
         private ICommand _sletVagtCommand;
-        private Vagter _vagt;
         /// <summary>
         /// SelectedVagter static property
         /// </summary>
-        public static Vagter SelectedVagter { get { return _vagt; } set { _vagt = value; } }
+        public static Vagter SelectedVagter { get; set; }
         /// <summary>
         /// SelectedVagter command
         /// </summary>
         public ICommand SelectedVagterCommand { get; set; }
         /// <summary>
+        /// StillingId property
+        /// </summary>
+        public int StillingsId { get; set; }
+        /// <summary>
+        /// Property til at skjule knapper
+        /// </summary>
+        public Visibility SkjulKnap { get; set; }/// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
         public VagtplanViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
+            StillingsId = (int)Setting.Values["StillingId"];
 
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
 
@@ -261,6 +268,10 @@ namespace _1aarsproeve.ViewModel
             AlleVagterCommand = new RelayCommand(() => _sorting = AlleVagter);
             FrieVagterCommand = new RelayCommand(() => _sorting = FrieVagter);
             MineVagterCommand = new RelayCommand(() => _sorting = MineVagter);
+
+            SkjulKnap = new Visibility();
+
+            Stilling();
         }
         /// <summary>
         /// Henter alle vagter
@@ -701,9 +712,20 @@ namespace _1aarsproeve.ViewModel
         public void LogUd()
         {
             Setting.Values.Remove("Brugernavn");
+            Setting.Values.Remove("StillingId");
 
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Login));
+        }
+        /// <summary>
+        /// Collapser knapper alt efter stilling
+        /// </summary>
+        public void Stilling()
+        {
+            if (StillingsId != 1)
+            {
+                SkjulKnap = Visibility.Collapsed;
+            }
         }
         /// <summary>
         /// Singleton vagtcollection

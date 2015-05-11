@@ -59,23 +59,6 @@ namespace _1aarsproeve.Handler
         public async void SletVagt()
         {
             PersistensFacade<Vagter>.SletDB("api/Vagters/", VagtplanViewModel.SelectedVagter.VagtId);
-            /*
-            // Create the message dialog and set its content
-            var messageDialog = new MessageDialog("Are you sure you want to Delete the Event: " + VagtplanViewModel.SelectedVagter.VagtId + " ?");
-
-            // Add commands and set their callbacks; both buttons use the same callback function instead of inline event handlers
-            messageDialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.CommandInvokedHandler)));
-            messageDialog.Commands.Add(new UICommand("No", null));
-
-            // Set the command that will be invoked by default
-            messageDialog.DefaultCommandIndex = 0;
-
-            // Set the command to be invoked when escape is pressed
-            messageDialog.CancelCommandIndex = 1;
-
-            // Show the message dialog
-            await messageDialog.ShowAsync();
-             * */
         }
     }
 }

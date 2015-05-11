@@ -52,7 +52,7 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Bruger
         /// </summary>
-        public BrugerHandler BrugerHandlerRef { get; set; }
+        public BrugerHandler BrugerHandler { get; set; }
 
         /// <summary>
         /// Get til klienten til forbindelsen til databasen
@@ -127,7 +127,7 @@ namespace _1aarsproeve.ViewModel
             {
                 if (_opretBrugerCommand == null)
                 {
-                    _opretBrugerCommand = new RelayCommand(BrugerHandlerRef.OpretBruger);
+                    _opretBrugerCommand = new RelayCommand(BrugerHandler.OpretBruger);
                 }
                 return _opretBrugerCommand;
             }
@@ -143,12 +143,15 @@ namespace _1aarsproeve.ViewModel
             {
                 if (_redigerBrugerCommand == null)
                 {
-                    _redigerBrugerCommand = new RelayCommand(BrugerHandlerRef.RedigerBruger);
+                    _redigerBrugerCommand = new RelayCommand(BrugerHandler.RedigerBruger);
                 }
                 return _redigerBrugerCommand;
             }
             set { _redigerBrugerCommand = value; }
         }
+        /// <summary>
+        /// Stilling property
+        /// </summary>
         public Stillinger Stilling { get; set; }
         /// <summary>
         /// Konstruktør for BrugerViewModel
@@ -158,13 +161,18 @@ namespace _1aarsproeve.ViewModel
             AabenForbindelse();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            _stillingerList = new List<Stillinger>();
+            StillingerList = new List<Stillinger>();
+
+            Brugernavn = "Daniel";
+            Password = "123456";
 
             InitialiserStillinger();
-            BrugerHandlerRef = new BrugerHandler(this);
             Ansat = new Ansatte();
+            BrugerHandler = new BrugerHandler(this);
         }
-
+        /// <summary>
+        /// Initialsiere stillinger
+        /// </summary>
         public void InitialiserStillinger()
         {
             var responce = PersistensFacade<Stillinger>.LoadDB("api/Stillingers");
@@ -227,8 +235,8 @@ namespace _1aarsproeve.ViewModel
                 else
                 {
 
-                    MessageDialog fail = new MessageDialog("Forkert brugernavn/password");
-                    fail.ShowAsync();
+                MessageDialog m = new MessageDialog("Forkert brugernavn/password", "Fejl!");
+                m.ShowAsync();
                 }
 
             }
@@ -238,8 +246,8 @@ namespace _1aarsproeve.ViewModel
                 {
                     AnsatteCollection.Clear();
                 }
-                MessageDialog exception = new MessageDialog("Forkert brugernavn/password!", "Fejl!");
-                exception.ShowAsync();
+                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                m.ShowAsync();
             }
         }
 
