@@ -1,4 +1,4 @@
-![alt text](http://i58.tinypic.com/vredxi.png "Shift Me")
+![alt text](http://i57.tinypic.com/2nqto4z.png "Shift Me")
 # 1. årsprøve
 Projektopgave for 1. årsprøve på 2. semester - datamatiker-uddannelsen hos Erhvervsakademi Sjælland Campus Roskilde.
 
