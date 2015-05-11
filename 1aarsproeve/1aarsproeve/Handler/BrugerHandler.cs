@@ -41,7 +41,8 @@ namespace _1aarsproeve.Handler
 
         public void RedigerBruger()
         {
-            PersistensFacade<Ansatte>.RedigerDB("api/Ansattes", BrugerViewModel.AnsatteCollection[0].Brugernavn, new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn, BrugerViewModel.AnsatteCollection[0].Navn, BrugerViewModel.AnsatteCollection[0].Password, BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil, BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer, BrugerViewModel.AnsatteCollection[0].StillingId));
+            PersistensFacade<Ansatte>.RedigerDB("api/Ansattes", new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn, BrugerViewModel.AnsatteCollection[0].Navn, BrugerViewModel.AnsatteCollection[0].Password, BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil, BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer, BrugerViewModel.AnsatteCollection[0].StillingId), streng: BrugerViewModel.AnsatteCollection[0].Brugernavn);
+            //PersistensFacade<Ansatte>.RedigerDB("api/Ansattes", BrugerViewModel.AnsatteCollection[0].Brugernavn, new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn, BrugerViewModel.AnsatteCollection[0].Navn, BrugerViewModel.AnsatteCollection[0].Password, BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil, BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer, BrugerViewModel.AnsatteCollection[0].StillingId));
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Hovedmenu));
         }

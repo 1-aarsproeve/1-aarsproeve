@@ -40,21 +40,12 @@ namespace _1aarsproeve.Persistens
         /// Redigerer data i databasen
         /// </summary>
         /// <param name="api">Tager API-url som string</param>
-        /// <param name="id">Tager ID som skal redigeres</param>
         /// <param name="objekt">Tager objekt som skal redigeres</param>
-        public static void RedigerDB(string api, int id, object objekt)
-        {
-            BrugerViewModel.Client.PutAsJsonAsync(api + "/" + id, objekt);
-        }
-        /// <summary>
-        /// Redigerer data i databasen
-        /// </summary>
-        /// <param name="api">Tager API-url som string</param>
         /// <param name="id">Tager ID som skal redigeres</param>
-        /// <param name="objekt">Tager objekt som skal redigeres</param>
-        public static void RedigerDB(string api, string brugernavn, object objekt)
+        /// <param name="streng">Tager brugernavn som skal redigeres</param>
+        public static void RedigerDB(string api, object objekt, int id = 0, string streng = null)
         {
-            BrugerViewModel.Client.PutAsJsonAsync(api + "/" + brugernavn, objekt);
+            BrugerViewModel.Client.PutAsJsonAsync(api + "/" + id + streng, objekt);
         }
         /// <summary>
         /// Henter data i databasen

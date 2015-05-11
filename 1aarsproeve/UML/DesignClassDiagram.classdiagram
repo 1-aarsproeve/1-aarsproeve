@@ -2050,25 +2050,8 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="94a86d8d-ce4e-4880-9efe-a5da5e2748fd" name="RedigerDB" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="94a86d8d-ce4e-4880-9efe-a5da5e2748fd" name="RedigerDB(string api, object objekt, int id = 0, string brugernavn = null" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="47f323d5-2c32-40a6-b928-ecd68408adb0" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="1a6a89d2-80d9-4556-aa3e-e8659fab7bc4" name="string api" direction="In" isUnique="false">
-                        <elementDefinition Id="390bce7c-b62a-4a61-a82d-d422276b46df" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="e7eaafd3-873e-45dd-969a-049ffdd3168b" name="int id" direction="In" isUnique="false">
-                        <elementDefinition Id="ae95902a-8968-4a2e-874a-335c8bb8ae04" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="f0a76f59-d6b8-4e55-9a10-84c6d2f62ad4" name="object objekt" direction="In" isUnique="false">
-                        <elementDefinition Id="29666f6d-a654-4b7e-97b4-6440c01d0a44" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>

@@ -14,9 +14,9 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Rediger vagt</x:String>
     </Page.Resources>
-    <!--<Page.DataContext>
+    <Page.DataContext>
         <ViewModel:VagtplanViewModel/>
-    </Page.DataContext>-->
+    </Page.DataContext>
 
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">
@@ -76,7 +76,7 @@
                 <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding AnsatteListe, Mode=TwoWay}" SelectedItem="{Binding Ansat, Mode=TwoWay}" PlaceholderText="Vælg ansat"/>
                 <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding UgenumreListe, Mode=TwoWay}" SelectedItem="{Binding Ugenumre, Mode=TwoWay}" PlaceholderText="Vælg ugenummer"/>
                 <ComboBox Style="{StaticResource GenerelCombobox}" ItemsSource="{Binding UgedageListe, Mode=TwoWay}" SelectedItem="{Binding Ugedag, Mode=TwoWay}" PlaceholderText="Vælg ugedag"/>
-                <Button Command="{Binding RedigerVagtCommand}" Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Opret vagt"/>
+                <Button Command="{Binding RedigerVagtCommand}" Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Rediger vagt"/>
             </StackPanel>
         </Grid>
     </Grid>
