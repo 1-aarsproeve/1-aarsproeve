@@ -25,20 +25,21 @@ namespace _1aarsproeve.ViewModel
     /// </summary>
     public class BrugerViewModel
     {
-        private static GeneriskSingleton<Ansatte> _ansatteSingleton = GeneriskSingleton<Ansatte>.Instance();
+        private GeneriskSingleton<Ansatte> _ansatteSingleton = GeneriskSingleton<Ansatte>.Instance();
         private string _brugernavn;
         private string _password;
         private static HttpClient _client;
+        private List<Stillinger> _stillingerList;
         private ICommand _opretBrugerCommand;
         private ICommand _redigerBrugerCommand;
+        private ICommand _logindCommand;
+        private ICommand _logudCommand;
 
-        public Ansatte Ansat { get; set; }
-        public BrugerHandler BrugerHandler { get; set; }
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
         public ApplicationDataContainer Setting { get; set; }
-
+        public Ansatte Ansat { get; set; }
         /// <summary>
         /// Brugernavn property
         /// </summary>
@@ -47,6 +48,12 @@ namespace _1aarsproeve.ViewModel
             get { return _brugernavn; }
             set { _brugernavn = value; }
         }
+
+        /// <summary>
+        /// Bruger
+        /// </summary>
+        public BrugerHandler BrugerHandlerRef { get; set; }
+
         /// <summary>
         /// Get til klienten til forbindelsen til databasen
         /// </summary
@@ -67,7 +74,7 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// AnsatteCollection property
         /// </summary>
-        public static ObservableCollection<Ansatte> AnsatteCollection
+        public ObservableCollection<Ansatte> AnsatteCollection
         {
             get { return _ansatteSingleton.Collection; }
             set { _ansatteSingleton.Collection = value; }
@@ -75,15 +82,42 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Liste med stillinger
         /// </summary>
-        public List<Stillinger> StillingerListe { get; set; }
+        public List<Stillinger> StillingerList
+        {
+            get { return _stillingerList; }
+            set { _stillingerList = value; }
+        }
         /// <summary>
         /// Logger brugeren ind
         /// </summary>
-        public ICommand LogIndCommand { get; set; }
+        public ICommand LogIndCommand
+        {
+            get
+            {
+                if (_logindCommand == null)
+                {
+                    _logindCommand = new RelayCommand(LogInd);
+                }
+                return _logindCommand;
+            }
+            set { _logindCommand = value; }
+        }
         /// <summary>
         /// Logger brugeren ud
         /// </summary>
-        public ICommand LogUdCommand { get; set; }
+        public ICommand LogUdCommand
+        {
+            get
+            {
+                if (_logudCommand == null)
+                {
+                    _logudCommand = new RelayCommand(LogUd);
+                }
+                return _logudCommand;
+            }
+            set { _logudCommand = value; }
+        }
+
         /// <summary>
         /// Opretter bruger
         /// </summary>
@@ -92,11 +126,14 @@ namespace _1aarsproeve.ViewModel
             get
             {
                 if (_opretBrugerCommand == null)
-                    _opretBrugerCommand = new RelayCommand(BrugerHandler.OpretBruger);
+                {
+                    _opretBrugerCommand = new RelayCommand(BrugerHandlerRef.OpretBruger);
+                }
                 return _opretBrugerCommand;
             }
             set { _opretBrugerCommand = value; }
         }
+
         /// <summary>
         /// Rediger bruger command
         /// </summary>
@@ -105,11 +142,14 @@ namespace _1aarsproeve.ViewModel
             get
             {
                 if (_redigerBrugerCommand == null)
-                    _redigerBrugerCommand = new RelayCommand(BrugerHandler.RedigerBruger);
+                {
+                    _redigerBrugerCommand = new RelayCommand(BrugerHandlerRef.RedigerBruger);
+                }
                 return _redigerBrugerCommand;
             }
             set { _redigerBrugerCommand = value; }
         }
+        public Stillinger Stilling { get; set; }
         /// <summary>
         /// Konstruktør for BrugerViewModel
         /// </summary>
@@ -118,19 +158,22 @@ namespace _1aarsproeve.ViewModel
             AabenForbindelse();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            StillingerListe = new List<Stillinger>();
-            StillingerListe.Add(new Stillinger(100, "loolllerland"));
-            var a = PersistensFacade<Stillinger>.LoadDB("api/Stillingers").Result;
-            //foreach (var item in a)
-            //{
-            //    StillingerListe.Add(item);
-            //}
+            _stillingerList = new List<Stillinger>();
 
-            BrugerHandler = new BrugerHandler(this);
-            LogIndCommand = new RelayCommand(LogInd);
-            LogUdCommand = new RelayCommand(LogUd);
-            OpretBrugerCommand = new RelayCommand(BrugerHandler.OpretBruger);
-            RedigerBrugerCommand = new RelayCommand(BrugerHandler.RedigerBruger);
+            InitialiserStillinger();
+            BrugerHandlerRef = new BrugerHandler(this);
+            Ansat = new Ansatte();
+        }
+
+        public void InitialiserStillinger()
+        {
+            var responce = PersistensFacade<Stillinger>.LoadDB("api/Stillingers");
+            var query = from q in responce.Result
+                        select q;
+            foreach (var itemStillinger in query)
+            {
+                StillingerList.Add(itemStillinger);
+            }
         }
         /// <summary>
         /// Åbner forbindelsen til database
@@ -156,12 +199,13 @@ namespace _1aarsproeve.ViewModel
             }
 
         }
+
         /// <summary>
         /// Logger brugeren ind
         /// </summary>
         public void LogInd()
         {
-            /*try
+            try
             {
                 AnsatteCollection.Clear();
                 var responce = PersistensFacade<Ansatte>.LoadDB("api/Ansattes");
@@ -196,9 +240,7 @@ namespace _1aarsproeve.ViewModel
                 }
                 MessageDialog exception = new MessageDialog("Forkert brugernavn/password!", "Fejl!");
                 exception.ShowAsync();
-            }*/
-            var rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(Hovedmenu));
+            }
         }
 
         /// <summary>

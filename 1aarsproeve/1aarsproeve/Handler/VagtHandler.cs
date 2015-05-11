@@ -58,7 +58,8 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public async void SletVagt()
         {
-
+            PersistensFacade<Vagter>.SletDB("api/Vagters/", VagtplanViewModel.SelectedVagter.VagtId);
+            /*
             // Create the message dialog and set its content
             var messageDialog = new MessageDialog("Are you sure you want to Delete the Event: " + VagtplanViewModel.SelectedVagter.VagtId + " ?");
 
@@ -74,11 +75,7 @@ namespace _1aarsproeve.Handler
 
             // Show the message dialog
             await messageDialog.ShowAsync();
-        }
-
-        private void CommandInvokedHandler(IUICommand command)
-        {
-            PersistensFacade<Vagter>.SletDB("api/Vagters/", VagtplanViewModel.SelectedVagter);
+             * */
         }
     }
 }

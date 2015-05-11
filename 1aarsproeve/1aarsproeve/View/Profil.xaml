@@ -14,9 +14,9 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Profil</x:String>
     </Page.Resources>
-    <!--<Page.DataContext>
+    <Page.DataContext>
         <ViewModel:BrugerViewModel/>
-    </Page.DataContext>-->
+    </Page.DataContext>
 
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">
@@ -59,8 +59,8 @@
         </Grid>
         <Grid Margin="300 40" Grid.Row="1">
             <StackPanel Margin="100 0">
-                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding AnsatteListe.Brugernavn, Mode=TwoWay}" IsReadOnly="True" PlaceholderText="Brugernavn" />
-                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Navn" Text="{Binding AnsatteListe.Navn, Mode=TwoWay}"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding AnsatteCollection[0].Brugernavn, Mode=TwoWay}" IsReadOnly="True" PlaceholderText="Brugernavn" />
+                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Navn" Text="{Binding AnsatteCollection[0].Navn, Mode=TwoWay}"/>
                 <PasswordBox Style="{StaticResource GenerelPasswordbox}" PlaceholderText="Password" Password="{Binding AnsatteCollection[0].Password, Mode=TwoWay}"/>
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="E-mail" Text="{Binding AnsatteCollection[0].Email, Mode=TwoWay}"/>
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Adresse" Text="{Binding AnsatteCollection[0].Adresse, Mode=TwoWay}"/>

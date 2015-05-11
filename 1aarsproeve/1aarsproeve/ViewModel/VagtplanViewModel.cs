@@ -189,10 +189,11 @@ namespace _1aarsproeve.ViewModel
         private ICommand _opretVagtCommand;
         private ICommand _redigerVagtCommand;
         private ICommand _sletVagtCommand;
+        private Vagter _vagt;
         /// <summary>
         /// SelectedVagter static property
         /// </summary>
-        public static Vagter SelectedVagter { get; set; }
+        public static Vagter SelectedVagter { get { return _vagt; } set { _vagt = value; } }
         /// <summary>
         /// SelectedVagter command
         /// </summary>
@@ -260,8 +261,6 @@ namespace _1aarsproeve.ViewModel
             AlleVagterCommand = new RelayCommand(() => _sorting = AlleVagter);
             FrieVagterCommand = new RelayCommand(() => _sorting = FrieVagter);
             MineVagterCommand = new RelayCommand(() => _sorting = MineVagter);
-
-            SelectedVagterCommand = new RelayArgCommand<Vagter>(v => VagtHandler.SetSelectedVagt(v));
         }
         /// <summary>
         /// Henter alle vagter

@@ -34,15 +34,14 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void OpretBruger()
         {
-            PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(BrugerViewModel.Ansat.Brugernavn, BrugerViewModel.Ansat.Navn, BrugerViewModel.Ansat.Password, BrugerViewModel.Ansat.Email, BrugerViewModel.Ansat.Mobil, BrugerViewModel.Ansat.Adresse, BrugerViewModel.Ansat.Postnummer, BrugerViewModel.Ansat.StillingId));
+            PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(BrugerViewModel.Ansat.Brugernavn, BrugerViewModel.Ansat.Navn, BrugerViewModel.Ansat.Password, BrugerViewModel.Ansat.Email, BrugerViewModel.Ansat.Mobil, BrugerViewModel.Ansat.Adresse, BrugerViewModel.Ansat.Postnummer, BrugerViewModel.Stilling.StillingId));
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Hovedmenu));
         }
 
         public void RedigerBruger()
         {
-            Ansatte a = new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn, BrugerViewModel.AnsatteCollection[0].Navn, BrugerViewModel.AnsatteCollection[0].Password, BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil, BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer, BrugerViewModel.AnsatteCollection[0].StillingId);
-            //PersistensFacade<Ansatte>.RedigerDB("api/Ansattes", BrugerViewModel.AnsatteCollection[0].Brugernavn, a);
+            PersistensFacade<Ansatte>.RedigerDB("api/Ansattes", BrugerViewModel.AnsatteCollection[0].Brugernavn, new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn, BrugerViewModel.AnsatteCollection[0].Navn, BrugerViewModel.AnsatteCollection[0].Password, BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil, BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer, BrugerViewModel.AnsatteCollection[0].StillingId));
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Hovedmenu));
         }

@@ -14,6 +14,9 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Login</x:String>
     </Page.Resources>
+    <Page.DataContext>
+        <ViewModel:BrugerViewModel/>
+    </Page.DataContext>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -48,8 +51,8 @@
         </Grid>
         <Grid Margin="450 40" Grid.Row="1">
             <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2">
-                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Brugernavn"/>
-                <PasswordBox Style="{StaticResource GenerelPasswordbox}" PlaceholderText="Password"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Brugernavn" Text="{Binding Brugernavn, Mode=TwoWay}"/>
+                <PasswordBox Style="{StaticResource GenerelPasswordbox}" PlaceholderText="Password" Password="{Binding Password, Mode=TwoWay}"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"/>

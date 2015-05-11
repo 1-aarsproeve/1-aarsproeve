@@ -73,11 +73,13 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Constructor for HovedViewModel
         /// </summary>
+        public int StillingsId { get; set; }
         public HovedViewModel()
         {
             AabenForbindelse();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
+            StillingsId = (int)Setting.Values["StillingId"];
 
             BeskederC = new ObservableCollection<HovedmenuView>();
             BeskedCollection.Add(BeskederC);
@@ -138,6 +140,7 @@ namespace _1aarsproeve.ViewModel
         public void LogUd()
         {
             Setting.Values.Remove("Brugernavn");
+            Setting.Values.Remove("StillingId");
 
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Login));
@@ -147,7 +150,7 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void Stilling()
         {
-            if (Brugernavn != "Daniel")
+            if (StillingsId != 2)
             {
                 SkjulKnap = Visibility.Collapsed;
             }

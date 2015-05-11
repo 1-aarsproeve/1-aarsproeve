@@ -25,16 +25,16 @@ namespace _1aarsproeve.Persistens
         /// <param name="objekt">Tager objekt som skal gemmes</param>
         public static void GemDB(string api, object objekt)
         {
-            HovedViewModel.Client.PostAsJsonAsync(api, objekt);
+            BrugerViewModel.Client.PostAsJsonAsync(api, objekt);
         }
         /// <summary>
         /// Sletter data i databasen
         /// </summary>
         /// <param name="api">Tager API-url som string</param>
         /// <param name="id">Tager ID som skal slettes</param>
-        public static void SletDB(string api, object id)
+        public static void SletDB(string api, int id)
         {
-            HovedViewModel.Client.DeleteAsync(api + id);
+            BrugerViewModel.Client.DeleteAsync(api + id);
         }
         /// <summary>
         /// Redigerer data i databasen
@@ -44,7 +44,17 @@ namespace _1aarsproeve.Persistens
         /// <param name="objekt">Tager objekt som skal redigeres</param>
         public static void RedigerDB(string api, int id, object objekt)
         {
-            HovedViewModel.Client.PutAsJsonAsync(api + id, objekt);
+            BrugerViewModel.Client.PutAsJsonAsync(api + "/" + id, objekt);
+        }
+        /// <summary>
+        /// Redigerer data i databasen
+        /// </summary>
+        /// <param name="api">Tager API-url som string</param>
+        /// <param name="id">Tager ID som skal redigeres</param>
+        /// <param name="objekt">Tager objekt som skal redigeres</param>
+        public static void RedigerDB(string api, string brugernavn, object objekt)
+        {
+            BrugerViewModel.Client.PutAsJsonAsync(api + "/" + brugernavn, objekt);
         }
         /// <summary>
         /// Henter data i databasen
@@ -52,7 +62,7 @@ namespace _1aarsproeve.Persistens
         /// <param name="api">Tager API-url som string</param>
         public static async Task<List<T>> LoadDB(string api)
         {
-            var response = HovedViewModel.Client.GetAsync(api).Result;
+            var response = BrugerViewModel.Client.GetAsync(api).Result;
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<T>>().Result.ToList();
