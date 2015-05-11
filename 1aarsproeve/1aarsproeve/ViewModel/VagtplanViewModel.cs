@@ -26,7 +26,6 @@ using _1aarsproeve.Annotations;
 using _1aarsproeve.Common;
 using _1aarsproeve.Handler;
 using _1aarsproeve.Model;
-using _1aarsproeve.Strategy;
 using _1aarsproeve.View;
 using _1aarsproeve.Persistens;
 
@@ -38,7 +37,6 @@ namespace _1aarsproeve.ViewModel
     public class VagtplanViewModel : INotifyPropertyChanged
     {
         private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection = GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
-        private IVagtSort _vagtsort;
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>

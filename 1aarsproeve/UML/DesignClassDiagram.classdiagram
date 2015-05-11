@@ -201,7 +201,7 @@
               <elementDefinition Id="2e8faa2a-4c01-46c0-ac66-b329a88a20e7" />
               <targetEnds>
                 <association Id="f0772ba7-9e83-4fde-ad69-c9054fd0c64c" isDerived="false" sourceEndRoleName="BrugerViewModel" targetEndRoleName="PersistencyService" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistencyService" />
+                  <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistensFacade" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
                       <memberEnd Id="7a0c2317-f5ff-4e75-8bd0-d9c4af5a99c8" name="BrugerViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -302,7 +302,7 @@
               <elementDefinition Id="2dbedc47-cc83-4a71-8064-058414ae393d" />
               <targetEnds>
                 <association Id="27ee01c9-70eb-477c-8e0b-665b1ac9ca3b" isDerived="false" sourceEndRoleName="HovedViewModel" targetEndRoleName="PersistencyService" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistencyService" />
+                  <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistensFacade" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
                       <memberEnd Id="eed0630c-99db-4388-b7bd-1a919c4e6b3c" name="HovedViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -441,7 +441,7 @@
                   <elementDefinition Id="25deaabf-ddff-4b5c-804d-a0ac2482da1d" />
                 </association>
                 <association Id="00e4cdfd-a9a8-4e14-bd35-926e9872250f" isDerived="false" sourceEndRoleName="VagtplanViewModel" targetEndRoleName="PersistencyService" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistencyService" />
+                  <classMoniker Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" LastKnownName="PersistensFacade" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
                       <memberEnd Id="b3e26168-f099-4bfd-ad31-eb7f3a725a86" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -471,22 +471,6 @@
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="bc48cd90-13d9-4703-91ce-6828c90fe957" />
-                </association>
-                <association Id="ad547734-a511-47d8-8a34-8969be06c7b9" isDerived="false" sourceEndRoleName="VagtplanViewModel" targetEndRoleName="IVagtSort" isLeaf="false" isAbstract="false">
-                  <interfaceMoniker Id="2a6748a4-faff-42bc-9094-14f8f9a85a47" LastKnownName="IVagtSort" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="20724a2f-bd5f-4587-91e9-0dc171ed9928" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="1d1d4351-fb91-4e5c-a48b-f836aeb6f5a7" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="cba1c3c8-3a9b-4e08-b7a9-2ec4ea3f64bb" name="IVagtSort" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="f53f250a-a743-476e-ad6d-80564d82396a" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="23692daf-c254-49a1-a140-0b86792e0e64" />
                 </association>
                 <association Id="fd793601-a697-470c-85ab-583eb25020e4" isDerived="false" sourceEndRoleName="VagtplanViewModel" targetEndRoleName="VagtplanView" isLeaf="false" isAbstract="false">
                   <classMoniker Id="55acbe85-667f-4aaf-a5bf-bcd540d40790" LastKnownName="VagtplanView" />
@@ -2011,11 +1995,11 @@
       </package>
     </logicalClassDesignerModelHasPackages>
     <logicalClassDesignerModelHasPackages>
-      <package Id="49b24c90-6057-40ef-8941-67cc07853f76" name="Persistency">
+      <package Id="49b24c90-6057-40ef-8941-67cc07853f76" name="Persistens">
         <elementDefinition Id="009889cd-2e7d-40a7-ace1-2053c310869d" />
         <packagedElements>
           <packageHasNamedElement>
-            <class Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" name="PersistencyService" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="4f310b98-b059-4ca6-9934-360af8bf1b8a" name="PersistensFacade" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="75266722-b4cc-4277-8995-8e3fd544ffb5" />
               <ownedOperationsInternal>
                 <operation Id="85149b2c-0724-4ba8-81d3-02379a02346d" name="GemDB" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -2167,139 +2151,6 @@
         <elementDefinition Id="fad644e5-e4e6-44b6-b6f2-667cf082d5f2" />
       </referencedType>
     </packageHasNamedElement>
-    <logicalClassDesignerModelHasPackages>
-      <package Id="c38d9073-aaa6-4eec-97c8-c89d6ccd4230" name="Strategy">
-        <ownedCommentsInternal>
-          <comment Id="483cf865-130b-439d-9379-fd1cc250e50c">
-            <elementDefinition Id="e4c4a000-9e8d-4049-823b-a551c618e2ef" />
-            <body>Denne package skal slettes i koden og DCD</body>
-          </comment>
-        </ownedCommentsInternal>
-        <elementDefinition Id="d45ed390-3c0c-4cd6-bb42-abdc69ca9629" />
-        <packagedElements>
-          <packageHasNamedElement>
-            <Interface Id="2a6748a4-faff-42bc-9094-14f8f9a85a47" name="IVagtSort" isAbstract="false" isLeaf="false">
-              <elementDefinition Id="91547953-c736-4456-8bac-428f3ec0ca04" />
-              <ownedOperations>
-                <operation Id="961dc839-4b41-4316-9121-0a0611d05629" name="Sort" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="383e50b7-5b96-4cef-bf43-57139c909c22" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="089c1319-8c68-409d-8947-5b85a6da8891" name="ObservableCollection&lt;Ugedage&gt; observableCollection" direction="In" isUnique="false">
-                        <elementDefinition Id="57228786-bc6f-48aa-a461-dda4387f3245" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="91bdbc7d-781b-4c45-9a75-9cbf9ee19bb0" name="int ugenummer" direction="In" isUnique="false">
-                        <elementDefinition Id="9e756c3e-42b3-4591-b36c-138179b9877f" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
-              </ownedOperations>
-            </Interface>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="44ffd872-d198-421c-967d-795ad4e2b3a0" name="AlleVagter" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="f28bab6a-64dc-4e91-befa-18015cf76db6" />
-              <suppliersInternal>
-                <interfaceRealization Id="852f5d10-ac9c-4526-a338-d2edbb183474">
-                  <interfaceMoniker Id="2a6748a4-faff-42bc-9094-14f8f9a85a47" LastKnownName="IVagtSort" />
-                  <elementDefinition Id="4f6872f9-6a45-4949-8834-dc7014157c13" />
-                </interfaceRealization>
-              </suppliersInternal>
-              <ownedOperationsInternal>
-                <operation Id="0ed12e6f-c190-4b55-a18a-8fab68e1a766" name="Sort" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="f71cba90-207f-404a-80d2-5f066eff0190" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="fd29525c-8aef-4d6c-be60-b2c6a8e475f1" name="ObservableCollection&lt;Ugedage&gt; observableCollection" direction="In" isUnique="false">
-                        <elementDefinition Id="cd6883a3-c2e2-4dd4-8e13-f91671f46148" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="ea9631eb-47ab-4738-aefe-4fdd2de1c29f" name="int ugenummer" direction="In" isUnique="false">
-                        <elementDefinition Id="8711ae06-b4bb-4e74-976a-e9989092171b" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
-              </ownedOperationsInternal>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="01c37077-61f6-45f5-97bf-9daf2bdc5340" name="FrieVagter" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="e4d3a962-56ff-4c53-80cb-b5e01c5596cb" />
-              <suppliersInternal>
-                <interfaceRealization Id="5c926577-bf5e-4726-9b06-293a3c3680bb">
-                  <interfaceMoniker Id="2a6748a4-faff-42bc-9094-14f8f9a85a47" LastKnownName="IVagtSort" />
-                  <elementDefinition Id="68dd50df-e835-46a8-bdc6-6f48311c874b" />
-                </interfaceRealization>
-              </suppliersInternal>
-              <ownedOperationsInternal>
-                <operation Id="0ac00ed0-0a6d-4c5e-b9bc-44b09a705ede" name="Sort" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="1fbcec3e-90b0-4f8b-8615-86419e6d8cd6" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="ec9f1535-f2ac-4926-802a-51c07f08f5e3" name="ObservableCollection&lt;Ugedage&gt; observableCollection" direction="In" isUnique="false">
-                        <elementDefinition Id="d9563dea-9be4-4b2a-8f64-7848c2a60d0a" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="aba514f2-fa49-4f18-89cd-6a9eda928a87" name="int ugenummer" direction="In" isUnique="false">
-                        <elementDefinition Id="3ee69489-f625-47ed-9d30-71b5509a8f9d" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
-              </ownedOperationsInternal>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="02dd6c56-50d3-4453-ac15-c947daff1714" name="MineVagter" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="7b999c8a-22dc-4ceb-99ba-8f647271999c" />
-              <suppliersInternal>
-                <interfaceRealization Id="7fa36029-3476-46e4-806d-6749c994e772">
-                  <interfaceMoniker Id="2a6748a4-faff-42bc-9094-14f8f9a85a47" LastKnownName="IVagtSort" />
-                  <elementDefinition Id="3e8dcec7-f2ae-4ccc-b758-82781d75cb8a" />
-                </interfaceRealization>
-              </suppliersInternal>
-              <ownedAttributesInternal>
-                <property Id="f1d09974-d021-4336-97d9-2a43cb061a21" name="Setting" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e438d53a-4224-4285-a96b-b87ac3be18c0" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="a31d9e59-ab5a-4709-a174-28d14daf168d" LastKnownName="ApplicationDataContainer" />
-                  </type_NamedElement>
-                </property>
-                <property Id="af453ff9-1d58-4793-9b29-d54ca281a7c7" name="Brugernavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="3a5d8c1d-bfb0-42f0-b27c-7b16ee47caae" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
-                  </type_NamedElement>
-                </property>
-              </ownedAttributesInternal>
-              <ownedOperationsInternal>
-                <operation Id="e11f8a2a-a1fd-4aed-a033-3c73fcb23ae6" name="Sort" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="ddd6e446-1997-4e92-866f-fc25e182298d" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="7a2a5ca5-60b6-41f8-ad99-de63b9b8d9d3" name="ObservableCollection&lt;Ugedage&gt; observableCollection" direction="In" isUnique="false">
-                        <elementDefinition Id="7722c029-3a31-491a-b9dc-13f2746960c7" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="6ec86b1d-d14a-4052-88b1-cb758c007063" name="int ugenummer" direction="In" isUnique="false">
-                        <elementDefinition Id="90c96003-e4c4-4ca2-8c79-41f6882c4fb6" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
-              </ownedOperationsInternal>
-            </class>
-          </packageHasNamedElement>
-        </packagedElements>
-      </package>
-    </logicalClassDesignerModelHasPackages>
     <packageHasNamedElement>
       <referencedType Id="531da8f9-7795-4f92-88b5-ebf39085414a" name="ObservableCollection&lt;T&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;T&gt;">
         <elementDefinition Id="521d6fef-918d-44ec-b2a2-8c0376b78a28" />

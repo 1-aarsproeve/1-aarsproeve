@@ -14,9 +14,6 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Login</x:String>
     </Page.Resources>
-    <Page.DataContext>
-        <ViewModel:BrugerViewModel/>
-    </Page.DataContext>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:

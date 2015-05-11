@@ -5,8 +5,10 @@
   name="Strategy" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <ownedCommentsInternal>
     <comment
-      Id="e4c4a000-9e8d-4049-823b-a551c618e2ef">
-      <body>Denne package skal slettes i koden og DCD</body>
+      Id="2e585a92-bd7b-44ae-8085-9585107c341f">
+      <body>Denne package skal slettes i koden og DCD!
+
+Undlad at tage den med i jeres review</body>
     </comment>
   </ownedCommentsInternal>
   <packagedElements>

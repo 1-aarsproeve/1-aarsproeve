@@ -14,9 +14,9 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Rediger vagt</x:String>
     </Page.Resources>
-    <Page.DataContext>
+    <!--<Page.DataContext>
         <ViewModel:VagtplanViewModel/>
-    </Page.DataContext>
+    </Page.DataContext>-->
 
     <Page.BottomAppBar>
         <CommandBar Style="{StaticResource Bund}">

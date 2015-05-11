@@ -24,5 +24,9 @@ namespace _1aarsproeve.Model
         /// Stilling porperty
         /// </summary>
         public string Stilling { get; set; }
+        public override string ToString()
+        {
+            return Stilling;
+        }
     }
 }
