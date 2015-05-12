@@ -24,15 +24,12 @@ namespace _1aarsproeve.ViewModel
     /// </summary>
     public class HovedViewModel
     {
-        private GeneriskSingleton<ObservableCollection<HovedmenuView>> _beskedCollection = GeneriskSingleton<ObservableCollection<HovedmenuView>>.Instance();
-        /// <summary>
-        /// ObservableCollection med Beskeder
-        /// </summary>
-        public ObservableCollection<HovedmenuView> BeskederC { get; set; }
+        private ICommand _skrivBeskedCommand;
+        private GeneriskSingleton<HovedmenuView> _beskedCollection = GeneriskSingleton<HovedmenuView>.Instance();
         /// <summary>
         /// Singleton vagtcollection
         /// </summary>
-        public ObservableCollection<ObservableCollection<HovedmenuView>> BeskedCollection
+        public ObservableCollection<HovedmenuView> BeskedCollection
         {
             get { return _beskedCollection.Collection; }
             set { _beskedCollection.Collection = value; }
@@ -53,15 +50,14 @@ namespace _1aarsproeve.ViewModel
         /// Property til at skjule knapper
         /// </summary>
         public Visibility SkjulKnap { get; set; }
-        private ICommand _skrivBeskedCommand;
         /// <summary>
         /// Hovedhandler property
         /// </summary>
         public HovedHandler HovedHandler { get; set; }
         /// <summary>
-        /// Besked property
+        /// HovedmenuView property
         /// </summary>
-        public Beskeder Besked { get; set; }
+        public HovedmenuView HovedmenuView { get; set; }
         /// <summary>
         /// StillingId property
         /// </summary>
@@ -75,14 +71,11 @@ namespace _1aarsproeve.ViewModel
             Brugernavn = (string)Setting.Values["Brugernavn"];
             StillingsId = (int)Setting.Values["StillingId"];
 
-            BeskederC = new ObservableCollection<HovedmenuView>();
-            BeskedCollection.Add(BeskederC);
-
-            BeskedCollection[0].Clear();
+            BeskedCollection.Clear();
             var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
             foreach (var item in query)
             {
-                BeskedCollection[0].Add(item);
+                BeskedCollection.Add(item);
             }
             
             SkjulKnap = new Visibility();
@@ -90,7 +83,7 @@ namespace _1aarsproeve.ViewModel
             Stilling();
 
             LogUdCommand = new RelayCommand(LogUd);
-            Besked = new Beskeder();
+            HovedmenuView = new HovedmenuView();
             HovedHandler = new HovedHandler(this);
         }
         /// <summary>

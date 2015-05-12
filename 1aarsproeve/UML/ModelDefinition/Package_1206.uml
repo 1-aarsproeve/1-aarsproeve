@@ -17,15 +17,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="c645c356-8fec-466e-9064-94ac83ba638c">
-            <classMoniker
-              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
-              LastKnownName="PersistensFacade"
-              LastKnownLocation="Package1_1208.uml" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="8f8d481c-ac78-4021-aefe-921de68ffd7e"
@@ -173,6 +164,45 @@
                 <memberEnd
                   Id="aa761a02-cd9b-4b18-aa19-553b00b5b8e9"
                   name="AnsatteView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0cce9b01-aac5-4261-9302-65e8f4e482e1"
+            isDerived="false"
+            sourceEndRoleName="BrugerViewModel"
+            targetEndRoleName="Ansatte"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b6535741-f133-4633-a099-890f8e64ecea"
+              LastKnownName="Ansatte"
+              LastKnownLocation="Package_1207.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7c2e5002-ea88-449e-9133-ed31d9aebe2a"
+                  name="BrugerViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58b9ce70-9214-4fc2-86d6-9eff24430607"
+                  name="Ansatte"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -402,15 +432,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="0a7ad4cc-c1a8-4515-9d89-d2fdc43040bb">
-            <classMoniker
-              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
-              LastKnownName="PersistensFacade"
-              LastKnownLocation="Package1_1208.uml" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="b9328fe9-2b9a-40c4-a313-b418cd442eda"
@@ -644,7 +665,7 @@
           </property>
           <property
             Id="a77eb705-1422-40d0-aa4b-1c5b62c630df"
-            name="ObservableCollection&lt;ObservableCollection&lt;HovedmenuView&gt;&gt;"
+            name="BeskedCollection"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -655,8 +676,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="eb27cd4c-5b5f-4dec-a4bc-ff309336dba3"
-                LastKnownName="BeskedCollection"
+                Id="1d596d0a-b3ef-4867-9caa-e6f7b13183f2"
+                LastKnownName="ObservableCollection&lt;HovedmenuView&gt;"
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
@@ -676,6 +697,24 @@
                 Id="dfde202c-2247-4b77-882f-063e00a84fc6"
                 LastKnownName="Visibility"
                 LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="376e2988-5c7f-40c3-9859-9906f7691827"
+            name="StillingsId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -706,15 +745,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <suppliersInternal>
-          <dependency
-            Id="99a18a69-30fb-48db-8f70-011ad3e24585">
-            <classMoniker
-              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
-              LastKnownName="PersistensFacade"
-              LastKnownLocation="Package1_1208.uml" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association
             Id="25deaabf-ddff-4b5c-804d-a0ac2482da1d"
@@ -1863,6 +1893,16 @@
       <undefinedType
         Id="784c7a10-af89-4440-b781-d2b13a8bd947"
         name="ObservableCollection&lt;Ansatte&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="71f4ad51-6155-4e73-85ce-eecfde7df465"
+        name="GeneriskSingleton&lt;HovedmenuView&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1d596d0a-b3ef-4867-9caa-e6f7b13183f2"
+        name="ObservableCollection&lt;HovedmenuView&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -11,12 +11,12 @@ namespace _1aarsproeveTests
     [TestClass()]
     public class BeskederTests
     {
-        private Beskeder _beskeder;
+        private HovedmenuView _beskeder;
 
         [TestInitialize]
         public void BeforeTest()
         {
-            _beskeder = new Beskeder();
+            _beskeder = new HovedmenuView();
         }
 
         [TestMethod()]

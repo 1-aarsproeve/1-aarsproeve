@@ -118,11 +118,9 @@
     <Compile Include="Handler\HovedHandler.cs" />
     <Compile Include="Handler\VagtHandler.cs" />
     <Compile Include="Model\Ansatte.cs" />
-    <Compile Include="Model\Beskeder.cs" />
     <Compile Include="Model\HovedmenuView.cs" />
     <Compile Include="Model\Stillinger.cs" />
     <Compile Include="Model\Ugedage.cs" />
-    <Compile Include="Model\Vagter.cs" />
     <Compile Include="Model\GeneriskSingleton.cs" />
     <Compile Include="Model\VagtplanView.cs" />
     <Compile Include="Persistens\PersistensFacade.cs" />

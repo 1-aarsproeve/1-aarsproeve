@@ -9,6 +9,51 @@ namespace _1aarsproeve.Model
     /// </summary>
     public partial class VagtplanView
     {
+        private string _brugernavn;
+        /// <summary>
+        /// Default Konstruktør
+        /// </summary>
+        public VagtplanView()
+        {
+            
+        }
+        /// <summary>
+        /// Konstruktør
+        /// </summary>
+        /// <param name="starttidspunkt"></param>
+        /// <param name="sluttidspunkt"></param>
+        /// <param name="ugenummer"></param>
+        /// <param name="ugedagId"></param>
+        /// <param name="brugernavn"></param>
+        public VagtplanView(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)
+        {
+            Starttidspunkt = starttidspunkt;
+            Sluttidspunkt = sluttidspunkt;
+            Ugenummer = ugenummer;
+            UgedagId = ugedagId;
+            Brugernavn = brugernavn;
+        }
+        public VagtplanView(int vagtId, TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)
+        {
+            VagtId = vagtId;
+            Starttidspunkt = starttidspunkt;
+            Sluttidspunkt = sluttidspunkt;
+            Ugenummer = ugenummer;
+            UgedagId = ugedagId;
+            Brugernavn = brugernavn;
+        }
+        /// <summary>
+        /// Checkmetode til brugernavn
+        /// </summary>
+        /// <param name="brugernavn"></param>
+        public void CheckBrugernavn(string brugernavn)
+        {
+            if (string.IsNullOrEmpty(brugernavn) || brugernavn.Length > 30)
+            {
+                throw new ArgumentException("brugernavn er forkert");
+            }
+
+        }
         /// <summary>
         /// Starttidspunkt Property
         /// </summary>
@@ -29,10 +74,20 @@ namespace _1aarsproeve.Model
         /// VagtId Property
         /// </summary>
         public int VagtId { get; set; }
+
         /// <summary>
         /// Brugernavn Property
         /// </summary>
-        public string Brugernavn { get; set; }
+        
+        public string Brugernavn
+        {
+            get { return _brugernavn; }
+            set
+            {
+                CheckBrugernavn(value);
+                _brugernavn = value;
+            }
+        }
         /// <summary>
         /// Navn Property
         /// </summary>

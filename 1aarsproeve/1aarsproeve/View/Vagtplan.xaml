@@ -174,12 +174,12 @@
             <TextBlock Style="{StaticResource UgedagText}" Grid.Column="6" Grid.Row="1" Text="Søndag"/>
             <TextBlock Style="{StaticResource DatoText}" Grid.Column="6" Grid.Row="2" Text="{Binding Soendag}"/>
 
-            <ListView x:Name="listView" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[0]}" SelectedItem="{Binding SelectedVagter.VagtId, Mode=TwoWay}" Grid.Row="3" Grid.Column="0">
-                <!--<Interactivity:Interaction.Behaviors>
+            <ListView x:Name="listView" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[0]}" Grid.Row="3" Grid.Column="0">
+                <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
                         <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>
                     </Core:EventTriggerBehavior>
-                </Interactivity:Interaction.Behaviors>-->
+                </Interactivity:Interaction.Behaviors>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Style="{StaticResource AnsatteStackpanel}">
@@ -198,10 +198,10 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[1]}" Grid.Row="3" Grid.Column="1">
+            <ListView x:Name="listView2" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[1]}" Grid.Row="3" Grid.Column="1">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
-                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>
+                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView2}"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
                 <ListView.ItemTemplate>
@@ -222,10 +222,10 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[2]}" Grid.Row="3" Grid.Column="2">
+            <ListView x:Name="listView3" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[2]}" Grid.Row="3" Grid.Column="2">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
-                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>
+                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView3}"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
                 <ListView.ItemTemplate>
@@ -246,10 +246,10 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[3]}" Grid.Row="3" Grid.Column="3">
+            <ListView x:Name="listView4" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[3]}" Grid.Row="3" Grid.Column="3">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
-                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>
+                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView4}"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
                 <ListView.ItemTemplate>
@@ -270,10 +270,10 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[4]}" Grid.Row="3" Grid.Column="4">
+            <ListView x:Name="listView5" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[4]}" Grid.Row="3" Grid.Column="4">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
-                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>
+                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView5}"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
                 <ListView.ItemTemplate>
@@ -294,10 +294,10 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[5]}" Grid.Row="3" Grid.Column="5">
+            <ListView x:Name="listView6" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[5]}" Grid.Row="3" Grid.Column="5">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
-                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>
+                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView6}"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
                 <ListView.ItemTemplate>
@@ -318,10 +318,10 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[6]}" Grid.Row="3" Grid.Column="6">
+            <ListView x:Name="listView7" Style="{StaticResource AnsatteListView}" ItemsSource="{Binding VagtCollection[6]}" Grid.Row="3" Grid.Column="6">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="SelectionChanged">
-                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView}"/>
+                        <Core:InvokeCommandAction Command="{Binding SelectedVagterCommand}" CommandParameter="{Binding SelectedItem, ElementName=listView7}"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
                 <ListView.ItemTemplate>

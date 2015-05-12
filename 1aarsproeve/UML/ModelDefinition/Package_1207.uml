@@ -490,6 +490,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="70f5d2e6-fd14-4497-b10f-ed49b22dd47e"
+            isDerived="false"
+            sourceEndRoleName="Ugedage"
+            targetEndRoleName="VagtplanView"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="37bbc963-d42f-478b-b802-74d3721aa6b3"
+              LastKnownName="VagtplanView"
+              LastKnownLocation="Package_1207.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b2e233f-9fda-4577-9ffd-6dccddff0a8d"
+                  name="Ugedage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4ee4c3b1-a3dd-4a3b-8723-70e4956544d2"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="991e23aa-111d-487b-9c64-4a4d7e38acb6"
@@ -2502,6 +2543,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="71c62afb-5147-465a-89e6-64c5a6f22903"
+            isDerived="false"
+            sourceEndRoleName="VagtplanView"
+            targetEndRoleName="Ansatte"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b6535741-f133-4633-a099-890f8e64ecea"
+              LastKnownName="Ansatte"
+              LastKnownLocation="Package_1207.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="798b68d1-e89f-4cf5-9725-907c40b76e25"
+                  name="VagtplanView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3fc7e1bc-3265-40b9-bad5-70190bb578dd"
+                  name="Ansatte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -3540,6 +3620,45 @@
                       value="1" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e5944fa9-e449-45d9-9031-036fcebebe2b"
+            isDerived="false"
+            sourceEndRoleName="HovedmenuView"
+            targetEndRoleName="Ansatte"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b6535741-f133-4633-a099-890f8e64ecea"
+              LastKnownName="Ansatte"
+              LastKnownLocation="Package_1207.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="578df175-0aba-43b2-a81c-688a874b1cd9"
+                  name="HovedmenuView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb01a233-a927-4bd6-974c-8cf5600d5609"
+                  name="Ansatte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>

@@ -25,7 +25,7 @@ namespace _1aarsproeve.Persistens
         /// <param name="objekt">Tager objekt som skal gemmes</param>
         public static void GemDB(string api, object objekt)
         {
-            BrugerViewModel.Client.PostAsJsonAsync(api, objekt);
+            BrugerViewModel.Client.PostAsJsonAsync(api + "/", objekt);
         }
         /// <summary>
         /// Sletter data i databasen
@@ -34,7 +34,7 @@ namespace _1aarsproeve.Persistens
         /// <param name="id">Tager ID som skal slettes</param>
         public static void SletDB(string api, int id)
         {
-            BrugerViewModel.Client.DeleteAsync(api + id);
+            BrugerViewModel.Client.DeleteAsync(api + "/" + id);
         }
         /// <summary>
         /// Redigerer data i databasen

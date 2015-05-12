@@ -11,6 +11,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="bd17ffb3-c71e-4daa-89b7-c898590b7e3c">
+            <classMoniker
+              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
+              LastKnownName="PersistensFacade"
+              LastKnownLocation="Package1_1208.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="35fe4e86-3606-44c6-8496-7d1b2498cf00"
@@ -46,6 +55,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="14cbfd43-3dfe-4c4f-9f08-d5aa297477c1">
+            <classMoniker
+              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
+              LastKnownName="PersistensFacade"
+              LastKnownLocation="Package1_1208.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="8225488c-c488-45af-80bf-2d6df7654daf"
@@ -65,6 +83,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="032a4855-e3bb-4f81-93ed-30363ccaa932">
+            <classMoniker
+              Id="75266722-b4cc-4277-8995-8e3fd544ffb5"
+              LastKnownName="PersistensFacade"
+              LastKnownLocation="Package1_1208.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="3a29f6cf-8cd3-44c5-b463-ca9106717c13"

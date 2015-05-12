@@ -36,7 +36,28 @@ namespace _1aarsproeve.ViewModel
     /// </summary>
     public class VagtplanViewModel : INotifyPropertyChanged
     {
-        private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection = GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
+        #region Backing fields
+
+        private ICommand _opretVagtCommand;
+        private ICommand _redigerVagtCommand;
+        private ICommand _sletVagtCommand;
+        private ICommand _forrigeUgeCommand;
+        private ICommand _naesteUgeCommand;
+        private ICommand _alleVagterCommand;
+        private ICommand _frieVagterCommand;
+        private ICommand _mineVagterCommand;
+        private ICommand _sortCommand;
+        private ICommand _eksporterAlleCommand;
+        private ICommand _eksporterMineCommand;
+        private ICommand _logudCommand;
+        private ICommand _selectedVagterCommand;
+        private Action<ObservableCollection<ObservableCollection<VagtplanView>>> _sorting;
+
+        private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection =
+            GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
+
+        #endregion
+
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
@@ -45,34 +66,44 @@ namespace _1aarsproeve.ViewModel
         /// Brugernavn property
         /// </summary>
         public string Brugernavn { get; set; }
+
+        #region Ugedage farver og collections
+
         /// <summary>
         /// Sætter mandag til bestemt farve
         /// </summary>
         public Brush MandagFarve { get; set; }
+
         /// <summary>
         /// Sætter tirsdag til bestemt farve
         /// </summary>
         public Brush TirsdagFarve { get; set; }
+
         /// <summary>
         /// Sætter onsdag til bestemt farve
         /// </summary>
         public Brush OnsdagFarve { get; set; }
+
         /// <summary>
         /// Sætter torsdag til bestemt farve
         /// </summary>
         public Brush TorsdagFarve { get; set; }
+
         /// <summary>
         /// Sætter fredag til bestemt farve
         /// </summary>
         public Brush FredagFarve { get; set; }
+
         /// <summary>
         /// Sætter lørdag til bestemt farve
         /// </summary>
         public Brush LoerdagFarve { get; set; }
+
         /// <summary>
         /// Sætter søndag til bestemt farve
         /// </summary>
         public Brush SoendagFarve { get; set; }
+
         private int _ugenummer;
         private string _mandag;
         private string _tirsdag;
@@ -81,122 +112,247 @@ namespace _1aarsproeve.ViewModel
         private string _fredag;
         private string _loerdag;
         private string _soendag;
+
         /// <summary>
         /// Alle mandagsvagter
         /// </summary>
         public ObservableCollection<VagtplanView> MandagVagter;
+
         /// <summary>
         /// Alle tirsdagsvagter
         /// </summary>
         public ObservableCollection<VagtplanView> TirsdagVagter;
+
         /// <summary>
         /// Alle onsdagsvagter
         /// </summary>
         public ObservableCollection<VagtplanView> OnsdagVagter;
+
         /// <summary>
         /// Alle torsdagssvagter
         /// </summary>
         public ObservableCollection<VagtplanView> TorsdagVagter;
+
         /// <summary>
         /// Alle fredagsvagter
         /// </summary>
         public ObservableCollection<VagtplanView> FredagVagter;
+
         /// <summary>
         /// Alle lørdagsvagter
         /// </summary>
         public ObservableCollection<VagtplanView> LoerdagVagter;
+
         /// <summary>
         /// Alle søndagsvagter
         /// </summary>
         public ObservableCollection<VagtplanView> SoendagVagter;
+
+        #endregion
+
+        #region Commands
+
+        /// <summary>
+        /// OpretVagtCommand property
+        /// </summary>
+        public ICommand OpretVagtCommand
+        {
+            get
+            {
+                _opretVagtCommand = new RelayCommand(VagtHandler.OpretVagt);
+                return _opretVagtCommand;
+            }
+            set { _opretVagtCommand = value; }
+        }
+        /// <summary>
+        /// RedigerVagtCommand property
+        /// </summary>
+        public ICommand RedigerVagtCommand
+        {
+            get
+            {
+                _redigerVagtCommand = new RelayCommand(VagtHandler.RedigerVagt);
+                return _redigerVagtCommand;
+            }
+            set { _redigerVagtCommand = value; }
+        }
+        /// <summary>
+        /// SletVagtCommand property
+        /// </summary>
+        public ICommand SletVagtCommand
+        {
+            get
+            {
+                _sletVagtCommand = new RelayCommand(VagtHandler.SletVagt);
+                return _sletVagtCommand;
+            }
+            set { _sletVagtCommand = value; }
+        }
+
         /// <summary>
         /// ForrigeUgeCommand property
         /// </summary>
-        public ICommand ForrigeUgeCommand { get; set; }
+        public ICommand ForrigeUgeCommand
+        {
+            get
+            {
+                _forrigeUgeCommand = new RelayCommand(ForrigeUge);
+                return _forrigeUgeCommand;
+            }
+            set { _forrigeUgeCommand = value; }
+        }
+
         /// <summary>
         /// NaesteUgeCommand property
         /// </summary>
-        public ICommand NaesteUgeCommand { get; set; }
+        public ICommand NaesteUgeCommand
+        {
+            get
+            {
+                _naesteUgeCommand = new RelayCommand(NaesteUge);
+                return _naesteUgeCommand;
+            }
+            set { _naesteUgeCommand = value; }
+        }
+
         /// <summary>
         /// AlleVagterCommand property
         /// </summary>
-        public ICommand AlleVagterCommand { get; set; }
+        public ICommand AlleVagterCommand
+        {
+            get
+            {
+                _alleVagterCommand = new RelayCommand(() => _sorting = AlleVagter);
+                return _alleVagterCommand;
+            }
+            set { _alleVagterCommand = value; }
+        }
+
         /// <summary>
         /// FrieVagterCommand property
         /// </summary>
-        public ICommand FrieVagterCommand { get; set; }
+        public ICommand FrieVagterCommand
+        {
+            get
+            {
+                _frieVagterCommand = new RelayCommand(() => _sorting = FrieVagter);
+                return _frieVagterCommand;
+            }
+            set { _frieVagterCommand = value; }
+        }
+
         /// <summary>
         /// MineVagterCommand property
         /// </summary>
-        public ICommand MineVagterCommand { get; set; }
-        private Action<ObservableCollection<ObservableCollection<VagtplanView>>> _sorting;
+        public ICommand MineVagterCommand
+        {
+            get
+            {
+                _mineVagterCommand = new RelayCommand(() => _sorting = MineVagter);
+                return _mineVagterCommand;
+            }
+            set { _mineVagterCommand = value; }
+        }
+
         /// <summary>
         /// SortCommand property
         /// </summary>
-        public ICommand SortCommand { get; set; }
+        public ICommand SortCommand
+        {
+            get
+            {
+                _sortCommand = new RelayCommand(() => _sorting(VagtCollection));
+                return _sortCommand;
+            }
+            set { _sortCommand = value; }
+        }
+
         /// <summary>
         /// EksporterAlleCommand property
         /// </summary>
-        public ICommand EksporterAlleCommand { get; set; }
+        public ICommand EksporterAlleCommand
+        {
+            get
+            {
+                _eksporterAlleCommand = new RelayCommand(EksporterAlleVagter);
+                return _eksporterAlleCommand;
+            }
+            set { _eksporterAlleCommand = value; }
+        }
+
         /// <summary>
         /// EksporterMineCommand property
         /// </summary>
-        public ICommand EksporterMineCommand { get; set; }
+        public ICommand EksporterMineCommand
+        {
+            get
+            {
+                _eksporterMineCommand = new RelayCommand(EksporterMineVagter);
+                return _eksporterMineCommand;
+            }
+            set { _eksporterMineCommand = value; }
+        }
+
         /// <summary>
         /// LogUdCommand property
         /// </summary>
-        public ICommand LogUdCommand { get; set; }
+        public ICommand LogUdCommand
+        {
+            get
+            {
+                _logudCommand = new RelayCommand(LogUd);
+                return _logudCommand;
+            }
+            set { _logudCommand = value; }
+        }
+
         /// <summary>
-        /// Starttidspunkt Property
+        /// SelectedVagterCommand property
         /// </summary>
-        public TimeSpan Starttidspunkt { get; set; }
-        /// <summary>
-        /// Sluttidspunkt Property
-        /// </summary>
-        public TimeSpan Sluttidspunkt { get; set; }
-        /// <summary>
-        /// UgedagId Property
-        /// </summary>
-        public int UgedagId { get; set; }
+        public ICommand SelectedVagterCommand
+        {
+            get
+            {
+                _selectedVagterCommand = new RelayArgCommand<VagtplanView>(v => VagtHandler.SetSelectedVagt(v));
+                return _selectedVagterCommand;
+            }
+            set { _selectedVagterCommand = value; }
+        }
+
+        #endregion
+
         /// <summary>
         /// AnsatteListe property
         /// </summary>
         public List<Ansatte> AnsatteListe { get; set; }
         /// <summary>
-        /// Ansat property
-        /// </summary>
-        public Ansatte Ansat { get; set; }
-        /// <summary>
         /// UgenumreListe property
         /// </summary>
         public List<int> UgenumreListe { get; set; }
         /// <summary>
-        /// Ugenumre property
+        /// VagtplanView property
         /// </summary>
-        public int Ugenumre { get; set; }
+        public VagtplanView VagtplanView { get; set; }
         /// <summary>
         /// UgedageListe property
         /// </summary>
         public List<Ugedage> UgedageListe { get; set; }
         /// <summary>
+        /// VagtHandler property
+        /// </summary>
+        public VagtHandler VagtHandler { get; set; }
+        /// <summary>
+        /// SelectedVagter static property
+        /// </summary>
+        public static VagtplanView SelectedVagter { get; set; }
+        /// <summary>
         /// Ugedag property
         /// </summary>
         public Ugedage Ugedag { get; set; }
         /// <summary>
-        /// VagtHandler property
+        /// Ansat property
         /// </summary>
-        public VagtHandler VagtHandler { get; set; }
-        private ICommand _opretVagtCommand;
-        private ICommand _redigerVagtCommand;
-        private ICommand _sletVagtCommand;
-        /// <summary>
-        /// SelectedVagter static property
-        /// </summary>
-        public static Vagter SelectedVagter { get; set; }
-        /// <summary>
-        /// SelectedVagter command
-        /// </summary>
-        public ICommand SelectedVagterCommand { get; set; }
+        public Ansatte Ansat { get; set; }
         /// <summary>
         /// StillingId property
         /// </summary>
@@ -236,19 +392,12 @@ namespace _1aarsproeve.ViewModel
 
             InitialiserVagter();
 
-            ForrigeUgeCommand = new RelayCommand(ForrigeUge);
-            NaesteUgeCommand = new RelayCommand(NaesteUge);
-
-            EksporterAlleCommand = new RelayCommand(EksporterAlleVagter);
-            EksporterMineCommand = new RelayCommand(EksporterMineVagter);
-            LogUdCommand = new RelayCommand(LogUd);
-
             VagtHandler = new VagtHandler(this);
             
             AnsatteListe = new List<Ansatte>();
             UgedageListe = new List<Ugedage>();
             UgenumreListe = new List<int>();
-
+            VagtplanView = new VagtplanView();
             var a = PersistensFacade<Ansatte>.LoadDB("api/Ansattes").Result;
             foreach (var item in a)
             {
@@ -264,15 +413,14 @@ namespace _1aarsproeve.ViewModel
                 UgenumreListe.Add(i);
             }
             _sorting = AlleVagter;
-            SortCommand = new RelayCommand(() => _sorting(VagtCollection));
-            AlleVagterCommand = new RelayCommand(() => _sorting = AlleVagter);
-            FrieVagterCommand = new RelayCommand(() => _sorting = FrieVagter);
-            MineVagterCommand = new RelayCommand(() => _sorting = MineVagter);
 
             SkjulKnap = new Visibility();
 
             Stilling();
         }
+
+        #region Sort vagter
+
         /// <summary>
         /// Henter alle vagter
         /// </summary>
@@ -302,6 +450,7 @@ namespace _1aarsproeve.ViewModel
                 m.ShowAsync();
             }
         }
+
         /// <summary>
         /// Henter frie vagter
         /// </summary>
@@ -331,6 +480,7 @@ namespace _1aarsproeve.ViewModel
                 m.ShowAsync();
             }
         }
+
         /// <summary>
         /// Henter mine vagter
         /// </summary>
@@ -360,42 +510,10 @@ namespace _1aarsproeve.ViewModel
                 m.ShowAsync();
             }
         }
-        /// <summary>
-        /// OpretVagtCommand property
-        /// </summary>
-        public ICommand OpretVagtCommand
-        {
-            get
-            {
-                _opretVagtCommand = new RelayCommand(VagtHandler.OpretVagt);
-                return _opretVagtCommand;
-            }
-            set { _opretVagtCommand = value; }
-        }
-        /// <summary>
-        /// RedigerVagtCommand property
-        /// </summary>
-        public ICommand RedigerVagtCommand
-        {
-            get
-            {
-                _redigerVagtCommand = new RelayCommand(VagtHandler.RedigerVagt);
-                return _redigerVagtCommand;
-            }
-            set { _redigerVagtCommand = value; }
-        }
-        /// <summary>
-        /// SletVagtCommand property
-        /// </summary>
-        public ICommand SletVagtCommand
-        {
-            get
-            {
-                _sletVagtCommand = new RelayCommand(VagtHandler.SletVagt);
-                return _sletVagtCommand;
-            }
-            set { _sletVagtCommand = value; }
-        }
+
+        #endregion
+        #region Eksporter vagter
+
         /// <summary>
         /// Eksporter alle vagter
         /// </summary>
@@ -403,7 +521,7 @@ namespace _1aarsproeve.ViewModel
         {
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            savePicker.FileTypeChoices.Add("Filformat", new List<string>() { ".ics", ".csv" });
+            savePicker.FileTypeChoices.Add("Filformat", new List<string>() {".ics", ".csv"});
             savePicker.SuggestedFileName = "vagtplan-alle-uge-" + Ugenummer;
 
             StorageFile fil = await savePicker.PickSaveFileAsync();
@@ -423,13 +541,15 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
-                            select new { q.Starttidspunkt, q.Sluttidspunkt, q.Navn };
+                            select new {q.Starttidspunkt, q.Sluttidspunkt, q.Navn};
                         foreach (var item in query1)
                         {
                             vagter +=
                                 "BEGIN:VEVENT\n" +
-                                "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Starttidspunkt.ToString("hhmmss") + "\n" +
-                                "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Sluttidspunkt.ToString("hhmmss") + "\n" +
+                                "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                item.Starttidspunkt.ToString("hhmmss") + "\n" +
+                                "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                item.Sluttidspunkt.ToString("hhmmss") + "\n" +
                                 "SUMMARY:" + emne + " | " + item.Navn + "\n" +
                                 "LOCATION:" + sted + "\n" +
                                 "END:VEVENT\n\n";
@@ -446,7 +566,7 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
-                            select new { q.Starttidspunkt, q.Sluttidspunkt, q.Navn };
+                            select new {q.Starttidspunkt, q.Sluttidspunkt, q.Navn};
                         foreach (var item in query1)
                         {
                             vagter +=
@@ -463,7 +583,8 @@ namespace _1aarsproeve.ViewModel
                 FileUpdateStatus status = await CachedFileManager.CompleteUpdatesAsync(fil);
                 if (status == FileUpdateStatus.Complete)
                 {
-                    MessageDialog m = new MessageDialog("Vagtplanen blev eksporteret som " + fil.FileType + "-fil", "Succes!");
+                    MessageDialog m = new MessageDialog("Vagtplanen blev eksporteret som " + fil.FileType + "-fil",
+                        "Succes!");
                     m.ShowAsync();
                 }
                 else
@@ -473,6 +594,7 @@ namespace _1aarsproeve.ViewModel
                 }
             }
         }
+
         /// <summary>
         /// Eksporterer alle mine vagter
         /// </summary>
@@ -480,7 +602,7 @@ namespace _1aarsproeve.ViewModel
         {
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            savePicker.FileTypeChoices.Add("Filformat", new List<string>() { ".ics", ".csv" });
+            savePicker.FileTypeChoices.Add("Filformat", new List<string>() {".ics", ".csv"});
             savePicker.SuggestedFileName = "vagtplan-mine-uge-" + Ugenummer;
 
             StorageFile fil = await savePicker.PickSaveFileAsync();
@@ -500,13 +622,15 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
-                            select new { q.Starttidspunkt, q.Sluttidspunkt };
+                            select new {q.Starttidspunkt, q.Sluttidspunkt};
                         foreach (var item in query1)
                         {
                             vagter +=
                                 "BEGIN:VEVENT\n" +
-                                "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Starttidspunkt.ToString("hhmmss") + "\n" +
-                                "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" + item.Sluttidspunkt.ToString("hhmmss") + "\n" +
+                                "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                item.Starttidspunkt.ToString("hhmmss") + "\n" +
+                                "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                item.Sluttidspunkt.ToString("hhmmss") + "\n" +
                                 "SUMMARY:" + emne + "\n" +
                                 "LOCATION:" + sted + "\n" +
                                 "END:VEVENT\n\n";
@@ -523,7 +647,7 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
-                            select new { q.Starttidspunkt, q.Sluttidspunkt };
+                            select new {q.Starttidspunkt, q.Sluttidspunkt};
                         foreach (var item in query1)
                         {
                             vagter +=
@@ -540,7 +664,8 @@ namespace _1aarsproeve.ViewModel
                 FileUpdateStatus status = await CachedFileManager.CompleteUpdatesAsync(fil);
                 if (status == FileUpdateStatus.Complete)
                 {
-                    MessageDialog m = new MessageDialog("Vagtplanen blev eksporteret som " + fil.FileType + "-fil", "Succes!");
+                    MessageDialog m = new MessageDialog("Vagtplanen blev eksporteret som " + fil.FileType + "-fil",
+                        "Succes!");
                     m.ShowAsync();
                 }
                 else
@@ -550,6 +675,9 @@ namespace _1aarsproeve.ViewModel
                 }
             }
         }
+
+        #endregion
+
         /// <summary>
         /// Clear alle collections
         /// </summary>
@@ -727,6 +855,9 @@ namespace _1aarsproeve.ViewModel
                 SkjulKnap = Visibility.Collapsed;
             }
         }
+
+        #region Properties
+
         /// <summary>
         /// Singleton vagtcollection
         /// </summary>
@@ -735,6 +866,7 @@ namespace _1aarsproeve.ViewModel
             get { return _vagtCollection.Collection; }
             set { _vagtCollection.Collection = value; }
         }
+
         /// <summary>
         /// Mandag property
         /// </summary>
@@ -747,6 +879,7 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Mandag");
             }
         }
+
         /// <summary>
         /// Tirsdag property
         /// </summary>
@@ -759,6 +892,7 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Tirsdag");
             }
         }
+
         /// <summary>
         /// Onsdag property
         /// </summary>
@@ -771,6 +905,7 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Onsdag");
             }
         }
+
         /// <summary>
         /// Torsdag property
         /// </summary>
@@ -783,6 +918,7 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Torsdag");
             }
         }
+
         /// <summary>
         /// Fredag property
         /// </summary>
@@ -795,6 +931,7 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Fredag");
             }
         }
+
         /// <summary>
         /// Lørdag property
         /// </summary>
@@ -807,6 +944,7 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Loerdag");
             }
         }
+
         /// <summary>
         /// Søndag property
         /// </summary>
@@ -819,6 +957,7 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Soendag");
             }
         }
+
         /// <summary>
         /// Ugenummer property
         /// </summary>
@@ -831,6 +970,9 @@ namespace _1aarsproeve.ViewModel
                 OnPropertyChanged("Ugenummer");
             }
         }
+
+        #endregion
+
         #region PropertyChanged
         /// <summary>
         /// Implementerer INotifyPropertyChanged interfacet

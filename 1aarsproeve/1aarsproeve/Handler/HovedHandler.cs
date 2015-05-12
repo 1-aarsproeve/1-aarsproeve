@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ using _1aarsproeve.ViewModel;
 namespace _1aarsproeve.Handler
 {
     /// <summary>
-    /// Handler-klasser der håndterer operationer for beskeder
+    /// Handler-klasser der håndterer operationer for HovedmenuView
     /// </summary>
     public class HovedHandler
     {
@@ -35,7 +36,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void SkrivBesked()
         {
-            PersistensFacade<Beskeder>.GemDB("api/Beskeders", new Beskeder() {Overskrift = HovedViewModel.Besked.Overskrift, Dato = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse = HovedViewModel.Besked.Beskrivelse, Udloebsdato = new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), Brugernavn = HovedViewModel.Brugernavn});
+            PersistensFacade<HovedmenuView>.GemDB("api/Beskeders", new HovedmenuView() {Overskrift = HovedViewModel.HovedmenuView.Overskrift, Dato = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse = HovedViewModel.HovedmenuView.Beskrivelse, Udloebsdato = new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), Brugernavn = HovedViewModel.Brugernavn});
 
             MessageDialog m = new MessageDialog("Beskeden blev oprettet", "Succes!");
             m.ShowAsync();

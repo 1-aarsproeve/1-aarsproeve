@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Windows.UI.Popups;
 using _1aarsproeve.Model;
 using _1aarsproeve.Persistens;
+using _1aarsproeve.View;
 using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Handler
@@ -33,17 +34,25 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void OpretVagt()
         {
-            PersistensFacade<Vagter>.GemDB("api/Vagters", new Vagter(VagtplanViewModel.Starttidspunkt, VagtplanViewModel.Sluttidspunkt, VagtplanViewModel.Ugenumre, VagtplanViewModel.Ugedag.UgedagId, VagtplanViewModel.Ansat.Brugernavn));
+            PersistensFacade<VagtplanView>.GemDB("api/Vagters", new VagtplanView(VagtplanViewModel.VagtplanView.Starttidspunkt, VagtplanViewModel.VagtplanView.Sluttidspunkt, VagtplanViewModel.VagtplanView.Ugenummer, VagtplanViewModel.Ugedag.UgedagId, VagtplanViewModel.Ansat.Brugernavn));
 
             MessageDialog m = new MessageDialog("Vagten blev tilføjet", "Succes!");
             m.ShowAsync();
+        }
+        /// <summary>
+        /// Set valgte vagt
+        /// </summary>
+        /// <param name="v">Tager VagtplanView som objekt</param>
+        public void SetSelectedVagt(VagtplanView v)
+        {
+            VagtplanViewModel.SelectedVagter = v;
         }
         /// <summary>
         /// Redigere i eksisterende vagt
         /// </summary>
         public void RedigerVagt()
         {
-            PersistensFacade<Vagter>.RedigerDB("api/Vagters", new Vagter() { VagtId = 3, Starttidspunkt = VagtplanViewModel.Starttidspunkt, Sluttidspunkt = VagtplanViewModel.Sluttidspunkt, Ugenummer = VagtplanViewModel.Ugenumre, UgedagId = VagtplanViewModel.Ugedag.UgedagId, Brugernavn = VagtplanViewModel.Ansat.Brugernavn }, id: 3);
+            PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.VagtplanView.Starttidspunkt, VagtplanViewModel.VagtplanView.Sluttidspunkt, VagtplanViewModel.VagtplanView.Ugenummer, VagtplanViewModel.Ugedag.UgedagId, VagtplanViewModel.Ansat.Brugernavn), id: VagtplanViewModel.SelectedVagter.VagtId);
 
             MessageDialog m = new MessageDialog("Vagten blev redigeret", "Succes!");
             m.ShowAsync();
@@ -53,7 +62,10 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public async void SletVagt()
         {
-            PersistensFacade<Vagter>.SletDB("api/Vagters/", VagtplanViewModel.SelectedVagter.VagtId);
+            PersistensFacade<VagtplanView>.SletDB("api/Vagters", VagtplanViewModel.SelectedVagter.VagtId);
+            
+            VagtplanViewModel.ClearVagterCollections();
+            VagtplanViewModel.InitialiserVagter();
         }
     }
 }
