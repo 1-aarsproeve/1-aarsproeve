@@ -294,6 +294,12 @@
                     <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
                   </type_NamedElement>
                 </property>
+                <property Id="b7293a8f-e351-42af-9244-f79904f16931" name="Client" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d5e58838-8ec6-45b5-b66f-952ea5d6a9ba" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1f99790e-9c8b-4227-b026-310fb73f4bf4" LastKnownName="HttpClient" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="67aa904b-5f75-42eb-be14-bed5e9ec18bb" name="LogInd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -301,6 +307,9 @@
                 </operation>
                 <operation Id="cabb33bf-60b0-49db-b45c-6b70c46fa156" name="LogUd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="f696e467-2412-4afd-b1c9-b5cd66eb6557" />
+                </operation>
+                <operation Id="8641cb78-86a5-4179-8ed2-f5ded5dd7231" name="AabenForbindelse" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4148db65-2de5-422b-8a90-d29fe3383a63" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -389,12 +398,6 @@
                     <referencedTypeMoniker Id="830eaa46-22be-495e-bd29-1737c8d65af9" LastKnownName="ICommand" />
                   </type_NamedElement>
                 </property>
-                <property Id="323df9d3-3d44-46f1-b8e8-412fb164e08b" name="Client" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="f48ce8ce-1ab2-4ae8-b724-e35ef12321b0" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="8c23fc41-457d-47b8-aa67-6afc01cfa94e" LastKnownName="HttpClient" />
-                  </type_NamedElement>
-                </property>
                 <property Id="5def6fe4-6cd3-448d-8ed8-aece1b8be4ae" name="ObservableCollection&lt;ObservableCollection&lt;HovedmenuView&gt;&gt;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="a77eb705-1422-40d0-aa4b-1c5b62c630df" />
                   <type_NamedElement>
@@ -411,9 +414,6 @@
               <ownedOperationsInternal>
                 <operation Id="b562b8c5-2a97-4478-abd7-6c2f21a15cdb" name="LogUd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="a31bdacf-5251-48c5-97a1-39aa99182111" />
-                </operation>
-                <operation Id="099b8c54-9baa-4a31-9b44-ca6e73363bed" name="AabenForbindelse" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="6d655de5-5bbd-40de-90e5-a048acfcf7fc" />
                 </operation>
                 <operation Id="13316366-8319-4e7a-ad73-e304f38559ef" name="Stilling" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="35f49cb5-613a-44f7-a459-e5ba0a90e0fd" />
@@ -2217,11 +2217,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="8c23fc41-457d-47b8-aa67-6afc01cfa94e" name="HttpClient" isAbstract="false" isLeaf="false" cachedFullName="HttpClient">
-        <elementDefinition Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="44aa2f61-c5fd-4667-a17e-3f623692b54d" name="GeneriskSingleton&lt;T&gt;" isAbstract="false" isLeaf="false" cachedFullName="GeneriskSingleton&lt;T&gt;">
         <elementDefinition Id="eba8afaf-e342-47dc-bdea-e999de4dc6c6" />
       </referencedType>
@@ -2269,6 +2264,11 @@
     <packageHasNamedElement>
       <referencedType Id="0af0e69c-7f47-4b78-80ab-44ef4001f10f" name="ObservableCollection&lt;Ansatte&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;Ansatte&gt;">
         <elementDefinition Id="784c7a10-af89-4440-b781-d2b13a8bd947" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1f99790e-9c8b-4227-b026-310fb73f4bf4" name="HttpClient" isAbstract="false" isLeaf="false" cachedFullName="HttpClient">
+        <elementDefinition Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

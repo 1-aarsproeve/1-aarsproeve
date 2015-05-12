@@ -28,11 +28,6 @@ namespace _1aarsproeve.Handler
         {
             VagtplanViewModel = vagtplanViewModel;
         }
-
-        public void SetSelectedVagt(Vagter v)
-        {
-            VagtplanViewModel.SelectedVagter = v;
-        }
         /// <summary>
         /// Opretter ny vagt
         /// </summary>

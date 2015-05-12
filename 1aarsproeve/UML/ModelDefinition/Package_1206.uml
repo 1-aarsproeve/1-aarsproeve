@@ -347,6 +347,24 @@
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="d5e58838-8ec6-45b5-b66f-952ea5d6a9ba"
+            name="Client"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed"
+                LastKnownName="HttpClient"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -362,6 +380,15 @@
             name="LogUd"
             isLeaf="false"
             isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4148db65-2de5-422b-8a90-d29fe3383a63"
+            name="AabenForbindelse"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
@@ -616,24 +643,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="f48ce8ce-1ab2-4ae8-b724-e35ef12321b0"
-            name="Client"
-            isLeaf="false"
-            isStatic="true"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed"
-                LastKnownName="HttpClient"
-                LastKnownLocation="Package_1206.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="a77eb705-1422-40d0-aa4b-1c5b62c630df"
             name="ObservableCollection&lt;ObservableCollection&lt;HovedmenuView&gt;&gt;"
             isLeaf="false"
@@ -676,15 +685,6 @@
             name="LogUd"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="6d655de5-5bbd-40de-90e5-a048acfcf7fc"
-            name="AabenForbindelse"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="true"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />

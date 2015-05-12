@@ -40,6 +40,7 @@ CREATE TABLE [dbo].[Ansatte] (
 );
 /* Indsætter i Ansatte-tabel */
 INSERT INTO Ansatte VALUES ('Daniel', 'Daniel Winther', '123456', 'daniel@hotmail.dk', '88888888', 'Degnestavnen 99', '2400', 1);
+INSERT INTO Ansatte VALUES ('Ubemandet', 'Ubemandet', '123456', 'daniel@hotmail.dk', '88888888', 'Degnestavnen 99', '2400', 1);
 
 /* Opretter Vagter-tabel */
 CREATE TABLE [dbo].[Vagter] (

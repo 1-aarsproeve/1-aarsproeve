@@ -39,6 +39,9 @@ namespace _1aarsproeve.ViewModel
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
         public ApplicationDataContainer Setting { get; set; }
+        /// <summary>
+        /// Ansat property
+        /// </summary>
         public Ansatte Ansat { get; set; }
         /// <summary>
         /// Brugernavn property
