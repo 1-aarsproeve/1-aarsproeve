@@ -6,65 +6,41 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2015-04-23T11:05:01" Importance="High" Text="Reverse Engineering Started." />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve' -  (Package)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model' -  (Package)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Medium" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView' -  (Class)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::Adresse' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::AnsatteView' -  (Operation)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::Brugernavn' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::Email' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::Mobil' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::Navn' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::Password' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::Postnummer' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::AnsatteView::StillingId' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Medium" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView' -  (Class)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView::BeskedId' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView::Beskrivelse' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView::Brugernavn' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView::Dato' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView::HovedmenuView' -  (Operation)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView::Navn' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView::Overskrift' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::HovedmenuView::Udloebsdato' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Medium" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView' -  (Class)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView::Brugernavn' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView::Navn' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView::Sluttidspunkt' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView::Starttidspunkt' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView::UgedagId' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView::Ugenummer' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView::VagtId' -  (Property)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::_1aarsproeve::Model::VagtplanView::VagtplanView' -  (Operation)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System' -  (Package)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::DateTime' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::Int32' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::String' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::TimeSpan' -  (Class)   (partially reverse engineered - definition not updated) " />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::VagtplanView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::VagtplanView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::VagtplanView to UML::System::TimeSpan (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::VagtplanView to UML::System::TimeSpan (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::VagtplanView to UML::System::Int32 (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::VagtplanView to UML::System::Int32 (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::VagtplanView to UML::System::Int32 (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::AnsatteView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::AnsatteView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::AnsatteView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::AnsatteView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::AnsatteView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::AnsatteView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::AnsatteView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::AnsatteView to UML::System::Int32 (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::HovedmenuView to UML::System::Int32 (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::HovedmenuView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::HovedmenuView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::HovedmenuView to UML::System::DateTime (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::HovedmenuView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::HovedmenuView to UML::System::String (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::_1aarsproeve::Model::HovedmenuView to UML::System::DateTime (Association)" />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="High" Text="(3) type(s) fully reverse engineered." />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="High" Text="(4) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
-  <Message Timestamp="2015-04-23T11:05:14" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+  <Message Timestamp="2015-05-12T12:51:51" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '328750ba-0257-4e16-b751-491c8d2165b6' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System' -  (Package)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::Linq' -  (Package)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::Linq::IQueryable' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::Linq::IQueryable&lt;Stillinger‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::Web' -  (Package)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::Web::Http' -  (Package)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::Web::Http::ApiController' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::System::Web::Http::IHttpActionResult' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve' -  (Package)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers' -  (Package)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Medium" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController' -  (Class)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::db' -  (Property)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::DeleteStillinger' -  (Operation)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::DeleteStillinger::id' -  (Parameter)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::Dispose' -  (Operation)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::Dispose::disposing' -  (Parameter)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::GetStillinger' -  (Operation)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::GetStillinger::id' -  (Parameter)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::GetStillingers' -  (Operation)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::PostStillinger' -  (Operation)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::PostStillinger::stillinger' -  (Parameter)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::PutStillinger' -  (Operation)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::PutStillinger::id' -  (Parameter)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::PutStillinger::stillinger' -  (Parameter)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::StillingerExists' -  (Operation)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::StillingerExists::id' -  (Parameter)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Controllers::StillingersController::StillingersController' -  (Operation)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::Stillinger' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'UML::WS1aarsproeve::TableContext' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: UML::WS1aarsproeve::Controllers::StillingersController to UML::System::Web::Http::ApiController (Generalization)" />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="High" Text="(6) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-05-12T12:52:44" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
 </Log>

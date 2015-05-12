@@ -423,5 +423,63 @@
         </appliedStereotypesInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5b831c82-881a-44d2-ba70-c94a2291c37a"
+        name="Stillinger"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a884b0fa-d79d-48ef-89d5-dbebea9159b7"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2FWS1aarsproeve%2Fbin%2FWS1aarsproeve.dll Namespace%3DWS1aarsproeve Type%3DStillinger"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="34308208-e807-4074-862b-a1041d16d4e9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="58d25c40-7671-4633-9a84-1e0ade27eb34">
+                <propertyInstance
+                  Id="d94c672c-dbcc-413d-9128-85d0e1016314"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5606c135-3b32-4feb-916e-56b49198bb99">
+                <propertyInstance
+                  Id="98453452-5306-4f51-b9e6-d4c43ea4e442"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="95e85c03-9b72-4940-b62f-61965eb5dce2">
+                <propertyInstance
+                  Id="b4ef39d8-69f4-4f65-ba55-59e2a620c99a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="56d37a19-ada6-4c4e-b3fc-12198ebb2df4">
+                <propertyInstance
+                  Id="34a5ea47-f441-40c6-8a96-aa54627b18b8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="746df844-d62d-4efd-8b6b-97777784ebbb">
+                <propertyInstance
+                  Id="ceca2210-6ebb-487e-944e-85a38e356d4f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

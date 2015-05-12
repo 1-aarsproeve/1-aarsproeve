@@ -20,6 +20,47 @@
               LastKnownLocation="Package1_1208.uml" />
           </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="de116955-851f-4593-b0aa-f8859de8be86"
+            isDerived="false"
+            sourceEndRoleName="VagtHandler"
+            targetEndRoleName="VagtplanViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="00e0a4c0-df76-4395-9531-acd74228ec16"
+              LastKnownName="VagtplanViewModel"
+              LastKnownLocation="Package_1206.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="84e5bf68-1205-48b4-b254-afa5d6917e48"
+                  name="VagtHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="08cf2ce8-14ac-4a94-aac5-85a78db0be65"
+                  name="VagtplanViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="35fe4e86-3606-44c6-8496-7d1b2498cf00"
@@ -64,6 +105,47 @@
               LastKnownLocation="Package1_1208.uml" />
           </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="6f6384ff-b5ff-491d-ba98-7dc71ae93788"
+            isDerived="false"
+            sourceEndRoleName="HovedHandler"
+            targetEndRoleName="HovedViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2dbedc47-cc83-4a71-8064-058414ae393d"
+              LastKnownName="HovedViewModel"
+              LastKnownLocation="Package_1206.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eca697a0-4413-41fe-8ab0-82f572c31b4c"
+                  name="HovedHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="01d83d63-fc8d-4751-86d7-f265c79f50d3"
+                  name="HovedViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="8225488c-c488-45af-80bf-2d6df7654daf"
@@ -92,6 +174,47 @@
               LastKnownLocation="Package1_1208.uml" />
           </dependency>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="f03dde35-84b9-4e2a-b118-048914bc4e99"
+            isDerived="false"
+            sourceEndRoleName="BrugerHandler"
+            targetEndRoleName="BrugerViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2e8faa2a-4c01-46c0-ac66-b329a88a20e7"
+              LastKnownName="BrugerViewModel"
+              LastKnownLocation="Package_1206.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a29c21fc-263b-49d0-b8fb-4c100dcbd78d"
+                  name="BrugerHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b5886614-61e4-48c2-b5fc-26ac234b0754"
+                  name="BrugerViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperationsInternal>
           <operation
             Id="3a29f6cf-8cd3-44c5-b463-ca9106717c13"
@@ -103,7 +226,7 @@
             isQuery="false" />
           <operation
             Id="48961735-905f-4890-98b2-b7487e3f96ec"
-            name="GemProfil"
+            name="RedigerBruger"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
