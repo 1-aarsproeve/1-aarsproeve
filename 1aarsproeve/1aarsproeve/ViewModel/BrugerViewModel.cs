@@ -48,12 +48,10 @@ namespace _1aarsproeve.ViewModel
             get { return _brugernavn; }
             set { _brugernavn = value; }
         }
-
         /// <summary>
         /// Bruger
         /// </summary>
         public BrugerHandler BrugerHandler { get; set; }
-
         /// <summary>
         /// Get til klienten til forbindelsen til databasen
         /// </summary
@@ -61,7 +59,6 @@ namespace _1aarsproeve.ViewModel
         {
             get { return _client; }
         }
-
         /// <summary>
         /// Password property
         /// </summary>

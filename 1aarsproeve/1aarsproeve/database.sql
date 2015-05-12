@@ -54,7 +54,10 @@ CREATE TABLE [dbo].[Vagter] (
     CONSTRAINT [FK_Vagter_Ansatte] FOREIGN KEY ([Brugernavn]) REFERENCES [dbo].[Ansatte] ([Brugernavn])
 );
 /* Indsætter i Vagter-tabel */
-INSERT INTO Vagter VALUES ('10:00', '16:00', 18, 1, 'Daniel');
+INSERT INTO Vagter VALUES ('10:00', '16:00', 20, 1, 'Daniel');
+INSERT INTO Vagter VALUES ('16:00', '21:00', 20, 2, 'Daniel');
+INSERT INTO Vagter VALUES ('08:00', '12:00', 20, 3, 'Ubemandet');
+INSERT INTO Vagter VALUES ('07:00', '15:00', 20, 4, 'Daniel');
 
 /* Opretter Beskeder-tabel */
 CREATE TABLE [dbo].[Beskeder] (
