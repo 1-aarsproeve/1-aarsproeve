@@ -300,7 +300,7 @@ namespace _1aarsproeve.ViewModel
         {
             get
             {
-                _logudCommand = new RelayCommand(LogUd);
+                _logudCommand = new RelayCommand(HjaelpeKlasse.LogUd);
                 return _logudCommand;
             }
             set { _logudCommand = value; }
@@ -354,20 +354,12 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public Ansatte Ansat { get; set; }
         /// <summary>
-        /// StillingId property
-        /// </summary>
-        public int StillingsId { get; set; }
-        /// <summary>
-        /// Property til at skjule knapper
-        /// </summary>
-        public Visibility SkjulKnap { get; set; }/// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
         public VagtplanViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            StillingsId = (int)Setting.Values["StillingId"];
 
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
 
@@ -414,9 +406,7 @@ namespace _1aarsproeve.ViewModel
             }
             _sorting = AlleVagter;
 
-            SkjulKnap = new Visibility();
-
-            Stilling();
+            HjaelpeKlasse.Stilling();
         }
 
         #region Sort vagter
@@ -834,27 +824,6 @@ namespace _1aarsproeve.ViewModel
             }
         }
         #endregion
-        /// <summary>
-        /// Logger brugeren ud
-        /// </summary>
-        public void LogUd()
-        {
-            Setting.Values.Remove("Brugernavn");
-            Setting.Values.Remove("StillingId");
-
-            var rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(Login));
-        }
-        /// <summary>
-        /// Collapser knapper alt efter stilling
-        /// </summary>
-        public void Stilling()
-        {
-            if (StillingsId != 1)
-            {
-                SkjulKnap = Visibility.Collapsed;
-            }
-        }
 
         #region Properties
 

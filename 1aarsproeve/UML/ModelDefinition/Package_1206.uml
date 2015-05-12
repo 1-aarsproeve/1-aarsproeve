@@ -463,14 +463,6 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="f696e467-2412-4afd-b1c9-b5cd66eb6557"
-            name="LogUd"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="4148db65-2de5-422b-8a90-d29fe3383a63"
             name="AabenForbindelse"
             visibility="Private"
@@ -738,61 +730,7 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="10829db4-33c5-41f7-8f94-2ec756b8c6fa"
-            name="SkjulKnap"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="dfde202c-2247-4b77-882f-063e00a84fc6"
-                LastKnownName="Visibility"
-                LastKnownLocation="Package_1206.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="376e2988-5c7f-40c3-9859-9906f7691827"
-            name="StillingsId"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
-                LastKnownName="int"
-                LastKnownLocation="Package_1207.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="a31bdacf-5251-48c5-97a1-39aa99182111"
-            name="LogUd"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="35f49cb5-613a-44f7-a459-e5ba0a90e0fd"
-            name="Stilling"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1710,24 +1648,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="e1038694-9f1d-4074-9627-55706001582d"
-            name="SkjulKnap"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="dfde202c-2247-4b77-882f-063e00a84fc6"
-                LastKnownName="Visibility"
-                LastKnownLocation="Package_1206.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="27c997a5-6184-456f-9340-dcbb2acb4453"
             name="RedigerVagtCommand"
             isLeaf="false"
@@ -1871,24 +1791,6 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="84727bbb-490f-427a-a8a1-700f70748f96"
-            name="StillingsId"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
-                LastKnownName="int"
-                LastKnownLocation="Package_1207.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1964,14 +1866,6 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation
-            Id="6b83c9b8-ea50-4689-aa09-68ecb41efaf1"
-            name="LogUd"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
           <operation
             Id="bbeaefba-15de-40b8-a7d7-c306139703eb"
             name="ForrigeUge"
@@ -2074,14 +1968,6 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation
-            Id="5f30fd2a-0064-40d6-a3ce-d6a5160c0e34"
-            name="Stilling"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
           <operation
             Id="768a9228-a6b7-49e8-845d-d1d770cccaf5"
             name="ClearVagterCollections"

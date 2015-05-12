@@ -25,6 +25,7 @@ namespace _1aarsproeve.ViewModel
     public class HovedViewModel
     {
         private ICommand _skrivBeskedCommand;
+        private ICommand _logUdCommand;
         private GeneriskSingleton<HovedmenuView> _beskedCollection = GeneriskSingleton<HovedmenuView>.Instance();
         /// <summary>
         /// Singleton vagtcollection
@@ -45,11 +46,17 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Logger brugeren ud
         /// </summary>
-        public ICommand LogUdCommand { get; set; }
-        /// <summary>
-        /// Property til at skjule knapper
-        /// </summary>
-        public Visibility SkjulKnap { get; set; }
+        public ICommand LogUdCommand
+        {
+            get
+            {
+                if (_logUdCommand == null)
+                    _logUdCommand = new RelayCommand(HjaelpeKlasse.LogUd);
+                return _logUdCommand;
+            }
+            set { _logUdCommand = value; }
+        }
+
         /// <summary>
         /// Hovedhandler property
         /// </summary>
@@ -58,10 +65,7 @@ namespace _1aarsproeve.ViewModel
         /// HovedmenuView property
         /// </summary>
         public HovedmenuView HovedmenuView { get; set; }
-        /// <summary>
-        /// StillingId property
-        /// </summary>
-        public int StillingsId { get; set; }
+
         /// <summary>
         /// Constructor for HovedViewModel
         /// </summary>
@@ -69,7 +73,6 @@ namespace _1aarsproeve.ViewModel
         {
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            StillingsId = (int)Setting.Values["StillingId"];
 
             BeskedCollection.Clear();
             var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
@@ -78,11 +81,7 @@ namespace _1aarsproeve.ViewModel
                 BeskedCollection.Add(item);
             }
             
-            SkjulKnap = new Visibility();
-
-            Stilling();
-
-            LogUdCommand = new RelayCommand(LogUd);
+            HjaelpeKlasse.Stilling();
             HovedmenuView = new HovedmenuView();
             HovedHandler = new HovedHandler(this);
         }
@@ -99,26 +98,6 @@ namespace _1aarsproeve.ViewModel
             }
             set { _skrivBeskedCommand = value; }
         }
-        /// <summary>
-        /// Logger brugeren ud
-        /// </summary>
-        public void LogUd()
-        {
-            Setting.Values.Remove("Brugernavn");
-            Setting.Values.Remove("StillingId");
 
-            var rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(Login));
-        }
-        /// <summary>
-        /// Collapser knapper alt efter stilling
-        /// </summary>
-        public void Stilling()
-        {
-            if (StillingsId != 1)
-            {
-                SkjulKnap = Visibility.Collapsed;
-            }
-        }
     }
 }

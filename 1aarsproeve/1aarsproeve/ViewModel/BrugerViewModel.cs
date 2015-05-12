@@ -111,7 +111,7 @@ namespace _1aarsproeve.ViewModel
             {
                 if (_logudCommand == null)
                 {
-                    _logudCommand = new RelayCommand(LogUd);
+                    _logudCommand = new RelayCommand(HjaelpeKlasse.LogUd);
                 }
                 return _logudCommand;
             }
@@ -243,20 +243,6 @@ namespace _1aarsproeve.ViewModel
                 MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
                 m.ShowAsync();
             }
-        }
-
-        /// <summary>
-        /// Logger brugeren ud
-        /// </summary>
-        public void LogUd()
-        {
-            //AnsatteCollection.Clear();
-            Setting.Values.Remove("Brugernavn");
-            Setting.Values.Remove("StillingId");
-
-            var rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(Login));
-
         }
     }
 }

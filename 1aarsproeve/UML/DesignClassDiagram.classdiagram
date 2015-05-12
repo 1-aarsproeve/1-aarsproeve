@@ -337,9 +337,6 @@
                 <operation Id="67aa904b-5f75-42eb-be14-bed5e9ec18bb" name="LogInd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="d837a3c9-c999-4134-b8a1-a534976bb103" />
                 </operation>
-                <operation Id="cabb33bf-60b0-49db-b45c-6b70c46fa156" name="LogUd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="f696e467-2412-4afd-b1c9-b5cd66eb6557" />
-                </operation>
                 <operation Id="8641cb78-86a5-4179-8ed2-f5ded5dd7231" name="AabenForbindelse" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="4148db65-2de5-422b-8a90-d29fe3383a63" />
                 </operation>
@@ -430,27 +427,7 @@
                     <referencedTypeMoniker Id="3a3df03d-298d-4ece-9c40-aaf02c6a5bdc" LastKnownName="ObservableCollection&lt;HovedmenuView&gt;" />
                   </type_NamedElement>
                 </property>
-                <property Id="a35c84b4-014c-4b7b-8886-e379152dc455" name="SkjulKnap" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="10829db4-33c5-41f7-8f94-2ec756b8c6fa" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="b0ca9c7e-689c-44a2-b443-6514f69d3a9d" LastKnownName="Visibility" />
-                  </type_NamedElement>
-                </property>
-                <property Id="d6a73703-125f-44b5-8bf0-60cd7d3b49b0" name="StillingsId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="376e2988-5c7f-40c3-9859-9906f7691827" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
-                  </type_NamedElement>
-                </property>
               </ownedAttributesInternal>
-              <ownedOperationsInternal>
-                <operation Id="b562b8c5-2a97-4478-abd7-6c2f21a15cdb" name="LogUd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="a31bdacf-5251-48c5-97a1-39aa99182111" />
-                </operation>
-                <operation Id="13316366-8319-4e7a-ad73-e304f38559ef" name="Stilling" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="35f49cb5-613a-44f7-a459-e5ba0a90e0fd" />
-                </operation>
-              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -749,12 +726,6 @@
                     <referencedTypeMoniker Id="433723bc-96f8-4c12-85f0-f060ffb73516" LastKnownName="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;" />
                   </type_NamedElement>
                 </property>
-                <property Id="37b0a271-936d-4733-bb3a-f2cac0fced19" name="SkjulKnap" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e1038694-9f1d-4074-9627-55706001582d" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="b0ca9c7e-689c-44a2-b443-6514f69d3a9d" LastKnownName="Visibility" />
-                  </type_NamedElement>
-                </property>
                 <property Id="7b61ffda-a60f-40a9-83da-f2cdfcab3c64" name="RedigerVagtCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="27c997a5-6184-456f-9340-dcbb2acb4453" />
                   <type_NamedElement>
@@ -803,12 +774,6 @@
                     <referencedTypeMoniker Id="2a7d9a60-eb63-42ec-b579-9bccefd3abc5" LastKnownName="VagtplanView" />
                   </type_NamedElement>
                 </property>
-                <property Id="fb6f252d-8ed0-4d16-b2fa-c343b32b3250" name="StillingsId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="84727bbb-490f-427a-a8a1-700f70748f96" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
-                  </type_NamedElement>
-                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="bada808a-7be1-49ce-a091-63693f0cf9b4" name="NuvaerendeUgedag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -853,9 +818,6 @@
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
-                </operation>
-                <operation Id="c8ca86c9-75e5-405a-bcf3-4f5bb404dec3" name="LogUd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="6b83c9b8-ea50-4689-aa09-68ecb41efaf1" />
                 </operation>
                 <operation Id="df880d31-e896-42c7-bbd5-354483c12848" name="ForrigeUge" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="bbeaefba-15de-40b8-a7d7-c306139703eb" />
@@ -904,9 +866,6 @@
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
-                </operation>
-                <operation Id="f77f1e9b-566b-49b5-975d-8f73445804d7" name="Stilling" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="5f30fd2a-0064-40d6-a3ce-d6a5160c0e34" />
                 </operation>
                 <operation Id="7a7c4433-222c-436e-b0b2-ed83ee4223be" name="ClearVagterCollections" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="768a9228-a6b7-49e8-845d-d1d770cccaf5" />
@@ -1979,6 +1938,39 @@
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="b9dd3342-a77a-4fb8-8324-683f06cd41ac" name="HjaelpeKlasse" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="f01da2a2-e4e2-4872-b362-44093888fae1" />
+              <ownedAttributesInternal>
+                <property Id="421ac904-8214-4ac8-8ea6-f8b789491522" name="Setting" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="824c52ff-55bf-4c74-83d3-1fcbc27f67fa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a31d9e59-ab5a-4709-a174-28d14daf168d" LastKnownName="ApplicationDataContainer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="e7601687-6a36-45b5-b0aa-60b2227ddc65" name="StillingsId" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="208e4f37-f13f-4bcf-8ee9-3e54c7b9c0d4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5dbd4733-2a0f-464a-b4a1-c3d51e5daa1d" name="SkjulKnap" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f4906772-9be9-4d8f-9a0a-892150eb736a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b0ca9c7e-689c-44a2-b443-6514f69d3a9d" LastKnownName="Visibility" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="2578f372-27e6-473c-a8e1-0f1b69dcb4c3" name="LogUd" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b93085c6-2fb7-41a2-a0df-33e08c47d3d9" />
+                </operation>
+                <operation Id="d6d2f71e-0390-4f8f-9281-6040f5dba661" name="Stilling" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="19c81f07-67c3-47d4-8064-8b270d5eeea8" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
         </packagedElements>
