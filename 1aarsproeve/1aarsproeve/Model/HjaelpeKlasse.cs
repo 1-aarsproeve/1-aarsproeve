@@ -14,8 +14,7 @@ namespace _1aarsproeve.Model
     /// Hjælpeklasse indeholdende statiske metoder
     /// </summary>
     public class HjaelpeKlasse
-    {
-        
+    {       
         private static ApplicationDataContainer Setting { get; set; }
 
         public HjaelpeKlasse()
@@ -36,13 +35,11 @@ namespace _1aarsproeve.Model
         /// </summary>
         public static void LogUd()
         {
-            //AnsatteCollection.Clear();
             Setting.Values.Remove("Brugernavn");
             Setting.Values.Remove("StillingId");
 
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Login));
-
         }
         /// <summary>
         /// Collapser knapper alt efter stilling

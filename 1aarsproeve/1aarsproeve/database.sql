@@ -40,7 +40,10 @@ CREATE TABLE [dbo].[Ansatte] (
 );
 /* Indsætter i Ansatte-tabel */
 INSERT INTO Ansatte VALUES ('Daniel', 'Daniel Winther', '123456', 'daniel@hotmail.dk', '88888888', 'Degnestavnen 99', '2400', 1);
-INSERT INTO Ansatte VALUES ('Ubemandet', 'Ubemandet', '123456', 'daniel@hotmail.dk', '88888888', 'Degnestavnen 99', '2400', 1);
+INSERT INTO Ansatte VALUES ('Jari', 'Jari Larsen', '123456', 'jari@hotmail.dk', '88888888', 'Roskildevej 69', '4000', 2);
+INSERT INTO Ansatte VALUES ('Jacob', 'Jacob Balling', '123456', 'jacob@hotmail.dk', '88888888', 'Skelbækvej 79', '3650', 3);
+INSERT INTO Ansatte VALUES ('Benjamin', 'Benjamin Jensen', '123456', 'benjamin@hotmail.dk', '88888888', 'Enghavevej 44', '3500', 4);
+INSERT INTO Ansatte VALUES ('Ubemandet', 'Ubemandet', '123456', 'infol@fakta.dk', '88888888', 'Jyderupvej 27', '2400', 1);
 
 /* Opretter Vagter-tabel */
 CREATE TABLE [dbo].[Vagter] (
@@ -56,9 +59,10 @@ CREATE TABLE [dbo].[Vagter] (
 );
 /* Indsætter i Vagter-tabel */
 INSERT INTO Vagter VALUES ('10:00', '16:00', 20, 1, 'Daniel');
-INSERT INTO Vagter VALUES ('16:00', '21:00', 20, 2, 'Daniel');
+INSERT INTO Vagter VALUES ('16:00', '21:00', 20, 2, 'Benjamin');
 INSERT INTO Vagter VALUES ('08:00', '12:00', 20, 3, 'Ubemandet');
-INSERT INTO Vagter VALUES ('07:00', '15:00', 20, 4, 'Daniel');
+INSERT INTO Vagter VALUES ('07:00', '15:00', 20, 4, 'Jacob');
+INSERT INTO Vagter VALUES ('07:00', '23:00', 20, 6, 'Jari');
 
 /* Opretter Beskeder-tabel */
 CREATE TABLE [dbo].[Beskeder] (

@@ -173,7 +173,6 @@ namespace _1aarsproeve.ViewModel
             {
                 StillingerListe.Add(itemStillinger);
             }
-
             Ansat = new Ansatte();
             BrugerHandler = new BrugerHandler(this);
         }
@@ -225,6 +224,7 @@ namespace _1aarsproeve.ViewModel
                     Setting.Values["StillingId"] = AnsatteCollection[0].StillingId;
                     var rootFrame = Window.Current.Content as Frame;
                     rootFrame.Navigate(typeof(Hovedmenu));
+
                 }
                 else
                 {
