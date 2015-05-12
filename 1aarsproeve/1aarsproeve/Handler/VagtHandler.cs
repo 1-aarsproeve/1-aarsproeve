@@ -48,7 +48,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void RedigerVagt()
         {
-            PersistensFacade<Vagter>.RedigerDB("api/Vagters", new Vagter() { VagtId = 3, Starttidspunkt = VagtplanViewModel.Starttidspunkt, Sluttidspunkt = VagtplanViewModel.Sluttidspunkt, Ugenummer = VagtplanViewModel.Ugenumre, UgedagId = VagtplanViewModel.Ugedag.UgedagId, Brugernavn = "Daniel" }, id: 3);
+            PersistensFacade<Vagter>.RedigerDB("api/Vagters", new Vagter() { VagtId = 3, Starttidspunkt = VagtplanViewModel.Starttidspunkt, Sluttidspunkt = VagtplanViewModel.Sluttidspunkt, Ugenummer = VagtplanViewModel.Ugenumre, UgedagId = VagtplanViewModel.Ugedag.UgedagId, Brugernavn = VagtplanViewModel.Ansat.Brugernavn }, id: 3);
 
             MessageDialog m = new MessageDialog("Vagten blev redigeret", "Succes!");
             m.ShowAsync();

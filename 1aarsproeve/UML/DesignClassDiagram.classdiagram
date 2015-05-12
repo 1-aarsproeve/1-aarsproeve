@@ -2050,8 +2050,40 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="94a86d8d-ce4e-4880-9efe-a5da5e2748fd" name="RedigerDB(string api, object objekt, int id = 0, string brugernavn = null" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="94a86d8d-ce4e-4880-9efe-a5da5e2748fd" name="RedigerDB" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="47f323d5-2c32-40a6-b928-ecd68408adb0" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="6f31beb7-20b5-416c-917b-9db3925e1f93" name="string api" direction="In" isUnique="false">
+                        <elementDefinition Id="7c938997-46c3-4675-8fb5-a6d66a6fc6eb" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0a6a6d7d-4149-4eb1-9c16-7bc07084c8bc" name="object objekt" direction="In" isUnique="false">
+                        <elementDefinition Id="1aa186a5-add4-4b12-8565-03b248d62ecf" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1c792b16-e169-4c93-8e06-e73901900395" name="int id" direction="In" isUnique="false">
+                        <elementDefinition Id="227c9025-7bf9-4306-aaf9-f330db577ddb" />
+                        <defaultValue>
+                          <literalString Id="9f74bd43-0cf6-4d78-abac-bf1212107cbd" name="DefaultValue" value="0">
+                            <elementDefinition Id="c4c35d18-1fde-41ec-98fa-073b096e7fb5" />
+                          </literalString>
+                        </defaultValue>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5e6e3656-8598-4d01-ac74-9a47a142a025" name="string streng" direction="In" isUnique="false">
+                        <elementDefinition Id="e9d2e860-2497-49b0-ba23-9674d18fc1aa" />
+                        <defaultValue>
+                          <literalString Id="5c6aeac5-e836-4eef-9900-66a02524ea2f" name="DefaultValue" value="null">
+                            <elementDefinition Id="6c17f6c7-895e-4931-acd4-c07892d3b5e6" />
+                          </literalString>
+                        </defaultValue>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>
