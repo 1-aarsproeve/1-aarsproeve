@@ -404,5 +404,13 @@
         </targetEnds>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d0b27080-4aab-4d95-aac9-76a1c6e4d57c"
+        name="Splash"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -151,6 +151,9 @@
     <Compile Include="View\SkrivBesked.xaml.cs">
       <DependentUpon>SkrivBesked.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Vagtplan.xaml.cs">
       <DependentUpon>Vagtplan.xaml</DependentUpon>
     </Compile>
@@ -205,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SkrivBesked.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Splash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

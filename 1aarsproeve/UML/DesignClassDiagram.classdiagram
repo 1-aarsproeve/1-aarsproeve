@@ -189,6 +189,11 @@
               </targetEnds>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="dfca1ec2-a10e-4af1-88b6-b0b905d78bc6" name="Splash" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d0b27080-4aab-4d95-aac9-76a1c6e4d57c" />
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
