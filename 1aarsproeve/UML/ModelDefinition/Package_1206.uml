@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="b2da44f7-40e8-45c5-974d-958870fdf62d"
   name="ViewModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -164,84 +164,6 @@
                 <memberEnd
                   Id="aa761a02-cd9b-4b18-aa19-553b00b5b8e9"
                   name="AnsatteView"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="0cce9b01-aac5-4261-9302-65e8f4e482e1"
-            isDerived="false"
-            sourceEndRoleName="BrugerViewModel"
-            targetEndRoleName="Ansatte"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="b6535741-f133-4633-a099-890f8e64ecea"
-              LastKnownName="Ansatte"
-              LastKnownLocation="Package_1207.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7c2e5002-ea88-449e-9133-ed31d9aebe2a"
-                  name="BrugerViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="58b9ce70-9214-4fc2-86d6-9eff24430607"
-                  name="Ansatte"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="43aba8ef-7f1d-43b6-9b72-7ec1b7eeacfa"
-            isDerived="false"
-            sourceEndRoleName="BrugerViewModel"
-            targetEndRoleName="Stillinger"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="40133f20-60eb-428f-a2ef-24a49031b4da"
-              LastKnownName="Stillinger"
-              LastKnownLocation="Package_1207.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="735eea48-73e1-471c-8b27-4cc91590284d"
-                  name="BrugerViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="3cc96693-450f-4830-8fe0-66297cc186b7"
-                  name="Stillinger"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -599,45 +521,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="084f96ec-4bbc-45bd-97d5-4015ecff4556"
-            isDerived="false"
-            sourceEndRoleName="HovedViewModel"
-            targetEndRoleName="HovedmenuView"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="bdd63659-386b-4195-b53a-163405f925f2"
-              LastKnownName="HovedmenuView"
-              LastKnownLocation="Package_1207.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c5cc6036-38a6-46a3-b74e-a2071ce6557f"
-                  name="HovedViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c7b9112b-ed8c-4b79-ad2d-1576ccf44a40"
-                  name="HovedmenuView"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -727,6 +610,24 @@
               <undefinedTypeMoniker
                 Id="1d596d0a-b3ef-4867-9caa-e6f7b13183f2"
                 LastKnownName="ObservableCollection&lt;HovedmenuView&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1d7261e1-5bdc-4759-8b09-1d94ede81fd9"
+            name="SkjulKnap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="dfde202c-2247-4b77-882f-063e00a84fc6"
+                LastKnownName="Visibility"
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
@@ -1788,6 +1689,24 @@
               <undefinedTypeMoniker
                 Id="8d07e2a0-3422-4856-b85e-f645ac646bc0"
                 LastKnownName="VagtplanView"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d010534f-11b7-4878-a607-808f0576e0f2"
+            name="SkjulKnap"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="dfde202c-2247-4b77-882f-063e00a84fc6"
+                LastKnownName="Visibility"
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>

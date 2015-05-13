@@ -59,8 +59,8 @@
         </Grid>
         <Grid Margin="300 40" Grid.Row="1">
             <StackPanel Margin="100 0">
-                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding HovedmenuView.Overskrift, Mode=TwoWay}"  PlaceholderText="Overskrift"/>
-                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding HovedmenuView.Beskrivelse, Mode=TwoWay}" Height="200" PlaceholderText="Beskrivelse"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding HovedHandler.Overskrift, Mode=TwoWay}"  PlaceholderText="Overskrift"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding HovedHandler.Beskrivelse, Mode=TwoWay}" Height="200" PlaceholderText="Beskrivelse"/>
                 <Button Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Skriv besked" Command="{Binding SkrivBeskedCommand}"/>
             </StackPanel>
         </Grid>

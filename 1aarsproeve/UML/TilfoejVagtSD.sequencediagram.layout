@@ -37,14 +37,14 @@
       </nodes>
     </asyncMessageConnector>
     <lifelineShape Id="204cf6be-a119-4b32-bb2b-661dca5b1546" absoluteBounds="5.5546875, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": Vagter" />
+      <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": VagtplanView" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="e9749d68-6587-4873-969a-ea6c516e2905" absoluteBounds="5.1296875, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": Vagter" />
+        <umlLifelineHeadShape Id="e9749d68-6587-4873-969a-ea6c516e2905" absoluteBounds="5.0710019183158872, 0.6, 1.1173711633682251, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": VagtplanView" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="ba34dac4-33db-43e8-a84e-f5026c2ca6e7" absoluteBounds="5.5546875, 1, 0, 7">
-          <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": Vagter" />
+          <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": VagtplanView" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="8e2c58ba-a0e4-4907-86af-7162400b14a7" absoluteBounds="5.5546875, 1.6, 0.15, 0.55000000000000027" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="1e5cdf3d-3446-41d4-aa3d-d7775cfbde3a" LastKnownName="BehaviorExecutionSpecification4" />

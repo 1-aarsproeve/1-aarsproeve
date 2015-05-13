@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,8 @@ namespace _1aarsproeve.Handler
     /// </summary>
     public class HovedHandler
     {
+        public string Overskrift { get; set; }
+        public string Beskrivelse { get; set; }
         /// <summary>
         /// HovedViewModel property
         /// </summary>
@@ -36,10 +39,38 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void SkrivBesked()
         {
-            PersistensFacade<HovedmenuView>.GemDB("api/Beskeders", new HovedmenuView() {Overskrift = HovedViewModel.HovedmenuView.Overskrift, Dato = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse = HovedViewModel.HovedmenuView.Beskrivelse, Udloebsdato = new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), Brugernavn = HovedViewModel.Brugernavn});
+            MessageDialog m = new MessageDialog("", "Fejl!");
+            try
+            {
+                HovedmenuView.CheckOverskrift(Overskrift);
+            }
+            catch (Exception)
+            {
+                m.Content += "Overskrift er forkert!\n";
+            }
+            try
+            {
+                HovedmenuView.CheckBeskrivelse(Beskrivelse);
+            }
+            catch (Exception)
+            {
+                m.Content += "Beskrivelse er forkert!\n";
+            }
+            if (m.Content != "")
+            {
+                m.ShowAsync();
+            }
+            else
+            {
+                PersistensFacade<HovedmenuView>.GemDB("api/Beskeders", new HovedmenuView(Overskrift, new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse, new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), HovedViewModel.Brugernavn));
 
-            MessageDialog m = new MessageDialog("Beskeden blev oprettet", "Succes!");
-            m.ShowAsync();
+                var rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(Hovedmenu));
+
+                MessageDialog me = new MessageDialog("Beskeden blev oprettet", "Succes!");
+                me.ShowAsync();
+            }
+
         }
     }
 }

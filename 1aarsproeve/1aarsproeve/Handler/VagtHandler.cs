@@ -17,6 +17,11 @@ namespace _1aarsproeve.Handler
     /// </summary>
     public class VagtHandler
     {
+        public TimeSpan Starttidspunkt { get; set; }
+        public TimeSpan Sluttidspunkt { get; set; }
+        public int Ugenummer { get; set; }
+        public Ugedage Ugedag { get; set; }
+        public Ansatte Ansat { get; set; }
         /// <summary>
         /// VagtplanViewModel property
         /// </summary>
@@ -30,16 +35,6 @@ namespace _1aarsproeve.Handler
             VagtplanViewModel = vagtplanViewModel;
         }
         /// <summary>
-        /// Opretter ny vagt
-        /// </summary>
-        public void OpretVagt()
-        {
-            PersistensFacade<VagtplanView>.GemDB("api/Vagters", new VagtplanView(VagtplanViewModel.VagtplanView.Starttidspunkt, VagtplanViewModel.VagtplanView.Sluttidspunkt, VagtplanViewModel.VagtplanView.Ugenummer, VagtplanViewModel.Ugedag.UgedagId, VagtplanViewModel.Ansat.Brugernavn));
-
-            MessageDialog m = new MessageDialog("Vagten blev tilføjet", "Succes!");
-            m.ShowAsync();
-        }
-        /// <summary>
         /// Set valgte vagt
         /// </summary>
         /// <param name="v">Tager VagtplanView som objekt</param>
@@ -48,24 +43,83 @@ namespace _1aarsproeve.Handler
             VagtplanViewModel.SelectedVagter = v;
         }
         /// <summary>
+        /// Opretter ny vagt
+        /// </summary>
+        public void OpretVagt()
+        {
+            MessageDialog m = new MessageDialog("", "Fejl!");
+            if (Ansat == null)
+            {
+                m.Content += "Vælg en ansat\n";
+            }
+            if (Ugenummer == 0)
+            {
+                m.Content += "Vælg ugenummer\n";
+            }
+            if (Ugedag == null)
+            {
+                m.Content += "Vælg en ugedag\n";
+            }
+            if (m.Content != "")
+            {
+                m.ShowAsync();
+            }
+            else
+            {
+                PersistensFacade<VagtplanView>.GemDB("api/Vagters", new VagtplanView(Starttidspunkt, Sluttidspunkt, Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn));
+
+                MessageDialog me = new MessageDialog("Vagten blev tilføjet", "Succes!");
+                me.ShowAsync();
+            }
+
+        }
+        /// <summary>
         /// Redigere i eksisterende vagt
         /// </summary>
         public void RedigerVagt()
         {
-            PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.VagtplanView.Starttidspunkt, VagtplanViewModel.VagtplanView.Sluttidspunkt, VagtplanViewModel.VagtplanView.Ugenummer, VagtplanViewModel.Ugedag.UgedagId, VagtplanViewModel.Ansat.Brugernavn), id: VagtplanViewModel.SelectedVagter.VagtId);
+            MessageDialog m = new MessageDialog("", "Fejl!");
+            if (Ansat == null)
+            {
+                m.Content += "Vælg en ansat\n";
+            }
+            if (Ugenummer == 0)
+            {
+                m.Content += "Vælg ugenummer\n";
+            }
+            if (Ugedag == null)
+            {
+                m.Content += "Vælg en ugedag\n";
+            }
+            if (m.Content != "")
+            {
+                m.ShowAsync();
+            }
+            else
+            {
+                PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(VagtplanViewModel.SelectedVagter.VagtId, Starttidspunkt, Sluttidspunkt, Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn), id: VagtplanViewModel.SelectedVagter.VagtId);
 
-            MessageDialog m = new MessageDialog("Vagten blev redigeret", "Succes!");
-            m.ShowAsync();
+                MessageDialog me = new MessageDialog("Vagten blev redigeret", "Succes!");
+                me.ShowAsync();
+            }
         }
         /// <summary>
         /// Sletter valgte vagt
         /// </summary>
         public async void SletVagt()
         {
-            PersistensFacade<VagtplanView>.SletDB("api/Vagters", VagtplanViewModel.SelectedVagter.VagtId);
-            
-            VagtplanViewModel.ClearVagterCollections();
-            VagtplanViewModel.InitialiserVagter();
+            if (VagtplanViewModel.SelectedVagter == null)
+            {
+                MessageDialog m = new MessageDialog("Vælg en vagt der skal slettes", "Fejl!");
+                m.ShowAsync();
+            }
+            else
+            {
+                PersistensFacade<VagtplanView>.SletDB("api/Vagters", VagtplanViewModel.SelectedVagter.VagtId);
+
+                VagtplanViewModel.ClearVagterCollections();
+                VagtplanViewModel.InitialiserVagter();
+            }
         }
     }
 }

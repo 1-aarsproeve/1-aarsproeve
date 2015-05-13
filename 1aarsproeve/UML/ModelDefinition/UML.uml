@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2118,7 +2118,7 @@
     <packageHasNamedElement>
       <interaction
         Id="bacd9a27-15e7-44a7-948d-e74ce27fb9d1"
-        name="TilfoejFjernRedigerVagter"
+        name="SkriveFaellesbeskeder"
         collapseFragmentsFlag="false"
         isActiveClass="false"
         isAbstract="false"
@@ -2722,7 +2722,7 @@
             <covered>
               <lifelineMoniker
                 Id="effa1260-eb06-4fac-b49b-7030491a8f1e"
-                LastKnownName="Bruger"
+                LastKnownName=": VagtplanViewModel"
                 LastKnownLocation="UML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2742,7 +2742,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagter"
+                LastKnownName=": VagtplanView"
                 LastKnownLocation="UML.uml" />
             </coveredLifelines>
             <finish>
@@ -2782,7 +2782,7 @@
             <covered>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagter"
+                LastKnownName=": VagtplanView"
                 LastKnownLocation="UML.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2802,7 +2802,7 @@
             <covered>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagter"
+                LastKnownName=": VagtplanView"
                 LastKnownLocation="UML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2822,7 +2822,7 @@
             <covered>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagter"
+                LastKnownName=": VagtplanView"
                 LastKnownLocation="UML.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2840,7 +2840,7 @@
             <covered>
               <lifelineMoniker
                 Id="8d606198-6797-427d-8421-9b80434d084b"
-                LastKnownName=": Vagter"
+                LastKnownName=": VagtplanView"
                 LastKnownLocation="UML.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -2950,14 +2950,9 @@
         <lifelines>
           <lifeline
             Id="effa1260-eb06-4fac-b49b-7030491a8f1e"
-            name="Bruger"
+            name=": VagtplanViewModel"
             isActor="true"
-            lifelineDisplayName="Bruger">
-            <represents>
-              <propertyMoniker
-                Id="6d4807c1-9215-46b6-b8e8-f3f40107fabc"
-                LastKnownLocation="UML.uml" />
-            </represents>
+            lifelineDisplayName=": VagtplanViewModel">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="43598f86-15d1-4688-b9a7-0aeafef64768"
@@ -2983,14 +2978,9 @@
           </lifeline>
           <lifeline
             Id="8d606198-6797-427d-8421-9b80434d084b"
-            name=": Vagter"
+            name=": VagtplanView"
             isActor="false"
-            lifelineDisplayName=": Vagter">
-            <represents>
-              <propertyMoniker
-                Id="8288abcc-216b-4b4b-b02b-dce0b7854d5e"
-                LastKnownLocation="UML.uml" />
-            </represents>
+            lifelineDisplayName=": VagtplanView">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="a1656977-7381-4209-89d2-8b491b88daff"
@@ -3022,7 +3012,7 @@
         <messages>
           <message
             Id="00ee00d4-92af-4757-8516-89b5b4ea6307"
-            name="OpretVagt(starttidspunkt, sluttidspunkt, ugenummer, ansat)"
+            name="OpretVagt()"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -3097,40 +3087,6 @@
             </receiveEvent>
           </message>
         </messages>
-        <ownedAttributesInternal>
-          <property
-            Id="6d4807c1-9215-46b6-b8e8-f3f40107fabc"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <actorMoniker
-                Id="82a6cbc4-25ee-46f4-b121-5638b877aa5a"
-                LastKnownName="Bruger"
-                LastKnownLocation="UML.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="8288abcc-216b-4b4b-b02b-dce0b7854d5e"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <classMoniker
-                Id="a7011201-3877-41e5-a2ee-a689b2fa0122"
-                LastKnownName="Vagter"
-                LastKnownLocation="UML.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
       </interaction>
     </packageHasNamedElement>
     <packageHasNamedElement>

@@ -14,42 +14,35 @@ namespace _1aarsproeve.Model
     /// Hjælpeklasse indeholdende statiske metoder
     /// </summary>
     public class HjaelpeKlasse
-    {       
-        private static ApplicationDataContainer Setting { get; set; }
-
-        public HjaelpeKlasse()
-        {
-            StillingsId = (int)Setting.Values["StillingId"];
-            SkjulKnap = new Visibility();
-        }
-        /// <summary>
-        /// StillingId property
-        /// </summary>
-        public static int StillingsId { get; set; }
+    {
         /// <summary>
         /// Property til at skjule knapper
         /// </summary>
         public static Visibility SkjulKnap { get; set; }
+        public HjaelpeKlasse()
+        {
+            SkjulKnap = new Visibility();
+        }
         /// <summary>
         /// Logger brugeren ud
         /// </summary>
         public static void LogUd()
         {
-            Setting.Values.Remove("Brugernavn");
-            Setting.Values.Remove("StillingId");
-
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Login));
         }
+
         /// <summary>
         /// Collapser knapper alt efter stilling
         /// </summary>
-        public static void Stilling()
+        /// <param name="stillingsId">Tager stillingsId som parameter</param>
+        public static Visibility Stilling(int stillingsId)
         {
-            if (StillingsId != 1)
+            if (stillingsId != 1)
             {
                 SkjulKnap = Visibility.Collapsed;
             }
+            return SkjulKnap;
         }
     }
 }

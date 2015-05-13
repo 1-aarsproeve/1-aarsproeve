@@ -33,6 +33,15 @@ namespace _1aarsproeve.Model
             UgedagId = ugedagId;
             Brugernavn = brugernavn;
         }
+        /// <summary>
+        /// Konstruktør med vagtId
+        /// </summary>
+        /// <param name="vagtId"></param>
+        /// <param name="starttidspunkt"></param>
+        /// <param name="sluttidspunkt"></param>
+        /// <param name="ugenummer"></param>
+        /// <param name="ugedagId"></param>
+        /// <param name="brugernavn"></param>
         public VagtplanView(int vagtId, TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)
         {
             VagtId = vagtId;

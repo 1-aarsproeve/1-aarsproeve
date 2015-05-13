@@ -25,6 +25,8 @@ namespace _1aarsproeve.ViewModel
     /// </summary>
     public class BrugerViewModel
     {
+        #region Backing fields
+
         private GeneriskSingleton<Ansatte> _ansatteSingleton = GeneriskSingleton<Ansatte>.Instance();
         private string _brugernavn;
         private string _password;
@@ -35,14 +37,14 @@ namespace _1aarsproeve.ViewModel
         private ICommand _logindCommand;
         private ICommand _logudCommand;
 
+        #endregion
+
+        #region Get Set properties
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
         public ApplicationDataContainer Setting { get; set; }
-        /// <summary>
-        /// Ansat property
-        /// </summary>
-        public Ansatte Ansat { get; set; }
+
         /// <summary>
         /// Brugernavn property
         /// </summary>
@@ -51,10 +53,12 @@ namespace _1aarsproeve.ViewModel
             get { return _brugernavn; }
             set { _brugernavn = value; }
         }
+
         /// <summary>
         /// Bruger
         /// </summary>
         public BrugerHandler BrugerHandler { get; set; }
+
         /// <summary>
         /// Get til klienten til forbindelsen til databasen
         /// </summary
@@ -62,6 +66,7 @@ namespace _1aarsproeve.ViewModel
         {
             get { return _client; }
         }
+
         /// <summary>
         /// Password property
         /// </summary>
@@ -71,6 +76,7 @@ namespace _1aarsproeve.ViewModel
             set { _password = value; }
 
         }
+
         /// <summary>
         /// AnsatteCollection property
         /// </summary>
@@ -79,6 +85,7 @@ namespace _1aarsproeve.ViewModel
             get { return _ansatteSingleton.Collection; }
             set { _ansatteSingleton.Collection = value; }
         }
+
         /// <summary>
         /// Liste med stillinger
         /// </summary>
@@ -87,6 +94,11 @@ namespace _1aarsproeve.ViewModel
             get { return _stillingerListe; }
             set { _stillingerListe = value; }
         }
+
+        #endregion
+
+        #region Commands
+
         /// <summary>
         /// Logger brugeren ind
         /// </summary>
@@ -102,6 +114,7 @@ namespace _1aarsproeve.ViewModel
             }
             set { _logindCommand = value; }
         }
+
         /// <summary>
         /// Logger brugeren ud
         /// </summary>
@@ -149,10 +162,9 @@ namespace _1aarsproeve.ViewModel
             }
             set { _redigerBrugerCommand = value; }
         }
-        /// <summary>
-        /// Stilling property
-        /// </summary>
-        public Stillinger Stilling { get; set; }
+
+        #endregion
+
         /// <summary>
         /// Konstruktør for BrugerViewModel
         /// </summary>
@@ -173,9 +185,9 @@ namespace _1aarsproeve.ViewModel
             {
                 StillingerListe.Add(itemStillinger);
             }
-            Ansat = new Ansatte();
             BrugerHandler = new BrugerHandler(this);
         }
+
         /// <summary>
         /// Åbner forbindelsen til database
         /// </summary>

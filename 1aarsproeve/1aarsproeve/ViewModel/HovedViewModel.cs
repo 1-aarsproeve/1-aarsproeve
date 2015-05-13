@@ -27,6 +27,9 @@ namespace _1aarsproeve.ViewModel
         private ICommand _skrivBeskedCommand;
         private ICommand _logUdCommand;
         private GeneriskSingleton<HovedmenuView> _beskedCollection = GeneriskSingleton<HovedmenuView>.Instance();
+
+        #region Get Set properties
+
         /// <summary>
         /// Singleton vagtcollection
         /// </summary>
@@ -35,36 +38,27 @@ namespace _1aarsproeve.ViewModel
             get { return _beskedCollection.Collection; }
             set { _beskedCollection.Collection = value; }
         }
+
         /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
         public ApplicationDataContainer Setting { get; set; }
+
         /// <summary>
         /// Brugernavn property
         /// </summary>
         public string Brugernavn { get; set; }
-        /// <summary>
-        /// Logger brugeren ud
-        /// </summary>
-        public ICommand LogUdCommand
-        {
-            get
-            {
-                if (_logUdCommand == null)
-                    _logUdCommand = new RelayCommand(HjaelpeKlasse.LogUd);
-                return _logUdCommand;
-            }
-            set { _logUdCommand = value; }
-        }
+
 
         /// <summary>
         /// Hovedhandler property
         /// </summary>
         public HovedHandler HovedHandler { get; set; }
         /// <summary>
-        /// HovedmenuView property
+        /// SkjulKnap property
         /// </summary>
-        public HovedmenuView HovedmenuView { get; set; }
+        public Visibility SkjulKnap { get; set; }
+        #endregion
 
         /// <summary>
         /// Constructor for HovedViewModel
@@ -72,7 +66,9 @@ namespace _1aarsproeve.ViewModel
         public HovedViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
+
             Brugernavn = (string)Setting.Values["Brugernavn"];
+            SkjulKnap = HjaelpeKlasse.Stilling((int)Setting.Values["StillingId"]);
 
             BeskedCollection.Clear();
             var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
@@ -80,11 +76,12 @@ namespace _1aarsproeve.ViewModel
             {
                 BeskedCollection.Add(item);
             }
-            
-            HjaelpeKlasse.Stilling();
-            HovedmenuView = new HovedmenuView();
+
             HovedHandler = new HovedHandler(this);
         }
+
+        #region Commands
+
         /// <summary>
         /// SkrivBesked command
         /// </summary>
@@ -99,5 +96,20 @@ namespace _1aarsproeve.ViewModel
             set { _skrivBeskedCommand = value; }
         }
 
+        /// <summary>
+        /// Logger brugeren ud
+        /// </summary>
+        public ICommand LogUdCommand
+        {
+            get
+            {
+                if (_logUdCommand == null)
+                    _logUdCommand = new RelayCommand(HjaelpeKlasse.LogUd);
+                return _logUdCommand;
+            }
+            set { _logUdCommand = value; }
+        }
+       
+        #endregion
     }
 }

@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="eb65e0f6-0885-4542-93e5-a80efa7431d3" name="TilfoejVagtSD" linkedPackageId="df92f145-937d-436e-841f-7797675d2fc9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="ee8be3b0-97cd-4b4e-846e-0cb981cbb6b7">
-      <profileInstance Id="61113b59-3820-496b-8171-7532d2781e35" name="CSharpProfile">
-        <elementDefinition Id="8ec30f03-3be4-4f30-9116-465333b6ee59" />
-      </profileInstance>
-      <elementDefinition Id="2069808b-ddf0-45a1-8651-0056c02892eb" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="eb65e0f6-0885-4542-93e5-a80efa7431d3" name="TilfoejVagtSD" linkedPackageId="df92f145-937d-436e-841f-7797675d2fc9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="c4a9686b-6ac9-4aef-a618-3e732d91350e" name="TilfoejVagtSD" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -57,7 +49,7 @@
           <behaviorExecutionSpecification Id="1e5cdf3d-3446-41d4-aa3d-d7775cfbde3a" name="BehaviorExecutionSpecification4">
             <elementDefinition Id="0d202150-e102-44c7-b6ae-25fbf898f0d5" />
             <coveredLifelines>
-              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": Vagter" />
+              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": VagtplanView" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="8b38174e-f597-413e-af63-2963e4110ad8" LastKnownName="ExecutionOccurrenceSpecification8" />
@@ -78,7 +70,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": Vagter" />
+              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": VagtplanView" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="38bdece6-f5fd-441b-bd73-be7c00d77d14" name="MessageOccurrenceSpecification9">
@@ -90,19 +82,19 @@
           <messageOccurrenceSpecification Id="3f7666e5-6acc-4070-afff-0da0db2659ac" name="MessageOccurrenceSpecification10">
             <elementDefinition Id="6ab0ff02-0cda-4f93-93e7-4a3982b7beb2" />
             <covered>
-              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": Vagter" />
+              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": VagtplanView" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="13a99556-cc1e-4ecb-8ec7-474e6c5dca39" name="MessageOccurrenceSpecification11">
+            <elementDefinition Id="254f879c-0cc7-4602-8a0a-8fffdb2fce86" />
+            <covered>
+              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": VagtplanView" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4d47ae61-f156-4c7f-9d44-fe826c9dfce3" name="MessageOccurrenceSpecification12">
             <elementDefinition Id="468ee44c-6c32-4286-8817-6e08369d146e" />
             <covered>
               <lifelineMoniker Id="c75c4fb8-1f07-48fe-bc4b-21ef93b03932" LastKnownName=": VagtHandler" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="13a99556-cc1e-4ecb-8ec7-474e6c5dca39" name="MessageOccurrenceSpecification11">
-            <elementDefinition Id="254f879c-0cc7-4602-8a0a-8fffdb2fce86" />
-            <covered>
-              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": Vagter" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="8b38174e-f597-413e-af63-2963e4110ad8" name="ExecutionOccurrenceSpecification8">
@@ -113,7 +105,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": Vagter" />
+              <lifelineMoniker Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" LastKnownName=": VagtplanView" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="75e55991-3dd7-4d05-ab13-557e576fc726" name="BehaviorExecutionSpecification5">
@@ -194,11 +186,8 @@
               <executionOccurrenceSpecificationMoniker Id="a4f66669-6806-4738-a7d6-0c4767049215" LastKnownName="ExecutionOccurrenceSpecification6" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" name=": Vagter" isActor="false" lifelineDisplayName=": Vagter">
+          <lifeline Id="a8688ed9-eea7-4d1c-a6f4-6e1a4b0c1e05" name=": VagtplanView" isActor="false" lifelineDisplayName=": VagtplanView">
             <elementDefinition Id="8d606198-6797-427d-8421-9b80434d084b" />
-            <represents>
-              <propertyMoniker Id="e23462cd-27c9-4b71-8615-9f2fcf83e655" />
-            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="e79aac62-285e-457a-bcdc-d8a2a915744d" LastKnownName="ExecutionOccurrenceSpecification7" />
               <executionOccurrenceSpecificationMoniker Id="8b38174e-f597-413e-af63-2963e4110ad8" LastKnownName="ExecutionOccurrenceSpecification8" />
@@ -213,7 +202,7 @@
           </lifeline>
         </lifelines>
         <messages>
-          <message Id="d0d7cddd-5fa5-4420-97fb-4a1382bca111" name="OpretVagt(starttidspunkt, sluttidspunkt, ugenummer, ansat)" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
+          <message Id="d0d7cddd-5fa5-4420-97fb-4a1382bca111" name="OpretVagt()" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
             <elementDefinition Id="00ee00d4-92af-4757-8516-89b5b4ea6307" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="051564b1-33f1-4fed-ad89-b3058f1c7062" LastKnownName="MessageOccurrenceSpecification7" />
@@ -257,12 +246,6 @@
               <referencedTypeMoniker Id="5bcb0028-8012-4f77-a2c4-e0071b44a0f3" LastKnownName="Bruger" />
             </type_NamedElement>
           </property>
-          <property Id="e23462cd-27c9-4b71-8615-9f2fcf83e655" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="8288abcc-216b-4b4b-b02b-dce0b7854d5e" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="9f6f4c50-699e-4284-8cb4-368b44f90f71" LastKnownName="Vagter" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
       </interaction>
     </packageHasNamedElement>
@@ -292,11 +275,6 @@
       </executionEvent>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="9f6f4c50-699e-4284-8cb4-368b44f90f71" name="Vagter" isAbstract="false" isLeaf="false" cachedFullName="UML::Vagter">
-        <elementDefinition Id="a7011201-3877-41e5-a2ee-a689b2fa0122" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <executionEvent Id="5c828f66-7ede-40a4-a134-71545f9b5d7e" name="ExecutionEvent">
         <elementDefinition Id="bcdeb915-6a41-4fb9-bf4d-c24e62965be7" />
       </executionEvent>
@@ -321,6 +299,12 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ee8be3b0-97cd-4b4e-846e-0cb981cbb6b7">
+        <profileInstance Id="61113b59-3820-496b-8171-7532d2781e35" name="CSharpProfile">
+          <elementDefinition Id="8ec30f03-3be4-4f30-9116-465333b6ee59" />
+        </profileInstance>
+        <elementDefinition Id="2069808b-ddf0-45a1-8651-0056c02892eb" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

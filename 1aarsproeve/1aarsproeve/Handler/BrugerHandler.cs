@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using _1aarsproeve.Model;
@@ -17,6 +18,15 @@ namespace _1aarsproeve.Handler
     /// </summary>
     public class BrugerHandler
     {
+        public string Navn { get; set; }
+        public string Brugernavn{ get; set; }
+        public string Password{ get; set; }
+        public string Postnummer{ get; set; }
+        public string Adresse{ get; set; }
+        public string Mobil{ get; set; }
+        public string Email{ get; set; }
+        public Stillinger Stilling { get; set; }
+
         /// <summary>
         /// VagtplanViewModel property
         /// </summary>
@@ -34,9 +44,81 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void OpretBruger()
         {
-            PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(BrugerViewModel.Ansat.Brugernavn, BrugerViewModel.Ansat.Navn, BrugerViewModel.Ansat.Password, BrugerViewModel.Ansat.Email, BrugerViewModel.Ansat.Mobil, BrugerViewModel.Ansat.Adresse, BrugerViewModel.Ansat.Postnummer, BrugerViewModel.Stilling.StillingId));
-            var rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(Hovedmenu));
+            MessageDialog m = new MessageDialog("", "Fejl!");
+            try
+            {
+                Ansatte.CheckNavn(Navn);
+            }
+            catch (Exception)
+            {
+                m.Content += "Navn er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckBrugernavn(Brugernavn);
+            }
+            catch (Exception)
+            {
+                m.Content += "Brugernavn er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckPassword(Password);
+            }
+            catch (Exception)
+            {
+                m.Content += "Password er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckEmail(Email);
+            }
+            catch (Exception)
+            {
+                m.Content += "Email er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckAdresse(Adresse);
+            }
+            catch (Exception)
+            {
+                m.Content += "Adresse er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckPostnummer(Postnummer);
+            }
+            catch (Exception)
+            {
+                m.Content += "Postnummer er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckMobil(Mobil);
+            }
+            catch (Exception)
+            {
+                m.Content += "Mobil er forkert!\n";
+            }
+            if (Stilling == null)
+            {
+                m.Content += "Vælg en stilling!\n";
+            }
+            if (m.Content != "")
+            {
+                m.ShowAsync();
+            }
+            else
+            {
+                PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(Brugernavn, Navn, Password, Email, Mobil, Adresse, Postnummer, Stilling.StillingId));
+                var rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(Hovedmenu)); 
+
+                MessageDialog me = new MessageDialog("Brugeren blev oprettet", "Succes!");
+                me.ShowAsync();
+            }
+      
         }
 
         public void RedigerBruger()

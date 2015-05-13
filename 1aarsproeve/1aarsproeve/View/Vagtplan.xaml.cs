@@ -108,5 +108,52 @@ namespace _1aarsproeve.View
         }
 
         #endregion
+
+        public void ClearSelected(ListView lv, ListView lv2, ListView lv3, ListView lv4, ListView lv5, ListView lv6, ListView lv7)
+        {
+            if (lv.SelectedIndex > -1)
+            {
+                lv2.SelectedIndex = -1;
+                lv3.SelectedIndex = -1;
+                lv4.SelectedIndex = -1;
+                lv5.SelectedIndex = -1;
+                lv6.SelectedIndex = -1;
+                lv7.SelectedIndex = -1;
+            }
+        }
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClearSelected(listView,listView2,listView3,listView4,listView5,listView6,listView7);
+        }
+
+        private void listView2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClearSelected(listView2, listView, listView3, listView4, listView5, listView6, listView7);
+        }
+
+        private void listView3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClearSelected(listView3, listView2, listView, listView4, listView5, listView6, listView7);
+        }
+
+        private void listView4_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClearSelected(listView4, listView2, listView3, listView, listView5, listView6, listView7);
+        }
+
+        private void listView5_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClearSelected(listView5, listView2, listView3, listView4, listView, listView6, listView7);
+        }
+
+        private void listView6_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClearSelected(listView6, listView2, listView3, listView4, listView5, listView, listView7);
+        }
+
+        private void listView7_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClearSelected(listView7, listView2, listView3, listView4, listView5, listView6, listView);
+        }
     }
 }

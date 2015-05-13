@@ -9,7 +9,15 @@ namespace _1aarsproeve.Model
     /// </summary>
     public partial class HovedmenuView
     {
-        public void CheckBeskrivelse(string beskrivelse)
+        public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn)
+        {
+            Overskrift = overskrift;
+            Dato = dato;
+            Beskrivelse = beskrivelse;
+            Udloebsdato = udleobsdato;
+            Brugernavn = brugernavn;
+        }
+        public static void CheckBeskrivelse(string beskrivelse)
         {
             if (string.IsNullOrEmpty(beskrivelse) || beskrivelse.Length < 10 || beskrivelse.Length > 200)
             {
@@ -17,16 +25,7 @@ namespace _1aarsproeve.Model
             }
         }
 
-        public void CheckBrugernavn(string brugernavn)
-        {
-            if (string.IsNullOrEmpty(brugernavn) || brugernavn.Length > 30)
-            {
-                throw new ArgumentException("brugernavn er forkert");
-            }
-
-        }
-
-        public void CheckOverskrift(string overskrift)
+        public static void CheckOverskrift(string overskrift)
         {
             if (string.IsNullOrEmpty(overskrift) || overskrift.Length < 10 || overskrift.Length > 50)
             {
@@ -73,19 +72,11 @@ namespace _1aarsproeve.Model
         /// Udloebsdato Property
         /// </summary>
         public DateTime Udloebsdato { get; set; }
-        private string _brugernavn;
+
         /// <summary>
         /// Brugernavn Property
         /// </summary>
-        public string Brugernavn
-        {
-            get { return _brugernavn; }
-            set
-            {
-                CheckBrugernavn(value);
-                _brugernavn = value;
-            }
-        }
+        public string Brugernavn { get; set; }
 
         /// <summary>
         /// Navn property

@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    
     <Grid Background="#b81323">
         <Image Source="../Assets/SplashScreen.scale-100.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None"/>
         <ProgressRing IsActive="True" Width="50" Height="50" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,250,0,0"/>

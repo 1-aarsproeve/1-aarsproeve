@@ -8,6 +8,14 @@ namespace _1aarsproeve.Model
     /// </summary>
     public partial class Ansatte
     {
+        private string _navn;
+        private string _brugernavn;
+        private string _password;
+        private string _postnummer;
+        private string _adresse;
+        private string _mobil;
+        private string _email;
+
         /// <summary>
         /// Ansatte klassens konstrutkur
         /// </summary>
@@ -36,15 +44,22 @@ namespace _1aarsproeve.Model
         public Ansatte()
         {
         }
-        public void CheckPassword(string password)
+        /// <summary>
+        /// Checker password
+        /// </summary>
+        /// <param name="password">Tager password some parameter</param>
+        public static void CheckPassword(string password)
         {
             if (string.IsNullOrEmpty(password) || password.Length > 30 || password.Length < 6)
             {
                 throw new ArgumentException("password er forkert");
             }
         }
-
-        public void CheckBrugernavn(string brugernavn)
+        /// <summary>
+        /// Checker brugernavn
+        /// </summary>
+        /// <param name="brugernavn">Tager brugernavn som parameter</param>
+        public static void CheckBrugernavn(string brugernavn)
         {
             if (string.IsNullOrEmpty(brugernavn) || brugernavn.Length > 30)
             {
@@ -52,16 +67,22 @@ namespace _1aarsproeve.Model
             }
 
         }
-
-        public void Checknavn(string navn)
+        /// <summary>
+        /// Checker navn
+        /// </summary>
+        /// <param name="navn">Tager navn som parameter</param>
+        public static void CheckNavn(string navn)
         {
             if (navn.Length == 0 || navn.Length > 30 || navn.Length < 2)
             {
                 throw new ArgumentException("navn er forkert");
             }
         }
-
-        public void CheckEmail(string email)
+        /// <summary>
+        /// Checker eamil
+        /// </summary>
+        /// <param name="email">Tager email som parameter</param>
+        public static void CheckEmail(string email)
         {
             if (email == null || email.Length > 20 || email.Length < 6)
             {
@@ -69,8 +90,11 @@ namespace _1aarsproeve.Model
             }
 
         }
-
-        public void CheckAdresse(string adresse)
+        /// <summary>
+        /// Checker adresse
+        /// </summary>
+        /// <param name="adresse">Tager adresse som parameter</param>
+        public static void CheckAdresse(string adresse)
         {
             if (adresse == null || adresse.Length > 50 || adresse.Length < 2)
             {
@@ -78,23 +102,29 @@ namespace _1aarsproeve.Model
             }
 
         }
-
-        public void CheckMobil(string mobil)
+        /// <summary>
+        /// Checker mobil
+        /// </summary>
+        /// <param name="mobil">Tager mobil som parameter</param>
+        public static void CheckMobil(string mobil)
         {
             if (mobil == null || mobil.Length > 8 || mobil.Length < 8)
             {
                 throw new ArgumentException("mobil nummer er for kort");
             }
         }
-
-        public void CheckPostnummer(string postnummer)
+        /// <summary>
+        /// Checker postnummer
+        /// </summary>
+        /// <param name="postnummer">Tager postnummer som parameter</param>
+        public static void CheckPostnummer(string postnummer)
         {
             if (postnummer == null || postnummer.Length < 4 || postnummer.Length > 4)
             {
                 throw new ArgumentException("postnummer skal være 4 tegn");
             }
         }
-        private string _brugernavn;
+
         /// <summary>
         /// Brugernavn property
         /// </summary>
@@ -112,20 +142,17 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Navn property
         /// </summary>
-
-        private string _navn;
-
         public string Navn
         {
             get { return _navn; }
             set
             {
-                Checknavn(value);
+                CheckNavn(value);
                 _navn = value;
             }
         }
 
-        private string _password;
+
         /// <summary>
         /// Password property
         /// </summary>
@@ -139,7 +166,7 @@ namespace _1aarsproeve.Model
             }
         }
 
-        private string _email;
+
         /// <summary>
         /// Email property
         /// </summary>  
@@ -152,7 +179,7 @@ namespace _1aarsproeve.Model
                 _email = value;
             }
         }
-        private string _mobil;
+
         /// <summary>
         /// Mobil property
         /// </summary>
@@ -166,20 +193,20 @@ namespace _1aarsproeve.Model
             }
         }
 
-        private string _Adresse;
+
         /// <summary>
         /// Adresse property
         /// </summary>
         public string Adresse
         {
-            get { return _Adresse; }
+            get { return _adresse; }
             set
             {
                 CheckAdresse(value);
-                _Adresse = value;
+                _adresse = value;
             }
         }
-        private string _postnummer;
+
         /// <summary>
         /// Postnummer property
         /// </summary>  

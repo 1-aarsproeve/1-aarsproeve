@@ -58,15 +58,6 @@ namespace _1aarsproeve.ViewModel
 
         #endregion
 
-        /// <summary>
-        /// Gør det muligt at gemme værdier i local storage
-        /// </summary>
-        public ApplicationDataContainer Setting { get; set; }
-        /// <summary>
-        /// Brugernavn property
-        /// </summary>
-        public string Brugernavn { get; set; }
-
         #region Ugedage farver og collections
 
         /// <summary>
@@ -321,38 +312,157 @@ namespace _1aarsproeve.ViewModel
 
         #endregion
 
+        #region Get Set properties
+        /// <summary>
+        /// Singleton vagtcollection
+        /// </summary>
+        public ObservableCollection<ObservableCollection<VagtplanView>> VagtCollection
+        {
+            get { return _vagtCollection.Collection; }
+            set { _vagtCollection.Collection = value; }
+        }
+
+        /// <summary>
+        /// Mandag property
+        /// </summary>
+        public string Mandag
+        {
+            get { return _mandag; }
+            set
+            {
+                _mandag = value;
+                OnPropertyChanged("Mandag");
+            }
+        }
+
+        /// <summary>
+        /// Tirsdag property
+        /// </summary>
+        public string Tirsdag
+        {
+            get { return _tirsdag; }
+            set
+            {
+                _tirsdag = value;
+                OnPropertyChanged("Tirsdag");
+            }
+        }
+
+        /// <summary>
+        /// Onsdag property
+        /// </summary>
+        public string Onsdag
+        {
+            get { return _onsdag; }
+            set
+            {
+                _onsdag = value;
+                OnPropertyChanged("Onsdag");
+            }
+        }
+
+        /// <summary>
+        /// Torsdag property
+        /// </summary>
+        public string Torsdag
+        {
+            get { return _torsdag; }
+            set
+            {
+                _torsdag = value;
+                OnPropertyChanged("Torsdag");
+            }
+        }
+
+        /// <summary>
+        /// Fredag property
+        /// </summary>
+        public string Fredag
+        {
+            get { return _fredag; }
+            set
+            {
+                _fredag = value;
+                OnPropertyChanged("Fredag");
+            }
+        }
+
+        /// <summary>
+        /// Lørdag property
+        /// </summary>
+        public string Loerdag
+        {
+            get { return _loerdag; }
+            set
+            {
+                _loerdag = value;
+                OnPropertyChanged("Loerdag");
+            }
+        }
+
+        /// <summary>
+        /// Søndag property
+        /// </summary>
+        public string Soendag
+        {
+            get { return _soendag; }
+            set
+            {
+                _soendag = value;
+                OnPropertyChanged("Soendag");
+            }
+        }
+
+        /// <summary>
+        /// Ugenummer property
+        /// </summary>
+        public int Ugenummer
+        {
+            get { return _ugenummer; }
+            set
+            {
+                _ugenummer = value;
+                OnPropertyChanged("Ugenummer");
+            }
+        }
+        /// <summary>
+        /// Gør det muligt at gemme værdier i local storage
+        /// </summary>
+        public ApplicationDataContainer Setting { get; set; }
+        /// <summary>
+        /// Brugernavn property
+        /// </summary>
+        public string Brugernavn { get; set; }
         /// <summary>
         /// AnsatteListe property
         /// </summary>
         public List<Ansatte> AnsatteListe { get; set; }
+
         /// <summary>
         /// UgenumreListe property
         /// </summary>
         public List<int> UgenumreListe { get; set; }
-        /// <summary>
-        /// VagtplanView property
-        /// </summary>
-        public VagtplanView VagtplanView { get; set; }
+
         /// <summary>
         /// UgedageListe property
         /// </summary>
         public List<Ugedage> UgedageListe { get; set; }
+
         /// <summary>
         /// VagtHandler property
         /// </summary>
         public VagtHandler VagtHandler { get; set; }
+
         /// <summary>
         /// SelectedVagter static property
         /// </summary>
         public static VagtplanView SelectedVagter { get; set; }
         /// <summary>
-        /// Ugedag property
+        /// SkjulKnap property
         /// </summary>
-        public Ugedage Ugedag { get; set; }
-        /// <summary>
-        /// Ansat property
-        /// </summary>
-        public Ansatte Ansat { get; set; }
+        public Visibility SkjulKnap { get; set; }
+        #endregion
+
         /// <summary>
         /// Constructor for VagtplanViewModel
         /// </summary>
@@ -360,6 +470,7 @@ namespace _1aarsproeve.ViewModel
         {
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
+            SkjulKnap = HjaelpeKlasse.Stilling((int)Setting.Values["StillingId"]);
 
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
 
@@ -389,7 +500,6 @@ namespace _1aarsproeve.ViewModel
             AnsatteListe = new List<Ansatte>();
             UgedageListe = new List<Ugedage>();
             UgenumreListe = new List<int>();
-            VagtplanView = new VagtplanView();
             var a = PersistensFacade<Ansatte>.LoadDB("api/Ansattes").Result;
             foreach (var item in a)
             {
@@ -405,8 +515,6 @@ namespace _1aarsproeve.ViewModel
                 UgenumreListe.Add(i);
             }
             _sorting = AlleVagter;
-
-            HjaelpeKlasse.Stilling();
         }
 
         #region Sort vagter
@@ -502,6 +610,7 @@ namespace _1aarsproeve.ViewModel
         }
 
         #endregion
+
         #region Eksporter vagter
 
         /// <summary>
@@ -726,6 +835,7 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         /// <param name="brush">Angiver farven som bliver vist på i dags ugedag</param>
         /// <param name="brushOriginal">Angiver farven som bliver vist på de ugedage som ikke er i dag</param>
+        
         public void NuvaerendeUgedag(SolidColorBrush brush, SolidColorBrush brushOriginal)
         {
             if (MandagFarve == null || TirsdagFarve == null || OnsdagFarve == null || TorsdagFarve == null || FredagFarve == null || LoerdagFarve == null || SoendagFarve == null)
@@ -826,119 +936,6 @@ namespace _1aarsproeve.ViewModel
         #endregion
 
         #region Properties
-
-        /// <summary>
-        /// Singleton vagtcollection
-        /// </summary>
-        public ObservableCollection<ObservableCollection<VagtplanView>> VagtCollection
-        {
-            get { return _vagtCollection.Collection; }
-            set { _vagtCollection.Collection = value; }
-        }
-
-        /// <summary>
-        /// Mandag property
-        /// </summary>
-        public string Mandag
-        {
-            get { return _mandag; }
-            set
-            {
-                _mandag = value;
-                OnPropertyChanged("Mandag");
-            }
-        }
-
-        /// <summary>
-        /// Tirsdag property
-        /// </summary>
-        public string Tirsdag
-        {
-            get { return _tirsdag; }
-            set
-            {
-                _tirsdag = value;
-                OnPropertyChanged("Tirsdag");
-            }
-        }
-
-        /// <summary>
-        /// Onsdag property
-        /// </summary>
-        public string Onsdag
-        {
-            get { return _onsdag; }
-            set
-            {
-                _onsdag = value;
-                OnPropertyChanged("Onsdag");
-            }
-        }
-
-        /// <summary>
-        /// Torsdag property
-        /// </summary>
-        public string Torsdag
-        {
-            get { return _torsdag; }
-            set
-            {
-                _torsdag = value;
-                OnPropertyChanged("Torsdag");
-            }
-        }
-
-        /// <summary>
-        /// Fredag property
-        /// </summary>
-        public string Fredag
-        {
-            get { return _fredag; }
-            set
-            {
-                _fredag = value;
-                OnPropertyChanged("Fredag");
-            }
-        }
-
-        /// <summary>
-        /// Lørdag property
-        /// </summary>
-        public string Loerdag
-        {
-            get { return _loerdag; }
-            set
-            {
-                _loerdag = value;
-                OnPropertyChanged("Loerdag");
-            }
-        }
-
-        /// <summary>
-        /// Søndag property
-        /// </summary>
-        public string Soendag
-        {
-            get { return _soendag; }
-            set
-            {
-                _soendag = value;
-                OnPropertyChanged("Soendag");
-            }
-        }
-
-        /// <summary>
-        /// Ugenummer property
-        /// </summary>
-        public int Ugenummer
-        {
-            get { return _ugenummer; }
-            set
-            {
-                _ugenummer = value;
-                OnPropertyChanged("Ugenummer");
-            }
-        }
 
         #endregion
 
