@@ -2658,10 +2658,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
-                LastKnownName="String"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -2738,10 +2738,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
-                LastKnownName="String"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -2818,10 +2818,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="01844391-ee0b-4dcd-8254-b2f0600d87fd"
+              <undefinedTypeMoniker
+                Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
                 LastKnownName="TimeSpan"
-                LastKnownLocation="Package1_1234.uml" />
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -2898,10 +2898,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="01844391-ee0b-4dcd-8254-b2f0600d87fd"
+              <undefinedTypeMoniker
+                Id="163d214b-bab8-4d87-ae7b-ba666bb3f27a"
                 LastKnownName="TimeSpan"
-                LastKnownLocation="Package1_1234.uml" />
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -2978,10 +2978,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
-                LastKnownName="Int32"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3058,10 +3058,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
-                LastKnownName="Int32"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3138,10 +3138,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
-                LastKnownName="Int32"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -3670,6 +3670,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3738,10 +3739,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="3ee06213-05aa-4948-b4fc-2e8ada04db28"
-                LastKnownName="Int32"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3818,10 +3819,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
-                LastKnownName="String"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3898,10 +3899,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
-                LastKnownName="String"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3978,10 +3979,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="c69a1eb3-4fac-41a0-ab56-9ec597e795bb"
+              <undefinedTypeMoniker
+                Id="449edf0f-ad14-4839-a2da-3c7251f77833"
                 LastKnownName="DateTime"
-                LastKnownLocation="Package1_1234.uml" />
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4002,66 +4003,66 @@
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="4217f2b2-4eb0-4539-9d8d-2a019e89db0d"
+                Id="858cb72f-a5d9-4716-81b7-05e3cf967d6b"
                 name="property"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="55ba38f7-dadd-413c-a10b-781e294c0fc3">
+                    Id="823b6376-421f-4d58-bd94-363ee3b32884">
                     <propertyInstance
-                      Id="d1482db5-9c39-4ee5-b9c0-402bb5daa0c3"
+                      Id="9e181cc3-6d24-4aa8-8906-7bb932ebca4f"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="884395e2-bbc2-4b99-8298-544cb7a8bac2">
+                    Id="3cbc7ea4-233e-4038-a22f-16739a8d9cb7">
                     <propertyInstance
-                      Id="30486257-67f5-4fcd-b1f3-29869d39c9af"
+                      Id="f92717bf-c991-48ab-917b-2d1b6c4dc093"
                       name="Get"
-                      value="public" />
+                      value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="eea35395-b3c9-4889-a136-bf75033495a3">
+                    Id="62b1bc52-e80d-48e6-8a39-4b2f485e25dd">
                     <propertyInstance
-                      Id="8617a4d6-0834-4913-9321-3d5c042190ac"
+                      Id="2bc48bf4-dec1-4efe-b449-35794e7d45b2"
                       name="HasBody"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0a805b72-fc29-446a-a24d-c660dfc1dbd4">
+                    Id="2219dfe5-f7e3-4977-809f-1199652b0aea">
                     <propertyInstance
-                      Id="0afe7e5a-90f7-4cfa-9ead-c2ee70adc973"
+                      Id="3fa7a526-49c9-4643-82c1-378bd0b386fe"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a85dd151-9797-439d-a330-409c9e777349">
+                    Id="c9958323-fb0b-440d-8be0-16afbbf5f7a1">
                     <propertyInstance
-                      Id="fe64ded0-ddf2-4e26-9bd6-d63df901ccdc"
+                      Id="7f223d69-16b7-48b8-81ba-754a06dc5153"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6db8cf40-dedf-4dcc-8e31-b4384bb25b96">
+                    Id="be95a58e-089e-4efa-9f2d-50add77c9ad6">
                     <propertyInstance
-                      Id="c2621eee-84eb-401c-b149-d2638548f1bb"
+                      Id="5f4dda2f-631f-4858-9165-6510b3659c11"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ae4a4a85-ece5-4131-9864-b91574b24885">
+                    Id="3ba079c0-97b5-47cd-9552-281404108544">
                     <propertyInstance
-                      Id="302ba655-3fcc-4ad0-98f2-888c7d32d4e6"
+                      Id="3f55542d-3560-4c32-bb8f-f22236c65b14"
                       name="Set"
-                      value="public" />
+                      value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
-                LastKnownName="String"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4138,10 +4139,10 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="f408735f-7ee1-449d-97c0-841aa9abb97a"
-                LastKnownName="String"
-                LastKnownLocation="Package1_1234.uml" />
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4218,10 +4219,85 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="c69a1eb3-4fac-41a0-ab56-9ec597e795bb"
+              <undefinedTypeMoniker
+                Id="449edf0f-ad14-4839-a2da-3c7251f77833"
                 LastKnownName="DateTime"
-                LastKnownLocation="Package1_1234.uml" />
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f1561ccf-5eff-4f1d-afbd-eb5bb32ca829"
+            name="DatoFormat"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8801c29c-b1fa-4795-a05e-1383372284fd"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2b8897e-dd6b-42a8-b84f-c8d050a6c272">
+                    <propertyInstance
+                      Id="9087c6c2-5956-4e4c-bbe8-0204808ca59d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7f2cbe4-cbaa-4ea6-a3e0-175a5a7cde9b">
+                    <propertyInstance
+                      Id="0ca34cf6-9d65-4bf7-8eff-549502b6d297"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c60895f7-3441-4d5d-8056-eacd38451abb">
+                    <propertyInstance
+                      Id="44f216ee-b64e-4346-a94d-339118cf7988"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4fb97d7-b3bc-44d6-81d5-a35c3d22db3e">
+                    <propertyInstance
+                      Id="8bc532a6-6627-4433-80e7-44216677456d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="129daf50-d587-480b-9dc8-20255e7b1408">
+                    <propertyInstance
+                      Id="ce1a794c-9825-4902-b14b-b2240def4ff0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="030d80b6-aba2-46a6-b1bd-d1c9ac5818e8">
+                    <propertyInstance
+                      Id="345b32e5-2d1c-43bf-8892-512afe4d6681"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58a1cdcf-7473-456d-881e-c7a624e3dc97">
+                    <propertyInstance
+                      Id="684e064c-d7e0-40b6-89fa-ca054ad01f19"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>

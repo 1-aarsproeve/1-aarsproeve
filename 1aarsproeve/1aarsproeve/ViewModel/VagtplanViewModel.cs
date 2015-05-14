@@ -835,9 +835,9 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         /// <param name="brush">Angiver farven som bliver vist på i dags ugedag</param>
         /// <param name="brushOriginal">Angiver farven som bliver vist på de ugedage som ikke er i dag</param>
-        
         public void NuvaerendeUgedag(SolidColorBrush brush, SolidColorBrush brushOriginal)
         {
+
             if (MandagFarve == null || TirsdagFarve == null || OnsdagFarve == null || TorsdagFarve == null || FredagFarve == null || LoerdagFarve == null || SoendagFarve == null)
             {
                 MandagFarve = brushOriginal;

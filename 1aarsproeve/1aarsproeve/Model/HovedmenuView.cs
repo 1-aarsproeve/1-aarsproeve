@@ -1,6 +1,7 @@
 
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace _1aarsproeve.Model
 {
@@ -9,6 +10,10 @@ namespace _1aarsproeve.Model
     /// </summary>
     public partial class HovedmenuView
     {
+        public HovedmenuView()
+        {
+            
+        }
         public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn)
         {
             Overskrift = overskrift;
@@ -54,6 +59,13 @@ namespace _1aarsproeve.Model
         /// Dato Property
         /// </summary>
         public DateTime Dato { get; set; }
+        /// <summary>
+        /// Formater dato
+        /// </summary>
+        public string DatoFormat
+        {
+            get { return Dato.ToString("d. MMMM", new CultureInfo("da-DK")); }
+        }
         private string _beskrivelse;
         /// <summary>
         /// Beskrivelse Property

@@ -263,6 +263,7 @@
         <Style x:Key="AnsatteText" TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
         </Style>
         <Style x:Key="HovedmenuButton" TargetType="HyperlinkButton">
             <Setter Property="BorderThickness" Value="10"/>

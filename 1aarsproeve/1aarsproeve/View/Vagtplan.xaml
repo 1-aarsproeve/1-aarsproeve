@@ -110,7 +110,7 @@
 				AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Style="{StaticResource HeaderTextBlockStyle}" Text="Vagtplan" Grid.Column="1" IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" HorizontalAlignment="Left"/>
             <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Grid.Row="0" Grid.Column="1" IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" HorizontalAlignment="Right">
-				<Run Text="Uge: " />
+				<Run Text="Uge:" />
 				<Run Text="{Binding Ugenummer}"/>
             </TextBlock>
 

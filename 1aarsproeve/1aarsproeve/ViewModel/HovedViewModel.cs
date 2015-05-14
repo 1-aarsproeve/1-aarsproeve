@@ -69,10 +69,14 @@ namespace _1aarsproeve.ViewModel
 
             Brugernavn = (string)Setting.Values["Brugernavn"];
             SkjulKnap = HjaelpeKlasse.Stilling((int)Setting.Values["StillingId"]);
-
+            
             BeskedCollection.Clear();
             var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
-            foreach (var item in query)
+            var query1 =
+                from q in query
+                orderby q.Dato descending 
+                select q;
+            foreach (var item in query1)
             {
                 BeskedCollection.Add(item);
             }

@@ -125,11 +125,7 @@
                                 <TextBlock Style="{StaticResource BeskederForfatterDatoBeskrivelse}">
 									<Run Text="{Binding Navn}"/>
 									<Run Text="|"/>
-									<Run Text="{Binding Dato.Day}"/>
-                                    <Run Text="-"/>
-                                    <Run Text="{Binding Dato.Month}"/>
-                                    <Run Text="-"/>
-                                    <Run Text="{Binding Dato.Year}"/>
+									<Run Text="{Binding DatoFormat}"/>
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource BeskederForfatterDatoBeskrivelse}" Text="{Binding Beskrivelse}" />
                             </StackPanel>
