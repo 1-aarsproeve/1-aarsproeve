@@ -45,6 +45,7 @@
                         </MenuFlyout>
                     </AppBarButton.Flyout>
                 </AppBarButton>
+                <AppBarButton Icon="Switch" Label="Anmod vagt" Command="{Binding AnmodVagtCommand}"/>
             </CommandBar.SecondaryCommands>
             <AppBarButton Icon="Calendar" Label="Sorter vagter">
                 <AppBarButton.Flyout>

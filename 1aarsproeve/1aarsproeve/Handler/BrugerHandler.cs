@@ -45,6 +45,14 @@ namespace _1aarsproeve.Handler
         public void OpretBruger()
         {
             MessageDialog m = new MessageDialog("", "Fejl!");
+            var u = PersistensFacade<Ansatte>.LoadDB("api/Ansattes").Result;
+            foreach (var ansatte in u)
+            {
+                if (ansatte.Brugernavn == Brugernavn)
+                {
+                    m.Content += "Brugernavnet findes allerede!\n";
+                }
+            }
             try
             {
                 Ansatte.CheckNavn(Navn);

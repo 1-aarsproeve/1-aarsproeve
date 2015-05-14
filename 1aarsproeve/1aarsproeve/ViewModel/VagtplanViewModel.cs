@@ -52,7 +52,7 @@ namespace _1aarsproeve.ViewModel
         private ICommand _logudCommand;
         private ICommand _selectedVagterCommand;
         private Action<ObservableCollection<ObservableCollection<VagtplanView>>> _sorting;
-
+        private ICommand _anmodVagtCommand;
         private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection =
             GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
 
@@ -154,6 +154,15 @@ namespace _1aarsproeve.ViewModel
                 return _opretVagtCommand;
             }
             set { _opretVagtCommand = value; }
+        }
+        public ICommand AnmodVagtCommand
+        {
+            get
+            {
+                _anmodVagtCommand = new RelayCommand(VagtHandler.AnmodVagt);
+                return _anmodVagtCommand;
+            }
+            set { _anmodVagtCommand = value; }
         }
         /// <summary>
         /// RedigerVagtCommand property

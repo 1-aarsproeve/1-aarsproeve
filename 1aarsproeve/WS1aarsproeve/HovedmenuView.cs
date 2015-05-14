@@ -14,25 +14,30 @@ namespace WS1aarsproeve
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int BeskedId { get; set; }
 
+        [Key]
+        [Column(Order = 1)]
         [StringLength(50)]
         public string Overskrift { get; set; }
 
         [Key]
-        [Column(Order = 1, TypeName = "date")]
+        [Column(Order = 2, TypeName = "date")]
         public DateTime Dato { get; set; }
 
-        [Column(TypeName = "text")]
+        [Key]
+        [Column(Order = 3, TypeName = "text")]
         public string Beskrivelse { get; set; }
 
         [Key]
-        [Column(Order = 2, TypeName = "date")]
+        [Column(Order = 4, TypeName = "date")]
         public DateTime Udloebsdato { get; set; }
 
         [Key]
-        [Column(Order = 3)]
+        [Column(Order = 5)]
         [StringLength(50)]
         public string Brugernavn { get; set; }
 
+        [Key]
+        [Column(Order = 6)]
         [StringLength(50)]
         public string Navn { get; set; }
     }

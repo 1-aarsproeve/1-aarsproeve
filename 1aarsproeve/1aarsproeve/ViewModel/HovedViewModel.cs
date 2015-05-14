@@ -11,6 +11,7 @@ using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Eventmaker.Common;
 using _1aarsproeve.Common;
 using _1aarsproeve.Handler;
 using _1aarsproeve.Model;
@@ -26,10 +27,17 @@ namespace _1aarsproeve.ViewModel
     {
         private ICommand _skrivBeskedCommand;
         private ICommand _logUdCommand;
+        private ICommand _accepterAnmodningCommand;
+        private ICommand _annullerAnmodningCommand;
+        private ICommand _selectedAnmodningerCommand;
         private GeneriskSingleton<HovedmenuView> _beskedCollection = GeneriskSingleton<HovedmenuView>.Instance();
 
         #region Get Set properties
-
+        /// <summary>
+        /// SelectedVagter static property
+        /// </summary>
+        public static AnmodningerView SelectedAnmodninger { get; set; }
+        public ObservableCollection<AnmodningerView> AnmodningCollection { get; set; }
         /// <summary>
         /// Singleton vagtcollection
         /// </summary>
@@ -63,6 +71,7 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Constructor for HovedViewModel
         /// </summary>
+        public string IngenAnmodninger { get; set; }
         public HovedViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;
@@ -81,11 +90,63 @@ namespace _1aarsproeve.ViewModel
                 BeskedCollection.Add(item);
             }
 
+            AnmodningCollection = new ObservableCollection<AnmodningerView>();
+
+            InitialiserAnmodninger();
+
             HovedHandler = new HovedHandler(this);
         }
 
+        public void InitialiserAnmodninger()
+        {
+            AnmodningCollection.Clear();
+            var queryAnmodning = PersistensFacade<AnmodningerView>.LoadDB("api/AnmodningerViews").Result;
+            var queryAnmodning1 =
+                from a in queryAnmodning
+                where a.Brugernavn == Brugernavn
+                select a;
+            if (queryAnmodning1.Any() == false)
+            {
+                IngenAnmodninger = "Der blev ikke fundet nogle anmodninger";
+            }
+            foreach (var item in queryAnmodning1)
+            {
+                AnmodningCollection.Add(item);
+            }
+        }
         #region Commands
-
+        /// <summary>
+        /// SelectedAnmodningerCommand property
+        /// </summary>
+        public ICommand SelectedAnmodningerCommand
+        {
+            get
+            {
+                _selectedAnmodningerCommand = new RelayArgCommand<AnmodningerView>(a => HovedHandler.SetSelectedAnmodning(a));
+                return _selectedAnmodningerCommand;
+            }
+            set { _selectedAnmodningerCommand = value; }
+        }
+        public ICommand AccepterAnmodningCommand
+        {
+            get
+            {
+                if (_accepterAnmodningCommand == null)
+                    _accepterAnmodningCommand = new RelayCommand(HovedHandler.AccepterAnmodning);
+                return _accepterAnmodningCommand;
+            }
+            set { _accepterAnmodningCommand = value; }
+        }
+        public ICommand AnnullerAnmodningCommand
+        {
+            get
+            {
+                if (_annullerAnmodningCommand == null)
+                    _annullerAnmodningCommand = new RelayCommand(HovedHandler.AnnullerAnmodning);
+                return _annullerAnmodningCommand;
+            }
+            set { _annullerAnmodningCommand = value; }
+        }
         /// <summary>
         /// SkrivBesked command
         /// </summary>

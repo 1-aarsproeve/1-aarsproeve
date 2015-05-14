@@ -62,7 +62,8 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="260"/>
-                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="260"/>
+                    <ColumnDefinition Width="260"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="260"/>
@@ -106,6 +107,16 @@
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.OpretBruger"/>
+                        </Core:EventTriggerBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </HyperlinkButton>
+                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Column="2" ToolTipService.ToolTip="Anmodninger"  >
+                    <HyperlinkButton.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/anmodvagt.png"/>
+                    </HyperlinkButton.Background>
+                    <Interactivity:Interaction.Behaviors>
+                        <Core:EventTriggerBehavior EventName="Click">
+                            <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.Anmodninger"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </HyperlinkButton>

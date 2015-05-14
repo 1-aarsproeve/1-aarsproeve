@@ -11,6 +11,7 @@ namespace WS1aarsproeve
     {
         public Ansatte()
         {
+            Anmodningers = new HashSet<Anmodninger>();
             Beskeders = new HashSet<Beskeder>();
             Vagters = new HashSet<Vagter>();
         }
@@ -19,6 +20,7 @@ namespace WS1aarsproeve
         [StringLength(50)]
         public string Brugernavn { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Navn { get; set; }
 
@@ -26,19 +28,25 @@ namespace WS1aarsproeve
         [StringLength(50)]
         public string Password { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Email { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Mobil { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Adresse { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Postnummer { get; set; }
 
         public int StillingId { get; set; }
+
+        public virtual ICollection<Anmodninger> Anmodningers { get; set; }
 
         public virtual Stillinger Stillinger { get; set; }
 

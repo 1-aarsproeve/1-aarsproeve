@@ -117,6 +117,7 @@
     <Compile Include="Handler\BrugerHandler.cs" />
     <Compile Include="Handler\HovedHandler.cs" />
     <Compile Include="Handler\VagtHandler.cs" />
+    <Compile Include="Model\AnmodningerView.cs" />
     <Compile Include="Model\Ansatte.cs" />
     <Compile Include="Model\HjaelpeKlasse.cs" />
     <Compile Include="Model\HovedmenuView.cs" />
@@ -129,6 +130,9 @@
     <Compile Include="ViewModel\BrugerViewModel.cs" />
     <Compile Include="ViewModel\HovedViewModel.cs" />
     <Compile Include="ViewModel\VagtplanViewModel.cs" />
+    <Compile Include="View\Anmodninger.xaml.cs">
+      <DependentUpon>Anmodninger.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Hovedmenu.xaml.cs">
       <DependentUpon>Hovedmenu.xaml</DependentUpon>
     </Compile>
@@ -166,6 +170,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\anmodvagt.png" />
     <Content Include="Assets\forrige.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\naeste.png" />
@@ -183,6 +188,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\Anmodninger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Hovedmenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

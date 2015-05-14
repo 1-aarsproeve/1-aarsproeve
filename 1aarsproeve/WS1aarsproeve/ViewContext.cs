@@ -8,16 +8,37 @@ namespace WS1aarsproeve
     public partial class ViewContext : DbContext
     {
         public ViewContext()
-            : base("name=ViewContext2")
+            : base("name=ViewContext5")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
 
+        public virtual DbSet<AnmodningerView> AnmodningerViews { get; set; }
         public virtual DbSet<HovedmenuView> HovedmenuViews { get; set; }
         public virtual DbSet<VagtplanView> VagtplanViews { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<AnmodningerView>()
+                .Property(e => e.AnmodningBrugernavn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AnmodningerView>()
+                .Property(e => e.Starttidspunkt)
+                .HasPrecision(0);
+
+            modelBuilder.Entity<AnmodningerView>()
+                .Property(e => e.Sluttidspunkt)
+                .HasPrecision(0);
+
+            modelBuilder.Entity<AnmodningerView>()
+                .Property(e => e.Brugernavn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AnmodningerView>()
+                .Property(e => e.Ugedag)
+                .IsUnicode(false);
+
             modelBuilder.Entity<HovedmenuView>()
                 .Property(e => e.Overskrift)
                 .IsUnicode(false);
@@ -50,11 +71,5 @@ namespace WS1aarsproeve
                 .Property(e => e.Navn)
                 .IsUnicode(false);
         }
-
-        public System.Data.Entity.DbSet<WS1aarsproeve.Vagter> Vagters { get; set; }
-
-        public System.Data.Entity.DbSet<WS1aarsproeve.Ansatte> Ansattes { get; set; }
-
-        public System.Data.Entity.DbSet<WS1aarsproeve.Ugedage> Ugedages { get; set; }
     }
 }

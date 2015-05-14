@@ -9,6 +9,11 @@ namespace WS1aarsproeve
     [Table("Vagter")]
     public partial class Vagter
     {
+        public Vagter()
+        {
+            Anmodningers = new HashSet<Anmodninger>();
+        }
+
         [Key]
         public int VagtId { get; set; }
 
@@ -23,6 +28,8 @@ namespace WS1aarsproeve
         [Required]
         [StringLength(50)]
         public string Brugernavn { get; set; }
+
+        public virtual ICollection<Anmodninger> Anmodningers { get; set; }
 
         public virtual Ansatte Ansatte { get; set; }
 

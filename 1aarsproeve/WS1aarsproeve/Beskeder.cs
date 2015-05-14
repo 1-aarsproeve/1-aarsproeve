@@ -12,6 +12,7 @@ namespace WS1aarsproeve
         [Key]
         public int BeskedId { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Overskrift { get; set; }
 
@@ -19,6 +20,7 @@ namespace WS1aarsproeve
         public DateTime Dato { get; set; }
 
         [Column(TypeName = "text")]
+        [Required]
         public string Beskrivelse { get; set; }
 
         [Column(TypeName = "date")]

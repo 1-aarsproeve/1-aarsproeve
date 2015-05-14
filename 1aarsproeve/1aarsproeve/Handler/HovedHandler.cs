@@ -35,6 +35,14 @@ namespace _1aarsproeve.Handler
             HovedViewModel = hovedViewModel;
         }
         /// <summary>
+        /// Set valgte anmodning
+        /// </summary>
+        /// <param name="a">Tager AnmodningerView som objekt</param>
+        public void SetSelectedAnmodning(AnmodningerView a)
+        {
+            HovedViewModel.SelectedAnmodninger = a;
+        }
+        /// <summary>
         /// Skriver ny besked
         /// </summary>
         public void SkrivBesked()
@@ -71,6 +79,28 @@ namespace _1aarsproeve.Handler
                 me.ShowAsync();
             }
 
+        }
+
+        public void AccepterAnmodning()
+        {
+            PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(HovedViewModel.SelectedAnmodninger.VagtId, HovedViewModel.SelectedAnmodninger.Starttidspunkt, HovedViewModel.SelectedAnmodninger.Sluttidspunkt, HovedViewModel.SelectedAnmodninger.Ugenummer, HovedViewModel.SelectedAnmodninger.UgedagId, HovedViewModel.SelectedAnmodninger.AnmodningBrugernavn), id: HovedViewModel.SelectedAnmodninger.VagtId);
+            PersistensFacade<AnmodningerView>.SletDB("api/Anmodningers", id: HovedViewModel.SelectedAnmodninger.AnmodningId);
+
+            var rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(Anmodninger));
+
+            MessageDialog m = new MessageDialog("Anmodningen blev accepteret", "Succes!");
+            m.ShowAsync();
+        }
+        public void AnnullerAnmodning()
+        {
+            PersistensFacade<AnmodningerView>.SletDB("api/Anmodningers", id: HovedViewModel.SelectedAnmodninger.AnmodningId);
+            
+            var rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(Anmodninger));
+
+            MessageDialog m = new MessageDialog("Anmodningen blev annulleret", "Succes!");
+            m.ShowAsync();
         }
     }
 }
