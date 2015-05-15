@@ -66,12 +66,15 @@ namespace _1aarsproeve.ViewModel
         /// SkjulKnap property
         /// </summary>
         public Visibility SkjulKnap { get; set; }
+        /// <summary>
+        /// IngenAnmodninger property
+        /// </summary>
+        public string IngenAnmodninger { get; set; }
         #endregion
 
         /// <summary>
         /// Constructor for HovedViewModel
         /// </summary>
-        public string IngenAnmodninger { get; set; }
         public HovedViewModel()
         {
             Setting = ApplicationData.Current.LocalSettings;

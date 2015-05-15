@@ -110,7 +110,7 @@
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </HyperlinkButton>
-                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Column="2" ToolTipService.ToolTip="Anmodninger"  >
+                <HyperlinkButton Style="{StaticResource HovedmenuButton}" Template="{StaticResource HovedButtonTemplate}" Grid.Column="2" ToolTipService.ToolTip="Vis anmodninger"  >
                     <HyperlinkButton.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/anmodvagt.png"/>
                     </HyperlinkButton.Background>

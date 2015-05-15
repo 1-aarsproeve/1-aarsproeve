@@ -97,7 +97,6 @@ namespace _1aarsproeve.Handler
             }
             else
             {
-
                 PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(VagtplanViewModel.SelectedVagter.VagtId, Starttidspunkt, Sluttidspunkt, Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn), id: VagtplanViewModel.SelectedVagter.VagtId);
 
                 MessageDialog me = new MessageDialog("Vagten blev redigeret", "Succes!");
@@ -122,12 +121,19 @@ namespace _1aarsproeve.Handler
                 VagtplanViewModel.InitialiserVagter();
             }
         }
-
+        /// <summary>
+        /// Anmoder om valgte vagt
+        /// </summary>
         public void AnmodVagt()
         {
             if (VagtplanViewModel.SelectedVagter == null)
             {
                 MessageDialog m = new MessageDialog("Vælg en vagt der skal slettes", "Fejl!");
+                m.ShowAsync();
+            }
+            else if (VagtplanViewModel.SelectedVagter.Brugernavn == VagtplanViewModel.Brugernavn)
+            {
+                MessageDialog m = new MessageDialog("Du kan ikke anmode vagtskift med dig selv", "Fejl!");
                 m.ShowAsync();
             }
             else

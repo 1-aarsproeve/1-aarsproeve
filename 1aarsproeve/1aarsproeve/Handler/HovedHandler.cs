@@ -20,6 +20,9 @@ namespace _1aarsproeve.Handler
     /// </summary>
     public class HovedHandler
     {
+        /// <summary>
+        /// Overskrift property
+        /// </summary>
         public string Overskrift { get; set; }
         public string Beskrivelse { get; set; }
         /// <summary>
@@ -80,7 +83,9 @@ namespace _1aarsproeve.Handler
             }
 
         }
-
+        /// <summary>
+        /// Accepterer vagtanmodning
+        /// </summary>
         public void AccepterAnmodning()
         {
             PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(HovedViewModel.SelectedAnmodninger.VagtId, HovedViewModel.SelectedAnmodninger.Starttidspunkt, HovedViewModel.SelectedAnmodninger.Sluttidspunkt, HovedViewModel.SelectedAnmodninger.Ugenummer, HovedViewModel.SelectedAnmodninger.UgedagId, HovedViewModel.SelectedAnmodninger.AnmodningBrugernavn), id: HovedViewModel.SelectedAnmodninger.VagtId);
@@ -92,6 +97,9 @@ namespace _1aarsproeve.Handler
             MessageDialog m = new MessageDialog("Anmodningen blev accepteret", "Succes!");
             m.ShowAsync();
         }
+        /// <summary>
+        /// Annullerer vagtanmodning
+        /// </summary>
         public void AnnullerAnmodning()
         {
             PersistensFacade<AnmodningerView>.SletDB("api/Anmodningers", id: HovedViewModel.SelectedAnmodninger.AnmodningId);

@@ -19,7 +19,7 @@ using _1aarsproeve.Persistens;
 using _1aarsproeve.View;
 
 namespace _1aarsproeve.ViewModel
-{
+{ 
     /// <summary>
     /// DataContext klasse til Views: Login, OpretBruger, Profil
     /// </summary>
@@ -224,19 +224,18 @@ namespace _1aarsproeve.ViewModel
                 var responce = PersistensFacade<Ansatte>.LoadDB("api/Ansattes");
 
                 var query = from q in responce.Result
-                            where q.Brugernavn == Brugernavn && q.Password == Password
-                            select q;
+                    where q.Brugernavn == Brugernavn && q.Password == Password
+                    select q;
                 foreach (var item in query)
                 {
                     AnsatteCollection.Add(item);
                 }
-                if (AnsatteCollection.Count() == 1)
+                if (AnsatteCollection.Any())
                 {
                     Setting.Values["Brugernavn"] = AnsatteCollection[0].Brugernavn;
                     Setting.Values["StillingId"] = AnsatteCollection[0].StillingId;
                     var rootFrame = Window.Current.Content as Frame;
                     rootFrame.Navigate(typeof(Hovedmenu));
-
                 }
                 else
                 {
@@ -248,7 +247,7 @@ namespace _1aarsproeve.ViewModel
             }
             catch (ArgumentException ex)
             {
-                if (AnsatteCollection.Count != 0)
+                if (AnsatteCollection.Any() == false)
                 {
                     AnsatteCollection.Clear();
                 }

@@ -45,7 +45,14 @@ namespace _1aarsproeve.Persistens
         /// <param name="streng">Tager brugernavn som skal redigeres</param>
         public static void RedigerDB(string api, object objekt, int id = 0, string streng = null)
         {
-            BrugerViewModel.Client.PutAsJsonAsync(api + "/" + id + streng, objekt);
+            if (id != 0)
+            {
+                BrugerViewModel.Client.PutAsJsonAsync(api + "/" + id, objekt);
+            }
+            else
+            {
+                BrugerViewModel.Client.PutAsJsonAsync(api + "/" + streng, objekt);
+            }
         }
         /// <summary>
         /// Henter data i databasen
