@@ -317,7 +317,7 @@ namespace _1aarsproeve.ViewModel
         {
             get
             {
-                _logudCommand = new RelayCommand(HjaelpeKlasse.LogUd);
+                _logudCommand = new RelayCommand(Hjaelpeklasse.LogUd);
                 return _logudCommand;
             }
             set { _logudCommand = value; }
@@ -496,7 +496,7 @@ namespace _1aarsproeve.ViewModel
         {
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            SkjulKnap = HjaelpeKlasse.Stilling((int)Setting.Values["StillingId"]);
+            SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
 
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
 
@@ -570,7 +570,7 @@ namespace _1aarsproeve.ViewModel
             }
             catch (Exception)
             {
-                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der kunne ikke udtrækkes fra databasen");
                 m.ShowAsync();
             }
         }
@@ -600,7 +600,7 @@ namespace _1aarsproeve.ViewModel
             }
             catch (Exception)
             {
-                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der kunne ikke udtrækkes fra databasen");
                 m.ShowAsync();
             }
         }
@@ -630,7 +630,7 @@ namespace _1aarsproeve.ViewModel
             }
             catch (Exception)
             {
-                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der kunne ikke udtrækkes fra databasen");
                 m.ShowAsync();
             }
         }
@@ -708,13 +708,12 @@ namespace _1aarsproeve.ViewModel
                 FileUpdateStatus status = await CachedFileManager.CompleteUpdatesAsync(fil);
                 if (status == FileUpdateStatus.Complete)
                 {
-                    MessageDialog m = new MessageDialog("Vagtplanen blev eksporteret som " + fil.FileType + "-fil",
-                        "Succes!");
+                    MessageDialog m = Hjaelpeklasse.SuccesMeddelelse("Vagtplanen blev eksporteret som " + fil.FileType + "-fil");
                     m.ShowAsync();
                 }
                 else
                 {
-                    MessageDialog m = new MessageDialog("Der skete en fejl under eksporteringen - prøv igen", "Fejl!");
+                    MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der skete en fejl under eksporteringen - prøv igen");
                     m.ShowAsync();
                 }
             }
@@ -789,13 +788,12 @@ namespace _1aarsproeve.ViewModel
                 FileUpdateStatus status = await CachedFileManager.CompleteUpdatesAsync(fil);
                 if (status == FileUpdateStatus.Complete)
                 {
-                    MessageDialog m = new MessageDialog("Vagtplanen blev eksporteret som " + fil.FileType + "-fil",
-                        "Succes!");
+                    MessageDialog m = Hjaelpeklasse.SuccesMeddelelse("Vagtplanen blev eksporteret som " + fil.FileType + "-fil");
                     m.ShowAsync();
                 }
                 else
                 {
-                    MessageDialog m = new MessageDialog("Der skete en fejl under eksporteringen - prøv igen", "Fejl!");
+                    MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der skete en fejl under eksporteringen - prøv igen");
                     m.ShowAsync();
                 }
             }
@@ -955,7 +953,7 @@ namespace _1aarsproeve.ViewModel
             }
             catch (Exception)
             {
-                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der kunne ikke udtrækkes fra databasen");
                 m.ShowAsync();
             }
         }

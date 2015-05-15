@@ -64,7 +64,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void OpretVagt()
         {
-            MessageDialog m = new MessageDialog("", "Fejl!");
+            MessageDialog m = Hjaelpeklasse.SuccesMeddelelse("");
             if (Ansat == null)
             {
                 m.Content += "Vælg en ansat\n";
@@ -85,7 +85,7 @@ namespace _1aarsproeve.Handler
             {
                 PersistensFacade<VagtplanView>.GemDB("api/Vagters", new VagtplanView(Starttidspunkt, Sluttidspunkt, Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn));
 
-                MessageDialog me = new MessageDialog("Vagten blev tilføjet", "Succes!");
+                MessageDialog me = Hjaelpeklasse.SuccesMeddelelse("Vagten blev tilføjet");
                 me.ShowAsync();
             }
 
@@ -97,7 +97,7 @@ namespace _1aarsproeve.Handler
         {
             if (VagtplanViewModel.SelectedVagter == null)
             {
-                MessageDialog m = new MessageDialog("Vælg en vagt der skal redigeres", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Vælg en vagt der skal redigeres");
                 m.ShowAsync();
             }
             else
@@ -111,7 +111,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void RedigerVagt()
         {
-            MessageDialog m = new MessageDialog("", "Fejl!");
+            var m = Hjaelpeklasse.SuccesMeddelelse("");
             if (Ansat == null)
             {
                 m.Content += "Vælg en ansat\n";
@@ -143,7 +143,7 @@ namespace _1aarsproeve.Handler
         {
             if (VagtplanViewModel.SelectedVagter == null)
             {
-                MessageDialog m = new MessageDialog("Vælg en vagt der skal slettes", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Vælg en vagt der skal slettes");
                 m.ShowAsync();
             }
             else
@@ -161,18 +161,18 @@ namespace _1aarsproeve.Handler
         {
             if (VagtplanViewModel.SelectedVagter == null)
             {
-                MessageDialog m = new MessageDialog("Vælg en vagt der skal slettes", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Vælg en vagt der skal slettes");
                 m.ShowAsync();
             }
             else if (VagtplanViewModel.SelectedVagter.Brugernavn == VagtplanViewModel.Brugernavn)
             {
-                MessageDialog m = new MessageDialog("Du kan ikke anmode vagtskift med dig selv", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Du kan ikke anmode vagtskift med dig selv");
                 m.ShowAsync();
             }
             else
             {
                 PersistensFacade<AnmodningerView>.GemDB("api/Anmodningers", new AnmodningerView(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.Brugernavn));
-                MessageDialog me = new MessageDialog("Du har anmodet om denne vagt", "Succes!");
+                MessageDialog me = Hjaelpeklasse.SuccesMeddelelse("Du har anmodet om denne vagt");
                 me.ShowAsync();
             }
         }

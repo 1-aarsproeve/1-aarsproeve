@@ -2013,7 +2013,7 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="b9dd3342-a77a-4fb8-8324-683f06cd41ac" name="HjaelpeKlasse" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="b9dd3342-a77a-4fb8-8324-683f06cd41ac" name="Hjaelpeklasse" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="f01da2a2-e4e2-4872-b362-44093888fae1" />
               <ownedAttributesInternal>
                 <property Id="e7601687-6a36-45b5-b0aa-60b2227ddc65" name="StillingsId" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2046,6 +2046,42 @@
                         <elementDefinition Id="c00107b3-55d2-4a87-aad1-d4d5f331c81d" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="b0ca9c7e-689c-44a2-b443-6514f69d3a9d" LastKnownName="Visibility" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="9fa41f57-da92-46ef-b7d7-471e308ae228" name="SuccesMeddelelse" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="87a826bd-98d3-4372-b6bd-dfcb6cc6caa8" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="99762e1e-3d3f-44f4-adf7-30cfcafa7bec" name="string meddelelse" direction="In" isUnique="false">
+                        <elementDefinition Id="41da542b-1f51-401b-b898-75e5bae2f625" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b3fb1df2-8fc7-42ca-ac01-edb6f4baa658" direction="Return" isUnique="false">
+                        <elementDefinition Id="bce6fcff-30be-45d9-be7e-adaf9cc2f1f6" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6d2381ab-eed5-4f84-af57-433cfcb073c3" LastKnownName="MessageDialog" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="449c6123-7b06-4861-be98-b79161ffd6c5" name="FejlMeddelelse" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5662e16b-a589-459e-b390-5701c472cba7" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="43f31fbe-4d38-41c3-ac97-479744e52f32" name="string meddelelse" direction="In" isUnique="false">
+                        <elementDefinition Id="138367ab-bd70-4bd1-aca5-786fb400b915" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3f032448-7367-43ca-b799-b54dbe40a99a" direction="Return" isUnique="false">
+                        <elementDefinition Id="1a4be305-09b1-43b0-99b1-594a139cc07a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6d2381ab-eed5-4f84-af57-433cfcb073c3" LastKnownName="MessageDialog" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -2726,6 +2762,11 @@
     <packageHasNamedElement>
       <referencedType Id="c149a09e-d06c-44b9-a22b-e2c6b6d5861c" name="ObservableCollection&lt;AnmodningerView&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;AnmodningerView&gt;">
         <elementDefinition Id="8cd784bd-c4cc-4beb-a6ec-a1c9dff3fb25" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6d2381ab-eed5-4f84-af57-433cfcb073c3" name="MessageDialog" isAbstract="false" isLeaf="false" cachedFullName="MessageDialog">
+        <elementDefinition Id="134c3dce-af80-45c6-a6e9-7824958a6178" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

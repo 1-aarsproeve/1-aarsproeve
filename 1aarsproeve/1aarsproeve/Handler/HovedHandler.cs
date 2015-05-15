@@ -53,7 +53,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void SkrivBesked()
         {
-            MessageDialog m = new MessageDialog("", "Fejl!");
+            MessageDialog m = Hjaelpeklasse.FejlMeddelelse("");
             try
             {
                 HovedmenuView.CheckOverskrift(Overskrift);

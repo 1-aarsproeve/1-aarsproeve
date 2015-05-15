@@ -80,7 +80,7 @@ namespace _1aarsproeve.ViewModel
             Setting = ApplicationData.Current.LocalSettings;
 
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            SkjulKnap = HjaelpeKlasse.Stilling((int)Setting.Values["StillingId"]);
+            SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
             
             BeskedCollection.Clear();
             var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
@@ -174,7 +174,7 @@ namespace _1aarsproeve.ViewModel
             get
             {
                 if (_logUdCommand == null)
-                    _logUdCommand = new RelayCommand(HjaelpeKlasse.LogUd);
+                    _logUdCommand = new RelayCommand(Hjaelpeklasse.LogUd);
                 return _logUdCommand;
             }
             set { _logUdCommand = value; }

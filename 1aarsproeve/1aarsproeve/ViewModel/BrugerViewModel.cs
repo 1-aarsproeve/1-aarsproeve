@@ -124,7 +124,7 @@ namespace _1aarsproeve.ViewModel
             {
                 if (_logudCommand == null)
                 {
-                    _logudCommand = new RelayCommand(HjaelpeKlasse.LogUd);
+                    _logudCommand = new RelayCommand(Hjaelpeklasse.LogUd);
                 }
                 return _logudCommand;
             }
@@ -206,8 +206,7 @@ namespace _1aarsproeve.ViewModel
             }
             catch (Exception)
             {
-
-                MessageDialog m = new MessageDialog("Der kunne ikke oprettes forbindelse til databasen", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der kunne ikke oprettes forbindelse til databasen");
                 m.ShowAsync();
             }
 
@@ -240,7 +239,7 @@ namespace _1aarsproeve.ViewModel
                 else
                 {
 
-                MessageDialog m = new MessageDialog("Forkert brugernavn/password", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Forkert brugernavn/password");
                 m.ShowAsync();
                 }
 
@@ -251,7 +250,7 @@ namespace _1aarsproeve.ViewModel
                 {
                     AnsatteCollection.Clear();
                 }
-                MessageDialog m = new MessageDialog("Der kunne ikke udtrækkes fra databasen", "Fejl!");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der kunne ikke udtrækkes fra databasen");
                 m.ShowAsync();
             }
         }

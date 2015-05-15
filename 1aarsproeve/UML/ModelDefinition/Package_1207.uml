@@ -4332,7 +4332,7 @@
     <packageHasNamedElement>
       <class
         Id="f01da2a2-e4e2-4872-b362-44093888fae1"
-        name="HjaelpeKlasse"
+        name="Hjaelpeklasse"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -4409,6 +4409,68 @@
                       Id="dfde202c-2247-4b77-882f-063e00a84fc6"
                       LastKnownName="Visibility"
                       LastKnownLocation="Package_1206.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="87a826bd-98d3-4372-b6bd-dfcb6cc6caa8"
+            name="SuccesMeddelelse"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="41da542b-1f51-401b-b898-75e5bae2f625"
+                  name="string meddelelse"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bce6fcff-30be-45d9-be7e-adaf9cc2f1f6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="134c3dce-af80-45c6-a6e9-7824958a6178"
+                      LastKnownName="MessageDialog"
+                      LastKnownLocation="Package_1207.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5662e16b-a589-459e-b390-5701c472cba7"
+            name="FejlMeddelelse"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="138367ab-bd70-4bd1-aca5-786fb400b915"
+                  name="string meddelelse"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a4be305-09b1-43b0-99b1-594a139cc07a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="134c3dce-af80-45c6-a6e9-7824958a6178"
+                      LastKnownName="MessageDialog"
+                      LastKnownLocation="Package_1207.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4625,6 +4687,11 @@
           </property>
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="134c3dce-af80-45c6-a6e9-7824958a6178"
+        name="MessageDialog" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

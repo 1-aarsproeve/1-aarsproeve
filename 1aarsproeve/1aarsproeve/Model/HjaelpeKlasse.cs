@@ -14,7 +14,7 @@ namespace _1aarsproeve.Model
     /// <summary>
     /// Hjælpeklasse indeholdende statiske metoder
     /// </summary>
-    public class HjaelpeKlasse
+    public class Hjaelpeklasse
     {
         /// <summary>
         /// Property til at skjule knapper
@@ -23,9 +23,29 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Konstruktør
         /// </summary>
-        public HjaelpeKlasse()
+        public Hjaelpeklasse()
         {
             SkjulKnap = new Visibility();
+        }
+        /// <summary>
+        /// Viser MessageDialog ved succes
+        /// </summary>
+        /// <param name="meddelelse">Tager meddelelse som parameter</param>
+        /// <returns>Returnerer dialogboksen</returns>
+        public static MessageDialog SuccesMeddelelse(string meddelelse)
+        {
+            MessageDialog sm = new MessageDialog(meddelelse, "Handlingen blev gennemført!");
+            return sm;
+        }
+        /// <summary>
+        /// Viser MessageDialog ved fejl
+        /// </summary>
+        /// <param name="meddelelse">Tager meddelelse som parameter</param>
+        /// <returns>Returnerer dialogboksen</returns>
+        public static MessageDialog FejlMeddelelse(string meddelelse)
+        {
+            MessageDialog fm = new MessageDialog(meddelelse, "Ups, der skete en fejl!");
+            return fm;
         }
         /// <summary>
         /// Logger brugeren ud

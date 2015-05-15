@@ -68,7 +68,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void OpretBruger()
         {
-            MessageDialog m = new MessageDialog("", "Fejl!");
+            MessageDialog m = Hjaelpeklasse.FejlMeddelelse("");
             var u = PersistensFacade<Ansatte>.LoadDB("api/Ansattes").Result;
             foreach (var ansatte in u)
             {
@@ -145,7 +145,7 @@ namespace _1aarsproeve.Handler
             {
                 PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(Brugernavn, Navn, Password, Email, Mobil, Adresse, Postnummer, Stilling.StillingId));
 
-                MessageDialog me = new MessageDialog("Brugeren blev oprettet", "Succes!");
+                MessageDialog me = Hjaelpeklasse.SuccesMeddelelse("Brugeren blev oprettet");
                 me.ShowAsync();
             }
       
@@ -155,7 +155,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void RedigerBruger()
         {
-            MessageDialog m = new MessageDialog("", "Fejl!");
+            MessageDialog m = Hjaelpeklasse.FejlMeddelelse("");
             try
             {
                 Ansatte.CheckNavn(Navn);
@@ -221,8 +221,8 @@ namespace _1aarsproeve.Handler
                 var rootFrame = Window.Current.Content as Frame;
                 rootFrame.Navigate(typeof(Hovedmenu));
 
-                MessageDialog me = new MessageDialog("Din profil blev redigeret", "Succes!");
-                me.ShowAsync();
+                MessageDialog m1 = Hjaelpeklasse.SuccesMeddelelse("Din profil blev redigeret");
+                m1.ShowAsync();
             }
         }
     }

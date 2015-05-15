@@ -119,7 +119,7 @@
     <Compile Include="Handler\VagtHandler.cs" />
     <Compile Include="Model\AnmodningerView.cs" />
     <Compile Include="Model\Ansatte.cs" />
-    <Compile Include="Model\HjaelpeKlasse.cs" />
+    <Compile Include="Model\Hjaelpeklasse.cs" />
     <Compile Include="Model\HovedmenuView.cs" />
     <Compile Include="Model\Stillinger.cs" />
     <Compile Include="Model\Ugedage.cs" />
