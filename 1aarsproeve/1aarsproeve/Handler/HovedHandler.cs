@@ -80,11 +80,7 @@ namespace _1aarsproeve.Handler
 
                 var rootFrame = Window.Current.Content as Frame;
                 rootFrame.Navigate(typeof(Hovedmenu));
-
-                MessageDialog me = new MessageDialog("Beskeden blev oprettet", "Succes!");
-                me.ShowAsync();
             }
-
 
         }
         /// <summary>
@@ -96,10 +92,7 @@ namespace _1aarsproeve.Handler
             PersistensFacade<AnmodningerView>.SletDB("api/Anmodningers", id: HovedViewModel.SelectedAnmodninger.AnmodningId);
 
             var rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(Anmodninger));
-
-            MessageDialog m = new MessageDialog("Anmodningen blev accepteret", "Succes!");
-            m.ShowAsync();
+            rootFrame.Navigate(typeof (Anmodninger));
         }
         /// <summary>
         /// Annullerer vagtanmodning
@@ -110,9 +103,6 @@ namespace _1aarsproeve.Handler
             
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Anmodninger));
-
-            MessageDialog m = new MessageDialog("Anmodningen blev annulleret", "Succes!");
-            m.ShowAsync();
         }
     }
 }

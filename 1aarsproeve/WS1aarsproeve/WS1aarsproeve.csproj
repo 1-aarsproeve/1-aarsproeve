@@ -121,12 +121,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Anmodninger.cs" />
-    <Compile Include="AnmodningerView.cs" />
-    <Compile Include="Ansatte.cs" />
+    <Compile Include="Models\Anmodninger.cs" />
+    <Compile Include="Views\AnmodningerView.cs" />
+    <Compile Include="Models\Ansatte.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -159,7 +158,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Beskeder.cs" />
+    <Compile Include="Models\Beskeder.cs" />
     <Compile Include="Controllers\AnmodningersController.cs" />
     <Compile Include="Controllers\AnmodningerViewsController.cs" />
     <Compile Include="Controllers\AnsattesController.cs" />
@@ -174,13 +173,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="HovedmenuView.cs" />
+    <Compile Include="Views\HovedmenuView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stillinger.cs" />
+    <Compile Include="Models\Stillinger.cs" />
     <Compile Include="TableContext.cs" />
-    <Compile Include="Ugedage.cs" />
-    <Compile Include="Vagter.cs" />
-    <Compile Include="VagtplanView.cs" />
+    <Compile Include="Models\Ugedage.cs" />
+    <Compile Include="Models\Vagter.cs" />
+    <Compile Include="Views\VagtplanView.cs" />
     <Compile Include="ViewContext.cs" />
   </ItemGroup>
   <ItemGroup>

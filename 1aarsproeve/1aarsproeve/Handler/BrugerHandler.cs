@@ -144,8 +144,6 @@ namespace _1aarsproeve.Handler
             else
             {
                 PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(Brugernavn, Navn, Password, Email, Mobil, Adresse, Postnummer, Stilling.StillingId));
-                var rootFrame = Window.Current.Content as Frame;
-                rootFrame.Navigate(typeof(Hovedmenu)); 
 
                 MessageDialog me = new MessageDialog("Brugeren blev oprettet", "Succes!");
                 me.ShowAsync();
@@ -219,8 +217,12 @@ namespace _1aarsproeve.Handler
                         BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer,
                         BrugerViewModel.AnsatteCollection[0].StillingId),
                     streng: BrugerViewModel.AnsatteCollection[0].Brugernavn);
+
                 var rootFrame = Window.Current.Content as Frame;
                 rootFrame.Navigate(typeof(Hovedmenu));
+
+                MessageDialog me = new MessageDialog("Din profil blev redigeret", "Succes!");
+                me.ShowAsync();
             }
         }
     }

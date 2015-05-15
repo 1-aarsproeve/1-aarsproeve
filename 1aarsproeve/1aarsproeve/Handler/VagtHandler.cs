@@ -132,8 +132,8 @@ namespace _1aarsproeve.Handler
             {
                 PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(VagtplanViewModel.SelectedVagter.VagtId, Starttidspunkt, Sluttidspunkt, Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn), id: VagtplanViewModel.SelectedVagter.VagtId);
 
-                MessageDialog me = new MessageDialog("Vagten blev redigeret", "Succes!");
-                me.ShowAsync();
+                var rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(Vagtplan));
             }
         }
         /// <summary>
@@ -150,8 +150,8 @@ namespace _1aarsproeve.Handler
             {
                 PersistensFacade<VagtplanView>.SletDB("api/Vagters", VagtplanViewModel.SelectedVagter.VagtId);
 
-                VagtplanViewModel.ClearVagterCollections();
-                VagtplanViewModel.InitialiserVagter();
+                var rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(Vagtplan));
             }
         }
         /// <summary>
@@ -175,7 +175,6 @@ namespace _1aarsproeve.Handler
                 MessageDialog me = new MessageDialog("Du har anmodet om denne vagt", "Succes!");
                 me.ShowAsync();
             }
-
         }
     }
 }

@@ -89,25 +89,25 @@
                                     <Run Text="har anmodet om din vagt"/>
                                 </TextBlock>
                             </StackPanel>
-                            <Grid Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch">
+                            <Grid Grid.Column="0" Grid.Row="1">
                                 <StackPanel>
-                                    <TextBlock Margin="0,5,0,0" FontSize="20" Foreground="Gray">
+                                    <TextBlock Style="{StaticResource AnmodningText}">
                                         <Run Text="Uge:"/>
                                         <Run Text="{Binding Ugenummer}"/>
                                     </TextBlock>
-                                    <TextBlock Margin="0,5,0,0" FontSize="20" Foreground="Gray">
+                                    <TextBlock Style="{StaticResource AnmodningText}">
                                         <Run Text="Dag:"/>
                                         <Run Text="{Binding Ugedag}"/>
                                     </TextBlock>
                                 </StackPanel>
                             </Grid>
-                            <Grid Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch">
+                            <Grid Grid.Column="1" Grid.Row="1">
                                 <StackPanel>
-                                    <TextBlock Margin="0,5,0,0" FontSize="20" Foreground="Gray">
+                                    <TextBlock Style="{StaticResource AnmodningText}">
                                         <Run Text="Starttidspunkt:"/>
                                         <Run Text="{Binding Starttidspunkt}"/>
                                     </TextBlock>
-                                    <TextBlock Margin="0,5,0,0" FontSize="20" Foreground="Gray">
+                                    <TextBlock Style="{StaticResource AnmodningText}">
                                         <Run Text="Sluttidspunkt:"/>
                                         <Run Text="{Binding Sluttidspunkt}"/>
                                     </TextBlock>

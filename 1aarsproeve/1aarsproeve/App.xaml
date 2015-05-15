@@ -371,7 +371,11 @@
             <Setter Property="Height" Value="50"/>
             <Setter Property="Margin" Value="0 0 0 10"/>
         </Style>
-
+        <Style x:Key="AnmodningText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="Margin" Value="0 5 0 0"/>
+        </Style>
         <Style x:Key="Bund" TargetType="CommandBar">
             <Setter Property="Background" Value="Gray"/>
         </Style>
