@@ -19,10 +19,25 @@ namespace _1aarsproeve.Handler
     /// </summary>
     public class VagtHandler
     {
+        /// <summary>
+        /// Starttidspunkt property
+        /// </summary>
         public TimeSpan Starttidspunkt { get; set; }
+        /// <summary>
+        /// Sluttidspunkt property
+        /// </summary>
         public TimeSpan Sluttidspunkt { get; set; }
+        /// <summary>
+        /// Ugenummer property
+        /// </summary>
         public int Ugenummer { get; set; }
+        /// <summary>
+        /// Ugedag property
+        /// </summary>
         public Ugedage Ugedag { get; set; }
+        /// <summary>
+        /// Ansat property
+        /// </summary>
         public Ansatte Ansat { get; set; }
         /// <summary>
         /// VagtplanViewModel property
@@ -75,7 +90,9 @@ namespace _1aarsproeve.Handler
             }
 
         }
-
+        /// <summary>
+        /// Navigerer til RedigerVagt view
+        /// </summary>
         public void NavigerRedigerVagt()
         {
             if (VagtplanViewModel.SelectedVagter == null)

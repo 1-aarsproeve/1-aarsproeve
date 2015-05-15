@@ -18,13 +18,37 @@ namespace _1aarsproeve.Handler
     /// </summary>
     public class BrugerHandler
     {
+        /// <summary>
+        /// Navn property
+        /// </summary>
         public string Navn { get; set; }
-        public string Brugernavn{ get; set; }
-        public string Password{ get; set; }
-        public string Postnummer{ get; set; }
-        public string Adresse{ get; set; }
-        public string Mobil{ get; set; }
-        public string Email{ get; set; }
+        /// <summary>
+        /// Brugernavn property
+        /// </summary>
+        public string Brugernavn { get; set; }
+        /// <summary>
+        /// Password property
+        /// </summary>
+        public string Password { get; set; }
+        /// <summary>
+        /// Postnummer property
+        /// </summary>
+        public string Postnummer { get; set; }
+        /// <summary>
+        /// Adresse property
+        /// </summary>
+        public string Adresse { get; set; }
+        /// <summary>
+        /// Mobil property
+        /// </summary>
+        public string Mobil { get; set; }
+        /// <summary>
+        /// Email property
+        /// </summary>
+        public string Email { get; set; }
+        /// <summary>
+        /// Stilling property
+        /// </summary>
         public Stillinger Stilling { get; set; }
 
         /// <summary>
@@ -133,9 +157,71 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void RedigerBruger()
         {
-            PersistensFacade<Ansatte>.RedigerDB("api/Ansattes", new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn, BrugerViewModel.AnsatteCollection[0].Navn, BrugerViewModel.AnsatteCollection[0].Password, BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil, BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer, BrugerViewModel.AnsatteCollection[0].StillingId), streng: BrugerViewModel.AnsatteCollection[0].Brugernavn);
-            var rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(Hovedmenu));
+            MessageDialog m = new MessageDialog("", "Fejl!");
+            try
+            {
+                Ansatte.CheckNavn(Navn);
+            }
+            catch (Exception)
+            {
+                m.Content += "Navn er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckPassword(Password);
+            }
+            catch (Exception)
+            {
+                m.Content += "Password er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckEmail(Email);
+            }
+            catch (Exception)
+            {
+                m.Content += "Email er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckAdresse(Adresse);
+            }
+            catch (Exception)
+            {
+                m.Content += "Adresse er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckPostnummer(Postnummer);
+            }
+            catch (Exception)
+            {
+                m.Content += "Postnummer er forkert!\n";
+            }
+            try
+            {
+                Ansatte.CheckMobil(Mobil);
+            }
+            catch (Exception)
+            {
+                m.Content += "Mobil er forkert!\n";
+            }
+            if (m.Content != "")
+            {
+                m.ShowAsync();
+            }
+            else
+            {
+                PersistensFacade<Ansatte>.RedigerDB("api/Ansattes",
+                    new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn,
+                        BrugerViewModel.AnsatteCollection[0].Navn, BrugerViewModel.AnsatteCollection[0].Password,
+                        BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil,
+                        BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer,
+                        BrugerViewModel.AnsatteCollection[0].StillingId),
+                    streng: BrugerViewModel.AnsatteCollection[0].Brugernavn);
+                var rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(Hovedmenu));
+            }
         }
     }
 }

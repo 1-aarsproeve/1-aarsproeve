@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="b2da44f7-40e8-45c5-974d-958870fdf62d"
   name="ViewModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -631,7 +631,125 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="6d589183-0eb8-41a6-b23b-1c2cd700c454"
+            name="SelectedAnmodninger"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="00b52ccf-1141-4ab0-b90c-c781ebdcf19a"
+                LastKnownName="AnmodningView"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9a0557de-f1da-4fd2-8747-87ce0234d069"
+            name="AnmodningCollection"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8cd784bd-c4cc-4beb-a6ec-a1c9dff3fb25"
+                LastKnownName="ObservableCollection&lt;AnmodningerView&gt;"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="265ad6bd-47f3-4290-8579-e634f934fca3"
+            name="IngenAnmodningern"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2"
+                LastKnownName="string"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4fb63dee-d095-4744-8271-86d8733adb35"
+            name="SelectedAnmodningerCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4e256aff-a859-40ae-a464-6aa35a51a7d4"
+            name="AccepterAnmodningCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ddb97c74-71e3-41dc-8253-2288efc05260"
+            name="AnnullerAnmodningCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0a1058ec-0b46-4435-b77e-fdf8a6396a82"
+            name="InitialiserAnmodninger"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -642,45 +760,6 @@
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
-          <association
-            Id="25deaabf-ddff-4b5c-804d-a0ac2482da1d"
-            isDerived="false"
-            sourceEndRoleName="GeneriskSingleton"
-            targetEndRoleName="GeneriskSingleton"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="ed3785a2-9540-4710-ae43-f007aeef8947"
-              LastKnownName="GeneriskSingleton"
-              LastKnownLocation="Package_1207.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7b4dbc5c-466f-45ba-89b9-5611a78ed30a"
-                  name="GeneriskSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="17cfe584-0718-493e-924e-8247524c2df9"
-                  name="GeneriskSingleton"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="a5cc59f7-4156-4f45-b577-ad74fa596318"
             isDerived="false"
@@ -799,20 +878,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="744c87e4-d8ee-4148-9843-3a2071e4303c"
+            Id="2f47537a-a74e-435c-abaf-406320ca0099"
             isDerived="false"
             sourceEndRoleName="VagtplanViewModel"
-            targetEndRoleName="VagtplanView"
+            targetEndRoleName="GeneriskSingleton"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="37bbc963-d42f-478b-b802-74d3721aa6b3"
-              LastKnownName="VagtplanView"
+              Id="ed3785a2-9540-4710-ae43-f007aeef8947"
+              LastKnownName="GeneriskSingleton"
               LastKnownLocation="Package_1207.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="2e6d4b70-5de1-4bee-8cf4-03ca7c9971c7"
+                  Id="21ced61b-4c94-4a1f-bf0b-e6711e0ca01b"
                   name="VagtplanViewModel"
                   isLeaf="false"
                   isStatic="false"
@@ -825,86 +904,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="15aa3d7e-9f65-4270-983a-4b7066b853b0"
-                  name="VagtplanView"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="4e110549-dde7-4f79-bf55-67ab545168a6"
-            isDerived="false"
-            sourceEndRoleName="VagtplanViewModel"
-            targetEndRoleName="Ugedage"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="26d54b08-6a8b-41a8-a6e0-5f7a7e61f2e7"
-              LastKnownName="Ugedage"
-              LastKnownLocation="Package_1207.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="35a34db3-2bcf-4a43-93d5-708d4a71f168"
-                  name="VagtplanViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d72adad3-41a1-46ce-8df0-d1a26bb1e6eb"
-                  name="Ugedage"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="d8f85fb4-7e13-4e04-96e1-095fe9dcaaca"
-            isDerived="false"
-            sourceEndRoleName="VagtplanViewModel"
-            targetEndRoleName="Ansatte"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="b6535741-f133-4633-a099-890f8e64ecea"
-              LastKnownName="Ansatte"
-              LastKnownLocation="Package_1207.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="243de7e6-1cae-46d7-8200-e83169bb3800"
-                  name="VagtplanViewModel"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a599b9b4-74b5-4bc3-92ab-76a7800c1cd3"
-                  name="Ansatte"
+                  Id="bc4abb53-97a5-4463-b9e5-b94b246b311d"
+                  name="GeneriskSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1710,6 +1711,42 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="4f38e8bd-8b47-41be-803b-823379d2d1b0"
+            name="NavigerRedigerVagtCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fd2e0e55-1eb0-4d67-9c02-89832ef27034"
+            name="AnmodVagtCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16404176-9a9c-4bd8-b5fd-d1f4b04c1223"
+                LastKnownName="ICommand"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2005,6 +2042,16 @@
       <undefinedType
         Id="8d07e2a0-3422-4856-b85e-f645ac646bc0"
         name="VagtplanView" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="00b52ccf-1141-4ab0-b90c-c781ebdcf19a"
+        name="AnmodningView" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8cd784bd-c4cc-4beb-a6ec-a1c9dff3fb25"
+        name="ObservableCollection&lt;AnmodningerView&gt;" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

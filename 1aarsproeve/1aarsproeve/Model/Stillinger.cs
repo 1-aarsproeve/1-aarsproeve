@@ -24,6 +24,10 @@ namespace _1aarsproeve.Model
         /// Stilling porperty
         /// </summary>
         public string Stilling { get; set; }
+        /// <summary>
+        /// Returnerer Stilling
+        /// </summary>
+        /// <returns>Returnerer ToString</returns>
         public override string ToString()
         {
             return Stilling;

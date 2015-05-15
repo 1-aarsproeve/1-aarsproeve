@@ -412,5 +412,63 @@
         isLeaf="false"
         isActiveClass="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="13c62332-b58b-4428-b997-c57b4c424f50"
+        name="Anmodninger"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="af79542a-402c-4c3e-a196-6e52d12200c9"
+        name="Anmodninger"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="eef64deb-c47e-4ffd-92a3-e623a655d72f"
+            isDerived="false"
+            sourceEndRoleName="Anmodninger"
+            targetEndRoleName="HovedViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2dbedc47-cc83-4a71-8064-058414ae393d"
+              LastKnownName="HovedViewModel"
+              LastKnownLocation="Package_1206.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7216c30-a748-49f4-bcc4-5a5d13debea8"
+                  name="Anmodninger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="47dbbbe0-1f07-4f74-8c75-2acedbf1d935"
+                  name="HovedViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

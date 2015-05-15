@@ -24,6 +24,9 @@ namespace _1aarsproeve.Handler
         /// Overskrift property
         /// </summary>
         public string Overskrift { get; set; }
+        /// <summary>
+        /// Beskrivelse property
+        /// </summary>
         public string Beskrivelse { get; set; }
         /// <summary>
         /// HovedViewModel property
@@ -81,6 +84,7 @@ namespace _1aarsproeve.Handler
                 MessageDialog me = new MessageDialog("Beskeden blev oprettet", "Succes!");
                 me.ShowAsync();
             }
+
 
         }
         /// <summary>

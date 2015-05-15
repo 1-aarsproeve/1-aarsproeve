@@ -157,6 +157,9 @@ namespace _1aarsproeve.ViewModel
             }
             set { _opretVagtCommand = value; }
         }
+        /// <summary>
+        /// AnmodVagtCommand property
+        /// </summary>
         public ICommand AnmodVagtCommand
         {
             get
@@ -166,6 +169,9 @@ namespace _1aarsproeve.ViewModel
             }
             set { _anmodVagtCommand = value; }
         }
+        /// <summary>
+        /// NavigerRedigerVagtCommand property
+        /// </summary>
         public ICommand NavigerRedigerVagtCommand
         {
             get

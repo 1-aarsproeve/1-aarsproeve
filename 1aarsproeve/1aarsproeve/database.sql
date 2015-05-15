@@ -59,8 +59,8 @@ CREATE TABLE [dbo].[Vagter] (
 );
 /* Indsætter i Vagter-tabel */
 INSERT INTO Vagter VALUES ('10:00', '16:00', 20, 1, 'Daniel');
-INSERT INTO Vagter VALUES ('16:00', '21:00', 20, 2, 'Benjamin');
 INSERT INTO Vagter VALUES ('08:00', '12:00', 20, 3, 'Ubemandet');
+INSERT INTO Vagter VALUES ('16:00', '21:00', 20, 2, 'Benjamin');
 INSERT INTO Vagter VALUES ('07:00', '15:00', 20, 4, 'Jacob');
 INSERT INTO Vagter VALUES ('07:00', '23:00', 20, 6, 'Jari');
 
@@ -78,6 +78,17 @@ CREATE TABLE [dbo].[Beskeder] (
 /* Indsætter i Besked-tabel */
 INSERT INTO Beskeder VALUES ('MUS-samtaler', '2015-04-04', 'Så er der MUS-samtaler!', '2015-05-15', 'Daniel');
 
+/* Opretter Anmodninger-tabl */
+CREATE TABLE [dbo].[Anmodninger] (
+    [AnmodningId]         INT          IDENTITY (1, 1) NOT NULL,
+    [VagtId]              INT          NOT NULL,
+    [AnmodningBrugernavn] VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([AnmodningId] ASC),
+    CONSTRAINT [FK_Anmodninger_Vagter] FOREIGN KEY ([VagtId]) REFERENCES [dbo].[Vagter] ([VagtId]),
+    CONSTRAINT [FK_Anmodninger_Ansatte] FOREIGN KEY ([AnmodningBrugernavn]) REFERENCES [dbo].[Ansatte] ([Brugernavn])
+);
+INSERT INTO Anmodninger VALUES (3,'Daniel');
+
 /* Opretter HovedmenuView */
 GO
 CREATE VIEW [dbo].[HovedmenuView]
@@ -89,4 +100,10 @@ GO
 CREATE VIEW [dbo].[VagtplanView]
 	AS SELECT Vagter.Starttidspunkt, Vagter.Sluttidspunkt, Vagter.UgedagId, Vagter.Ugenummer, Vagter.VagtId, Ansatte.Brugernavn, Ansatte.Navn FROM [Vagter]
 	JOIN Ansatte ON Vagter.Brugernavn = Ansatte.Brugernavn
+/* Opretter AnmodningerView */ 
+GO
+CREATE VIEW [dbo].[AnmodningerView]
+	AS SELECT Anmodninger.AnmodningId, Anmodninger.AnmodningBrugernavn, Vagter.Starttidspunkt, Vagter.Sluttidspunkt, Vagter.UgedagId, Vagter.Ugenummer, Vagter.Brugernavn, Vagter.VagtId, Ugedage.Ugedag FROM [Anmodninger]
+	JOIN Vagter ON Anmodninger.VagtId = Vagter.VagtId
+	JOIN Ugedage On Vagter.UgedagId = Ugedage.UgedagId
 GO

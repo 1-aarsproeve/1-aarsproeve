@@ -10,10 +10,21 @@ namespace _1aarsproeve.Model
     /// </summary>
     public partial class HovedmenuView
     {
+        /// <summary>
+        /// HovedmenuView default konstruktør
+        /// </summary>
         public HovedmenuView()
         {
-            
+
         }
+        /// <summary>
+        /// HovedmenuView konstruktør
+        /// </summary>
+        /// <param name="overskrift">overskrift parameter</param>
+        /// <param name="dato">dato parameter</param>
+        /// <param name="beskrivelse">beskrivelse parameter</param>
+        /// <param name="udleobsdato">udleobsdato parameter</param>
+        /// <param name="brugernavn">brugernavn parameter</param>
         public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn)
         {
             Overskrift = overskrift;
@@ -22,6 +33,10 @@ namespace _1aarsproeve.Model
             Udloebsdato = udleobsdato;
             Brugernavn = brugernavn;
         }
+        /// <summary>
+        /// Checker beskrivelse
+        /// </summary>
+        /// <param name="beskrivelse">beskrivelse parameter</param>
         public static void CheckBeskrivelse(string beskrivelse)
         {
             if (string.IsNullOrEmpty(beskrivelse) || beskrivelse.Length < 10 || beskrivelse.Length > 200)
@@ -29,7 +44,10 @@ namespace _1aarsproeve.Model
                 throw new ArgumentException(" fejl i beskrivelse ");
             }
         }
-
+        /// <summary>
+        /// Checker overskrift
+        /// </summary>
+        /// <param name="overskrift">overskrift parameter</param>
         public static void CheckOverskrift(string overskrift)
         {
             if (string.IsNullOrEmpty(overskrift) || overskrift.Length < 10 || overskrift.Length > 50)

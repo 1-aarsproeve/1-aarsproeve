@@ -648,5 +648,75 @@
         </signatures>
       </Interface>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c6f2000d-adf0-4942-954c-462ac62e7007"
+        name="IQueryable&lt;Anmodninger‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ab3ed070-50df-40b4-ba76-b013bb8cfa8d"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01ba04ce-bddd-492e-a0e6-4c3e8f15b626">
+                <propertyInstance
+                  Id="4a3c2737-144e-4f98-9c73-aad70fa88381"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a226ce5a-1369-4245-8e7e-cd5fbdb0a69e">
+                <propertyInstance
+                  Id="431b15ff-9cfd-4f44-a077-d618d2b2b02f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="211010e0-748e-4705-b122-8035f7eb3dc2">
+                <propertyInstance
+                  Id="43f7c340-ab2e-4d5f-9ed8-b9875eae1bd7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b1ceed18-1d61-4844-a2f2-aa9669261910">
+                <propertyInstance
+                  Id="e1546784-9e1f-45b2-b06b-e1c0c19df0b7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="f547e4c0-ad7a-427f-b832-ac74cd8e1619">
+            <redefinableTemplateSignatureMoniker
+              Id="0d2f3ea3-e5d4-40c5-a6fe-61eb5d89efd3"
+              LastKnownLocation="Package9_1234.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="88f73054-6ffc-4e52-9ca5-fae33fbe48f9">
+                  <actuals>
+                    <classMoniker
+                      Id="3d1ffb09-895b-434b-a7a2-765c1a84949c"
+                      LastKnownName="Anmodninger"
+                      LastKnownLocation="Package1_1235.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="328750ba-0257-4e16-b751-491c8d2165b6"
+                      LastKnownLocation="Package9_1234.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -99,7 +99,9 @@ namespace _1aarsproeve.ViewModel
 
             HovedHandler = new HovedHandler(this);
         }
-
+        /// <summary>
+        /// Initialiserer anmodninger
+        /// </summary>
         public void InitialiserAnmodninger()
         {
             AnmodningCollection.Clear();
