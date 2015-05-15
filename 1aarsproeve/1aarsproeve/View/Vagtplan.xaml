@@ -23,13 +23,7 @@
         <CommandBar Style="{StaticResource Bund}">
             <CommandBar.SecondaryCommands>
                 <AppBarButton Visibility="{Binding SkjulKnap}" Icon="Delete" Label="Slet vagt" Command="{Binding SletVagtCommand}"/>
-                <AppBarButton Visibility="{Binding SkjulKnap}" Icon="Edit" Label="Rediger vagt">
-                    <Interactivity:Interaction.Behaviors>
-                        <Core:EventTriggerBehavior EventName="Click">
-                            <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.RedigerVagt"/>
-                        </Core:EventTriggerBehavior>
-                    </Interactivity:Interaction.Behaviors>
-                </AppBarButton>
+                <AppBarButton Visibility="{Binding SkjulKnap}" Icon="Edit" Label="Rediger vagt" Command="{Binding NavigerRedigerVagtCommand}"/>
                 <AppBarButton Visibility="{Binding SkjulKnap}" Icon="Add" Label="Opret vagt">
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">

@@ -51,8 +51,10 @@ namespace _1aarsproeve.ViewModel
         private ICommand _eksporterMineCommand;
         private ICommand _logudCommand;
         private ICommand _selectedVagterCommand;
-        private Action<ObservableCollection<ObservableCollection<VagtplanView>>> _sorting;
         private ICommand _anmodVagtCommand;
+        private ICommand _navigerRedigerVagtCommand;
+        private Action<ObservableCollection<ObservableCollection<VagtplanView>>> _sorting;
+
         private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection =
             GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
 
@@ -163,6 +165,15 @@ namespace _1aarsproeve.ViewModel
                 return _anmodVagtCommand;
             }
             set { _anmodVagtCommand = value; }
+        }
+        public ICommand NavigerRedigerVagtCommand
+        {
+            get
+            {
+                _navigerRedigerVagtCommand = new RelayCommand(VagtHandler.NavigerRedigerVagt);
+                return _navigerRedigerVagtCommand;
+            }
+            set { _navigerRedigerVagtCommand = value; }
         }
         /// <summary>
         /// RedigerVagtCommand property

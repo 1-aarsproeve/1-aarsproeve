@@ -5,6 +5,8 @@ using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using _1aarsproeve.Model;
 using _1aarsproeve.Persistens;
 using _1aarsproeve.View;
@@ -72,6 +74,20 @@ namespace _1aarsproeve.Handler
                 me.ShowAsync();
             }
 
+        }
+
+        public void NavigerRedigerVagt()
+        {
+            if (VagtplanViewModel.SelectedVagter == null)
+            {
+                MessageDialog m = new MessageDialog("Vælg en vagt der skal redigeres", "Fejl!");
+                m.ShowAsync();
+            }
+            else
+            {
+                var rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(RedigerVagt));
+            }
         }
         /// <summary>
         /// Redigere i eksisterende vagt
