@@ -12,7 +12,7 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-        <x:String x:Key="AppName">Fakta | Shift me</x:String>
+        <x:String x:Key="AppName">Fakta | Shift m1</x:String>
     </Page.Resources>
 
     <Page.DataContext>

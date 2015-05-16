@@ -85,8 +85,8 @@ namespace _1aarsproeve.Handler
             {
                 PersistensFacade<VagtplanView>.GemDB("api/Vagters", new VagtplanView(Starttidspunkt, Sluttidspunkt, Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn));
 
-                MessageDialog me = Hjaelpeklasse.SuccesMeddelelse("Vagten blev tilføjet");
-                me.ShowAsync();
+                MessageDialog m1 = Hjaelpeklasse.SuccesMeddelelse("Vagten blev tilføjet");
+                m1.ShowAsync();
             }
 
         }
@@ -172,8 +172,8 @@ namespace _1aarsproeve.Handler
             else
             {
                 PersistensFacade<AnmodningerView>.GemDB("api/Anmodningers", new AnmodningerView(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.Brugernavn));
-                MessageDialog me = Hjaelpeklasse.SuccesMeddelelse("Du har anmodet om denne vagt");
-                me.ShowAsync();
+                MessageDialog m1 = Hjaelpeklasse.SuccesMeddelelse("Du har anmodet om denne vagt");
+                m1.ShowAsync();
             }
         }
     }

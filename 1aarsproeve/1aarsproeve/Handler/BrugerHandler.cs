@@ -145,8 +145,8 @@ namespace _1aarsproeve.Handler
             {
                 PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(Brugernavn, Navn, Password, Email, Mobil, Adresse, Postnummer, Stilling.StillingId));
 
-                MessageDialog me = Hjaelpeklasse.SuccesMeddelelse("Brugeren blev oprettet");
-                me.ShowAsync();
+                MessageDialog m1 = Hjaelpeklasse.SuccesMeddelelse("Brugeren blev oprettet");
+                m1.ShowAsync();
             }
       
         }

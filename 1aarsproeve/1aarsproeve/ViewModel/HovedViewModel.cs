@@ -94,7 +94,6 @@ namespace _1aarsproeve.ViewModel
             }
 
             AnmodningCollection = new ObservableCollection<AnmodningerView>();
-
             InitialiserAnmodninger();
 
             HovedHandler = new HovedHandler(this);
