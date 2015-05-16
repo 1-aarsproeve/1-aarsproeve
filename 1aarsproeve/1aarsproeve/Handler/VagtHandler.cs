@@ -50,6 +50,7 @@ namespace _1aarsproeve.Handler
         public VagtHandler(VagtplanViewModel vagtplanViewModel)
         {
             VagtplanViewModel = vagtplanViewModel;
+            Ugenummer = VagtplanViewModel.Ugenummer;
         }
         /// <summary>
         /// Set valgte vagt

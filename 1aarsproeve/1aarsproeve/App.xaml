@@ -89,7 +89,7 @@
                                 </ObjectAnimationUsingKeyFrames>
                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
         							Storyboard.TargetProperty="Foreground">
-                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedForegroundThemeBrush}" />
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Lightgray" />
                                 </ObjectAnimationUsingKeyFrames>
                             </Storyboard>
                         </VisualState>

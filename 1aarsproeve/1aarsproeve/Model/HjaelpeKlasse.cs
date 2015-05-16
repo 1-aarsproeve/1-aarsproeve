@@ -44,7 +44,7 @@ namespace _1aarsproeve.Model
         /// <returns>Returnerer dialogboksen</returns>
         public static MessageDialog FejlMeddelelse(string meddelelse)
         {
-            MessageDialog fm = new MessageDialog(meddelelse, "Ups, der skete en fejl!");
+            MessageDialog fm = new MessageDialog(meddelelse, "Ups, der opstod en fejl!");
             return fm;
         }
         /// <summary>
