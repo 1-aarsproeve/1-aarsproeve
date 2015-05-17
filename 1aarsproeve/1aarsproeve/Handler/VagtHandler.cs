@@ -162,7 +162,7 @@ namespace _1aarsproeve.Handler
         {
             if (VagtplanViewModel.SelectedVagter == null)
             {
-                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Vælg en vagt der skal slettes");
+                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Vælg en vagt du vil anmode om");
                 m.ShowAsync();
             }
             else if (VagtplanViewModel.SelectedVagter.Brugernavn == VagtplanViewModel.Brugernavn)
@@ -173,7 +173,7 @@ namespace _1aarsproeve.Handler
             else
             {
                 PersistensFacade<AnmodningerView>.GemDB("api/Anmodningers", new AnmodningerView(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.Brugernavn));
-                MessageDialog m1 = Hjaelpeklasse.SuccesMeddelelse("Du har anmodet om denne vagt");
+                MessageDialog m1 = Hjaelpeklasse.SuccesMeddelelse("Du har anmodet " + VagtplanViewModel.SelectedVagter.Navn + " om denne vagt");
                 m1.ShowAsync();
             }
         }

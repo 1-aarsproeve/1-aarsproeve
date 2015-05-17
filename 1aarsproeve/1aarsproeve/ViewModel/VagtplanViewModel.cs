@@ -560,7 +560,7 @@ namespace _1aarsproeve.ViewModel
                     var query =
                         from q in vagter
                         where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
-                        orderby q.Starttidspunkt ascending
+                        orderby q.Starttidspunkt ascending, q.Sluttidspunkt
                         select q;
                     foreach (var item in query)
                     {
@@ -590,7 +590,7 @@ namespace _1aarsproeve.ViewModel
                     var query =
                         from q in vagter
                         where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == "Ubemandet"
-                        orderby q.Starttidspunkt ascending
+                        orderby q.Starttidspunkt ascending, q.Sluttidspunkt
                         select q;
                     foreach (var item in query)
                     {
@@ -620,7 +620,7 @@ namespace _1aarsproeve.ViewModel
                     var query =
                         from q in vagter
                         where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
-                        orderby q.Starttidspunkt ascending
+                        orderby q.Starttidspunkt ascending, q.Sluttidspunkt
                         select q;
                     foreach (var item in query)
                     {
@@ -943,7 +943,7 @@ namespace _1aarsproeve.ViewModel
                     var query =
                         from q in vagter
                         where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
-                        orderby q.Starttidspunkt ascending
+                        orderby q.Starttidspunkt ascending, q.Sluttidspunkt
                         select q;
                     foreach (var item in query)
                     {

@@ -63,11 +63,106 @@ CREATE TABLE [Vagter] (
     CONSTRAINT [FK_Vagter_Ansatte] FOREIGN KEY ([Brugernavn]) REFERENCES [Ansatte] ([Brugernavn])
 );
 /* Indsætter i Vagter-tabel */
-INSERT INTO Vagter VALUES ('10:00', '16:00', 20, 1, 'Daniel');
-INSERT INTO Vagter VALUES ('08:00', '12:00', 20, 3, 'Ubemandet');
-INSERT INTO Vagter VALUES ('16:00', '21:00', 20, 2, 'Benjamin');
-INSERT INTO Vagter VALUES ('07:00', '15:00', 20, 4, 'Jacob');
-INSERT INTO Vagter VALUES ('07:00', '23:00', 20, 6, 'Jari');
+INSERT INTO Vagter VALUES('08:00','15:00',25,'1','Jacob');
+INSERT INTO Vagter VALUES('10:00','13:00',26,'1','Ubemandet');
+INSERT INTO Vagter VALUES('12:00','13:00',22,'1','Daniel');
+INSERT INTO Vagter VALUES('10:00','12:00',22,'1','Ubemandet');
+INSERT INTO Vagter VALUES('12:00','12:00',28,'1','Jari');
+INSERT INTO Vagter VALUES('09:00','16:00',26,'1','Benjamin');
+INSERT INTO Vagter VALUES('10:00','13:00',29,'1','Ubemandet');
+INSERT INTO Vagter VALUES('08:00','13:00',30,'2','Benjamin');
+INSERT INTO Vagter VALUES('12:00','15:00',22,'2','Ubemandet');
+INSERT INTO Vagter VALUES('09:00','16:00',23,'2','Benjamin');
+INSERT INTO Vagter VALUES('10:00','14:00',26,'2','Daniel');
+INSERT INTO Vagter VALUES('09:00','17:00',20,'2','Ubemandet');
+INSERT INTO Vagter VALUES('08:00','17:00',27,'2','Daniel');
+INSERT INTO Vagter VALUES('09:00','12:00',25,'4','Ubemandet');
+INSERT INTO Vagter VALUES('12:00','14:00',23,'3','Jari');
+INSERT INTO Vagter VALUES('07:00','15:00',20,'3','Jacob');
+INSERT INTO Vagter VALUES('10:00','15:00',30,'3','Jari');
+INSERT INTO Vagter VALUES('12:00','14:00',21,'3','Jari');
+INSERT INTO Vagter VALUES('08:00','16:00',25,'3','Jari');
+INSERT INTO Vagter VALUES('07:00','13:00',21,'3','Benjamin');
+INSERT INTO Vagter VALUES('08:00','17:00',29,'3','Benjamin');
+INSERT INTO Vagter VALUES('08:00','12:00',21,'4','Jari');
+INSERT INTO Vagter VALUES('09:00','16:00',24,'4','Ubemandet');
+INSERT INTO Vagter VALUES('11:00','16:00',23,'4','Jacob');
+INSERT INTO Vagter VALUES('11:00','12:00',22,'4','Ubemandet');
+INSERT INTO Vagter VALUES('09:00','12:00',26,'4','Daniel');
+INSERT INTO Vagter VALUES('11:00','14:00',27,'4','Jari');
+INSERT INTO Vagter VALUES('11:00','17:00',23,'4','Daniel');
+INSERT INTO Vagter VALUES('09:00','16:00',28,'5','Jari');
+INSERT INTO Vagter VALUES('11:00','13:00',21,'5','Jari');
+INSERT INTO Vagter VALUES('08:00','15:00',27,'5','Ubemandet');
+INSERT INTO Vagter VALUES('11:00','15:00',24,'5','Jacob');
+INSERT INTO Vagter VALUES('11:00','14:00',22,'5','Jari');
+INSERT INTO Vagter VALUES('08:00','17:00',21,'5','Ubemandet');
+INSERT INTO Vagter VALUES('08:00','14:00',29,'5','Ubemandet');
+INSERT INTO Vagter VALUES('09:00','15:00',21,'6','Ubemandet');
+INSERT INTO Vagter VALUES('11:00','17:00',26,'6','Benjamin');
+INSERT INTO Vagter VALUES('09:00','12:00',28,'6','Benjamin');
+INSERT INTO Vagter VALUES('10:00','14:00',27,'6','Daniel');
+INSERT INTO Vagter VALUES('07:00','16:00',30,'6','Ubemandet');
+INSERT INTO Vagter VALUES('11:00','13:00',28,'6','Ubemandet');
+INSERT INTO Vagter VALUES('09:00','13:00',27,'6','Benjamin');
+INSERT INTO Vagter VALUES('07:00','15:00',21,'7','Jacob');
+INSERT INTO Vagter VALUES('12:00','12:00',29,'7','Jari');
+INSERT INTO Vagter VALUES('08:00','14:00',25,'7','Daniel');
+INSERT INTO Vagter VALUES('10:00','14:00',21,'7','Ubemandet');
+INSERT INTO Vagter VALUES('12:00','14:00',20,'7','Benjamin');
+INSERT INTO Vagter VALUES('09:00','14:00',25,'7','Ubemandet');
+INSERT INTO Vagter VALUES('11:00','16:00',23,'7','Jari');
+INSERT INTO Vagter VALUES('09:00','14:00',27,'1','Jacob');
+INSERT INTO Vagter VALUES('10:00','17:00',30,'1','Benjamin');
+INSERT INTO Vagter VALUES('08:00','16:00',28,'1','Jacob');
+INSERT INTO Vagter VALUES('07:00','13:00',23,'1','Jacob');
+INSERT INTO Vagter VALUES('07:00','17:00',23,'1','Daniel');
+INSERT INTO Vagter VALUES('08:00','16:00',30,'1','Ubemandet');
+INSERT INTO Vagter VALUES('09:00','13:00',27,'1','Daniel');
+INSERT INTO Vagter VALUES('08:00','14:00',29,'2','Daniel');
+INSERT INTO Vagter VALUES('12:00','15:00',25,'4','Benjamin');
+INSERT INTO Vagter VALUES('08:00','16:00',25,'2','Jacob');
+INSERT INTO Vagter VALUES('07:00','12:00',26,'2','Jacob');
+INSERT INTO Vagter VALUES('09:00','12:00',26,'2','Jacob');
+INSERT INTO Vagter VALUES('07:00','13:00',20,'2','Ubemandet');
+INSERT INTO Vagter VALUES('11:00','16:00',25,'2','Ubemandet');
+INSERT INTO Vagter VALUES('12:00','17:00',24,'3','Benjamin');
+INSERT INTO Vagter VALUES('07:00','16:00',30,'3','Daniel');
+INSERT INTO Vagter VALUES('11:00','12:00',23,'3','Benjamin');
+INSERT INTO Vagter VALUES('07:00','15:00',26,'3','Benjamin');
+INSERT INTO Vagter VALUES('11:00','13:00',27,'3','Jacob');
+INSERT INTO Vagter VALUES('11:00','15:00',26,'3','Jacob');
+INSERT INTO Vagter VALUES('09:00','12:00',21,'3','Benjamin');
+INSERT INTO Vagter VALUES('12:00','17:00',28,'4','Ubemandet');
+INSERT INTO Vagter VALUES('10:00','15:00',26,'4','Ubemandet');
+INSERT INTO Vagter VALUES('11:00','13:00',24,'4','Jacob');
+INSERT INTO Vagter VALUES('08:00','16:00',24,'4','Jari');
+INSERT INTO Vagter VALUES('12:00','14:00',28,'4','Ubemandet');
+INSERT INTO Vagter VALUES('12:00','15:00',30,'4','Jari');
+INSERT INTO Vagter VALUES('11:00','17:00',27,'4','Jari');
+INSERT INTO Vagter VALUES('10:00','15:00',25,'5','Jacob');
+INSERT INTO Vagter VALUES('10:00','17:00',24,'5','Jari');
+INSERT INTO Vagter VALUES('07:00','12:00',20,'5','Jacob');
+INSERT INTO Vagter VALUES('10:00','13:00',22,'5','Daniel');
+INSERT INTO Vagter VALUES('11:00','16:00',30,'5','Ubemandet');
+INSERT INTO Vagter VALUES('08:00','17:00',24,'5','Jari');
+INSERT INTO Vagter VALUES('12:00','13:00',21,'5','Jari');
+INSERT INTO Vagter VALUES('12:00','16:00',29,'6','Ubemandet');
+INSERT INTO Vagter VALUES('07:00','17:00',27,'6','Ubemandet');
+INSERT INTO Vagter VALUES('10:00','12:00',26,'6','Ubemandet');
+INSERT INTO Vagter VALUES('10:00','14:00',22,'6','Jari');
+INSERT INTO Vagter VALUES('09:00','13:00',25,'6','Ubemandet');
+INSERT INTO Vagter VALUES('12:00','16:00',27,'6','Benjamin');
+INSERT INTO Vagter VALUES('07:00','17:00',29,'6','Jari');
+INSERT INTO Vagter VALUES('10:00','17:00',30,'7','Benjamin');
+INSERT INTO Vagter VALUES('09:00','13:00',29,'7','Jari');
+INSERT INTO Vagter VALUES('11:00','14:00',28,'7','Benjamin');
+INSERT INTO Vagter VALUES('12:00','15:00',20,'7','Daniel');
+INSERT INTO Vagter VALUES('09:00','12:00',28,'7','Ubemandet');
+INSERT INTO Vagter VALUES('08:00','15:00',28,'7','Benjamin');
+INSERT INTO Vagter VALUES('12:00','12:00',22,'7','Benjamin');
+INSERT INTO Vagter VALUES('10:00','17:00',24,'1','Benjamin');
+INSERT INTO Vagter VALUES('08:00','16:00',22,'1','Daniel');
 
 /* Opretter Beskeder-tabel */
 CREATE TABLE [Beskeder] (
@@ -81,7 +176,7 @@ CREATE TABLE [Beskeder] (
     CONSTRAINT [FK_Beskeder_Ansatte] FOREIGN KEY ([Brugernavn]) REFERENCES [Ansatte] ([Brugernavn])
 );
 /* Indsætter i Besked-tabel */
-INSERT INTO Beskeder VALUES ('MUS-samtaler', '2015-04-04', 'Så er der MUS-samtaler!', '2015-05-15', 'Daniel');
+INSERT INTO Beskeder VALUES ('MUS-samtaler', GETDATE(), 'Så er der MUS-samtaler!', '2015-07-07', 'Daniel');
 
 /* Opretter Anmodninger-tabl */
 CREATE TABLE [Anmodninger] (
@@ -89,10 +184,10 @@ CREATE TABLE [Anmodninger] (
     [VagtId]              INT          NOT NULL,
     [AnmodningBrugernavn] VARCHAR (50) NOT NULL,
     PRIMARY KEY CLUSTERED ([AnmodningId] ASC),
-    CONSTRAINT [FK_Anmodninger_Vagter] FOREIGN KEY ([VagtId]) REFERENCES [Vagter] ([VagtId]),
-    CONSTRAINT [FK_Anmodninger_Ansatte] FOREIGN KEY ([AnmodningBrugernavn]) REFERENCES [Ansatte] ([Brugernavn])
+    CONSTRAINT [FK_Anmodninger_Vagter] FOREIGN KEY ([VagtId]) REFERENCES [Vagter] ([VagtId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Anmodninger_Ansatte] FOREIGN KEY ([AnmodningBrugernavn]) REFERENCES [Ansatte] ([Brugernavn]) ON DELETE CASCADE
 );
-INSERT INTO Anmodninger VALUES (3,'Daniel');
+INSERT INTO Anmodninger VALUES (3,'Benjamin');
 
 /* Opretter HovedmenuView */
 GO
