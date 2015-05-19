@@ -50,7 +50,7 @@ namespace _1aarsproeve.Model
         /// <param name="password">Tager password some parameter</param>
         public static void CheckPassword(string password)
         {
-            if (string.IsNullOrEmpty(password) || password.Length > 30 || password.Length < 6)
+            if (string.IsNullOrEmpty(password) || password.Length > 100 || password.Length < 6)
             {
                 throw new ArgumentException("password er forkert");
             }

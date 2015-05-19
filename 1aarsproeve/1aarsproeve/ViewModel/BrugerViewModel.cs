@@ -30,7 +30,6 @@ namespace _1aarsproeve.ViewModel
         private GeneriskSingleton<Ansatte> _ansatteSingleton = GeneriskSingleton<Ansatte>.Instance();
         private string _brugernavn;
         private string _password;
-        private static HttpClient _client;
         private List<Stillinger> _stillingerListe;
         private ICommand _opretBrugerCommand;
         private ICommand _redigerBrugerCommand;
@@ -59,13 +58,6 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public BrugerHandler BrugerHandler { get; set; }
 
-        /// <summary>
-        /// Get til klienten til forbindelsen til databasen
-        /// </summary
-        public static HttpClient Client
-        {
-            get { return _client; }
-        }
 
         /// <summary>
         /// Password property
@@ -170,7 +162,7 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public BrugerViewModel()
         {
-            AabenForbindelse();
+            Hjaelpeklasse.AabenForbindelse();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
             StillingerListe = new List<Stillinger>();
@@ -187,31 +179,6 @@ namespace _1aarsproeve.ViewModel
             }
             BrugerHandler = new BrugerHandler(this);
         }
-
-        /// <summary>
-        /// Åbner forbindelsen til database
-        /// </summary>
-        private void AabenForbindelse()
-        {
-            try
-            {
-                const string serverUrl = "http://localhost:9999/";
-                HttpClientHandler handler = new HttpClientHandler();
-                handler.UseDefaultCredentials = true;
-                _client = new HttpClient(handler);
-                _client.BaseAddress = new Uri(serverUrl);
-                _client.DefaultRequestHeaders.Clear();
-                _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            }
-            catch (Exception)
-            {
-                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der kunne ikke oprettes forbindelse til databasen");
-                m.ShowAsync();
-            }
-
-        }
-
         /// <summary>
         /// Logger brugeren ind
         /// </summary>
@@ -223,7 +190,7 @@ namespace _1aarsproeve.ViewModel
                 var responce = PersistensFacade<Ansatte>.LoadDB("api/Ansattes");
 
                 var query = from q in responce.Result
-                    where q.Brugernavn == Brugernavn && q.Password == Password
+                    where q.Brugernavn == Brugernavn && q.Password == Hjaelpeklasse.KrypterStreng(Password)
                     select q;
                 foreach (var item in query)
                 {

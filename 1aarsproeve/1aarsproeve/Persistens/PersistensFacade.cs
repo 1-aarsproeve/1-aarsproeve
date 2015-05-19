@@ -25,7 +25,7 @@ namespace _1aarsproeve.Persistens
         /// <param name="objekt">Tager objekt som skal gemmes</param>
         public static void GemDB(string api, object objekt)
         {
-            BrugerViewModel.Client.PostAsJsonAsync(api + "/", objekt);
+            Hjaelpeklasse.Client.PostAsJsonAsync(api + "/", objekt);
         }
         /// <summary>
         /// Sletter data i databasen
@@ -34,7 +34,7 @@ namespace _1aarsproeve.Persistens
         /// <param name="id">Tager ID som skal slettes</param>
         public static void SletDB(string api, int id)
         {
-            BrugerViewModel.Client.DeleteAsync(api + "/" + id);
+            Hjaelpeklasse.Client.DeleteAsync(api + "/" + id);
         }
         /// <summary>
         /// Redigerer data i databasen
@@ -47,11 +47,11 @@ namespace _1aarsproeve.Persistens
         {
             if (id != 0)
             {
-                BrugerViewModel.Client.PutAsJsonAsync(api + "/" + id, objekt);
+                Hjaelpeklasse.Client.PutAsJsonAsync(api + "/" + id, objekt);
             }
             else
             {
-                BrugerViewModel.Client.PutAsJsonAsync(api + "/" + streng, objekt);
+                Hjaelpeklasse.Client.PutAsJsonAsync(api + "/" + streng, objekt);
             }
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace _1aarsproeve.Persistens
         /// <param name="api">Tager API-url som string</param>
         public static async Task<List<T>> LoadDB(string api)
         {
-            var response = BrugerViewModel.Client.GetAsync(api).Result;
+            var response = Hjaelpeklasse.Client.GetAsync(api).Result;
             if (response.IsSuccessStatusCode)
             {
                 return response.Content.ReadAsAsync<IEnumerable<T>>().Result.ToList();

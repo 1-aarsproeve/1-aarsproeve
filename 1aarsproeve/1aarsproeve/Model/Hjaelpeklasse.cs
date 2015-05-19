@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Security.Cryptography;
+using Windows.Security.Cryptography.Core;
 using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -16,6 +21,16 @@ namespace _1aarsproeve.Model
     /// </summary>
     public class Hjaelpeklasse
     {
+        private static HttpClient _client;
+
+        /// <summary>
+        /// Get til klienten til forbindelsen til databasen
+        /// </summary
+        public static HttpClient Client
+        {
+            get { return _client; }
+        }
+
         /// <summary>
         /// Property til at skjule knapper
         /// </summary>
@@ -70,6 +85,41 @@ namespace _1aarsproeve.Model
                 SkjulKnap = Visibility.Collapsed;
             }
             return SkjulKnap;
+        }
+        /// <summary>
+        /// Åbner forbindelsen til database
+        /// </summary>
+        public static void AabenForbindelse()
+        {
+            try
+            {
+                const string serverUrl = "http://localhost:9999/";
+                HttpClientHandler handler = new HttpClientHandler();
+                handler.UseDefaultCredentials = true;
+                _client = new HttpClient(handler);
+                _client.BaseAddress = new Uri(serverUrl);
+                _client.DefaultRequestHeaders.Clear();
+                _client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            }
+            catch (Exception)
+            {
+                MessageDialog m = FejlMeddelelse("Der kunne ikke oprettes forbindelse til databasen");
+                m.ShowAsync();
+            }
+
+        }
+        /// <summary>
+        /// Krypterer streng med MD5-algoritme
+        /// </summary>
+        /// <param name="streng">Tager streng som parameter</param>
+        /// <returns>Returnerer krypteret streng</returns>
+        public static string KrypterStreng(string streng)
+        {
+            var alg = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Md5);
+            IBuffer buff = CryptographicBuffer.ConvertStringToBinary(streng + "WmkqCmP4y4oi483xXOnb", BinaryStringEncoding.Utf8);
+            var hashed = alg.HashData(buff);
+            var res = CryptographicBuffer.EncodeToHexString(hashed);
+            return res;
         }
     }
 }

@@ -44,11 +44,11 @@ CREATE TABLE [Ansatte] (
     CONSTRAINT [FK_Ansatte_Roller] FOREIGN KEY ([StillingId]) REFERENCES [Stillinger] ([StillingId])
 );
 /* Indsætter i Ansatte-tabel */
-INSERT INTO Ansatte VALUES ('Daniel', 'Daniel Winther', '123456', 'daniel@hotmail.dk', '88888888', 'Degnestavnen 99', '2400', 1);
-INSERT INTO Ansatte VALUES ('Jari', 'Jari Larsen', '123456', 'jari@hotmail.dk', '88888888', 'Roskildevej 69', '4000', 2);
-INSERT INTO Ansatte VALUES ('Jacob', 'Jacob Balling', '123456', 'jacob@hotmail.dk', '88888888', 'Skelbækvej 79', '3650', 3);
-INSERT INTO Ansatte VALUES ('Benjamin', 'Benjamin Jensen', '123456', 'benjamin@hotmail.dk', '88888888', 'Enghavevej 44', '3500', 4);
-INSERT INTO Ansatte VALUES ('Ubemandet', 'Ubemandet', '123456', 'infol@fakta.dk', '88888888', 'Jyderupvej 27', '2400', 1);
+INSERT INTO Ansatte VALUES ('Daniel', 'Daniel Winther', '66d3c1dff5c55c9138f65a213f843d47', 'daniel@hotmail.dk', '88888888', 'Degnestavnen 99', '2400', 1);
+INSERT INTO Ansatte VALUES ('Jari', 'Jari Larsen', '66d3c1dff5c55c9138f65a213f843d47', 'jari@hotmail.dk', '88888888', 'Roskildevej 69', '4000', 2);
+INSERT INTO Ansatte VALUES ('Jacob', 'Jacob Balling', '66d3c1dff5c55c9138f65a213f843d47', 'jacob@hotmail.dk', '88888888', 'Skelbækvej 79', '3650', 3);
+INSERT INTO Ansatte VALUES ('Benjamin', 'Benjamin Jensen', '66d3c1dff5c55c9138f65a213f843d47', 'benjamin@hotmail.dk', '88888888', 'Enghavevej 44', '3500', 4);
+INSERT INTO Ansatte VALUES ('Ubemandet', 'Ubemandet', '66d3c1dff5c55c9138f65a213f843d47', 'infol@fakta.dk', '88888888', 'Jyderupvej 27', '2400', 1);
 
 /* Opretter Vagter-tabel */
 CREATE TABLE [Vagter] (
