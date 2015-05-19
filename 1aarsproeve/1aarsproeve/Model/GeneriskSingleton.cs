@@ -20,6 +20,7 @@ namespace _1aarsproeve.Model
 
         private GeneriskSingleton()
         {
+            //HovedmenuView fuckyou = new HovedmenuView();
             _collection = new ObservableCollection<T>();
         }
 

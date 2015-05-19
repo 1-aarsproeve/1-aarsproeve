@@ -316,12 +316,6 @@
                     <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
                   </type_NamedElement>
                 </property>
-                <property Id="b7293a8f-e351-42af-9244-f79904f16931" name="Client" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="d5e58838-8ec6-45b5-b66f-952ea5d6a9ba" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="1f99790e-9c8b-4227-b026-310fb73f4bf4" LastKnownName="HttpClient" />
-                  </type_NamedElement>
-                </property>
                 <property Id="276a72cc-ea66-4780-98dd-bda3277216b1" name="RedigerBrugerCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="b2db7d6c-d9d8-4188-be88-77ef7a141b95" />
                   <type_NamedElement>
@@ -332,9 +326,6 @@
               <ownedOperationsInternal>
                 <operation Id="67aa904b-5f75-42eb-be14-bed5e9ec18bb" name="LogInd" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="d837a3c9-c999-4134-b8a1-a534976bb103" />
-                </operation>
-                <operation Id="8641cb78-86a5-4179-8ed2-f5ded5dd7231" name="AabenForbindelse" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="4148db65-2de5-422b-8a90-d29fe3383a63" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -453,6 +444,9 @@
               <ownedOperationsInternal>
                 <operation Id="83cec813-7567-4df7-84ec-8bd164d28c6e" name="InitialiserAnmodninger" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="0a1058ec-0b46-4435-b77e-fdf8a6396a82" />
+                </operation>
+                <operation Id="cffe75d1-7c4a-48c6-bd63-22d934649b51" name="InitialiserBeskeder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e2d8a3b0-3ecd-415b-8086-42c8a0eb9ecc" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -2028,6 +2022,12 @@
                     <referencedTypeMoniker Id="b0ca9c7e-689c-44a2-b443-6514f69d3a9d" LastKnownName="Visibility" />
                   </type_NamedElement>
                 </property>
+                <property Id="fa5782f2-93e4-46cc-8f9d-59fa02d2c26b" name="Client" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ee8bf08a-801a-4ef0-8ba1-0d13309bc70b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9c4c5d94-0666-4cfb-9d06-88d20b643690" LastKnownName="HttpClient" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="2578f372-27e6-473c-a8e1-0f1b69dcb4c3" name="LogUd" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -2087,6 +2087,19 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
+                <operation Id="e95d9b9a-1f17-465b-ad8a-4fb3d220142a" name="AabenForbindelse" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5a6b4056-4068-4cae-988a-34b913cc32fa" />
+                </operation>
+                <operation Id="040f446f-3b66-4ae7-9a19-133f1d92dfba" name="KrypterStreng" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c22f72b8-16b0-4931-8d3d-c72a36953a69" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8b4cf881-8fce-4fe7-a553-cc1507789d89" name="string streng" direction="In" isUnique="false">
+                        <elementDefinition Id="f28bca07-d2b8-4857-8f07-d12528fd8ede" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -2119,6 +2132,32 @@
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="4238f52f-01ce-4592-9208-3dac26e4639d" />
+                </association>
+                <association Id="676c5a0e-ea48-4bdb-9c60-c42af2faf977" isDerived="false" sourceEndRoleName="AnmodningerViews" targetEndRoleName="VagtplanView" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="55acbe85-667f-4aaf-a5bf-bcd540d40790" LastKnownName="VagtplanView" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="bce45393-0a32-4b66-b910-fb76f8df2f69" name="AnmodningerViews" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="531bebc2-dca8-4122-9c18-53d54dcf291c" name="Lower" value="*">
+                            <elementDefinition Id="b857ff5d-b3b7-4641-968e-7c546b5be787" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="05286d73-0f03-4181-aa1e-a41a7d719ad3" name="Upper" value="*">
+                            <elementDefinition Id="62e1cc70-388d-4847-b99d-7d5b4c1390ec" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="b7133f7c-be23-4ef5-912c-9a957c79f2f2" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="db42842c-335f-43a2-a1c2-0504eb66cf51" name="VagtplanView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="ab3f19e3-8fc2-4610-aee7-3a501dd10c41" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="95f81e6b-d527-4ed6-8969-879ea3e05c19" />
                 </association>
               </targetEnds>
               <ownedAttributesInternal>
@@ -2625,11 +2664,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="1f99790e-9c8b-4227-b026-310fb73f4bf4" name="HttpClient" isAbstract="false" isLeaf="false" cachedFullName="HttpClient">
-        <elementDefinition Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="3a3df03d-298d-4ece-9c40-aaf02c6a5bdc" name="ObservableCollection&lt;HovedmenuView&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;HovedmenuView&gt;">
         <elementDefinition Id="1d596d0a-b3ef-4867-9caa-e6f7b13183f2" />
       </referencedType>
@@ -2767,6 +2801,11 @@
     <packageHasNamedElement>
       <referencedType Id="6d2381ab-eed5-4f84-af57-433cfcb073c3" name="MessageDialog" isAbstract="false" isLeaf="false" cachedFullName="MessageDialog">
         <elementDefinition Id="134c3dce-af80-45c6-a6e9-7824958a6178" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9c4c5d94-0666-4cfb-9d06-88d20b643690" name="HttpClient" isAbstract="false" isLeaf="false" cachedFullName="HttpClient">
+        <elementDefinition Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

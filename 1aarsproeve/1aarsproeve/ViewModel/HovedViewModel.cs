@@ -82,6 +82,18 @@ namespace _1aarsproeve.ViewModel
             Brugernavn = (string)Setting.Values["Brugernavn"];
             SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
             
+            InitialiserBeskeder();
+
+            AnmodningCollection = new ObservableCollection<AnmodningerView>();
+            InitialiserAnmodninger();
+
+            HovedHandler = new HovedHandler(this);
+        }
+        /// <summary>
+        /// Initialiser beskeder
+        /// </summary>
+        public void InitialiserBeskeder()
+        {
             BeskedCollection.Clear();
             var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
             var query1 =
@@ -92,11 +104,6 @@ namespace _1aarsproeve.ViewModel
             {
                 BeskedCollection.Add(item);
             }
-
-            AnmodningCollection = new ObservableCollection<AnmodningerView>();
-            InitialiserAnmodninger();
-
-            HovedHandler = new HovedHandler(this);
         }
         /// <summary>
         /// Initialiserer anmodninger

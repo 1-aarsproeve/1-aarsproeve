@@ -143,7 +143,7 @@ namespace _1aarsproeve.Handler
             }
             else
             {
-                PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(Brugernavn, Navn, Password, Email, Mobil, Adresse, Postnummer, Stilling.StillingId));
+                PersistensFacade<Ansatte>.GemDB("api/Ansattes", new Ansatte(Brugernavn, Navn, Hjaelpeklasse.KrypterStreng(Password), Email, Mobil, Adresse, Postnummer, Stilling.StillingId));
 
                 MessageDialog m1 = Hjaelpeklasse.SuccesMeddelelse("Brugeren blev oprettet");
                 m1.ShowAsync();
@@ -158,7 +158,7 @@ namespace _1aarsproeve.Handler
             MessageDialog m = Hjaelpeklasse.FejlMeddelelse("");
             try
             {
-                Ansatte.CheckNavn(Navn);
+                Ansatte.CheckNavn(BrugerViewModel.AnsatteCollection[0].Navn);
             }
             catch (Exception)
             {
@@ -166,7 +166,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckPassword(Password);
+                Ansatte.CheckPassword(BrugerViewModel.AnsatteCollection[0].Password);
             }
             catch (Exception)
             {
@@ -174,7 +174,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckEmail(Email);
+                Ansatte.CheckEmail(BrugerViewModel.AnsatteCollection[0].Email);
             }
             catch (Exception)
             {
@@ -182,7 +182,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckAdresse(Adresse);
+                Ansatte.CheckAdresse(BrugerViewModel.AnsatteCollection[0].Adresse);
             }
             catch (Exception)
             {
@@ -190,7 +190,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckPostnummer(Postnummer);
+                Ansatte.CheckPostnummer(BrugerViewModel.AnsatteCollection[0].Postnummer);
             }
             catch (Exception)
             {
@@ -198,7 +198,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckMobil(Mobil);
+                Ansatte.CheckMobil(BrugerViewModel.AnsatteCollection[0].Mobil);
             }
             catch (Exception)
             {
@@ -212,7 +212,7 @@ namespace _1aarsproeve.Handler
             {
                 PersistensFacade<Ansatte>.RedigerDB("api/Ansattes",
                     new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn,
-                        BrugerViewModel.AnsatteCollection[0].Navn, BrugerViewModel.AnsatteCollection[0].Password,
+                        BrugerViewModel.AnsatteCollection[0].Navn, Hjaelpeklasse.KrypterStreng(Password),
                         BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil,
                         BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer,
                         BrugerViewModel.AnsatteCollection[0].StillingId),

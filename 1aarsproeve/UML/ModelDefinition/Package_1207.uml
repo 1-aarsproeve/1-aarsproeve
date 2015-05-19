@@ -4373,6 +4373,24 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="ee8bf08a-801a-4ef0-8ba1-0d13309bc70b"
+            name="Client"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed"
+                LastKnownName="HttpClient"
+                LastKnownLocation="Package_1206.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -4476,6 +4494,32 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="5a6b4056-4068-4cae-988a-34b913cc32fa"
+            name="AabenForbindelse"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c22f72b8-16b0-4931-8d3d-c72a36953a69"
+            name="KrypterStreng"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f28bca07-d2b8-4857-8f07-d12528fd8ede"
+                  name="string streng"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -4529,6 +4573,58 @@
                 <memberEnd
                   Id="4bfcefcb-9caf-4d32-98b4-2c57388ab802"
                   name="Ansatte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="95f81e6b-d527-4ed6-8969-879ea3e05c19"
+            isDerived="false"
+            sourceEndRoleName="AnmodningerViews"
+            targetEndRoleName="VagtplanView"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="37bbc963-d42f-478b-b802-74d3721aa6b3"
+              LastKnownName="VagtplanView"
+              LastKnownLocation="Package_1207.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b7133f7c-be23-4ef5-912c-9a957c79f2f2"
+                  name="AnmodningerViews"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b857ff5d-b3b7-4641-968e-7c546b5be787"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="62e1cc70-388d-4847-b99d-7d5b4c1390ec"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ab3f19e3-8fc2-4610-aee7-3a501dd10c41"
+                  name="VagtplanView"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

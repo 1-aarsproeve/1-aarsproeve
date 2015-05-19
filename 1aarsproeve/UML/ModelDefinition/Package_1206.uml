@@ -339,24 +339,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="d5e58838-8ec6-45b5-b66f-952ea5d6a9ba"
-            name="Client"
-            isLeaf="false"
-            isStatic="true"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed"
-                LastKnownName="HttpClient"
-                LastKnownLocation="Package_1206.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="b2db7d6c-d9d8-4188-be88-77ef7a141b95"
             name="RedigerBrugerCommand"
             isLeaf="false"
@@ -379,15 +361,6 @@
           <operation
             Id="d837a3c9-c999-4134-b8a1-a534976bb103"
             name="LogInd"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="4148db65-2de5-422b-8a90-d29fe3383a63"
-            name="AabenForbindelse"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -744,6 +717,14 @@
           <operation
             Id="0a1058ec-0b46-4435-b77e-fdf8a6396a82"
             name="InitialiserAnmodninger"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e2d8a3b0-3ecd-415b-8086-42c8a0eb9ecc"
+            name="InitialiserBeskeder"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
