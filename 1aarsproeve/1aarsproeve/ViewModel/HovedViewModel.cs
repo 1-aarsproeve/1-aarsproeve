@@ -86,7 +86,7 @@ namespace _1aarsproeve.ViewModel
             var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
             var query1 =
                 from q in query
-                orderby q.Dato descending 
+                orderby q.Dato descending, q.BeskedId descending
                 select q;
             foreach (var item in query1)
             {
