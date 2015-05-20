@@ -30,7 +30,7 @@ namespace _1aarsproeve.ViewModel
         private ICommand _accepterAnmodningCommand;
         private ICommand _annullerAnmodningCommand;
         private ICommand _selectedAnmodningerCommand;
-        private GeneriskSingleton<HovedmenuView> _beskedCollection = GeneriskSingleton<HovedmenuView>.Instance();
+        private GeneriskSingleton<HovedmenuView> _beskedCollection;
 
         #region Get Set properties
         /// <summary>
@@ -77,11 +77,12 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public HovedViewModel()
         {
+            _beskedCollection = GeneriskSingleton<HovedmenuView>.Instance();
             Setting = ApplicationData.Current.LocalSettings;
 
             Brugernavn = (string)Setting.Values["Brugernavn"];
             SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
-            
+
             InitialiserBeskeder();
 
             AnmodningCollection = new ObservableCollection<AnmodningerView>();
@@ -90,7 +91,7 @@ namespace _1aarsproeve.ViewModel
             HovedHandler = new HovedHandler(this);
         }
         /// <summary>
-        /// Initialiser beskeder
+        /// Initialiserer beskeder
         /// </summary>
         public void InitialiserBeskeder()
         {

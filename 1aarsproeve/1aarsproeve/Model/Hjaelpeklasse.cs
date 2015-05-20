@@ -22,7 +22,6 @@ namespace _1aarsproeve.Model
     public class Hjaelpeklasse
     {
         private static HttpClient _client;
-
         /// <summary>
         /// Get til klienten til forbindelsen til databasen
         /// </summary
@@ -30,7 +29,6 @@ namespace _1aarsproeve.Model
         {
             get { return _client; }
         }
-
         /// <summary>
         /// Property til at skjule knapper
         /// </summary>
@@ -106,20 +104,20 @@ namespace _1aarsproeve.Model
                 MessageDialog m = FejlMeddelelse("Der kunne ikke oprettes forbindelse til databasen");
                 m.ShowAsync();
             }
-
         }
         /// <summary>
-        /// Krypterer streng med MD5-algoritme
+        /// Krypterer streng med MD5-hashalgoritme
         /// </summary>
         /// <param name="streng">Tager streng som parameter</param>
         /// <returns>Returnerer krypteret streng</returns>
         public static string KrypterStreng(string streng)
         {
+            const string salt = "WmkqCmP4y4oi483xXOnb";
             var alg = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Md5);
-            IBuffer buff = CryptographicBuffer.ConvertStringToBinary(streng + "WmkqCmP4y4oi483xXOnb", BinaryStringEncoding.Utf8);
+            IBuffer buff = CryptographicBuffer.ConvertStringToBinary(streng + salt, BinaryStringEncoding.Utf8);
             var hashed = alg.HashData(buff);
-            var res = CryptographicBuffer.EncodeToHexString(hashed);
-            return res;
+            var resultat = CryptographicBuffer.EncodeToHexString(hashed);
+            return resultat;
         }
     }
 }

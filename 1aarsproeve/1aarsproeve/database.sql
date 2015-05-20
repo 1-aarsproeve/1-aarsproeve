@@ -1,7 +1,7 @@
 ﻿/* Opretter database */
-CREATE DATABASE "1aarsproeveDB"
+CREATE DATABASE [1aarsproeveDB]
 GO
-USE "1aarsproeveDB";
+USE [1aarsproeveDB]
 
 /* Opretter Stillinger-tabel */
 CREATE TABLE [Stillinger] (
@@ -48,7 +48,7 @@ INSERT INTO Ansatte VALUES ('Daniel', 'Daniel Winther', '66d3c1dff5c55c9138f65a2
 INSERT INTO Ansatte VALUES ('Jari', 'Jari Larsen', '66d3c1dff5c55c9138f65a213f843d47', 'jari@hotmail.dk', '88888888', 'Roskildevej 69', '4000', 2);
 INSERT INTO Ansatte VALUES ('Jacob', 'Jacob Balling', '66d3c1dff5c55c9138f65a213f843d47', 'jacob@hotmail.dk', '88888888', 'Skelbækvej 79', '3650', 3);
 INSERT INTO Ansatte VALUES ('Benjamin', 'Benjamin Jensen', '66d3c1dff5c55c9138f65a213f843d47', 'benjamin@hotmail.dk', '88888888', 'Enghavevej 44', '3500', 4);
-INSERT INTO Ansatte VALUES ('Ubemandet', 'Ubemandet', '66d3c1dff5c55c9138f65a213f843d47', 'infol@fakta.dk', '88888888', 'Jyderupvej 27', '2400', 1);
+INSERT INTO Ansatte VALUES ('Ubemandet', 'Ubemandet', '66d3c1dff5c55c9138f65a213f843d47', 'infol@fakta.dk', '88888888', 'Jyderupvej 27', '2300', 1);
 
 /* Opretter Vagter-tabel */
 CREATE TABLE [Vagter] (
@@ -176,7 +176,7 @@ CREATE TABLE [Beskeder] (
     CONSTRAINT [FK_Beskeder_Ansatte] FOREIGN KEY ([Brugernavn]) REFERENCES [Ansatte] ([Brugernavn])
 );
 /* Indsætter i Besked-tabel */
-INSERT INTO Beskeder VALUES ('MUS-samtaler', GETDATE(), 'Så er der MUS-samtaler!', '2015-07-07', 'Daniel');
+INSERT INTO Beskeder VALUES ('MUS-samtaler', GETDATE(), 'Så er der MUS-samtaler!', DATEADD(mm, +1, GETDATE()), 'Daniel');
 
 /* Opretter Anmodninger-tabl */
 CREATE TABLE [Anmodninger] (

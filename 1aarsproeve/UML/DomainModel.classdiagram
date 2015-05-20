@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="900c63c0-1a40-458f-9ee1-8cff881ec8b0" name="DomainModel" linkedPackageId="d682854a-42ee-47e3-84bb-0f4a9934204d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="900c63c0-1a40-458f-9ee1-8cff881ec8b0" name="DomainModel" linkedPackageId="d682854a-42ee-47e3-84bb-0f4a9934204d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="61ccf300-d549-47a8-bbe8-4e75b611a859">
+      <profileInstance Id="2ef8db0d-6337-4305-af80-8dc4d7c41978" name="CSharpProfile">
+        <elementDefinition Id="8ec30f03-3be4-4f30-9116-465333b6ee59" />
+      </profileInstance>
+      <elementDefinition Id="2069808b-ddf0-45a1-8651-0056c02892eb" />
+    </packageHasProfileInstances>
+  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="9d5598fa-4ef2-4c67-8df5-2374daa4ad74" name="Ansatte" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -190,6 +198,65 @@
             <elementDefinition Id="0ae7459d-ed96-42bd-a391-58a8ce6a7197" />
           </property>
         </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ec45b7c6-d76c-4a5d-b929-78a50174a3eb" name="Anmodninger" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="271a7cb4-fa19-4636-be62-7e09b49386f2" />
+        <targetEnds>
+          <association Id="45ea1cf2-924c-4ac9-8f22-fb93bcae236d" isDerived="false" sourceEndRoleName="Anmodninger" targetEndRoleName="Ansatte" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9d5598fa-4ef2-4c67-8df5-2374daa4ad74" LastKnownName="Ansatte" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9986b166-c82d-4e92-9e49-b9ff8b43612d" name="Anmodninger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="b0b07656-cd42-4dd6-8bd2-deee8fd5027a" name="Lower" value="*">
+                      <elementDefinition Id="c9321490-f550-4067-a0fd-7c9a911fe6ac" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="24cc8e68-b6d7-4f6f-a6c2-414a133af2d1" name="Upper" value="*">
+                      <elementDefinition Id="55acbe4b-dd36-4c24-9f10-d77727090326" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="1bc66381-1dbd-47ae-a877-c18fe8209c8b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eef01f47-a3c1-4709-ac1d-baa84332c5bf" name="Ansatte" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="9d223eae-336b-4669-a12c-de35e09076a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6fa0c0f5-d6df-4f63-9292-d30590100bd2" />
+          </association>
+          <association Id="34a57eb5-0273-4c30-8d4e-3154dd2acdba" isDerived="false" sourceEndRoleName="Anmodninger" targetEndRoleName="Vagter" isLeaf="false" isAbstract="false">
+            <classMoniker Id="266f5087-7f7c-4500-8eb4-c3fcfececff7" LastKnownName="Vagter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a5721cf-ee0e-4b01-a4d7-8a88bba3d9ba" name="Anmodninger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="5d0a47eb-d098-4160-b1f6-0fa727f438f4" name="Lower" value="*">
+                      <elementDefinition Id="9bcd7cfe-fb52-47fd-af48-2a7cd634e5ad" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="554d928b-c742-4f65-8f95-f20e896b7096" name="Upper" value="*">
+                      <elementDefinition Id="12b45aff-c995-4c16-80f6-3818e7c9060f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d2dd3af8-5eb7-4b6b-b78a-151d615cc2a3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="473b7f20-9fdf-4cf8-ada9-7ca666b8374c" name="Vagter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="d58e54b0-99bc-4d0f-90dd-46459f8aa400" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2b1814e3-5c52-4b8a-a3c4-3c026481b9e7" />
+          </association>
+        </targetEnds>
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>

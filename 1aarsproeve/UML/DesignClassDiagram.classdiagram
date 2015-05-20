@@ -1488,6 +1488,18 @@
                     <referencedTypeMoniker Id="3a97e9c4-fd90-4cd2-83af-0791261c6061" LastKnownName="int" />
                   </type_NamedElement>
                 </property>
+                <property Id="47e6314a-cbff-4719-a750-546ab5bf9090" name="SluttidspunktFormat" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="df43fdc1-a97b-4187-a99b-a47c611cfc7d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f30a5802-df06-44e8-aba7-a66e52090201" name="StarttidspunktFormat" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b117f6b9-12bf-4fdf-ba61-980f6e97c362" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>

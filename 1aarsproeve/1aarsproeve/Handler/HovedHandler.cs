@@ -73,10 +73,8 @@ namespace _1aarsproeve.Handler
                 m.ShowAsync();
             }
             else
-            {
-                HovedViewModel.BeskedCollection.Add(new HovedmenuView(Overskrift, new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse, new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), HovedViewModel.Brugernavn));
+            {                
                 PersistensFacade<HovedmenuView>.GemDB("api/Beskeders", new HovedmenuView(Overskrift, new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse, new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), HovedViewModel.Brugernavn));
-
                 var rootFrame = Window.Current.Content as Frame;
                 rootFrame.Navigate(typeof(Hovedmenu));
             }

@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
 
 namespace _1aarsproeve.Model
 {
@@ -62,6 +63,20 @@ namespace _1aarsproeve.Model
                 throw new ArgumentException("brugernavn er forkert");
             }
 
+        }
+        /// <summary>
+        /// Formater starttidspunkt
+        /// </summary>
+        public string StarttidspunktFormat
+        {
+            get { return Starttidspunkt.ToString(@"hh\:mm", new CultureInfo("da-DK")); }
+        }
+        /// <summary>
+        /// Formater sluttidspunkt
+        /// </summary>
+        public string SluttidspunktFormat
+        {
+            get { return Sluttidspunkt.ToString(@"hh\:mm", new CultureInfo("da-DK")); }
         }
         /// <summary>
         /// Starttidspunkt Property

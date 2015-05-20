@@ -20,7 +20,6 @@ namespace _1aarsproeve.Model
 
         private GeneriskSingleton()
         {
-            //HovedmenuView fuckyou = new HovedmenuView();
             _collection = new ObservableCollection<T>();
         }
 
@@ -47,5 +46,18 @@ namespace _1aarsproeve.Model
             }
             return _instance;
         }
+
+        /*public void Load()
+        {
+            var query = Persistens.PersistensFacade<T>.LoadDB("api/" + typeof(T).Name + "s").Result;
+            foreach (var item in query)
+            {
+                Collection.Add(item);   
+            }
+        }
+        public void Add(T t)
+        {
+            Collection.Add(t);
+        }*/
     }
 }

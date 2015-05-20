@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="b04abd55-cce0-4845-91cd-0d60b0f14cb1"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -333,6 +333,123 @@
                 <memberEnd
                   Id="5ece4af8-908b-4aa1-ac86-dd79f8987b03"
                   name="Eksporter alle vagter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6e04fc68-3dbf-4cf8-936e-da1ca266583f"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Anmod vagt"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d9866d01-8f6d-427b-9c17-b6b9eda7d0ad"
+              LastKnownName="Anmod vagt"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1be6c467-d955-4f90-bceb-759ff3702d8f"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5bc85132-fbce-4d53-89f7-2f3b8d3bb61f"
+                  name="Anmod vagt"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f15386a2-9157-4417-8417-3c75a807419e"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Accepter anmodning"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="00fc097b-32a3-4c12-a64a-cb019da97c80"
+              LastKnownName="Accepter anmodning"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6477b019-6c35-46f8-8878-8caf007e3a5a"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="232cdd07-a7cf-44e2-9efd-f7ab0a89325a"
+                  name="Accepter anmodning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8fb7d61a-0857-444a-bc62-ce69825f4149"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Annuller anmodning"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e6bf66f0-f558-4bf1-9d5b-af43e0dca19b"
+              LastKnownName="Annuller anmodning"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="60b6589c-0de3-44d4-98b7-226fbfdf4437"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f6a380b8-65f1-41a0-b3d2-0bbe986daff3"
+                  name="Annuller anmodning"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -772,6 +889,162 @@
                 <memberEnd
                   Id="fd69669b-1ca2-4b6e-a6e3-2c3075b1b806"
                   name="Eksporter alle vagter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7ca5afb0-1953-4cf2-b6a1-9914b6c9a5dc"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Anmod vagt"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d9866d01-8f6d-427b-9c17-b6b9eda7d0ad"
+              LastKnownName="Anmod vagt"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ba2b6ac-a5f5-4cf5-b561-855a85c6d80c"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1305141a-78c0-470d-a816-46b980bdcaeb"
+                  name="Anmod vagt"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1d30a62f-afd4-4750-9a36-1b342be51f3a"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Anmod vagt"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d9866d01-8f6d-427b-9c17-b6b9eda7d0ad"
+              LastKnownName="Anmod vagt"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc1560eb-9629-4677-8d72-dde1ff467152"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bbf8d487-0171-4a25-9047-d604e03e902d"
+                  name="Anmod vagt"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f64933df-63dd-4f25-aee4-698427aa0c44"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Accepter anmodning"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="00fc097b-32a3-4c12-a64a-cb019da97c80"
+              LastKnownName="Accepter anmodning"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1681e187-e752-40e3-aa14-5e31b0f72baa"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7b74ad82-aa35-4f67-b309-e5afd4df4aef"
+                  name="Accepter anmodning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="17471b8c-52fc-424f-9382-e66a9e554686"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Annuller anmodning"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e6bf66f0-f558-4bf1-9d5b-af43e0dca19b"
+              LastKnownName="Annuller anmodning"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e4890365-5bb6-462e-835d-96876f5c5980"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1ece2ec3-df38-41ba-a0b6-3a008ca84cf3"
+                  name="Annuller anmodning"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -3213,6 +3486,163 @@
               LastKnownLocation="UML.uml" />
           </generalization>
         </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="321e5bbf-721b-403c-bee7-12e8174acd02"
+        name="Anmod vagt"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d9866d01-8f6d-427b-9c17-b6b9eda7d0ad"
+        name="Anmod vagt"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7451b043-700a-4ade-84ba-878010a849dd"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="00fc097b-32a3-4c12-a64a-cb019da97c80"
+        name="Accepter anmodning"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="eaefb256-585d-4962-bbae-3da5ba80bb1d"
+        name="UseCase2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e6bf66f0-f558-4bf1-9d5b-af43e0dca19b"
+        name="Annuller anmodning"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="271a7cb4-fa19-4636-be62-7e09b49386f2"
+        name="Anmodninger"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="6fa0c0f5-d6df-4f63-9292-d30590100bd2"
+            isDerived="false"
+            sourceEndRoleName="Anmodninger"
+            targetEndRoleName="Ansatte"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="616d91b8-0e27-4df6-bb9a-ba1a9e80b110"
+              LastKnownName="Ansatte"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1bc66381-1dbd-47ae-a877-c18fe8209c8b"
+                  name="Anmodninger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c9321490-f550-4067-a0fd-7c9a911fe6ac"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="55acbe4b-dd36-4c24-9f10-d77727090326"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d223eae-336b-4669-a12c-de35e09076a6"
+                  name="Ansatte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2b1814e3-5c52-4b8a-a3c4-3c026481b9e7"
+            isDerived="false"
+            sourceEndRoleName="Anmodninger"
+            targetEndRoleName="Vagter"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a7011201-3877-41e5-a2ee-a689b2fa0122"
+              LastKnownName="Vagter"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d2dd3af8-5eb7-4b6b-b78a-151d615cc2a3"
+                  name="Anmodninger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9bcd7cfe-fb52-47fd-af48-2a7cd634e5ad"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="12b45aff-c995-4c16-80f6-3818e7c9060f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d58e54b0-99bc-4d0f-90dd-46459f8aa400"
+                  name="Vagter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </class>
     </packageHasNamedElement>
   </packagedElements>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace _1aarsproeve.ViewModel
     {
         #region Backing fields
 
-        private GeneriskSingleton<Ansatte> _ansatteSingleton = GeneriskSingleton<Ansatte>.Instance();
+        private GeneriskSingleton<Ansatte> _ansatteSingleton;
         private string _brugernavn;
         private string _password;
         private List<Stillinger> _stillingerListe;
@@ -163,6 +164,7 @@ namespace _1aarsproeve.ViewModel
         public BrugerViewModel()
         {
             Hjaelpeklasse.AabenForbindelse();
+            _ansatteSingleton = GeneriskSingleton<Ansatte>.Instance();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
             StillingerListe = new List<Stillinger>();

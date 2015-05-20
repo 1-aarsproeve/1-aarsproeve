@@ -55,8 +55,7 @@ namespace _1aarsproeve.ViewModel
         private ICommand _navigerRedigerVagtCommand;
         private Action<ObservableCollection<ObservableCollection<VagtplanView>>> _sorting;
 
-        private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection =
-            GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
+        private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection;
 
         #endregion
 
@@ -494,6 +493,7 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public VagtplanViewModel()
         {
+            _vagtCollection = GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
             SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
