@@ -189,19 +189,19 @@ CREATE TABLE [Anmodninger] (
 );
 INSERT INTO Anmodninger VALUES (3,'Benjamin');
 
-/* Opretter HovedmenuView */
 GO
+/* Opretter HovedmenuView */
 CREATE VIEW [HovedmenuView]
 	AS  SELECT Beskeder.*, Ansatte.Navn FROM [Beskeder] 
 	JOIN Ansatte ON Beskeder.Brugernavn = Ansatte.Brugernavn
 	WHERE Beskeder.Udloebsdato > GETDATE()
-/* Opretter VagtplanView */
 GO
+/* Opretter VagtplanView */
 CREATE VIEW [VagtplanView]
 	AS SELECT Vagter.Starttidspunkt, Vagter.Sluttidspunkt, Vagter.UgedagId, Vagter.Ugenummer, Vagter.VagtId, Ansatte.Brugernavn, Ansatte.Navn FROM [Vagter]
 	JOIN Ansatte ON Vagter.Brugernavn = Ansatte.Brugernavn
-/* Opretter AnmodningerView */ 
 GO
+/* Opretter AnmodningerView */ 
 CREATE VIEW [AnmodningerView]
 	AS SELECT Anmodninger.AnmodningId, Anmodninger.AnmodningBrugernavn, Vagter.Starttidspunkt, Vagter.Sluttidspunkt, Vagter.UgedagId, Vagter.Ugenummer, Vagter.Brugernavn, Vagter.VagtId, Ugedage.Ugedag FROM [Anmodninger]
 	JOIN Vagter ON Anmodninger.VagtId = Vagter.VagtId

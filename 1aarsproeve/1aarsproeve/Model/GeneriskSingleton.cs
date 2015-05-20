@@ -6,6 +6,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Networking.Connectivity;
+using _1aarsproeve.Persistens;
+using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Model
 {
@@ -17,10 +19,13 @@ namespace _1aarsproeve.Model
     {
         private static GeneriskSingleton<T> _instance;
         private ObservableCollection<T> _collection;
-
         private GeneriskSingleton()
         {
             _collection = new ObservableCollection<T>();
+            /*if (typeof (T).Name != "ObservableCollection`1")
+            {
+                Load();
+            }*/
         }
 
         /// <summary>
@@ -49,7 +54,7 @@ namespace _1aarsproeve.Model
 
         /*public void Load()
         {
-            var query = Persistens.PersistensFacade<T>.LoadDB("api/" + typeof(T).Name + "s").Result;
+            var query = PersistensFacade<T>.LoadDB("api/" + typeof(T).Name + "s").Result;
             foreach (var item in query)
             {
                 Collection.Add(item);   

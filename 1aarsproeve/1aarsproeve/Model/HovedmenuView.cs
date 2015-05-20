@@ -25,13 +25,14 @@ namespace _1aarsproeve.Model
         /// <param name="beskrivelse">beskrivelse parameter</param>
         /// <param name="udleobsdato">udleobsdato parameter</param>
         /// <param name="brugernavn">brugernavn parameter</param>
-        public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn)
+        public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn, string navn = null)
         {
             Overskrift = overskrift;
             Dato = dato;
             Beskrivelse = beskrivelse;
             Udloebsdato = udleobsdato;
             Brugernavn = brugernavn;
+            Navn = navn;
         }
         /// <summary>
         /// Checker beskrivelse
