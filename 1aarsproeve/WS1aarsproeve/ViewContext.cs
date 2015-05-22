@@ -24,6 +24,10 @@ namespace WS1aarsproeve
                 .IsUnicode(false);
 
             modelBuilder.Entity<AnmodningerView>()
+                .Property(e => e.Navn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AnmodningerView>()
                 .Property(e => e.Starttidspunkt)
                 .HasPrecision(0);
 

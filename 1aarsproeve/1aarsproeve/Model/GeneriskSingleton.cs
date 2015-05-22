@@ -22,10 +22,7 @@ namespace _1aarsproeve.Model
         private GeneriskSingleton()
         {
             _collection = new ObservableCollection<T>();
-            /*if (typeof (T).Name != "ObservableCollection`1")
-            {
-                Load();
-            }*/
+            LoadGenerisk();
         }
 
         /// <summary>
@@ -52,7 +49,7 @@ namespace _1aarsproeve.Model
             return _instance;
         }
 
-        /*public void Load()
+        public void LoadGenerisk()
         {
             var query = PersistensFacade<T>.LoadDB("api/" + typeof(T).Name + "s").Result;
             foreach (var item in query)
@@ -60,9 +57,5 @@ namespace _1aarsproeve.Model
                 Collection.Add(item);   
             }
         }
-        public void Add(T t)
-        {
-            Collection.Add(t);
-        }*/
     }
 }

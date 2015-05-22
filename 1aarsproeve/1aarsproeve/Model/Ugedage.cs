@@ -17,6 +17,12 @@ namespace _1aarsproeve.Model
             UgedagId = ugedagId;
             Ugedag = ugedag;
         }
+
+        public Ugedage()
+        {
+           
+        }
+
         /// <summary>
         /// UgedagId Property
         /// </summary>

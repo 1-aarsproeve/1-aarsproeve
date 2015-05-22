@@ -26,14 +26,33 @@ namespace _1aarsproeve.Model
         /// <param name="ugenummer"></param>
         /// <param name="ugedagId"></param>
         /// <param name="brugernavn"></param>
-        public VagtplanView(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)
+        public VagtplanView(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, Ugedage ugedag, Ansatte ansat)
         {
+            Ansat = new Ansatte();
+            Ugedag = new Ugedage();
             Starttidspunkt = starttidspunkt;
             Sluttidspunkt = sluttidspunkt;
             Ugenummer = ugenummer;
-            UgedagId = ugedagId;
-            Brugernavn = brugernavn;
+            Ansat = ansat;
+            Ugedag = ugedag;
+            UgedagId = Ugedag.UgedagId;
+            Brugernavn = Ansat.Brugernavn;
         }
+
+        public Ugedage Ugedag { get; set; }
+
+        public VagtplanView(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugedagId, int ugenummer, string brugernavn, string navn)
+        {
+            Starttidspunkt = starttidspunkt;
+            Sluttidspunkt = sluttidspunkt;
+            UgedagId = ugedagId;
+            Ugenummer = ugenummer;
+            Brugernavn = brugernavn;
+            Navn = navn;
+        }
+
+        public Ansatte Ansat { get; set; }
+
         /// <summary>
         /// Konstruktør med vagtId
         /// </summary>

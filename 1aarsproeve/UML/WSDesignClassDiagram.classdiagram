@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="e3e7e677-6008-43d1-b172-43a2de52ad7e" name="WSDesignClassDiagram" linkedPackageId="4f0d4103-5a47-4957-af0a-e42384548a37" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="e3e7e677-6008-43d1-b172-43a2de52ad7e" name="WSDesignClassDiagram" linkedPackageId="4f0d4103-5a47-4957-af0a-e42384548a37" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="338bb91f-61b6-4740-a3d4-ffe495748217" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
@@ -4337,6 +4337,12 @@
                   <elementDefinition Id="506e08f5-c0ef-4d3b-8346-bdabd58dbc40" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="15cc208a-f222-47e7-a99e-c474da35770f" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5c259448-5e39-4eea-ace8-e7c62978cd4e" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d2d062eb-b5ce-4c8f-b206-cfd1c12b5b8e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="74e916c2-773d-4f81-b5c2-5355a58f0c2a" LastKnownName="string" />
                   </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
@@ -10965,6 +10971,11 @@
     <packageHasNamedElement>
       <referencedType Id="ccb6a3b5-0c4d-4307-8916-5bf3a31cd359" name="Anmodninger" isAbstract="false" isLeaf="false" cachedFullName="UML::Controller::Anmodninger">
         <elementDefinition Id="3d1ffb09-895b-434b-a7a2-765c1a84949c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="74e916c2-773d-4f81-b5c2-5355a58f0c2a" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="b0e246b7-409a-4b04-ad83-a1cf6d9a18c2" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

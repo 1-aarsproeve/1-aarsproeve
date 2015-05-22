@@ -20,6 +20,10 @@ public partial class AnmodningerView
     /// </summary>
     public int AnmodningId { get; set; }
     /// <summary>
+    /// Navn property
+    /// </summary>
+    public string Navn { get; set; }
+    /// <summary>
     /// AnmodningBrugernavn property
     /// </summary>
     public string AnmodningBrugernavn { get; set; }

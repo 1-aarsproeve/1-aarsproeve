@@ -27,7 +27,7 @@ namespace _1aarsproeve.ViewModel
     {
         #region Backing fields
 
-        private GeneriskSingleton<Ansatte> _ansatteSingleton;
+        private static GeneriskSingleton<Ansatte> _ansatteSingleton;
         private string _brugernavn;
         private string _password;
         private List<Stillinger> _stillingerListe;
@@ -72,7 +72,7 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// AnsatteCollection property
         /// </summary>
-        public ObservableCollection<Ansatte> AnsatteCollection
+        public static ObservableCollection<Ansatte> AnsatteCollection
         {
             get { return _ansatteSingleton.Collection; }
             set { _ansatteSingleton.Collection = value; }

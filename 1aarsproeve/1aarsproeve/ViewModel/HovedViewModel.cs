@@ -11,6 +11,7 @@ using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 using Eventmaker.Common;
 using _1aarsproeve.Common;
 using _1aarsproeve.Handler;
@@ -83,28 +84,10 @@ namespace _1aarsproeve.ViewModel
             Brugernavn = (string)Setting.Values["Brugernavn"];
             SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
 
-            InitialiserBeskeder();
-
             AnmodningCollection = new ObservableCollection<AnmodningerView>();
             InitialiserAnmodninger();
 
             HovedHandler = new HovedHandler(this);
-        }
-        /// <summary>
-        /// Initialiserer beskeder
-        /// </summary>
-        public void InitialiserBeskeder()
-        {
-            BeskedCollection.Clear();
-            var query = PersistensFacade<HovedmenuView>.LoadDB("api/HovedmenuViews").Result;
-            var query1 =
-                from q in query
-                orderby q.Dato descending, q.BeskedId descending
-                select q;
-            foreach (var item in query1)
-            {
-                BeskedCollection.Add(item);
-            }
         }
         /// <summary>
         /// Initialiserer anmodninger

@@ -192,9 +192,10 @@ INSERT INTO Anmodninger VALUES (3,'Benjamin');
 GO
 /* Opretter HovedmenuView */
 CREATE VIEW [HovedmenuView]
-	AS  SELECT Beskeder.*, Ansatte.Navn FROM [Beskeder] 
+	AS SELECT TOP 100 Beskeder.*, Ansatte.Navn FROM [Beskeder] 
 	JOIN Ansatte ON Beskeder.Brugernavn = Ansatte.Brugernavn
 	WHERE Beskeder.Udloebsdato > GETDATE()
+	ORDER BY Beskeder.Dato DESC, Beskeder.BeskedId DESC
 GO
 /* Opretter VagtplanView */
 CREATE VIEW [VagtplanView]
@@ -203,7 +204,8 @@ CREATE VIEW [VagtplanView]
 GO
 /* Opretter AnmodningerView */ 
 CREATE VIEW [AnmodningerView]
-	AS SELECT Anmodninger.AnmodningId, Anmodninger.AnmodningBrugernavn, Vagter.Starttidspunkt, Vagter.Sluttidspunkt, Vagter.UgedagId, Vagter.Ugenummer, Vagter.Brugernavn, Vagter.VagtId, Ugedage.Ugedag FROM [Anmodninger]
+	AS SELECT Anmodninger.AnmodningId, Anmodninger.AnmodningBrugernavn, Ansatte.Navn, Vagter.Starttidspunkt, Vagter.Sluttidspunkt, Vagter.UgedagId, Vagter.Ugenummer, Vagter.Brugernavn, Vagter.VagtId, Ugedage.Ugedag FROM [Anmodninger]
 	JOIN Vagter ON Anmodninger.VagtId = Vagter.VagtId
+	JOIN Ansatte ON Anmodninger.AnmodningBrugernavn = Ansatte.Brugernavn
 	JOIN Ugedage On Vagter.UgedagId = Ugedage.UgedagId
 GO

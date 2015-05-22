@@ -8,7 +8,7 @@ namespace WS1aarsproeve
     public partial class TableContext : DbContext
     {
         public TableContext()
-            : base("name=TableContext1")
+            : base("name=TableContext2")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
@@ -57,8 +57,7 @@ namespace WS1aarsproeve
             modelBuilder.Entity<Ansatte>()
                 .HasMany(e => e.Anmodningers)
                 .WithRequired(e => e.Ansatte)
-                .HasForeignKey(e => e.AnmodningBrugernavn)
-                .WillCascadeOnDelete(false);
+                .HasForeignKey(e => e.AnmodningBrugernavn);
 
             modelBuilder.Entity<Ansatte>()
                 .HasMany(e => e.Beskeders)
@@ -111,11 +110,6 @@ namespace WS1aarsproeve
             modelBuilder.Entity<Vagter>()
                 .Property(e => e.Brugernavn)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Vagter>()
-                .HasMany(e => e.Anmodningers)
-                .WithRequired(e => e.Vagter)
-                .WillCascadeOnDelete(false);
         }
     }
 }

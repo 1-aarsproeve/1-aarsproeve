@@ -59,7 +59,7 @@
         </Grid>
         <Grid Margin="300 40" Grid.Row="1">
             <StackPanel Margin="100 0">
-                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding AnsatteCollection[0].Brugernavn, Mode=TwoWay}" IsReadOnly="True" PlaceholderText="Brugernavn" />
+                <TextBox Opacity="0.6" Style="{StaticResource GenerelTextbox}" Text="{Binding AnsatteCollection[0].Brugernavn, Mode=TwoWay}" IsReadOnly="True" PlaceholderText="Brugernavn" ToolTipService.ToolTip="Brugernavnet kan ikke ændres" />
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Navn" Text="{Binding AnsatteCollection[0].Navn, Mode=TwoWay}"/>
                 <PasswordBox Style="{StaticResource GenerelPasswordbox}" PlaceholderText="Password" Password="{Binding BrugerHandler.Password, Mode=TwoWay}"/>
                 <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="E-mail" Text="{Binding AnsatteCollection[0].Email, Mode=TwoWay}"/>

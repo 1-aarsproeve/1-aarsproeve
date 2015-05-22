@@ -53,9 +53,9 @@ namespace _1aarsproeve.ViewModel
         private ICommand _selectedVagterCommand;
         private ICommand _anmodVagtCommand;
         private ICommand _navigerRedigerVagtCommand;
-        private Action<ObservableCollection<ObservableCollection<VagtplanView>>> _sorting;
+        private Action<ObservableCollection<VagtplanView>[]> _sorting;
 
-        private GeneriskSingleton<ObservableCollection<VagtplanView>> _vagtCollection;
+        private VagtplanSingleton _vagtCollection;
 
         #endregion
 
@@ -96,7 +96,6 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public Brush SoendagFarve { get; set; }
 
-        private int _ugenummer;
         private string _mandag;
         private string _tirsdag;
         private string _onsdag;
@@ -277,7 +276,7 @@ namespace _1aarsproeve.ViewModel
         {
             get
             {
-                _sortCommand = new RelayCommand(() => _sorting(VagtCollection));
+                _sortCommand = new RelayCommand(() => _sorting(VagtCollection.VagtCollectionsArray));
                 return _sortCommand;
             }
             set { _sortCommand = value; }
@@ -341,10 +340,10 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Singleton vagtcollection
         /// </summary>
-        public ObservableCollection<ObservableCollection<VagtplanView>> VagtCollection
+        public VagtplanSingleton VagtCollection
         {
-            get { return _vagtCollection.Collection; }
-            set { _vagtCollection.Collection = value; }
+            get { return _vagtCollection; }
+            set { _vagtCollection = value; }
         }
 
         /// <summary>
@@ -439,18 +438,6 @@ namespace _1aarsproeve.ViewModel
         }
 
         /// <summary>
-        /// Ugenummer property
-        /// </summary>
-        public int Ugenummer
-        {
-            get { return _ugenummer; }
-            set
-            {
-                _ugenummer = value;
-                OnPropertyChanged("Ugenummer");
-            }
-        }
-        /// <summary>
         /// Gør det muligt at gemme værdier i local storage
         /// </summary>
         public ApplicationDataContainer Setting { get; set; }
@@ -493,33 +480,14 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public VagtplanViewModel()
         {
-            _vagtCollection = GeneriskSingleton<ObservableCollection<VagtplanView>>.Instance();
+            _vagtCollection = VagtplanSingleton.Instance();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
             SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
 
+
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
-
-            FindUgenummer("da-DK");
             Ugedage();
-
-            MandagVagter = new ObservableCollection<VagtplanView>();
-            TirsdagVagter = new ObservableCollection<VagtplanView>();
-            OnsdagVagter = new ObservableCollection<VagtplanView>();
-            TorsdagVagter = new ObservableCollection<VagtplanView>();
-            FredagVagter = new ObservableCollection<VagtplanView>();
-            LoerdagVagter = new ObservableCollection<VagtplanView>();
-            SoendagVagter = new ObservableCollection<VagtplanView>();
-
-            VagtCollection.Add(MandagVagter);
-            VagtCollection.Add(TirsdagVagter);
-            VagtCollection.Add(OnsdagVagter);
-            VagtCollection.Add(TorsdagVagter);
-            VagtCollection.Add(FredagVagter);
-            VagtCollection.Add(LoerdagVagter);
-            VagtCollection.Add(SoendagVagter);
-
-            InitialiserVagter();
 
             VagtHandler = new VagtHandler(this);
             
@@ -549,17 +517,16 @@ namespace _1aarsproeve.ViewModel
         /// Henter alle vagter
         /// </summary>
         /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
-        public async void AlleVagter(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection)
+        public async void AlleVagter(ObservableCollection<VagtplanView>[] vagtCollection)
         {
-            ClearVagterCollections();
             try
             {
-                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
-                for (int i = 0; i < vagtCollection.Count; i++)
+                ClearVagterCollections();
+                for (int i = 0; i < vagtCollection.Length; i++)
                 {
                     var query =
-                        from q in vagter
-                        where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
+                        from q in VagtCollection.VagterListe
+                        where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer
                         orderby q.Starttidspunkt ascending, q.Sluttidspunkt
                         select q;
                     foreach (var item in query)
@@ -579,17 +546,16 @@ namespace _1aarsproeve.ViewModel
         /// Henter frie vagter
         /// </summary>
         /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
-        public async void FrieVagter(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection)
+        public async void FrieVagter(ObservableCollection<VagtplanView>[] vagtCollection)
         {
-            ClearVagterCollections();
             try
             {
-                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
-                for (int i = 0; i < vagtCollection.Count; i++)
+                ClearVagterCollections();
+                for (int i = 0; i < vagtCollection.Length; i++)
                 {
                     var query =
-                        from q in vagter
-                        where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == "Ubemandet"
+                        from q in VagtCollection.VagterListe
+                        where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == "Ubemandet"
                         orderby q.Starttidspunkt ascending, q.Sluttidspunkt
                         select q;
                     foreach (var item in query)
@@ -609,17 +575,16 @@ namespace _1aarsproeve.ViewModel
         /// Henter mine vagter
         /// </summary>
         /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
-        public async void MineVagter(ObservableCollection<ObservableCollection<VagtplanView>> vagtCollection)
+        public async void MineVagter(ObservableCollection<VagtplanView>[] vagtCollection)
         {
-            ClearVagterCollections();
             try
             {
-                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
-                for (int i = 0; i < vagtCollection.Count; i++)
+                ClearVagterCollections();
+                for (int i = 0; i < vagtCollection.Length; i++)
                 {
                     var query =
-                        from q in vagter
-                        where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                        from q in VagtCollection.VagterListe
+                        where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == Brugernavn
                         orderby q.Starttidspunkt ascending, q.Sluttidspunkt
                         select q;
                     foreach (var item in query)
@@ -647,7 +612,7 @@ namespace _1aarsproeve.ViewModel
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
             savePicker.FileTypeChoices.Add("Filformat", new List<string>() {".ics", ".csv"});
-            savePicker.SuggestedFileName = "vagtplan-alle-uge-" + Ugenummer;
+            savePicker.SuggestedFileName = "vagtplan-alle-uge-" + _vagtCollection.Ugenummer;
 
             StorageFile fil = await savePicker.PickSaveFileAsync();
             if (fil != null)
@@ -661,19 +626,19 @@ namespace _1aarsproeve.ViewModel
                     vagter +=
                         "BEGIN:VCALENDAR\n" +
                         "VERSION:2.0\n\n";
-                    for (int i = 0; i < VagtCollection.Count; i++)
+                    for (int i = 0; i < VagtCollection.VagtCollectionsArray.Length; i++)
                     {
                         var query1 =
-                            from q in VagtCollection[i]
-                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
+                            from q in VagtCollection.VagtCollectionsArray[i]
+                            where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer
                             select new {q.Starttidspunkt, q.Sluttidspunkt, q.Navn};
                         foreach (var item in query1)
                         {
                             vagter +=
                                 "BEGIN:VEVENT\n" +
-                                "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                "DTSTART:" + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
                                 item.Starttidspunkt.ToString("hhmmss") + "\n" +
-                                "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                "DTEND:" + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
                                 item.Sluttidspunkt.ToString("hhmmss") + "\n" +
                                 "SUMMARY:" + emne + " | " + item.Navn + "\n" +
                                 "LOCATION:" + sted + "\n" +
@@ -686,19 +651,19 @@ namespace _1aarsproeve.ViewModel
                 {
                     vagter +=
                         "Emne, Startdato, Starttidspunkt, Slutdato, Sluttidspunkt, Placering\n";
-                    for (int i = 0; i < VagtCollection.Count; i++)
+                    for (int i = 0; i < VagtCollection.VagtCollectionsArray.Length; i++)
                     {
                         var query1 =
-                            from q in VagtCollection[i]
-                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                            from q in VagtCollection.VagtCollectionsArray[i]
+                            where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == Brugernavn
                             select new {q.Starttidspunkt, q.Sluttidspunkt, q.Navn};
                         foreach (var item in query1)
                         {
                             vagter +=
                                 emne + " | " + item.Navn +
-                                ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
+                                ", " + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Starttidspunkt +
-                                ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
+                                ", " + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Sluttidspunkt +
                                 ", " + sted + "\n";
                         }
@@ -727,7 +692,7 @@ namespace _1aarsproeve.ViewModel
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
             savePicker.FileTypeChoices.Add("Filformat", new List<string>() {".ics", ".csv"});
-            savePicker.SuggestedFileName = "vagtplan-mine-uge-" + Ugenummer;
+            savePicker.SuggestedFileName = "vagtplan-mine-uge-" + _vagtCollection.Ugenummer;
 
             StorageFile fil = await savePicker.PickSaveFileAsync();
             if (fil != null)
@@ -741,19 +706,19 @@ namespace _1aarsproeve.ViewModel
                     vagter +=
                         "BEGIN:VCALENDAR\n" +
                         "VERSION:2.0\n\n";
-                    for (int i = 0; i < VagtCollection.Count; i++)
+                    for (int i = 0; i < VagtCollection.VagtCollectionsArray.Length; i++)
                     {
                         var query1 =
-                            from q in VagtCollection[i]
-                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                            from q in VagtCollection.VagtCollectionsArray[i]
+                            where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == Brugernavn
                             select new {q.Starttidspunkt, q.Sluttidspunkt};
                         foreach (var item in query1)
                         {
                             vagter +=
                                 "BEGIN:VEVENT\n" +
-                                "DTSTART:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                "DTSTART:" + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
                                 item.Starttidspunkt.ToString("hhmmss") + "\n" +
-                                "DTEND:" + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                "DTEND:" + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
                                 item.Sluttidspunkt.ToString("hhmmss") + "\n" +
                                 "SUMMARY:" + emne + "\n" +
                                 "LOCATION:" + sted + "\n" +
@@ -766,19 +731,19 @@ namespace _1aarsproeve.ViewModel
                 {
                     vagter +=
                         "Subject, Start Date, Start Time, End Date, End Time, Location\n";
-                    for (int i = 0; i < VagtCollection.Count; i++)
+                    for (int i = 0; i < VagtCollection.VagtCollectionsArray.Length; i++)
                     {
                         var query1 =
-                            from q in VagtCollection[i]
-                            where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer && q.Brugernavn == Brugernavn
+                            from q in VagtCollection.VagtCollectionsArray[i]
+                            where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == Brugernavn
                             select new {q.Starttidspunkt, q.Sluttidspunkt};
                         foreach (var item in query1)
                         {
                             vagter +=
                                 emne +
-                                ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
+                                ", " + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Starttidspunkt +
-                                ", " + FoersteDagPaaUge(Ugenummer).AddDays(i).ToString("d") +
+                                ", " + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Sluttidspunkt +
                                 ", " + sted + "\n";
                         }
@@ -802,57 +767,58 @@ namespace _1aarsproeve.ViewModel
         #endregion
 
         /// <summary>
-        /// Clear alle collections
-        /// </summary>
-        public void ClearVagterCollections()
-        {
-            for (int i = 0; i < VagtCollection.Count; i++)
-            {
-                VagtCollection[i].Clear();
-            }
-        }
-        /// <summary>
         /// Henter vagter for forrige uge
         /// </summary>
         public void ForrigeUge()
         {
-            Ugenummer = Ugenummer - 1;
+            _vagtCollection.Ugenummer = _vagtCollection.Ugenummer - 1;
 
-            if (Ugenummer < 1)
+            if (_vagtCollection.Ugenummer < 1)
             {
-                Ugenummer = 52;
+                _vagtCollection.Ugenummer = 52;
             }
-            Ugedage();
+
             ClearVagterCollections();
-            InitialiserVagter();
+            VagtCollection.LoadVagter();
+            Ugedage();
         }
         /// <summary>
         /// Henter vagter for næste uge
         /// </summary
         public void NaesteUge()
         {
-            Ugenummer = Ugenummer + 1;
+            _vagtCollection.Ugenummer = _vagtCollection.Ugenummer + 1;
 
-            if (Ugenummer > 52)
+            if (_vagtCollection.Ugenummer > 52)
             {
-                Ugenummer = 1;
+                _vagtCollection.Ugenummer = 1;
             }
-            Ugedage();
+
             ClearVagterCollections();
-            InitialiserVagter();
+            VagtCollection.LoadVagter();
+            Ugedage();
+
+        }
+
+        public void ClearVagterCollections()
+        {
+            for (int i = 0; i < _vagtCollection.VagtCollectionsArray.Length; i++)
+            {
+                _vagtCollection.VagtCollectionsArray[i].Clear();
+            }
         }
         /// <summary>
         /// Sætter datoerne for hver ugedag
         /// </summary>
         public void Ugedage()
         {
-            Mandag = FoersteDagPaaUge(Ugenummer).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Tirsdag = FoersteDagPaaUge(Ugenummer).AddDays(1).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Onsdag = FoersteDagPaaUge(Ugenummer).AddDays(2).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Torsdag = FoersteDagPaaUge(Ugenummer).AddDays(3).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Fredag = FoersteDagPaaUge(Ugenummer).AddDays(4).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Loerdag = FoersteDagPaaUge(Ugenummer).AddDays(5).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Soendag = FoersteDagPaaUge(Ugenummer).AddDays(6).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Mandag = FoersteDagPaaUge(_vagtCollection.Ugenummer).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Tirsdag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(1).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Onsdag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(2).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Torsdag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(3).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Fredag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(4).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Loerdag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(5).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Soendag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(6).ToString("d. MMMM", new CultureInfo("da-DK"));
         }
         /// <summary>
         /// Angiver farve på nuværende ugedag
@@ -897,15 +863,7 @@ namespace _1aarsproeve.ViewModel
                     break;
             }
         }
-        /// <summary>
-        /// Finder nuværende ugenummer
-        /// </summary>
-        /// <param name="kulturInfo">Angiver hvilket land</param>
-        public void FindUgenummer(string kulturInfo)
-        {
-            var kultur = CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(kulturInfo);
-            Ugenummer = kultur.Calendar.GetWeekOfYear(DateTime.Today, DateTimeFormatInfo.GetInstance(kultur).CalendarWeekRule, DateTimeFormatInfo.GetInstance(kultur).FirstDayOfWeek);
-        }
+
         /// <summary>
         /// Finder første dag på ugen
         /// </summary>
@@ -928,35 +886,6 @@ namespace _1aarsproeve.ViewModel
             return resultat.AddDays(-3);
         }
         #region InitialiserVagter
-        /// <summary>
-        /// Initialisere vagter
-        /// </summary>
-        public async void InitialiserVagter()
-        {
-            ClearVagterCollections();
-
-            try
-            {
-                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
-                for (int i = 0; i < VagtCollection.Count; i++)
-                {
-                    var query =
-                        from q in vagter
-                        where q.UgedagId == i + 1 && q.Ugenummer == Ugenummer
-                        orderby q.Starttidspunkt ascending, q.Sluttidspunkt
-                        select q;
-                    foreach (var item in query)
-                    {
-                        VagtCollection[i].Add(item);
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                MessageDialog m = Hjaelpeklasse.FejlMeddelelse("Der kunne ikke udtrækkes fra databasen");
-                m.ShowAsync();
-            }
-        }
         #endregion
 
         #region Properties

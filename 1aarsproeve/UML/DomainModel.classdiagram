@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="900c63c0-1a40-458f-9ee1-8cff881ec8b0" name="DomainModel" linkedPackageId="d682854a-42ee-47e3-84bb-0f4a9934204d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="61ccf300-d549-47a8-bbe8-4e75b611a859">
-      <profileInstance Id="2ef8db0d-6337-4305-af80-8dc4d7c41978" name="CSharpProfile">
-        <elementDefinition Id="8ec30f03-3be4-4f30-9116-465333b6ee59" />
-      </profileInstance>
-      <elementDefinition Id="2069808b-ddf0-45a1-8651-0056c02892eb" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="900c63c0-1a40-458f-9ee1-8cff881ec8b0" name="DomainModel" linkedPackageId="d682854a-42ee-47e3-84bb-0f4a9934204d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="9d5598fa-4ef2-4c67-8df5-2374daa4ad74" name="Ansatte" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -257,6 +249,11 @@
             <elementDefinition Id="2b1814e3-5c52-4b8a-a3c4-3c026481b9e7" />
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="9e3df624-4d8f-4125-a913-54e09694decc" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d3e36935-2f59-4327-910b-6b3457ba66e2" />
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
@@ -274,6 +271,12 @@
           <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
         </profileInstance>
         <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="61ccf300-d549-47a8-bbe8-4e75b611a859">
+        <profileInstance Id="2ef8db0d-6337-4305-af80-8dc4d7c41978" name="CSharpProfile">
+          <elementDefinition Id="8ec30f03-3be4-4f30-9116-465333b6ee59" />
+        </profileInstance>
+        <elementDefinition Id="2069808b-ddf0-45a1-8651-0056c02892eb" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

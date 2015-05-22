@@ -85,7 +85,7 @@
                             </Grid.RowDefinitions>
                             <StackPanel Grid.ColumnSpan="2" Margin="0,10,0,0" Grid.Row="0">
                                 <TextBlock Foreground="#FFB81323" FontSize="30">
-                                    <Run Foreground="Gray" Text="{Binding AnmodningBrugernavn}"/>
+                                    <Run Foreground="Gray" Text="{Binding Navn}"/>
                                     <Run Text="har anmodet om din vagt"/>
                                 </TextBlock>
                             </StackPanel>

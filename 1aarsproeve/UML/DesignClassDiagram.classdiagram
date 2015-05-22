@@ -445,9 +445,6 @@
                 <operation Id="83cec813-7567-4df7-84ec-8bd164d28c6e" name="InitialiserAnmodninger" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="0a1058ec-0b46-4435-b77e-fdf8a6396a82" />
                 </operation>
-                <operation Id="cffe75d1-7c4a-48c6-bd63-22d934649b51" name="InitialiserBeskeder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="e2d8a3b0-3ecd-415b-8086-42c8a0eb9ecc" />
-                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -471,21 +468,21 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="bc48cd90-13d9-4703-91ce-6828c90fe957" />
                 </association>
-                <association Id="61eb7053-4305-434b-b84b-96fba10389c2" isDerived="false" sourceEndRoleName="VagtplanViewModel" targetEndRoleName="GeneriskSingleton" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="c193246b-d71a-488c-8fc4-455f32efb89f" LastKnownName="GeneriskSingleton" />
+                <association Id="6a5d692b-a1db-472a-a80e-64f25a586f94" isDerived="false" sourceEndRoleName="VagtplanViewModel" targetEndRoleName="VagtplanSingleton" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="c36b4aee-fbc6-42d1-9d51-734982601b42" LastKnownName="VagtplanSingleton" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="b2c32fb0-e1ca-485f-8b12-3af422bc084d" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="21ced61b-4c94-4a1f-bf0b-e6711e0ca01b" />
+                      <memberEnd Id="c543e7fd-7945-4217-96fd-2c20197e7999" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="7bad1691-f60a-4cd2-b06b-69ccd1b304c7" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="e917be0c-202c-4138-aedc-bbe7baa0c986" name="GeneriskSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="bc4abb53-97a5-4463-b9e5-b94b246b311d" />
+                      <memberEnd Id="897b7493-d568-4f10-8083-5750c46e14f3" name="VagtplanSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="27f1e93d-2d49-4955-96f8-6212aa4f6343" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="2f47537a-a74e-435c-abaf-406320ca0099" />
+                  <elementDefinition Id="72d25dd2-a233-4ae3-8a2f-27943ae0c120" />
                 </association>
               </targetEnds>
               <ownedAttributesInternal>
@@ -547,12 +544,6 @@
                   <elementDefinition Id="166ed3e1-e491-40b7-acb2-5f2b00248475" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="21e28f13-e366-4011-9d1f-13321386b568" LastKnownName="Brush" />
-                  </type_NamedElement>
-                </property>
-                <property Id="23f36c9b-a520-4211-bc59-65da4a1804dc" name="Ugenummer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="110d2561-897d-4dd7-83e7-e4c8bf313bce" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
                   </type_NamedElement>
                 </property>
                 <property Id="21b8e6f2-6d76-4c8c-84e9-9155a305f093" name="Mandag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -654,7 +645,7 @@
                 <property Id="a5f9f528-2292-4d17-86e6-86a64b103f36" name="_sorting" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="f4f380b1-ca54-4220-ae3e-c5af5bd7626e" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="cb2526da-6bc3-4d4b-b841-6f84518f5cca" LastKnownName="Action&lt;ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;&gt;" />
+                    <referencedTypeMoniker Id="4cad7806-819e-4676-a625-8ce1633c6db4" LastKnownName="Action&lt;ObservableCollection&lt;VagtplanView[]&gt;" />
                   </type_NamedElement>
                 </property>
                 <property Id="9baa7345-fdd0-4978-855c-303bd38597c9" name="ForrigeUgeCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -782,16 +773,6 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="a66f4c5c-a8b7-479c-b5e9-c013f6d31eec" name="FindUgenummer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="d62fe089-4d4d-473e-b824-f77922ab2222" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="c53a4d88-2c27-4f59-8fad-fe37470bf9f8" name="string kulturInfo" direction="In" isUnique="false">
-                        <elementDefinition Id="9c2ac8d9-53a6-4fa6-9275-b1f315deeebb" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
                 <operation Id="34d019be-9556-4dbd-9a58-1ffc2fd6599e" name="FoersteDagPaaUge" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="180e65a4-5f3f-43d4-b64a-92283c0d9dae" />
                   <ownedParameters>
@@ -860,9 +841,6 @@
                 </operation>
                 <operation Id="7a7c4433-222c-436e-b0b2-ed83ee4223be" name="ClearVagterCollections" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="768a9228-a6b7-49e8-845d-d1d770cccaf5" />
-                </operation>
-                <operation Id="10f5106f-f742-4681-8cf0-82fafbe82ee3" name="InitialiserVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="e3a46817-be46-4011-964c-027f9acae5d5" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -1027,6 +1005,9 @@
               <ownedOperationsInternal>
                 <operation Id="92a74881-0f04-4d46-8c1a-75efb5833b85" name="Instance : GeneriskSingleton&lt;T&gt;" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="b3847214-e87c-4a02-b2eb-98af48d1b46a" />
+                </operation>
+                <operation Id="ee6192e9-e3b7-4c1a-a7c3-f07052974854" name="LoadGenerisk" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="86d91ee7-7dcb-4f22-8305-20fa5cf0b2da" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -2221,7 +2202,97 @@
                     <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
                   </type_NamedElement>
                 </property>
+                <property Id="598ebbc3-f732-4cd5-bb22-4d49589e69db" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9f1bf6ee-05ef-48a3-8e5b-903b62058c56" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2e25b764-0281-45d4-a1ce-b93421a11329" LastKnownName="string" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c36b4aee-fbc6-42d1-9d51-734982601b42" name="VagtplanSingleton" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="00f04f3b-0d50-4371-aa17-b98409e9169c" />
+              <ownedAttributesInternal>
+                <property Id="b8859c9f-eaa1-4dde-ad39-712cf78e4722" name="_instance" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1850b4fb-b96b-4bf7-8185-ee66a7f9623c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="455444ab-8a5b-45e6-847d-7d2b6867829f" LastKnownName="VagtplanView" />
+                  </type_NamedElement>
+                </property>
+                <property Id="956ce149-c96d-420d-b0f4-85a320bc6365" name="VagterListe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="075c7564-4e06-461f-9ee3-59f39d7a76aa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0096b500-43c8-4b4d-8706-4358b1b55c6f" LastKnownName="List&lt;VagtplanView&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="17baba11-e88b-47ff-9a56-2f1cad0506b1" name="Ugenummer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="beeab5df-b01c-4c18-a0e7-530fbcab1633" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
+                <property Id="c479b125-318c-4446-8d26-75c336f7facb" name="VagtCollectionsArray" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e1f7034c-536e-44ec-9da0-bc046e091916" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5fb99700-0bb9-4c80-ac24-8f214e75efc0" LastKnownName="ObservableCollection&lt;VagtplanView&gt;[]" />
+                  </type_NamedElement>
+                </property>
+                <property Id="9296c399-df98-4bd9-ac29-498978ae3e26" name="SoendagCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d0b66e2a-1d78-47ab-ac27-a4e9297e3caa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00e61eb7-a623-409c-904f-a86bd066593f" LastKnownName="ObservableCollection&lt;VagtplanView&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="7bb1c50c-72d6-40f5-be84-74f8be146362" name="MandagCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="acb4eecb-901f-4925-839d-2bf1e9929319" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00e61eb7-a623-409c-904f-a86bd066593f" LastKnownName="ObservableCollection&lt;VagtplanView&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="d1cf696e-ab87-48e2-b93c-eb6fdf093329" name="TirsdagCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="33100538-9031-49a1-bf38-7b266c3b1ad7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00e61eb7-a623-409c-904f-a86bd066593f" LastKnownName="ObservableCollection&lt;VagtplanView&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="e98b17b2-f2a5-46e8-901b-30f3524e64f9" name="TorsdagCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0dd4337c-37fb-4425-b65d-dfb9e16d5ed1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00e61eb7-a623-409c-904f-a86bd066593f" LastKnownName="ObservableCollection&lt;VagtplanView&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="1e4ec1ad-4d98-40ff-bf72-a4913c232b34" name="OnsdagCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="84f0e325-07e6-47a7-9e2a-28e1fab580e3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00e61eb7-a623-409c-904f-a86bd066593f" LastKnownName="ObservableCollection&lt;VagtplanView&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="6293d1d0-c4c6-4bf0-9082-10b5e66869f0" name="FredagCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e89b2f4f-a836-4ec6-b246-087e1f3c228c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00e61eb7-a623-409c-904f-a86bd066593f" LastKnownName="ObservableCollection&lt;VagtplanView&gt;" />
+                  </type_NamedElement>
+                </property>
+                <property Id="611c33bc-f50b-497b-bc38-269712ada10d" name="LoerdagCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b95a65ad-96a6-4b97-a71a-4f26b31e9e2f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="00e61eb7-a623-409c-904f-a86bd066593f" LastKnownName="ObservableCollection&lt;VagtplanView&gt;" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="e7821a03-48a0-42e8-b546-d68ab19019d9" name="Instance" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b55ba318-e5b7-443c-90a0-429f60659f7a" />
+                </operation>
+                <operation Id="f9c3ac35-0f80-4008-a124-20dffadacd25" name="LoadVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4d986c8f-323c-4e40-abdf-d8b8b0d0e247" />
+                </operation>
+                <operation Id="7ff44236-2433-44a8-9089-11767725fa1e" name="+ FindUgenummer(string kulturInfo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="867748fd-3132-489c-b677-d6a6e384a16c" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
         </packagedElements>
@@ -2646,11 +2717,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="cb2526da-6bc3-4d4b-b841-6f84518f5cca" name="Action&lt;ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="Action&lt;ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;&gt;">
-        <elementDefinition Id="dd2a6186-db7f-4b0d-a4fd-68ab697528d8" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="433723bc-96f8-4c12-85f0-f060ffb73516" name="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;ObservableCollection&lt;VagtplanView&gt;&gt;">
         <elementDefinition Id="0b6a9821-66c1-47cc-aec4-e1cbf1783aaa" />
       </referencedType>
@@ -2818,6 +2884,31 @@
     <packageHasNamedElement>
       <referencedType Id="9c4c5d94-0666-4cfb-9d06-88d20b643690" name="HttpClient" isAbstract="false" isLeaf="false" cachedFullName="HttpClient">
         <elementDefinition Id="b1ab7730-fb3f-4819-9dc0-136b5dc6daed" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="455444ab-8a5b-45e6-847d-7d2b6867829f" name="VagtplanView" isAbstract="false" isLeaf="false" cachedFullName="UML::Model::VagtplanView">
+        <elementDefinition Id="37bbc963-d42f-478b-b802-74d3721aa6b3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0096b500-43c8-4b4d-8706-4358b1b55c6f" name="List&lt;VagtplanView&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;VagtplanView&gt;">
+        <elementDefinition Id="bfb85c7c-95b8-4617-bf2d-5dea40cb4393" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5fb99700-0bb9-4c80-ac24-8f214e75efc0" name="ObservableCollection&lt;VagtplanView&gt;[]" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;VagtplanView&gt;[]">
+        <elementDefinition Id="62b9e7a7-d065-4207-be51-f423066f761c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="00e61eb7-a623-409c-904f-a86bd066593f" name="ObservableCollection&lt;VagtplanView&gt;" isAbstract="false" isLeaf="false" cachedFullName="ObservableCollection&lt;VagtplanView&gt;">
+        <elementDefinition Id="1cf2203a-fa3e-43c8-8737-f161b29eebfd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4cad7806-819e-4676-a625-8ce1633c6db4" name="Action&lt;ObservableCollection&lt;VagtplanView[]&gt;" isAbstract="false" isLeaf="false" cachedFullName="Action&lt;ObservableCollection&lt;VagtplanView[]&gt;">
+        <elementDefinition Id="cec064c7-4a75-4550-85f7-051d40ceb4b7" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Reflection;
 
 namespace _1aarsproeve.Model
 {
@@ -25,14 +26,25 @@ namespace _1aarsproeve.Model
         /// <param name="beskrivelse">beskrivelse parameter</param>
         /// <param name="udleobsdato">udleobsdato parameter</param>
         /// <param name="brugernavn">brugernavn parameter</param>
-        public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn, string navn = null)
+        public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn, Ansatte ansat)
+        {
+            Ansat = new Ansatte();
+
+            Overskrift = overskrift;
+            Dato = dato;
+            Beskrivelse = beskrivelse;
+            Udloebsdato = udleobsdato;
+            Brugernavn = brugernavn;
+            Ansat = ansat;
+            Navn = Ansat.Navn;
+        }
+        public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn)
         {
             Overskrift = overskrift;
             Dato = dato;
             Beskrivelse = beskrivelse;
             Udloebsdato = udleobsdato;
             Brugernavn = brugernavn;
-            Navn = navn;
         }
         /// <summary>
         /// Checker beskrivelse
@@ -109,6 +121,8 @@ namespace _1aarsproeve.Model
         /// </summary>
         public string Brugernavn { get; set; }
 
+
+        public Ansatte Ansat { get; set; }
         /// <summary>
         /// Navn property
         /// </summary>

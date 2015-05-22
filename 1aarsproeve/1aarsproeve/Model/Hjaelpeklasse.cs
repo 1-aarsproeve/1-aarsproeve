@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -21,6 +22,7 @@ namespace _1aarsproeve.Model
     /// </summary>
     public class Hjaelpeklasse
     {
+
         private static HttpClient _client;
         /// <summary>
         /// Get til klienten til forbindelsen til databasen
