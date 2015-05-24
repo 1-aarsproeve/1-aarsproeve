@@ -756,6 +756,12 @@
                     <referencedTypeMoniker Id="dc93c020-a066-4ba6-8673-b8c080857d92" LastKnownName="ICommand" />
                   </type_NamedElement>
                 </property>
+                <property Id="13247fd5-b681-4212-9e76-eecf4f397642" name="Aar" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="424ea2ea-47d5-42a3-8059-18f2a3386d99" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b6affb74-c80d-4125-a67f-83f37b0285e5" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="bada808a-7be1-49ce-a091-63693f0cf9b4" name="NuvaerendeUgedag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -777,16 +783,21 @@
                   <elementDefinition Id="180e65a4-5f3f-43d4-b64a-92283c0d9dae" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="4df45378-f4ba-44e2-9511-65fd3994702a" name="int ugePaaAaret" direction="In" isUnique="false">
-                        <elementDefinition Id="80c98093-8861-4799-9540-16f7bb2a6d97" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="8682121b-5f47-45bf-a647-d15fce1ec8d3" direction="Return">
+                      <parameter Id="8682121b-5f47-45bf-a647-d15fce1ec8d3" direction="Return" isUnique="false">
                         <elementDefinition Id="d02dcf39-6ea6-41a5-aafe-02f518847441" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="dcb91b17-f0ba-43f2-b9af-e62d3c3b9136" LastKnownName="DateTime" />
                         </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="10b797ee-7b31-4442-9a16-58de8cac7251" name="int aar" direction="In" isUnique="false">
+                        <elementDefinition Id="84651010-1d09-4498-9bcc-ee25587c79f5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7d71f436-ce93-4138-98f2-2ff95bf6433d" name="int ugePaaAaret" direction="In" isUnique="false">
+                        <elementDefinition Id="bd10a2fd-70b6-4dac-87d6-91c8f23856dc" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>

@@ -48,7 +48,9 @@ namespace _1aarsproeve.Model
             }
             return _instance;
         }
-
+        /// <summary>
+        /// Generisk load-metode
+        /// </summary>
         public void LoadGenerisk()
         {
             var query = PersistensFacade<T>.LoadDB("api/" + typeof(T).Name + "s").Result;

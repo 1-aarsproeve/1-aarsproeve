@@ -15,6 +15,9 @@ using _1aarsproeve.ViewModel;
 
 namespace _1aarsproeve.Model
 {
+    /// <summary>
+    /// Vagtplan Singleton klasse
+    /// </summary>
     public class VagtplanSingleton : INotifyPropertyChanged
     {
         private static VagtplanSingleton _instance;
@@ -28,49 +31,65 @@ namespace _1aarsproeve.Model
         private ObservableCollection<VagtplanView> _loerdagCollection;
         private ObservableCollection<VagtplanView> _soendagCollection;
         private int _ugenummer;
-
+        /// <summary>
+        /// Mandag-collection property
+        /// </summary>
         public ObservableCollection<VagtplanView> MandagCollection
         {
             get { return _mandagCollection; }
             set { _mandagCollection = value; }
         }
-
+        /// <summary>
+        /// Tirsdag-collection property
+        /// </summary>
         public ObservableCollection<VagtplanView> TirsdagCollection
         {
             get { return _tirsdagCollection; }
             set { _tirsdagCollection = value; }
         }
-
+        /// <summary>
+        /// Onsdag-collection property
+        /// </summary>
         public ObservableCollection<VagtplanView> OnsdagCollection
         {
             get { return _onsdagCollection; }
             set { _onsdagCollection = value; }
         }
-
+        /// <summary>
+        /// Torsdag-collection property
+        /// </summary>
         public ObservableCollection<VagtplanView> TorsdagCollection
         {
             get { return _torsdagCollection; }
             set { _torsdagCollection = value; }
         }
-
+        /// <summary>
+        /// Fredag-collection property
+        /// </summary>
         public ObservableCollection<VagtplanView> FredagCollection
         {
             get { return _fredagCollection; }
             set { _fredagCollection = value; }
         }
-
+        /// <summary>
+        /// Lørdag-collection property
+        /// </summary>
         public ObservableCollection<VagtplanView> LoerdagCollection
         {
             get { return _loerdagCollection; }
             set { _loerdagCollection = value; }
         }
-
+        /// <summary>
+        /// Søndag-collection property
+        /// </summary>
         public ObservableCollection<VagtplanView> SoendagCollection
         {
             get { return _soendagCollection; }
             set { _soendagCollection = value; }
         }
-
+        /// <summary>
+        /// Samlet array af ugedage-collections
+        /// </summary>
         public ObservableCollection<VagtplanView>[] VagtCollectionsArray
         {
             get { return _vagtCollectionsArray; }
@@ -100,7 +119,12 @@ namespace _1aarsproeve.Model
             FindUgenummer("da-DK");
             LoadVagter();
         }
-
+        /// <summary>
+        /// Instance metoden der definere singleton
+        /// </summary>
+        /// <returns>
+        /// _instance som er et objekt af VagtplanSingleton
+        /// </returns>
         public static VagtplanSingleton Instance()
         {
             if (_instance == null)
@@ -109,13 +133,17 @@ namespace _1aarsproeve.Model
             }
             return _instance;
         }
-
+        /// <summary>
+        /// Liste property
+        /// </summary>
         public List<VagtplanView> VagterListe
         {
             get { return _vagterListe; }
             set { _vagterListe = value; }
         }
-
+        /// <summary>
+        /// Loader vagter fra database
+        /// </summary>
         public async void LoadVagter()
         {
             try
@@ -166,6 +194,9 @@ namespace _1aarsproeve.Model
             var kultur = CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(kulturInfo);
             Ugenummer = kultur.Calendar.GetWeekOfYear(DateTime.Today, DateTimeFormatInfo.GetInstance(kultur).CalendarWeekRule, DateTimeFormatInfo.GetInstance(kultur).FirstDayOfWeek);
         }
+
+        #region PropertyChanged
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -174,5 +205,8 @@ namespace _1aarsproeve.Model
             var handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        #endregion
+
     }
 }

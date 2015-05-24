@@ -1702,6 +1702,24 @@
                 LastKnownLocation="Package_1206.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="424ea2ea-47d5-42a3-8059-18f2a3386d99"
+            name="Aar"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2d00125e-eaf1-4ce6-a280-96148bc6c7e8"
+                LastKnownName="int"
+                LastKnownLocation="Package_1207.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1740,15 +1758,9 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="80c98093-8861-4799-9540-16f7bb2a6d97"
-                  name="int ugePaaAaret"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="d02dcf39-6ea6-41a5-aafe-02f518847441"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
                       Id="449edf0f-ad14-4839-a2da-3c7251f77833"
@@ -1756,6 +1768,20 @@
                       LastKnownLocation="Package_1207.uml" />
                   </type_NamedElement>
                 </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="84651010-1d09-4498-9bcc-ee25587c79f5"
+                  name="int aar"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd10a2fd-70b6-4dac-87d6-91c8f23856dc"
+                  name="int ugePaaAaret"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
