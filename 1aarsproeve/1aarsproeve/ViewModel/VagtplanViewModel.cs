@@ -54,7 +54,15 @@ namespace _1aarsproeve.ViewModel
         private ICommand _anmodVagtCommand;
         private ICommand _navigerRedigerVagtCommand;
         private Action<ObservableCollection<VagtplanView>[]> _sorting;
+        private int _aar;
 
+        private string _mandag;
+        private string _tirsdag;
+        private string _onsdag;
+        private string _torsdag;
+        private string _fredag;
+        private string _loerdag;
+        private string _soendag;
         private VagtplanSingleton _vagtCollection;
 
         #endregion
@@ -95,15 +103,6 @@ namespace _1aarsproeve.ViewModel
         /// Sætter søndag til bestemt farve
         /// </summary>
         public Brush SoendagFarve { get; set; }
-
-        private string _mandag;
-        private string _tirsdag;
-        private string _onsdag;
-        private string _torsdag;
-        private string _fredag;
-        private string _loerdag;
-        private string _soendag;
-
         /// <summary>
         /// Alle mandagsvagter
         /// </summary>
@@ -338,6 +337,18 @@ namespace _1aarsproeve.ViewModel
 
         #region Get Set properties
         /// <summary>
+        /// År property
+        /// </summary>
+        public int Aar
+        {
+            get { return _aar; }
+            set
+            {
+                _aar = value;
+                OnPropertyChanged("Aar");
+            }
+        }
+        /// <summary>
         /// Singleton vagtcollection
         /// </summary>
         public VagtplanSingleton VagtCollection
@@ -485,12 +496,13 @@ namespace _1aarsproeve.ViewModel
             Brugernavn = (string)Setting.Values["Brugernavn"];
             SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
 
+            Aar = DateTime.Today.Year;
 
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
             Ugedage();
 
             VagtHandler = new VagtHandler(this);
-            
+
             AnsatteListe = new List<Ansatte>();
             UgedageListe = new List<Ugedage>();
             UgenumreListe = new List<int>();
@@ -611,7 +623,7 @@ namespace _1aarsproeve.ViewModel
         {
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            savePicker.FileTypeChoices.Add("Filformat", new List<string>() {".ics", ".csv"});
+            savePicker.FileTypeChoices.Add("Filformat", new List<string>() { ".ics", ".csv" });
             savePicker.SuggestedFileName = "vagtplan-alle-uge-" + _vagtCollection.Ugenummer;
 
             StorageFile fil = await savePicker.PickSaveFileAsync();
@@ -631,14 +643,14 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection.VagtCollectionsArray[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer
-                            select new {q.Starttidspunkt, q.Sluttidspunkt, q.Navn};
+                            select new { q.Starttidspunkt, q.Sluttidspunkt, q.Navn };
                         foreach (var item in query1)
                         {
                             vagter +=
                                 "BEGIN:VEVENT\n" +
-                                "DTSTART:" + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                "DTSTART:" + FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
                                 item.Starttidspunkt.ToString("hhmmss") + "\n" +
-                                "DTEND:" + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                "DTEND:" + FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
                                 item.Sluttidspunkt.ToString("hhmmss") + "\n" +
                                 "SUMMARY:" + emne + " | " + item.Navn + "\n" +
                                 "LOCATION:" + sted + "\n" +
@@ -656,14 +668,14 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection.VagtCollectionsArray[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == Brugernavn
-                            select new {q.Starttidspunkt, q.Sluttidspunkt, q.Navn};
+                            select new { q.Starttidspunkt, q.Sluttidspunkt, q.Navn };
                         foreach (var item in query1)
                         {
                             vagter +=
                                 emne + " | " + item.Navn +
-                                ", " + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("d") +
+                                ", " + FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Starttidspunkt +
-                                ", " + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("d") +
+                                ", " + FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Sluttidspunkt +
                                 ", " + sted + "\n";
                         }
@@ -691,7 +703,7 @@ namespace _1aarsproeve.ViewModel
         {
             FileSavePicker savePicker = new FileSavePicker();
             savePicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            savePicker.FileTypeChoices.Add("Filformat", new List<string>() {".ics", ".csv"});
+            savePicker.FileTypeChoices.Add("Filformat", new List<string>() { ".ics", ".csv" });
             savePicker.SuggestedFileName = "vagtplan-mine-uge-" + _vagtCollection.Ugenummer;
 
             StorageFile fil = await savePicker.PickSaveFileAsync();
@@ -711,14 +723,14 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection.VagtCollectionsArray[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == Brugernavn
-                            select new {q.Starttidspunkt, q.Sluttidspunkt};
+                            select new { q.Starttidspunkt, q.Sluttidspunkt };
                         foreach (var item in query1)
                         {
                             vagter +=
                                 "BEGIN:VEVENT\n" +
-                                "DTSTART:" + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                "DTSTART:" + FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
                                 item.Starttidspunkt.ToString("hhmmss") + "\n" +
-                                "DTEND:" + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
+                                "DTEND:" + FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(i).ToString("yyyyMMdd") + "T" +
                                 item.Sluttidspunkt.ToString("hhmmss") + "\n" +
                                 "SUMMARY:" + emne + "\n" +
                                 "LOCATION:" + sted + "\n" +
@@ -736,14 +748,14 @@ namespace _1aarsproeve.ViewModel
                         var query1 =
                             from q in VagtCollection.VagtCollectionsArray[i]
                             where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == Brugernavn
-                            select new {q.Starttidspunkt, q.Sluttidspunkt};
+                            select new { q.Starttidspunkt, q.Sluttidspunkt };
                         foreach (var item in query1)
                         {
                             vagter +=
                                 emne +
-                                ", " + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("d") +
+                                ", " + FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Starttidspunkt +
-                                ", " + FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(i).ToString("d") +
+                                ", " + FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(i).ToString("d") +
                                 ", " + item.Sluttidspunkt +
                                 ", " + sted + "\n";
                         }
@@ -763,7 +775,6 @@ namespace _1aarsproeve.ViewModel
                 }
             }
         }
-
         #endregion
 
         /// <summary>
@@ -772,15 +783,27 @@ namespace _1aarsproeve.ViewModel
         public void ForrigeUge()
         {
             _vagtCollection.Ugenummer = _vagtCollection.Ugenummer - 1;
-
-            if (_vagtCollection.Ugenummer < 1)
+            Ugedage();
+            if (Aar == 2016 || Aar == 2021 || Aar == 2027 || Aar == 2033 || Aar == 2038 || Aar == 2044 || Aar == 2049 || Aar == 2055 || Aar == 2061)
             {
-                _vagtCollection.Ugenummer = 52;
+                if (_vagtCollection.Ugenummer < 1)
+                {
+                    _vagtCollection.Ugenummer = 53;
+                    Aar--;
+                    Ugedage();
+                }
             }
-
+            else
+            {
+                if (_vagtCollection.Ugenummer < 1)
+                {
+                    _vagtCollection.Ugenummer = 52;
+                    Aar--;
+                    Ugedage();
+                }
+            }
             ClearVagterCollections();
             VagtCollection.LoadVagter();
-            Ugedage();
         }
         /// <summary>
         /// Henter vagter for næste uge
@@ -788,18 +811,29 @@ namespace _1aarsproeve.ViewModel
         public void NaesteUge()
         {
             _vagtCollection.Ugenummer = _vagtCollection.Ugenummer + 1;
-
-            if (_vagtCollection.Ugenummer > 52)
-            {
-                _vagtCollection.Ugenummer = 1;
-            }
-
-            ClearVagterCollections();
-            VagtCollection.LoadVagter();
             Ugedage();
 
+            if (Aar == 2015 || Aar == 2020 || Aar == 2026 || Aar == 2032 || Aar == 2037 || Aar == 2043 || Aar == 2048 || Aar == 2054 || Aar == 2060)
+            {
+                if (_vagtCollection.Ugenummer > 53)
+                {
+                    _vagtCollection.Ugenummer = 1;
+                    Aar++;
+                    Ugedage();
+                }
+            }
+            else
+            {
+                if (_vagtCollection.Ugenummer > 52)
+                {
+                    _vagtCollection.Ugenummer = 1;
+                    Aar++;
+                    Ugedage();
+                }
+            }
+            ClearVagterCollections();
+            VagtCollection.LoadVagter();
         }
-
         public void ClearVagterCollections()
         {
             for (int i = 0; i < _vagtCollection.VagtCollectionsArray.Length; i++)
@@ -812,13 +846,13 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void Ugedage()
         {
-            Mandag = FoersteDagPaaUge(_vagtCollection.Ugenummer).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Tirsdag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(1).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Onsdag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(2).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Torsdag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(3).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Fredag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(4).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Loerdag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(5).ToString("d. MMMM", new CultureInfo("da-DK"));
-            Soendag = FoersteDagPaaUge(_vagtCollection.Ugenummer).AddDays(6).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Mandag = FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Tirsdag = FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(1).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Onsdag = FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(2).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Torsdag = FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(3).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Fredag = FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(4).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Loerdag = FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(5).ToString("d. MMMM", new CultureInfo("da-DK"));
+            Soendag = FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer).AddDays(6).ToString("d. MMMM", new CultureInfo("da-DK"));
         }
         /// <summary>
         /// Angiver farve på nuværende ugedag
@@ -868,10 +902,11 @@ namespace _1aarsproeve.ViewModel
         /// Finder første dag på ugen
         /// </summary>
         /// <param name="ugePaaAaret">Angiver ugenummer</param>
+        /// <param name="aar">Angiver årstal</param>
         /// <returns></returns>
-        public DateTime FoersteDagPaaUge(int ugePaaAaret)
+        public DateTime FoersteDagPaaUge(int aar, int ugePaaAaret)
         {
-            DateTime jan1 = new DateTime(DateTime.Today.Year, 1, 1);
+            DateTime jan1 = new DateTime(aar, 1, 1);
             int daysOffset = DayOfWeek.Thursday - jan1.DayOfWeek;
 
             DateTime foersteTorsdag = jan1.AddDays(daysOffset);
@@ -885,13 +920,6 @@ namespace _1aarsproeve.ViewModel
             var resultat = foersteTorsdag.AddDays(ugenummer * 7);
             return resultat.AddDays(-3);
         }
-        #region InitialiserVagter
-        #endregion
-
-        #region Properties
-
-        #endregion
-
         #region PropertyChanged
         /// <summary>
         /// Implementerer INotifyPropertyChanged interfacet
