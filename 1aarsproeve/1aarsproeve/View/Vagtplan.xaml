@@ -111,8 +111,8 @@
 				<Run Text="{Binding Aar}"/>
             </TextBlock>
 
-            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Grid.Row="0" Grid.Column="2" IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="40,0,30,40" HorizontalAlignment="Right">
-				<Run Text="Uge:" />
+            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Grid.Row="0" Grid.Column="2" IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="30,0,30,40" HorizontalAlignment="Right">
+				<Run Text="- Uge:" />
 				<Run Text="{Binding VagtCollection.Ugenummer}"/>
             </TextBlock>
             <TextBlock Style="{StaticResource LoggetIndText}" Grid.Column="1" Grid.ColumnSpan="2">

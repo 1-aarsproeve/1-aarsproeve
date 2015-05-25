@@ -782,10 +782,10 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void ForrigeUge()
         {
-            _vagtCollection.Ugenummer = _vagtCollection.Ugenummer - 1;
-            Ugedage();
-            if (Aar == 2016 || Aar == 2021 || Aar == 2027 || Aar == 2033 || Aar == 2038 || Aar == 2044 || Aar == 2049 || Aar == 2055 || Aar == 2061)
+            if (FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer) == new DateTime(Aar, 01, 03) || FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer) == new DateTime(Aar, 01, 04))
             {
+                _vagtCollection.Ugenummer--;
+                Ugedage();
                 if (_vagtCollection.Ugenummer < 1)
                 {
                     _vagtCollection.Ugenummer = 53;
@@ -795,6 +795,8 @@ namespace _1aarsproeve.ViewModel
             }
             else
             {
+                _vagtCollection.Ugenummer--;
+                Ugedage();
                 if (_vagtCollection.Ugenummer < 1)
                 {
                     _vagtCollection.Ugenummer = 52;
@@ -810,11 +812,10 @@ namespace _1aarsproeve.ViewModel
         /// </summary
         public void NaesteUge()
         {
-            _vagtCollection.Ugenummer = _vagtCollection.Ugenummer + 1;
-            Ugedage();
-
-            if (Aar == 2015 || Aar == 2020 || Aar == 2026 || Aar == 2032 || Aar == 2037 || Aar == 2043 || Aar == 2048 || Aar == 2054 || Aar == 2060)
+            if (FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer) == new DateTime(Aar, 12, 20) || FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer) == new DateTime(Aar, 12, 21))
             {
+                _vagtCollection.Ugenummer++;
+                Ugedage();
                 if (_vagtCollection.Ugenummer > 53)
                 {
                     _vagtCollection.Ugenummer = 1;
@@ -824,6 +825,8 @@ namespace _1aarsproeve.ViewModel
             }
             else
             {
+                _vagtCollection.Ugenummer++;
+                Ugedage();
                 if (_vagtCollection.Ugenummer > 52)
                 {
                     _vagtCollection.Ugenummer = 1;
@@ -831,6 +834,7 @@ namespace _1aarsproeve.ViewModel
                     Ugedage();
                 }
             }
+
             ClearVagterCollections();
             VagtCollection.LoadVagter();
         }
