@@ -55,8 +55,8 @@ namespace _1aarsproeve.Handler
         /// <summary>
         /// Set valgte vagt
         /// </summary>
-        /// <param name="v">Tager VagtplanView som objekt</param>
-        public void SetSelectedVagt(VagtplanView v)
+        /// <param name="v">Tager VagtModel som objekt</param>
+        public void SetSelectedVagt(VagtModel v)
         {
             VagtplanViewModel.SelectedVagter = v;
         }
@@ -84,8 +84,8 @@ namespace _1aarsproeve.Handler
             }
             else
             {
-                PersistensFacade<VagtplanView>.GemDB("api/Vagters", new VagtplanView(Starttidspunkt, Sluttidspunkt, Ugenummer, Ugedag, Ansat));
-                VagtplanView vagt = new VagtplanView(Starttidspunkt, Sluttidspunkt, Ugedag.UgedagId, Ugenummer, Ansat.Brugernavn, Ansat.Navn);
+                PersistensFacade<VagtModel>.GemDB("api/Vagters", new VagtModel(Starttidspunkt, Sluttidspunkt, Ugenummer, Ugedag, Ansat));
+                VagtModel vagt = new VagtModel(Starttidspunkt, Sluttidspunkt, Ugedag.UgedagId, Ugenummer, Ansat.Brugernavn, Ansat.Navn);
 
                 VagtplanViewModel.VagtCollection.VagtCollectionsArray[Ugedag.UgedagId - 1].Add(vagt);
                 
@@ -134,12 +134,12 @@ namespace _1aarsproeve.Handler
             }
             else
             {
-                PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.SelectedVagter.Starttidspunkt, VagtplanViewModel.SelectedVagter.Sluttidspunkt, VagtplanViewModel.SelectedVagter.Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn), id: VagtplanViewModel.SelectedVagter.VagtId);
+                PersistensFacade<VagtModel>.RedigerDB("api/Vagters", new VagtModel(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.SelectedVagter.Starttidspunkt, VagtplanViewModel.SelectedVagter.Sluttidspunkt, VagtplanViewModel.SelectedVagter.Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn), id: VagtplanViewModel.SelectedVagter.VagtId);
                 VagtplanViewModel.VagtCollection.VagtCollectionsArray[VagtplanViewModel.SelectedVagter.UgedagId - 1].Remove(VagtplanViewModel.SelectedVagter);
 
                 if (VagtplanViewModel.SelectedVagter.Ugenummer == VagtplanViewModel.VagtCollection.Ugenummer)
                 {
-                    VagtplanViewModel.VagtCollection.VagtCollectionsArray[Ugedag.UgedagId - 1].Add(new VagtplanView(VagtplanViewModel.SelectedVagter.Starttidspunkt, VagtplanViewModel.SelectedVagter.Sluttidspunkt, VagtplanViewModel.SelectedVagter.Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn, Ansat.Navn));
+                    VagtplanViewModel.VagtCollection.VagtCollectionsArray[Ugedag.UgedagId - 1].Add(new VagtModel(VagtplanViewModel.SelectedVagter.Starttidspunkt, VagtplanViewModel.SelectedVagter.Sluttidspunkt, VagtplanViewModel.SelectedVagter.Ugenummer, Ugedag.UgedagId, Ansat.Brugernavn, Ansat.Navn));
                 }
                 
                 var rootFrame = Window.Current.Content as Frame;
@@ -158,7 +158,7 @@ namespace _1aarsproeve.Handler
             }
             else
             {
-                PersistensFacade<VagtplanView>.SletDB("api/Vagters", VagtplanViewModel.SelectedVagter.VagtId);
+                PersistensFacade<VagtModel>.SletDB("api/Vagters", VagtplanViewModel.SelectedVagter.VagtId);
                 switch (VagtplanViewModel.SelectedVagter.UgedagId)
                 {
                     case 1:
@@ -202,7 +202,7 @@ namespace _1aarsproeve.Handler
             }
             else
             {
-                PersistensFacade<AnmodningerView>.GemDB("api/Anmodningers", new AnmodningerView(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.Brugernavn));
+                PersistensFacade<AnmodningModel>.GemDB("api/Anmodningers", new AnmodningModel(VagtplanViewModel.SelectedVagter.VagtId, VagtplanViewModel.Brugernavn));
                 
                 MessageDialog m1 = Hjaelpeklasse.SuccesMeddelelse("Du har anmodet " + VagtplanViewModel.SelectedVagter.Navn + " om denne vagt");
                 m1.ShowAsync();

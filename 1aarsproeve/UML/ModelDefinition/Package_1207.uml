@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="fc1fbbe4-f3cb-4b3c-ac15-40880f9b6484"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -495,12 +495,12 @@
             Id="70f5d2e6-fd14-4497-b10f-ed49b22dd47e"
             isDerived="false"
             sourceEndRoleName="Ugedage"
-            targetEndRoleName="VagtplanView"
+            targetEndRoleName="VagtModel"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="37bbc963-d42f-478b-b802-74d3721aa6b3"
-              LastKnownName="VagtplanView"
+              LastKnownName="VagtModel"
               LastKnownLocation="Package_1207.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -519,7 +519,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="4ee4c3b1-a3dd-4a3b-8723-70e4956544d2"
-                  name="VagtplanView"
+                  name="VagtModel"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2078,7 +2078,7 @@
     <packageHasNamedElement>
       <class
         Id="37bbc963-d42f-478b-b802-74d3721aa6b3"
-        name="VagtplanView"
+        name="VagtModel"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -2554,7 +2554,7 @@
           <association
             Id="71c62afb-5147-465a-89e6-64c5a6f22903"
             isDerived="false"
-            sourceEndRoleName="VagtplanView"
+            sourceEndRoleName="VagtModel"
             targetEndRoleName="Ansatte"
             isLeaf="false"
             isAbstract="false">
@@ -2566,7 +2566,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="798b68d1-e89f-4cf5-9725-907c40b76e25"
-                  name="VagtplanView"
+                  name="VagtModel"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -3207,7 +3207,7 @@
     <packageHasNamedElement>
       <class
         Id="bdd63659-386b-4195-b53a-163405f925f2"
-        name="HovedmenuView"
+        name="BeskedModel"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -3683,7 +3683,7 @@
           <association
             Id="e5944fa9-e449-45d9-9031-036fcebebe2b"
             isDerived="false"
-            sourceEndRoleName="HovedmenuView"
+            sourceEndRoleName="BeskedModel"
             targetEndRoleName="Ansatte"
             isLeaf="false"
             isAbstract="false">
@@ -3695,7 +3695,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="578df175-0aba-43b2-a81c-688a874b1cd9"
-                  name="HovedmenuView"
+                  name="BeskedModel"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4570,7 +4570,7 @@
     <packageHasNamedElement>
       <class
         Id="03f38fcb-9eb3-4538-88c9-94f382f965d5"
-        name="AnmodningerViews"
+        name="AnmodningModel"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -4578,7 +4578,7 @@
           <association
             Id="4238f52f-01ce-4592-9208-3dac26e4639d"
             isDerived="false"
-            sourceEndRoleName="AnmodningerViews"
+            sourceEndRoleName="AnmodningModel"
             targetEndRoleName="Ansatte"
             isLeaf="false"
             isAbstract="false">
@@ -4590,7 +4590,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="aac5a697-4146-42f9-aadd-f4c528e40698"
-                  name="AnmodningerViews"
+                  name="AnmodningModel"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4630,19 +4630,19 @@
           <association
             Id="95f81e6b-d527-4ed6-8969-879ea3e05c19"
             isDerived="false"
-            sourceEndRoleName="AnmodningerViews"
-            targetEndRoleName="VagtplanView"
+            sourceEndRoleName="AnmodningModel"
+            targetEndRoleName="VagtModel"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
               Id="37bbc963-d42f-478b-b802-74d3721aa6b3"
-              LastKnownName="VagtplanView"
+              LastKnownName="VagtModel"
               LastKnownLocation="Package_1207.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="b7133f7c-be23-4ef5-912c-9a957c79f2f2"
-                  name="AnmodningerViews"
+                  name="AnmodningModel"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4668,7 +4668,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="ab3f19e3-8fc2-4610-aee7-3a501dd10c41"
-                  name="VagtplanView"
+                  name="VagtModel"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4873,7 +4873,7 @@
             <type_NamedElement>
               <classMoniker
                 Id="37bbc963-d42f-478b-b802-74d3721aa6b3"
-                LastKnownName="VagtplanView"
+                LastKnownName="VagtModel"
                 LastKnownLocation="Package_1207.uml" />
             </type_NamedElement>
           </property>
@@ -5077,12 +5077,22 @@
             isQuery="false" />
           <operation
             Id="867748fd-3132-489c-b677-d6a6e384a16c"
-            name="+ FindUgenummer(string kulturInfo"
+            name="FindUgenummer"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b6e38483-5e79-4517-9d7a-23434f167bfd"
+                  name="string kulturInfo"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>

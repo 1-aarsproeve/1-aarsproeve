@@ -9,24 +9,24 @@ namespace _1aarsproeve.Model
     /// <summary>
     /// Hovedmenuview klasse
     /// </summary>
-    public partial class HovedmenuView
+    public partial class BeskedModel
     {
         /// <summary>
-        /// HovedmenuView default konstruktør
+        /// BeskedModel default konstruktør
         /// </summary>
-        public HovedmenuView()
+        public BeskedModel()
         {
 
         }
         /// <summary>
-        /// HovedmenuView konstruktør
+        /// BeskedModel konstruktør
         /// </summary>
         /// <param name="overskrift">overskrift parameter</param>
         /// <param name="dato">dato parameter</param>
         /// <param name="beskrivelse">beskrivelse parameter</param>
         /// <param name="udleobsdato">udleobsdato parameter</param>
         /// <param name="brugernavn">brugernavn parameter</param>
-        public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn, Ansatte ansat)
+        public BeskedModel(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn, Ansatte ansat)
         {
             Ansat = new Ansatte();
 
@@ -38,7 +38,7 @@ namespace _1aarsproeve.Model
             Ansat = ansat;
             Navn = Ansat.Navn;
         }
-        public HovedmenuView(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn)
+        public BeskedModel(string overskrift, DateTime dato, string beskrivelse, DateTime udleobsdato, string brugernavn)
         {
             Overskrift = overskrift;
             Dato = dato;

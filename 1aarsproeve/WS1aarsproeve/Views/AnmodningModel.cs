@@ -6,8 +6,8 @@ namespace WS1aarsproeve
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("AnmodningerView")]
-    public partial class AnmodningerView
+    [Table("AnmodningModel")]
+    public partial class AnmodningModel
     {
         [Key]
         [Column(Order = 0)]

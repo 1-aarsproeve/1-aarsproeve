@@ -6,15 +6,15 @@ using System.Globalization;
 namespace _1aarsproeve.Model
 {
     /// <summary>
-    /// VagtplanView Klassen, der joiner Vagter med Ansatte
+    /// VagtModel Klassen, der joiner Vagter med Ansatte
     /// </summary>
-    public partial class VagtplanView
+    public partial class VagtModel
     {
         private string _brugernavn;
         /// <summary>
         /// Default Konstruktør
         /// </summary>
-        public VagtplanView()
+        public VagtModel()
         {
             
         }
@@ -26,7 +26,7 @@ namespace _1aarsproeve.Model
         /// <param name="ugenummer"></param>
         /// <param name="ugedagId"></param>
         /// <param name="brugernavn"></param>
-        public VagtplanView(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, Ugedage ugedag, Ansatte ansat)
+        public VagtModel(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, Ugedage ugedag, Ansatte ansat)
         {
             Ansat = new Ansatte();
             Ugedag = new Ugedage();
@@ -41,7 +41,7 @@ namespace _1aarsproeve.Model
 
         public Ugedage Ugedag { get; set; }
 
-        public VagtplanView(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugedagId, int ugenummer, string brugernavn, string navn)
+        public VagtModel(TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugedagId, int ugenummer, string brugernavn, string navn)
         {
             Starttidspunkt = starttidspunkt;
             Sluttidspunkt = sluttidspunkt;
@@ -62,7 +62,7 @@ namespace _1aarsproeve.Model
         /// <param name="ugenummer"></param>
         /// <param name="ugedagId"></param>
         /// <param name="brugernavn"></param>
-        public VagtplanView(int vagtId, TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)
+        public VagtModel(int vagtId, TimeSpan starttidspunkt, TimeSpan sluttidspunkt, int ugenummer, int ugedagId, string brugernavn)
         {
             VagtId = vagtId;
             Starttidspunkt = starttidspunkt;

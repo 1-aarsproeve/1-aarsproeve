@@ -6,30 +6,31 @@ namespace WS1aarsproeve
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("HovedmenuView")]
-    public partial class HovedmenuView
+    [Table("VagtModel")]
+    public partial class VagtModel
     {
         [Key]
         [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int BeskedId { get; set; }
+        public TimeSpan Starttidspunkt { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(50)]
-        public string Overskrift { get; set; }
+        public TimeSpan Sluttidspunkt { get; set; }
 
         [Key]
-        [Column(Order = 2, TypeName = "date")]
-        public DateTime Dato { get; set; }
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int UgedagId { get; set; }
 
         [Key]
-        [Column(Order = 3, TypeName = "text")]
-        public string Beskrivelse { get; set; }
+        [Column(Order = 3)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Ugenummer { get; set; }
 
         [Key]
-        [Column(Order = 4, TypeName = "date")]
-        public DateTime Udloebsdato { get; set; }
+        [Column(Order = 4)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int VagtId { get; set; }
 
         [Key]
         [Column(Order = 5)]

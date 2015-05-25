@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7fcb9803-f07b-4ed9-9e23-eb7af8e76ede" name="DesignClassDiagram" linkedPackageId="9467ccdf-342a-4c08-8a33-291cddcedd79" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7fcb9803-f07b-4ed9-9e23-eb7af8e76ede" name="DesignClassDiagram" linkedPackageId="9467ccdf-342a-4c08-8a33-291cddcedd79" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="07392d45-5266-4b35-a375-9fb16f508317" name="View">
@@ -963,8 +963,8 @@
             <class Id="eafc4893-251c-4513-947e-e0d912f4418e" name="Ugedage" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="26d54b08-6a8b-41a8-a6e0-5f7a7e61f2e7" />
               <targetEnds>
-                <association Id="e71cedfa-bc30-45b9-9e03-113da7e7aeb1" isDerived="false" sourceEndRoleName="Ugedage" targetEndRoleName="VagtplanView" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="55acbe85-667f-4aaf-a5bf-bcd540d40790" LastKnownName="VagtplanView" />
+                <association Id="e71cedfa-bc30-45b9-9e03-113da7e7aeb1" isDerived="false" sourceEndRoleName="Ugedage" targetEndRoleName="VagtModel" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="55acbe85-667f-4aaf-a5bf-bcd540d40790" LastKnownName="VagtModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
                       <memberEnd Id="0833c844-314a-4775-a063-ee75fedca6c5" name="Ugedage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
@@ -972,7 +972,7 @@
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="32685738-5eb4-463f-a452-13d38b0cb9c0" name="VagtplanView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                      <memberEnd Id="32685738-5eb4-463f-a452-13d38b0cb9c0" name="VagtModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="4ee4c3b1-a3dd-4a3b-8723-70e4956544d2" />
                       </memberEnd>
                     </associationHasOwnedEnds>
@@ -1024,7 +1024,7 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="55acbe85-667f-4aaf-a5bf-bcd540d40790" name="VagtplanView" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="55acbe85-667f-4aaf-a5bf-bcd540d40790" name="VagtModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <referencesInternal>
                 <reference Id="c86819f4-6dc3-476a-9342-6e0955ee09c7" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DVagtplanView" tag="ViewCode">
                   <elementDefinition Id="be1b964d-04e6-44f9-b102-88e45b3f910a" />
@@ -1032,11 +1032,11 @@
               </referencesInternal>
               <elementDefinition Id="37bbc963-d42f-478b-b802-74d3721aa6b3" />
               <targetEnds>
-                <association Id="43d39561-4464-4bf4-8518-b3dd67e247ff" isDerived="false" sourceEndRoleName="VagtplanView" targetEndRoleName="Ansatte" isLeaf="false" isAbstract="false">
+                <association Id="43d39561-4464-4bf4-8518-b3dd67e247ff" isDerived="false" sourceEndRoleName="VagtModel" targetEndRoleName="Ansatte" isLeaf="false" isAbstract="false">
                   <classMoniker Id="2411eb64-d69f-4bb6-a979-982469eaacbe" LastKnownName="Ansatte" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="415a06dd-fd70-4035-8719-2830cb14b82c" name="VagtplanView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="415a06dd-fd70-4035-8719-2830cb14b82c" name="VagtModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
                         <lowerValueInternal>
                           <literalString Id="9004ae62-78e2-4be7-a470-fc696bbb367e" name="Lower" value="*">
                             <elementDefinition Id="0b2a97b9-4545-4d4c-a546-d650a333be68" />
@@ -1496,7 +1496,7 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="e3d4f1bd-ed24-4bd2-a7cc-3c4b9a2d3ccb" name="HovedmenuView" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="e3d4f1bd-ed24-4bd2-a7cc-3c4b9a2d3ccb" name="BeskedModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <referencesInternal>
                 <reference Id="4440f1f4-7f7b-4bf8-ac46-2096fcffa9f4" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSanneWinther%2FDocuments%2FGitHub%2F1-aarsproeve%2F1aarsproeve%2F1aarsproeve%2Fbin%2FDebug%2F1aarsproeve.exe Namespace%3D_1aarsproeve.Model Type%3DHovedmenuView" tag="ViewCode">
                   <elementDefinition Id="3e0700f0-79ef-4ad5-bc5d-a73b9f538b9d" />
@@ -1504,11 +1504,11 @@
               </referencesInternal>
               <elementDefinition Id="bdd63659-386b-4195-b53a-163405f925f2" />
               <targetEnds>
-                <association Id="3d119852-e38f-4561-bb18-e61218410f69" isDerived="false" sourceEndRoleName="HovedmenuView" targetEndRoleName="Ansatte" isLeaf="false" isAbstract="false">
+                <association Id="3d119852-e38f-4561-bb18-e61218410f69" isDerived="false" sourceEndRoleName="BeskedModel" targetEndRoleName="Ansatte" isLeaf="false" isAbstract="false">
                   <classMoniker Id="2411eb64-d69f-4bb6-a979-982469eaacbe" LastKnownName="Ansatte" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="981760fb-f2a8-4cdb-9fba-50e1bd590ef7" name="HovedmenuView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="981760fb-f2a8-4cdb-9fba-50e1bd590ef7" name="BeskedModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
                         <lowerValueInternal>
                           <literalString Id="f44f8727-f032-42f3-8f4e-8a7f9ee7dfc7" name="Lower" value="*">
                             <elementDefinition Id="ae7807c4-3856-43bb-8369-524dc9630f8a" />
@@ -2108,14 +2108,14 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="3966076b-b739-4631-bb61-eb253197a2eb" name="AnmodningerViews" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="3966076b-b739-4631-bb61-eb253197a2eb" name="AnmodningModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="03f38fcb-9eb3-4538-88c9-94f382f965d5" />
               <targetEnds>
-                <association Id="46b62455-1a7d-4760-9b66-2cb46a4f02ea" isDerived="false" sourceEndRoleName="AnmodningerViews" targetEndRoleName="Ansatte" isLeaf="false" isAbstract="false">
+                <association Id="46b62455-1a7d-4760-9b66-2cb46a4f02ea" isDerived="false" sourceEndRoleName="AnmodningModel" targetEndRoleName="Ansatte" isLeaf="false" isAbstract="false">
                   <classMoniker Id="2411eb64-d69f-4bb6-a979-982469eaacbe" LastKnownName="Ansatte" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="46a3806e-ef85-4eb7-a9bd-5d7894ba6f14" name="AnmodningerViews" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="46a3806e-ef85-4eb7-a9bd-5d7894ba6f14" name="AnmodningModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
                         <lowerValueInternal>
                           <literalString Id="b9014f1c-c5e0-474e-bc1b-acf48d733a4a" name="Lower" value="*">
                             <elementDefinition Id="65a17440-b44a-4900-acd7-2cf741984b23" />
@@ -2137,11 +2137,11 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="4238f52f-01ce-4592-9208-3dac26e4639d" />
                 </association>
-                <association Id="676c5a0e-ea48-4bdb-9c60-c42af2faf977" isDerived="false" sourceEndRoleName="AnmodningerViews" targetEndRoleName="VagtplanView" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="55acbe85-667f-4aaf-a5bf-bcd540d40790" LastKnownName="VagtplanView" />
+                <association Id="676c5a0e-ea48-4bdb-9c60-c42af2faf977" isDerived="false" sourceEndRoleName="AnmodningModel" targetEndRoleName="VagtModel" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="55acbe85-667f-4aaf-a5bf-bcd540d40790" LastKnownName="VagtModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="bce45393-0a32-4b66-b910-fb76f8df2f69" name="AnmodningerViews" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="bce45393-0a32-4b66-b910-fb76f8df2f69" name="AnmodningModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
                         <lowerValueInternal>
                           <literalString Id="531bebc2-dca8-4122-9c18-53d54dcf291c" name="Lower" value="*">
                             <elementDefinition Id="b857ff5d-b3b7-4641-968e-7c546b5be787" />
@@ -2156,7 +2156,7 @@
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="db42842c-335f-43a2-a1c2-0504eb66cf51" name="VagtplanView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                      <memberEnd Id="db42842c-335f-43a2-a1c2-0504eb66cf51" name="VagtModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
                         <elementDefinition Id="ab3f19e3-8fc2-4610-aee7-3a501dd10c41" />
                       </memberEnd>
                     </associationHasOwnedEnds>
@@ -2229,7 +2229,7 @@
                 <property Id="b8859c9f-eaa1-4dde-ad39-712cf78e4722" name="_instance" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="1850b4fb-b96b-4bf7-8185-ee66a7f9623c" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="455444ab-8a5b-45e6-847d-7d2b6867829f" LastKnownName="VagtplanView" />
+                    <referencedTypeMoniker Id="455444ab-8a5b-45e6-847d-7d2b6867829f" LastKnownName="VagtModel" />
                   </type_NamedElement>
                 </property>
                 <property Id="956ce149-c96d-420d-b0f4-85a320bc6365" name="VagterListe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -2300,8 +2300,15 @@
                 <operation Id="f9c3ac35-0f80-4008-a124-20dffadacd25" name="LoadVagter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="4d986c8f-323c-4e40-abdf-d8b8b0d0e247" />
                 </operation>
-                <operation Id="7ff44236-2433-44a8-9089-11767725fa1e" name="+ FindUgenummer(string kulturInfo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="7ff44236-2433-44a8-9089-11767725fa1e" name="FindUgenummer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="867748fd-3132-489c-b677-d6a6e384a16c" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7f64e9ae-05f7-4f94-94e6-c321e6852927" name="string kulturInfo" direction="In" isUnique="false">
+                        <elementDefinition Id="b6e38483-5e79-4517-9d7a-23434f167bfd" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -2898,7 +2905,7 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="455444ab-8a5b-45e6-847d-7d2b6867829f" name="VagtplanView" isAbstract="false" isLeaf="false" cachedFullName="UML::Model::VagtplanView">
+      <referencedType Id="455444ab-8a5b-45e6-847d-7d2b6867829f" name="VagtModel" isAbstract="false" isLeaf="false" cachedFullName="UML::Model::VagtModel">
         <elementDefinition Id="37bbc963-d42f-478b-b802-74d3721aa6b3" />
       </referencedType>
     </packageHasNamedElement>

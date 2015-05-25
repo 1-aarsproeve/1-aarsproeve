@@ -53,7 +53,7 @@ namespace _1aarsproeve.ViewModel
         private ICommand _selectedVagterCommand;
         private ICommand _anmodVagtCommand;
         private ICommand _navigerRedigerVagtCommand;
-        private Action<ObservableCollection<VagtplanView>[]> _sorting;
+        private Action<ObservableCollection<VagtModel>[]> _sorting;
         private int _aar;
 
         private string _mandag;
@@ -106,37 +106,37 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// Alle mandagsvagter
         /// </summary>
-        public ObservableCollection<VagtplanView> MandagVagter;
+        public ObservableCollection<VagtModel> MandagVagter;
 
         /// <summary>
         /// Alle tirsdagsvagter
         /// </summary>
-        public ObservableCollection<VagtplanView> TirsdagVagter;
+        public ObservableCollection<VagtModel> TirsdagVagter;
 
         /// <summary>
         /// Alle onsdagsvagter
         /// </summary>
-        public ObservableCollection<VagtplanView> OnsdagVagter;
+        public ObservableCollection<VagtModel> OnsdagVagter;
 
         /// <summary>
         /// Alle torsdagssvagter
         /// </summary>
-        public ObservableCollection<VagtplanView> TorsdagVagter;
+        public ObservableCollection<VagtModel> TorsdagVagter;
 
         /// <summary>
         /// Alle fredagsvagter
         /// </summary>
-        public ObservableCollection<VagtplanView> FredagVagter;
+        public ObservableCollection<VagtModel> FredagVagter;
 
         /// <summary>
         /// Alle lørdagsvagter
         /// </summary>
-        public ObservableCollection<VagtplanView> LoerdagVagter;
+        public ObservableCollection<VagtModel> LoerdagVagter;
 
         /// <summary>
         /// Alle søndagsvagter
         /// </summary>
-        public ObservableCollection<VagtplanView> SoendagVagter;
+        public ObservableCollection<VagtModel> SoendagVagter;
 
         #endregion
 
@@ -327,7 +327,7 @@ namespace _1aarsproeve.ViewModel
         {
             get
             {
-                _selectedVagterCommand = new RelayArgCommand<VagtplanView>(v => VagtHandler.SetSelectedVagt(v));
+                _selectedVagterCommand = new RelayArgCommand<VagtModel>(v => VagtHandler.SetSelectedVagt(v));
                 return _selectedVagterCommand;
             }
             set { _selectedVagterCommand = value; }
@@ -479,7 +479,7 @@ namespace _1aarsproeve.ViewModel
         /// <summary>
         /// SelectedVagter static property
         /// </summary>
-        public static VagtplanView SelectedVagter { get; set; }
+        public static VagtModel SelectedVagter { get; set; }
         /// <summary>
         /// SkjulKnap property
         /// </summary>
@@ -529,7 +529,7 @@ namespace _1aarsproeve.ViewModel
         /// Henter alle vagter
         /// </summary>
         /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
-        public async void AlleVagter(ObservableCollection<VagtplanView>[] vagtCollection)
+        public async void AlleVagter(ObservableCollection<VagtModel>[] vagtCollection)
         {
             try
             {
@@ -558,7 +558,7 @@ namespace _1aarsproeve.ViewModel
         /// Henter frie vagter
         /// </summary>
         /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
-        public async void FrieVagter(ObservableCollection<VagtplanView>[] vagtCollection)
+        public async void FrieVagter(ObservableCollection<VagtModel>[] vagtCollection)
         {
             try
             {
@@ -587,7 +587,7 @@ namespace _1aarsproeve.ViewModel
         /// Henter mine vagter
         /// </summary>
         /// <param name="vagtCollection">Tager vagtcollection som parameter</param>
-        public async void MineVagter(ObservableCollection<VagtplanView>[] vagtCollection)
+        public async void MineVagter(ObservableCollection<VagtModel>[] vagtCollection)
         {
             try
             {

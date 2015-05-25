@@ -10,12 +10,12 @@ namespace _1aarsproeveTests
     [TestClass()]
     public class VagterTests
     {
-        private VagtplanView _vagter;
+        private VagtModel _vagter;
 
         [TestInitialize]
         public void BeforeTest()
         {
-            _vagter = new VagtplanView();
+            _vagter = new VagtModel();
         }
 
         [TestMethod()]

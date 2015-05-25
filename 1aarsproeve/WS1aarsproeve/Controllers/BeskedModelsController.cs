@@ -12,44 +12,44 @@ using WS1aarsproeve;
 
 namespace WS1aarsproeve.Controllers
 {
-    public class HovedmenuViewsController : ApiController
+    public class BeskedModelsController : ApiController
     {
         private ViewContext db = new ViewContext();
 
-        // GET: api/HovedmenuViews
-        public IQueryable<HovedmenuView> GetHovedmenuViews()
+        // GET: api/BeskedModels
+        public IQueryable<BeskedModel> GetBeskedModels()
         {
-            return db.HovedmenuViews;
+            return db.BeskedModels;
         }
 
-        // GET: api/HovedmenuViews/5
-        [ResponseType(typeof(HovedmenuView))]
-        public IHttpActionResult GetHovedmenuView(int id)
+        // GET: api/BeskedModels/5
+        [ResponseType(typeof(BeskedModel))]
+        public IHttpActionResult GetBeskedModel(int id)
         {
-            HovedmenuView hovedmenuView = db.HovedmenuViews.Find(id);
-            if (hovedmenuView == null)
+            BeskedModel beskedModel = db.BeskedModels.Find(id);
+            if (beskedModel == null)
             {
                 return NotFound();
             }
 
-            return Ok(hovedmenuView);
+            return Ok(beskedModel);
         }
 
-        // PUT: api/HovedmenuViews/5
+        // PUT: api/BeskedModels/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutHovedmenuView(int id, HovedmenuView hovedmenuView)
+        public IHttpActionResult PutBeskedModel(int id, BeskedModel beskedModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != hovedmenuView.BeskedId)
+            if (id != beskedModel.BeskedId)
             {
                 return BadRequest();
             }
 
-            db.Entry(hovedmenuView).State = EntityState.Modified;
+            db.Entry(beskedModel).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WS1aarsproeve.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!HovedmenuViewExists(id))
+                if (!BeskedModelExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace WS1aarsproeve.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/HovedmenuViews
-        [ResponseType(typeof(HovedmenuView))]
-        public IHttpActionResult PostHovedmenuView(HovedmenuView hovedmenuView)
+        // POST: api/BeskedModels
+        [ResponseType(typeof(BeskedModel))]
+        public IHttpActionResult PostBeskedModel(BeskedModel beskedModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.HovedmenuViews.Add(hovedmenuView);
+            db.BeskedModels.Add(beskedModel);
 
             try
             {
@@ -87,7 +87,7 @@ namespace WS1aarsproeve.Controllers
             }
             catch (DbUpdateException)
             {
-                if (HovedmenuViewExists(hovedmenuView.BeskedId))
+                if (BeskedModelExists(beskedModel.BeskedId))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace WS1aarsproeve.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = hovedmenuView.BeskedId }, hovedmenuView);
+            return CreatedAtRoute("DefaultApi", new { id = beskedModel.BeskedId }, beskedModel);
         }
 
-        // DELETE: api/HovedmenuViews/5
-        [ResponseType(typeof(HovedmenuView))]
-        public IHttpActionResult DeleteHovedmenuView(int id)
+        // DELETE: api/BeskedModels/5
+        [ResponseType(typeof(BeskedModel))]
+        public IHttpActionResult DeleteBeskedModel(int id)
         {
-            HovedmenuView hovedmenuView = db.HovedmenuViews.Find(id);
-            if (hovedmenuView == null)
+            BeskedModel beskedModel = db.BeskedModels.Find(id);
+            if (beskedModel == null)
             {
                 return NotFound();
             }
 
-            db.HovedmenuViews.Remove(hovedmenuView);
+            db.BeskedModels.Remove(beskedModel);
             db.SaveChanges();
 
-            return Ok(hovedmenuView);
+            return Ok(beskedModel);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace WS1aarsproeve.Controllers
             base.Dispose(disposing);
         }
 
-        private bool HovedmenuViewExists(int id)
+        private bool BeskedModelExists(int id)
         {
-            return db.HovedmenuViews.Count(e => e.BeskedId == id) > 0;
+            return db.BeskedModels.Count(e => e.BeskedId == id) > 0;
         }
     }
 }

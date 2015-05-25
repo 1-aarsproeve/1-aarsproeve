@@ -8,70 +8,70 @@ namespace WS1aarsproeve
     public partial class ViewContext : DbContext
     {
         public ViewContext()
-            : base("name=ViewContext5")
+            : base("name=ViewContext7")
         {
             base.Configuration.ProxyCreationEnabled = false;
         }
 
-        public virtual DbSet<AnmodningerView> AnmodningerViews { get; set; }
-        public virtual DbSet<HovedmenuView> HovedmenuViews { get; set; }
-        public virtual DbSet<VagtplanView> VagtplanViews { get; set; }
+        public virtual DbSet<AnmodningModel> AnmodningModels { get; set; }
+        public virtual DbSet<BeskedModel> BeskedModels { get; set; }
+        public virtual DbSet<VagtModel> VagtModels { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<AnmodningerView>()
+            modelBuilder.Entity<AnmodningModel>()
                 .Property(e => e.AnmodningBrugernavn)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AnmodningerView>()
+            modelBuilder.Entity<AnmodningModel>()
                 .Property(e => e.Navn)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AnmodningerView>()
+            modelBuilder.Entity<AnmodningModel>()
                 .Property(e => e.Starttidspunkt)
                 .HasPrecision(0);
 
-            modelBuilder.Entity<AnmodningerView>()
+            modelBuilder.Entity<AnmodningModel>()
                 .Property(e => e.Sluttidspunkt)
                 .HasPrecision(0);
 
-            modelBuilder.Entity<AnmodningerView>()
+            modelBuilder.Entity<AnmodningModel>()
                 .Property(e => e.Brugernavn)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<AnmodningerView>()
+            modelBuilder.Entity<AnmodningModel>()
                 .Property(e => e.Ugedag)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<HovedmenuView>()
+            modelBuilder.Entity<BeskedModel>()
                 .Property(e => e.Overskrift)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<HovedmenuView>()
+            modelBuilder.Entity<BeskedModel>()
                 .Property(e => e.Beskrivelse)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<HovedmenuView>()
+            modelBuilder.Entity<BeskedModel>()
                 .Property(e => e.Brugernavn)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<HovedmenuView>()
+            modelBuilder.Entity<BeskedModel>()
                 .Property(e => e.Navn)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<VagtplanView>()
+            modelBuilder.Entity<VagtModel>()
                 .Property(e => e.Starttidspunkt)
                 .HasPrecision(0);
 
-            modelBuilder.Entity<VagtplanView>()
+            modelBuilder.Entity<VagtModel>()
                 .Property(e => e.Sluttidspunkt)
                 .HasPrecision(0);
 
-            modelBuilder.Entity<VagtplanView>()
+            modelBuilder.Entity<VagtModel>()
                 .Property(e => e.Brugernavn)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<VagtplanView>()
+            modelBuilder.Entity<VagtModel>()
                 .Property(e => e.Navn)
                 .IsUnicode(false);
         }

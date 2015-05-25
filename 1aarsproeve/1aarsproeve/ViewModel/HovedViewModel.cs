@@ -31,18 +31,18 @@ namespace _1aarsproeve.ViewModel
         private ICommand _accepterAnmodningCommand;
         private ICommand _annullerAnmodningCommand;
         private ICommand _selectedAnmodningerCommand;
-        private GeneriskSingleton<HovedmenuView> _beskedCollection;
+        private GeneriskSingleton<BeskedModel> _beskedCollection;
 
         #region Get Set properties
         /// <summary>
         /// SelectedVagter static property
         /// </summary>
-        public static AnmodningerView SelectedAnmodninger { get; set; }
-        public ObservableCollection<AnmodningerView> AnmodningCollection { get; set; }
+        public static AnmodningModel SelectedAnmodning { get; set; }
+        public ObservableCollection<AnmodningModel> AnmodningCollection { get; set; }
         /// <summary>
         /// Singleton vagtcollection
         /// </summary>
-        public ObservableCollection<HovedmenuView> BeskedCollection
+        public ObservableCollection<BeskedModel> BeskedCollection
         {
             get { return _beskedCollection.Collection; }
             set { _beskedCollection.Collection = value; }
@@ -78,24 +78,24 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public HovedViewModel()
         {
-            _beskedCollection = GeneriskSingleton<HovedmenuView>.Instance();
+            _beskedCollection = GeneriskSingleton<BeskedModel>.Instance();
             Setting = ApplicationData.Current.LocalSettings;
 
             Brugernavn = (string)Setting.Values["Brugernavn"];
             SkjulKnap = Hjaelpeklasse.Stilling((int)Setting.Values["StillingId"]);
 
-            AnmodningCollection = new ObservableCollection<AnmodningerView>();
+            AnmodningCollection = new ObservableCollection<AnmodningModel>();
             InitialiserAnmodninger();
 
             HovedHandler = new HovedHandler(this);
         }
         /// <summary>
-        /// Initialiserer anmodninger
+        /// Initialiserer anmodningerAnmodningerModel
         /// </summary>
         public void InitialiserAnmodninger()
         {
             AnmodningCollection.Clear();
-            var queryAnmodning = PersistensFacade<AnmodningerView>.LoadDB("api/AnmodningerViews").Result;
+            var queryAnmodning = PersistensFacade<AnmodningModel>.LoadDB("api/AnmodningModels").Result;
             var queryAnmodning1 =
                 from a in queryAnmodning
                 where a.Brugernavn == Brugernavn
@@ -117,7 +117,7 @@ namespace _1aarsproeve.ViewModel
         {
             get
             {
-                _selectedAnmodningerCommand = new RelayArgCommand<AnmodningerView>(a => HovedHandler.SetSelectedAnmodning(a));
+                _selectedAnmodningerCommand = new RelayArgCommand<AnmodningModel>(a => HovedHandler.SetSelectedAnmodning(a));
                 return _selectedAnmodningerCommand;
             }
             set { _selectedAnmodningerCommand = value; }

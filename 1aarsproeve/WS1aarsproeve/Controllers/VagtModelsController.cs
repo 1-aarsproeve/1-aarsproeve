@@ -12,44 +12,44 @@ using WS1aarsproeve;
 
 namespace WS1aarsproeve.Controllers
 {
-    public class AnmodningerViewsController : ApiController
+    public class VagtModelsController : ApiController
     {
         private ViewContext db = new ViewContext();
 
-        // GET: api/AnmodningerViews
-        public IQueryable<AnmodningerView> GetAnmodningerViews()
+        // GET: api/VagtModels
+        public IQueryable<VagtModel> GetVagtModels()
         {
-            return db.AnmodningerViews;
+            return db.VagtModels;
         }
 
-        // GET: api/AnmodningerViews/5
-        [ResponseType(typeof(AnmodningerView))]
-        public IHttpActionResult GetAnmodningerView(int id)
+        // GET: api/VagtModels/5
+        [ResponseType(typeof(VagtModel))]
+        public IHttpActionResult GetVagtModel(TimeSpan id)
         {
-            AnmodningerView anmodningerView = db.AnmodningerViews.Find(id);
-            if (anmodningerView == null)
+            VagtModel vagtModel = db.VagtModels.Find(id);
+            if (vagtModel == null)
             {
                 return NotFound();
             }
 
-            return Ok(anmodningerView);
+            return Ok(vagtModel);
         }
 
-        // PUT: api/AnmodningerViews/5
+        // PUT: api/VagtModels/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutAnmodningerView(int id, AnmodningerView anmodningerView)
+        public IHttpActionResult PutVagtModel(TimeSpan id, VagtModel vagtModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != anmodningerView.AnmodningId)
+            if (id != vagtModel.Starttidspunkt)
             {
                 return BadRequest();
             }
 
-            db.Entry(anmodningerView).State = EntityState.Modified;
+            db.Entry(vagtModel).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WS1aarsproeve.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!AnmodningerViewExists(id))
+                if (!VagtModelExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace WS1aarsproeve.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/AnmodningerViews
-        [ResponseType(typeof(AnmodningerView))]
-        public IHttpActionResult PostAnmodningerView(AnmodningerView anmodningerView)
+        // POST: api/VagtModels
+        [ResponseType(typeof(VagtModel))]
+        public IHttpActionResult PostVagtModel(VagtModel vagtModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.AnmodningerViews.Add(anmodningerView);
+            db.VagtModels.Add(vagtModel);
 
             try
             {
@@ -87,7 +87,7 @@ namespace WS1aarsproeve.Controllers
             }
             catch (DbUpdateException)
             {
-                if (AnmodningerViewExists(anmodningerView.AnmodningId))
+                if (VagtModelExists(vagtModel.Starttidspunkt))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace WS1aarsproeve.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = anmodningerView.AnmodningId }, anmodningerView);
+            return CreatedAtRoute("DefaultApi", new { id = vagtModel.Starttidspunkt }, vagtModel);
         }
 
-        // DELETE: api/AnmodningerViews/5
-        [ResponseType(typeof(AnmodningerView))]
-        public IHttpActionResult DeleteAnmodningerView(int id)
+        // DELETE: api/VagtModels/5
+        [ResponseType(typeof(VagtModel))]
+        public IHttpActionResult DeleteVagtModel(TimeSpan id)
         {
-            AnmodningerView anmodningerView = db.AnmodningerViews.Find(id);
-            if (anmodningerView == null)
+            VagtModel vagtModel = db.VagtModels.Find(id);
+            if (vagtModel == null)
             {
                 return NotFound();
             }
 
-            db.AnmodningerViews.Remove(anmodningerView);
+            db.VagtModels.Remove(vagtModel);
             db.SaveChanges();
 
-            return Ok(anmodningerView);
+            return Ok(vagtModel);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace WS1aarsproeve.Controllers
             base.Dispose(disposing);
         }
 
-        private bool AnmodningerViewExists(int id)
+        private bool VagtModelExists(TimeSpan id)
         {
-            return db.AnmodningerViews.Count(e => e.AnmodningId == id) > 0;
+            return db.VagtModels.Count(e => e.Starttidspunkt == id) > 0;
         }
     }
 }

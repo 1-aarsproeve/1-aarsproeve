@@ -21,20 +21,20 @@ namespace _1aarsproeve.Model
     public class VagtplanSingleton : INotifyPropertyChanged
     {
         private static VagtplanSingleton _instance;
-        private List<VagtplanView> _vagterListe; 
-        private ObservableCollection<VagtplanView>[] _vagtCollectionsArray;
-        private ObservableCollection<VagtplanView> _mandagCollection;
-        private ObservableCollection<VagtplanView> _tirsdagCollection;
-        private ObservableCollection<VagtplanView> _onsdagCollection;
-        private ObservableCollection<VagtplanView> _torsdagCollection;
-        private ObservableCollection<VagtplanView> _fredagCollection;
-        private ObservableCollection<VagtplanView> _loerdagCollection;
-        private ObservableCollection<VagtplanView> _soendagCollection;
+        private List<VagtModel> _vagterListe; 
+        private ObservableCollection<VagtModel>[] _vagtCollectionsArray;
+        private ObservableCollection<VagtModel> _mandagCollection;
+        private ObservableCollection<VagtModel> _tirsdagCollection;
+        private ObservableCollection<VagtModel> _onsdagCollection;
+        private ObservableCollection<VagtModel> _torsdagCollection;
+        private ObservableCollection<VagtModel> _fredagCollection;
+        private ObservableCollection<VagtModel> _loerdagCollection;
+        private ObservableCollection<VagtModel> _soendagCollection;
         private int _ugenummer;
         /// <summary>
         /// Mandag-collection property
         /// </summary>
-        public ObservableCollection<VagtplanView> MandagCollection
+        public ObservableCollection<VagtModel> MandagCollection
         {
             get { return _mandagCollection; }
             set { _mandagCollection = value; }
@@ -42,7 +42,7 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Tirsdag-collection property
         /// </summary>
-        public ObservableCollection<VagtplanView> TirsdagCollection
+        public ObservableCollection<VagtModel> TirsdagCollection
         {
             get { return _tirsdagCollection; }
             set { _tirsdagCollection = value; }
@@ -50,7 +50,7 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Onsdag-collection property
         /// </summary>
-        public ObservableCollection<VagtplanView> OnsdagCollection
+        public ObservableCollection<VagtModel> OnsdagCollection
         {
             get { return _onsdagCollection; }
             set { _onsdagCollection = value; }
@@ -58,7 +58,7 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Torsdag-collection property
         /// </summary>
-        public ObservableCollection<VagtplanView> TorsdagCollection
+        public ObservableCollection<VagtModel> TorsdagCollection
         {
             get { return _torsdagCollection; }
             set { _torsdagCollection = value; }
@@ -66,7 +66,7 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Fredag-collection property
         /// </summary>
-        public ObservableCollection<VagtplanView> FredagCollection
+        public ObservableCollection<VagtModel> FredagCollection
         {
             get { return _fredagCollection; }
             set { _fredagCollection = value; }
@@ -74,7 +74,7 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Lørdag-collection property
         /// </summary>
-        public ObservableCollection<VagtplanView> LoerdagCollection
+        public ObservableCollection<VagtModel> LoerdagCollection
         {
             get { return _loerdagCollection; }
             set { _loerdagCollection = value; }
@@ -82,7 +82,7 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Søndag-collection property
         /// </summary>
-        public ObservableCollection<VagtplanView> SoendagCollection
+        public ObservableCollection<VagtModel> SoendagCollection
         {
             get { return _soendagCollection; }
             set { _soendagCollection = value; }
@@ -90,7 +90,7 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Samlet array af ugedage-collections
         /// </summary>
-        public ObservableCollection<VagtplanView>[] VagtCollectionsArray
+        public ObservableCollection<VagtModel>[] VagtCollectionsArray
         {
             get { return _vagtCollectionsArray; }
             set { _vagtCollectionsArray = value; }
@@ -98,16 +98,16 @@ namespace _1aarsproeve.Model
 
         private VagtplanSingleton()
         {
-            _vagterListe = new List<VagtplanView>();
-            _mandagCollection = new ObservableCollection<VagtplanView>();
-            _tirsdagCollection = new ObservableCollection<VagtplanView>();
-            _onsdagCollection = new ObservableCollection<VagtplanView>();
-            _torsdagCollection = new ObservableCollection<VagtplanView>();
-            _fredagCollection = new ObservableCollection<VagtplanView>();
-            _loerdagCollection = new ObservableCollection<VagtplanView>();
-            _soendagCollection = new ObservableCollection<VagtplanView>();
+            _vagterListe = new List<VagtModel>();
+            _mandagCollection = new ObservableCollection<VagtModel>();
+            _tirsdagCollection = new ObservableCollection<VagtModel>();
+            _onsdagCollection = new ObservableCollection<VagtModel>();
+            _torsdagCollection = new ObservableCollection<VagtModel>();
+            _fredagCollection = new ObservableCollection<VagtModel>();
+            _loerdagCollection = new ObservableCollection<VagtModel>();
+            _soendagCollection = new ObservableCollection<VagtModel>();
 
-            _vagtCollectionsArray = new ObservableCollection<VagtplanView>[7];
+            _vagtCollectionsArray = new ObservableCollection<VagtModel>[7];
             _vagtCollectionsArray[0] = _mandagCollection;
             _vagtCollectionsArray[1] = _tirsdagCollection;
             _vagtCollectionsArray[2] = _onsdagCollection;
@@ -136,7 +136,7 @@ namespace _1aarsproeve.Model
         /// <summary>
         /// Liste property
         /// </summary>
-        public List<VagtplanView> VagterListe
+        public List<VagtModel> VagterListe
         {
             get { return _vagterListe; }
             set { _vagterListe = value; }
@@ -149,7 +149,7 @@ namespace _1aarsproeve.Model
             try
             {
                 VagterListe.Clear();
-                var vagter = await PersistensFacade<VagtplanView>.LoadDB("api/VagtplanViews");
+                var vagter = await PersistensFacade<VagtModel>.LoadDB("api/VagtModels");
                 foreach (var item in vagter)
                 {
                     VagterListe.Add(item);

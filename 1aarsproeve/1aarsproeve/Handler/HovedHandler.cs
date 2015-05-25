@@ -14,7 +14,7 @@ using _1aarsproeve.ViewModel;
 namespace _1aarsproeve.Handler
 {
     /// <summary>
-    /// Handler-klasser der håndterer operationer for HovedmenuView
+    /// Handler-klasser der håndterer operationer for BeskedModel
     /// </summary>
     public class HovedHandler
     {
@@ -41,10 +41,10 @@ namespace _1aarsproeve.Handler
         /// <summary>
         /// Set valgte anmodning
         /// </summary>
-        /// <param name="a">Tager AnmodningerView som objekt</param>
-        public void SetSelectedAnmodning(AnmodningerView a)
+        /// <param name="a">Tager AnmodningModel som objekt</param>
+        public void SetSelectedAnmodning(AnmodningModel a)
         {
-            HovedViewModel.SelectedAnmodninger = a;
+            HovedViewModel.SelectedAnmodning = a;
         }
         /// <summary>
         /// Skriver ny besked
@@ -54,7 +54,7 @@ namespace _1aarsproeve.Handler
             MessageDialog m = Hjaelpeklasse.FejlMeddelelse("");
             try
             {
-                HovedmenuView.CheckOverskrift(Overskrift);
+                BeskedModel.CheckOverskrift(Overskrift);
             }
             catch (Exception)
             {
@@ -62,7 +62,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                HovedmenuView.CheckBeskrivelse(Beskrivelse);
+                BeskedModel.CheckBeskrivelse(Beskrivelse);
             }
             catch (Exception)
             {
@@ -75,8 +75,8 @@ namespace _1aarsproeve.Handler
             else
             {
 
-                PersistensFacade<HovedmenuView>.GemDB("api/Beskeders", new HovedmenuView(Overskrift, new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse, new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), HovedViewModel.Brugernavn));
-                HovedViewModel.BeskedCollection.Add(new HovedmenuView(Overskrift, new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse, new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), HovedViewModel.Brugernavn, BrugerViewModel.AnsatteCollection[0]));
+                PersistensFacade<BeskedModel>.GemDB("api/Beskeders", new BeskedModel(Overskrift, new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse, new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), HovedViewModel.Brugernavn));
+                HovedViewModel.BeskedCollection.Add(new BeskedModel(Overskrift, new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day), Beskrivelse, new DateTime(DateTime.Today.Year, DateTime.Today.Month + 1, DateTime.Today.Day), HovedViewModel.Brugernavn, BrugerViewModel.AnsatteCollection[0]));
                 
                 var rootFrame = Window.Current.Content as Frame;
                 rootFrame.Navigate(typeof(Hovedmenu));
@@ -88,8 +88,8 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void AccepterAnmodning()
         {
-            PersistensFacade<VagtplanView>.RedigerDB("api/Vagters", new VagtplanView(HovedViewModel.SelectedAnmodninger.VagtId, HovedViewModel.SelectedAnmodninger.Starttidspunkt, HovedViewModel.SelectedAnmodninger.Sluttidspunkt, HovedViewModel.SelectedAnmodninger.Ugenummer, HovedViewModel.SelectedAnmodninger.UgedagId, HovedViewModel.SelectedAnmodninger.AnmodningBrugernavn), id: HovedViewModel.SelectedAnmodninger.VagtId);
-            PersistensFacade<AnmodningerView>.SletDB("api/Anmodningers", id: HovedViewModel.SelectedAnmodninger.AnmodningId);
+            PersistensFacade<VagtModel>.RedigerDB("api/Vagters", new VagtModel(HovedViewModel.SelectedAnmodning.VagtId, HovedViewModel.SelectedAnmodning.Starttidspunkt, HovedViewModel.SelectedAnmodning.Sluttidspunkt, HovedViewModel.SelectedAnmodning.Ugenummer, HovedViewModel.SelectedAnmodning.UgedagId, HovedViewModel.SelectedAnmodning.AnmodningBrugernavn), id: HovedViewModel.SelectedAnmodning.VagtId);
+            PersistensFacade<AnmodningModel>.SletDB("api/Anmodningers", id: HovedViewModel.SelectedAnmodning.AnmodningId);
 
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof (Anmodninger));
@@ -99,7 +99,7 @@ namespace _1aarsproeve.Handler
         /// </summary>
         public void AnnullerAnmodning()
         {
-            PersistensFacade<AnmodningerView>.SletDB("api/Anmodningers", id: HovedViewModel.SelectedAnmodninger.AnmodningId);
+            PersistensFacade<AnmodningModel>.SletDB("api/Anmodningers", id: HovedViewModel.SelectedAnmodning.AnmodningId);
             
             var rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Anmodninger));

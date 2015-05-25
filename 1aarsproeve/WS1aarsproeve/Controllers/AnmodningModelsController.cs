@@ -12,44 +12,44 @@ using WS1aarsproeve;
 
 namespace WS1aarsproeve.Controllers
 {
-    public class VagtplanViewsController : ApiController
+    public class AnmodningModelsController : ApiController
     {
         private ViewContext db = new ViewContext();
 
-        // GET: api/VagtplanViews
-        public IQueryable<VagtplanView> GetVagtplanViews()
+        // GET: api/AnmodningModels
+        public IQueryable<AnmodningModel> GetAnmodningModels()
         {
-            return db.VagtplanViews;
+            return db.AnmodningModels;
         }
 
-        // GET: api/VagtplanViews/5
-        [ResponseType(typeof(VagtplanView))]
-        public IHttpActionResult GetVagtplanView(TimeSpan id)
+        // GET: api/AnmodningModels/5
+        [ResponseType(typeof(AnmodningModel))]
+        public IHttpActionResult GetAnmodningModel(int id)
         {
-            VagtplanView vagtplanView = db.VagtplanViews.Find(id);
-            if (vagtplanView == null)
+            AnmodningModel anmodningModel = db.AnmodningModels.Find(id);
+            if (anmodningModel == null)
             {
                 return NotFound();
             }
 
-            return Ok(vagtplanView);
+            return Ok(anmodningModel);
         }
 
-        // PUT: api/VagtplanViews/5
+        // PUT: api/AnmodningModels/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutVagtplanView(TimeSpan id, VagtplanView vagtplanView)
+        public IHttpActionResult PutAnmodningModel(int id, AnmodningModel anmodningModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != vagtplanView.Starttidspunkt)
+            if (id != anmodningModel.AnmodningId)
             {
                 return BadRequest();
             }
 
-            db.Entry(vagtplanView).State = EntityState.Modified;
+            db.Entry(anmodningModel).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WS1aarsproeve.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VagtplanViewExists(id))
+                if (!AnmodningModelExists(id))
                 {
                     return NotFound();
                 }
@@ -70,16 +70,16 @@ namespace WS1aarsproeve.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/VagtplanViews
-        [ResponseType(typeof(VagtplanView))]
-        public IHttpActionResult PostVagtplanView(VagtplanView vagtplanView)
+        // POST: api/AnmodningModels
+        [ResponseType(typeof(AnmodningModel))]
+        public IHttpActionResult PostAnmodningModel(AnmodningModel anmodningModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.VagtplanViews.Add(vagtplanView);
+            db.AnmodningModels.Add(anmodningModel);
 
             try
             {
@@ -87,7 +87,7 @@ namespace WS1aarsproeve.Controllers
             }
             catch (DbUpdateException)
             {
-                if (VagtplanViewExists(vagtplanView.Starttidspunkt))
+                if (AnmodningModelExists(anmodningModel.AnmodningId))
                 {
                     return Conflict();
                 }
@@ -97,23 +97,23 @@ namespace WS1aarsproeve.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = vagtplanView.Starttidspunkt }, vagtplanView);
+            return CreatedAtRoute("DefaultApi", new { id = anmodningModel.AnmodningId }, anmodningModel);
         }
 
-        // DELETE: api/VagtplanViews/5
-        [ResponseType(typeof(VagtplanView))]
-        public IHttpActionResult DeleteVagtplanView(TimeSpan id)
+        // DELETE: api/AnmodningModels/5
+        [ResponseType(typeof(AnmodningModel))]
+        public IHttpActionResult DeleteAnmodningModel(int id)
         {
-            VagtplanView vagtplanView = db.VagtplanViews.Find(id);
-            if (vagtplanView == null)
+            AnmodningModel anmodningModel = db.AnmodningModels.Find(id);
+            if (anmodningModel == null)
             {
                 return NotFound();
             }
 
-            db.VagtplanViews.Remove(vagtplanView);
+            db.AnmodningModels.Remove(anmodningModel);
             db.SaveChanges();
 
-            return Ok(vagtplanView);
+            return Ok(anmodningModel);
         }
 
         protected override void Dispose(bool disposing)
@@ -125,9 +125,9 @@ namespace WS1aarsproeve.Controllers
             base.Dispose(disposing);
         }
 
-        private bool VagtplanViewExists(TimeSpan id)
+        private bool AnmodningModelExists(int id)
         {
-            return db.VagtplanViews.Count(e => e.Starttidspunkt == id) > 0;
+            return db.AnmodningModels.Count(e => e.AnmodningId == id) > 0;
         }
     }
 }
