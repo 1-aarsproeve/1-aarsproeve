@@ -667,7 +667,7 @@ namespace _1aarsproeve.ViewModel
                     {
                         var query1 =
                             from q in VagtCollection.VagtCollectionsArray[i]
-                            where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer && q.Brugernavn == Brugernavn
+                            where q.UgedagId == i + 1 && q.Ugenummer == _vagtCollection.Ugenummer
                             select new { q.Starttidspunkt, q.Sluttidspunkt, q.Navn };
                         foreach (var item in query1)
                         {
@@ -809,7 +809,7 @@ namespace _1aarsproeve.ViewModel
         }
         /// <summary>
         /// Henter vagter for næste uge
-        /// </summary
+        /// </summary>
         public void NaesteUge()
         {
             if (FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer) == new DateTime(Aar, 12, 20) || FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer) == new DateTime(Aar, 12, 21))
@@ -838,6 +838,9 @@ namespace _1aarsproeve.ViewModel
             ClearVagterCollections();
             VagtCollection.LoadVagter();
         }
+        /// <summary>
+        /// Sletter alle vagtcollections
+        /// </summary>
         public void ClearVagterCollections()
         {
             for (int i = 0; i < _vagtCollection.VagtCollectionsArray.Length; i++)
