@@ -782,6 +782,7 @@ namespace _1aarsproeve.ViewModel
         /// </summary>
         public void ForrigeUge()
         {
+
             if (FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer) == new DateTime(Aar, 01, 03) || FoersteDagPaaUge(Aar, _vagtCollection.Ugenummer) == new DateTime(Aar, 01, 04))
             {
                 _vagtCollection.Ugenummer--;

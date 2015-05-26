@@ -166,10 +166,11 @@ namespace _1aarsproeve.ViewModel
             _ansatteSingleton = GeneriskSingleton<Ansatte>.Instance();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
+            Brugernavn = "";
             StillingerListe = new List<Stillinger>();
 
-            Brugernavn = "Daniel";
-            Password = "123456";
+            //Brugernavn = "Daniel";
+            //Password = "123456";
 
             var responce = PersistensFacade<Stillinger>.LoadDB("api/Stillingers");
             var query = from q in responce.Result
