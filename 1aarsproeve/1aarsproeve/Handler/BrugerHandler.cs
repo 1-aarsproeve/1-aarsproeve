@@ -165,7 +165,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckPassword(BrugerViewModel.AnsatteCollection[0].Password);
+                Ansatte.CheckPassword(Password);
             }
             catch (Exception)
             {

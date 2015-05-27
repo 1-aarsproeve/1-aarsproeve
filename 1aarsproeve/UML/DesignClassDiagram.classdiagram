@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7fcb9803-f07b-4ed9-9e23-eb7af8e76ede" name="DesignClassDiagram" linkedPackageId="9467ccdf-342a-4c08-8a33-291cddcedd79" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="7fcb9803-f07b-4ed9-9e23-eb7af8e76ede" name="DesignClassDiagram" linkedPackageId="9467ccdf-342a-4c08-8a33-291cddcedd79" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="07392d45-5266-4b35-a375-9fb16f508317" name="View">
@@ -9,21 +9,21 @@
             <class Id="f720ecf5-7295-4c5b-b176-ff2551a8b2a4" name="Hovedmenu" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="15acda1c-1afc-46b6-928b-b93094a7b8ab" />
               <targetEnds>
-                <association Id="74818985-04ef-4037-b6ad-1ed7e0708c03" isDerived="false" sourceEndRoleName="Hovedmenu" targetEndRoleName="HovedViewModel" isLeaf="false" isAbstract="false">
+                <association Id="910b8cd9-4dee-4708-9d1b-2dec2c955fa7" isDerived="false" sourceEndRoleName="Hovedmenu" targetEndRoleName="HovedViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="367c21c9-5893-4eb1-a167-96d7d1f20c1b" LastKnownName="HovedViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="f4ee7e36-10c2-4897-a4b6-2a522e65f9cf" name="Hovedmenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="e685e599-ad06-4a96-b342-da43370ab8ca" />
+                      <memberEnd Id="1567b920-d4cb-48b6-86ef-aaf84f1d034f" name="Hovedmenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="33ce9785-34f8-44f3-a1a7-e6441889988f" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="ec2c762f-74b4-46cf-b61e-4b1f0f80665b" name="HovedViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="1b22810c-81f6-4519-9c60-c136e2f05ec1" />
+                      <memberEnd Id="4bffc9a5-f620-44c7-b5b1-6dfdb540e20e" name="HovedViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="3ff19ced-22c2-4e6d-83e2-e2033385e5ac" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="ae1469d8-2f12-47fe-8f5a-ecc07bb093d9" />
+                  <elementDefinition Id="da338a17-fdfa-43b0-ac54-aea49c4ff0b4" />
                 </association>
               </targetEnds>
             </class>
@@ -32,21 +32,21 @@
             <class Id="b1e58380-ee55-4660-9fa4-1bf03198e612" name="Login" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="4956e003-0f64-46bf-825c-cbf445c43127" />
               <targetEnds>
-                <association Id="af66dd70-a6f9-4b2f-821d-1de5ed95fba1" isDerived="false" sourceEndRoleName="Login" targetEndRoleName="BrugerViewModel" isLeaf="false" isAbstract="false">
+                <association Id="4d3c124a-fefa-464f-bd8a-2aa467dc013d" isDerived="false" sourceEndRoleName="Login" targetEndRoleName="BrugerViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="13358d3b-7d51-4fa2-8978-bb05d72660b6" LastKnownName="BrugerViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="34c9b51a-6752-4909-82fe-f1aeda5ffa48" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="b0689dcc-5d12-4793-b473-38d5d5f54737" />
+                      <memberEnd Id="143eb192-3516-4b97-9045-40ad70021a28" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="26cf9489-bc32-43ba-99d8-7623a06b30bb" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="3554c6ff-7c3b-48b6-9bad-a6f6b6b12ec7" name="BrugerViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="5f55ff2c-7db9-47b0-a197-ab772b4de7d8" />
+                      <memberEnd Id="cc2cee38-b033-4aca-8c32-12a5ed6be4d5" name="BrugerViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="1655137b-2173-48d1-ac29-7575f1388b38" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="9c52c691-753f-4af8-ac96-5003d1f46bda" />
+                  <elementDefinition Id="0381a239-2b70-4845-9f91-efb25b7d23b9" />
                 </association>
               </targetEnds>
             </class>
@@ -54,45 +54,27 @@
           <packageHasNamedElement>
             <class Id="68567683-21a8-4523-af37-932d7018d724" name="OpretBruger" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="8d3111b9-98b5-49b2-9bbd-f35a1b30c280" />
-              <targetEnds>
-                <association Id="0d2ef7d2-5200-498f-af0c-57de466ec2a8" isDerived="false" sourceEndRoleName="OpretBruger" targetEndRoleName="BrugerViewModel" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="13358d3b-7d51-4fa2-8978-bb05d72660b6" LastKnownName="BrugerViewModel" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="edd84663-218c-4bf1-b1c8-8a9c98cb129a" name="OpretBruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="ea2b080b-6cf8-46ec-8285-94ab4f153b90" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="771543d1-05e2-4a2d-b7f6-19a3df6f540d" name="BrugerViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="189c124e-03ce-40a3-9200-51678af1cb25" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="f7836696-6f79-42dc-8305-2a4032887b15" />
-                </association>
-              </targetEnds>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
             <class Id="d8e2b2f1-d85c-4eba-a5c0-7c6821056aa3" name="OpretVagt" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="176ae4b2-76c3-4f91-a892-84e99964e635" />
               <targetEnds>
-                <association Id="98c0837a-0406-497f-a51e-da70c8d12feb" isDerived="false" sourceEndRoleName="OpretVagt" targetEndRoleName="VagtplanViewModel" isLeaf="false" isAbstract="false">
+                <association Id="01c5245d-549d-4309-bd63-d26d6edbcd7a" isDerived="false" sourceEndRoleName="OpretVagt" targetEndRoleName="VagtplanViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="cd58a3dc-c644-46b9-9bf1-e19766e2813e" LastKnownName="VagtplanViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="7f12336c-eddc-4a3d-8486-ab483a944af8" name="OpretVagt" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="a2beff76-47a9-43f5-9291-1b06f5d3ce30" />
+                      <memberEnd Id="0d52097e-2891-4fc2-8713-0df7bf774efb" name="OpretVagt" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="cf22b43d-98c4-4743-af11-7fabcacd69cc" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="5554665d-1aaa-405e-a9e8-56942864e7cc" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="08ce3103-520d-4419-82d3-b40784ed606f" />
+                      <memberEnd Id="d75b1385-f8ff-4273-97d2-51e34c190a54" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d30593b3-a4d3-41d8-94b6-5579e8d33fff" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="7c757c53-6a3b-43d0-9c5a-b321362eea1a" />
+                  <elementDefinition Id="1452bfaf-d968-4eb1-a492-089a88d03fa2" />
                 </association>
               </targetEnds>
             </class>
@@ -101,21 +83,21 @@
             <class Id="583ea57f-1341-40e1-8ef0-b8c1e72080ed" name="Profil" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="5c73ae6d-e8c7-4369-bd67-026199039e8a" />
               <targetEnds>
-                <association Id="8d07888a-d609-4cb1-a9ce-751f7a866942" isDerived="false" sourceEndRoleName="Profil" targetEndRoleName="BrugerViewModel" isLeaf="false" isAbstract="false">
+                <association Id="60ad2346-ef84-44e3-b2ce-43c9e7befc8d" isDerived="false" sourceEndRoleName="Profil" targetEndRoleName="BrugerViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="13358d3b-7d51-4fa2-8978-bb05d72660b6" LastKnownName="BrugerViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="1c308ab2-c31d-4d58-9cd5-290a45832716" name="Profil" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="06086503-9c1b-4ca8-a946-facc77b08249" />
+                      <memberEnd Id="44e65776-5f97-4a44-9840-9c7a4e7e04d1" name="Profil" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="b6d6e930-aa70-44e4-9f36-bf9f878cf625" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="7d1c3b16-b3eb-449e-b59d-ebedd3ff6a8b" name="BrugerViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="5bef24dd-2989-4d72-b338-0659ddd0439d" />
+                      <memberEnd Id="023e4ab8-3bad-4f79-9690-a50683634a76" name="BrugerViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="fbc22b12-0601-4d79-8c1c-0f4795aa1c94" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="9276782a-7440-4a8a-9a0a-6a92daa79d9a" />
+                  <elementDefinition Id="bcb1f958-5505-4c07-87f7-a97e6f31be56" />
                 </association>
               </targetEnds>
             </class>
@@ -124,21 +106,21 @@
             <class Id="60030dcf-b3b0-4c6e-ad55-9ff07de8e9a4" name="RedigerVagt" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="20ac01d2-c4ba-4ab3-ab16-44b61315d0f7" />
               <targetEnds>
-                <association Id="cee8c626-647b-4552-9c05-ec6cfce9d17b" isDerived="false" sourceEndRoleName="RedigerVagt" targetEndRoleName="VagtplanViewModel" isLeaf="false" isAbstract="false">
+                <association Id="86ddadf0-ab71-4798-a07a-4e0f6282fd85" isDerived="false" sourceEndRoleName="RedigerVagt" targetEndRoleName="VagtplanViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="cd58a3dc-c644-46b9-9bf1-e19766e2813e" LastKnownName="VagtplanViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="85dd7d39-c54e-4009-b8ed-eb4b801f057b" name="RedigerVagt" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="82741bda-0c38-4915-9139-7e6ed3627dab" />
+                      <memberEnd Id="f9e82be3-c29b-40d7-850c-a62a7632a458" name="RedigerVagt" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="177c30a4-75c5-40c5-8887-937006a79fa0" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="4e90711d-d396-4659-810e-a84f62934f4b" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="876e3ce5-ec6d-4074-8efe-339c2fe0a3d6" />
+                      <memberEnd Id="8cdffd54-1bef-4b27-9e5d-7a1f549da8a3" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="b940b9bb-12b1-49da-9f9f-46b1f6f80b99" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="febfdf02-5d3d-46d3-b0c2-8be896a565d8" />
+                  <elementDefinition Id="fcbb7422-3dc7-47fb-83ab-d82e445dce8b" />
                 </association>
               </targetEnds>
             </class>
@@ -147,21 +129,21 @@
             <class Id="92ee1be4-ecce-465d-b329-80cd656bcdc2" name="SkrivBesked" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="40ac3e0c-c308-4ba2-a478-2e3b98c429a4" />
               <targetEnds>
-                <association Id="906edb42-8a7a-4990-93d5-05488bdc6035" isDerived="false" sourceEndRoleName="SkrivBesked" targetEndRoleName="HovedViewModel" isLeaf="false" isAbstract="false">
+                <association Id="797974b1-e481-4326-b0ff-a914e830de01" isDerived="false" sourceEndRoleName="SkrivBesked" targetEndRoleName="HovedViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="367c21c9-5893-4eb1-a167-96d7d1f20c1b" LastKnownName="HovedViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="5add47dd-88b6-472e-a7e6-a16836912223" name="SkrivBesked" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="8ec99d2d-1bc0-45ad-a191-82df35fb4e73" />
+                      <memberEnd Id="48555c3c-0a4d-4cb3-8fd6-b1987a0380ef" name="SkrivBesked" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="3aff429d-038d-4acc-afd3-dccd625dce65" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="98df6328-1b60-4f14-a81e-5637c559b42d" name="HovedViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="d00e7722-0cfe-4ced-b401-356796535a01" />
+                      <memberEnd Id="f2183514-5a2b-402a-a4a8-f3bc4605209b" name="HovedViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d12251f6-469b-4988-8fa5-4775b4f55ba4" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="8bd41e62-a327-4c50-886d-8e8c0eb0f20a" />
+                  <elementDefinition Id="e308ec5e-1906-48a0-8b4d-fc69e2797ef2" />
                 </association>
               </targetEnds>
             </class>
@@ -170,21 +152,21 @@
             <class Id="3af89bd2-902d-40e7-992c-7f32fd956823" name="Vagtplan" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="8507a9c8-a758-4e19-aecb-d7deaf075da5" />
               <targetEnds>
-                <association Id="9bdcf71d-255b-4ce6-acbf-9c720b2a8718" isDerived="false" sourceEndRoleName="Vagtplan" targetEndRoleName="VagtplanViewModel" isLeaf="false" isAbstract="false">
+                <association Id="f91cd5e1-da61-403c-8868-1c642afcdc81" isDerived="false" sourceEndRoleName="Vagtplan" targetEndRoleName="VagtplanViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="cd58a3dc-c644-46b9-9bf1-e19766e2813e" LastKnownName="VagtplanViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="3357e1b8-11d4-4078-a4ea-3bece78705b4" name="Vagtplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="f534d0db-a7bb-40d1-9a3c-162f58126bf6" />
+                      <memberEnd Id="2767ddf6-2e55-43b8-8571-5c6b0ac43802" name="Vagtplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="fffce392-f12e-45b2-8522-2b037d22169b" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="d2e4b21c-02ed-458d-a312-0d66e28ca16b" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="9943008d-4d3c-4526-851f-0a17b840a454" />
+                      <memberEnd Id="93d22d7f-cc90-4b45-a271-f1da9a7c1739" name="VagtplanViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="c9766311-6828-4ca4-bd27-f65f513c18f9" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="7bdb7b9a-b9ca-4c33-9ebb-cce4a203c743" />
+                  <elementDefinition Id="a5de0b8a-2a38-4459-a711-6e2756cc4970" />
                 </association>
               </targetEnds>
             </class>
@@ -198,21 +180,21 @@
             <class Id="58b3e6ba-a4d5-4b4e-9f42-e73b46aa648c" name="Anmodninger" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="af79542a-402c-4c3e-a196-6e52d12200c9" />
               <targetEnds>
-                <association Id="7f590304-4b0f-4f82-bd4c-57ea8e070548" isDerived="false" sourceEndRoleName="Anmodninger" targetEndRoleName="HovedViewModel" isLeaf="false" isAbstract="false">
+                <association Id="20d232b3-b0b6-43f5-b10a-3cf36b27335b" isDerived="false" sourceEndRoleName="Anmodninger" targetEndRoleName="HovedViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="367c21c9-5893-4eb1-a167-96d7d1f20c1b" LastKnownName="HovedViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="5e7cad23-e119-4e98-ba5b-97da646283cd" name="Anmodninger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="d7216c30-a748-49f4-bcc4-5a5d13debea8" />
+                      <memberEnd Id="872cda23-f118-4dae-a720-8b49b410776d" name="Anmodninger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="7a02d4fd-6e0e-4bde-ac99-5c978e48e7ad" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="c702de7a-8f4b-4729-a2c3-cb24ae694813" name="HovedViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="47dbbbe0-1f07-4f74-8c75-2acedbf1d935" />
+                      <memberEnd Id="d75e1e63-a49e-409f-900b-3346a687cc40" name="HovedViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="5d0dc0c9-4320-45d2-895a-edb48c9be1a2" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="eef64deb-c47e-4ffd-92a3-e623a655d72f" />
+                  <elementDefinition Id="7662d6ff-cebd-404e-b479-cedd87cae39a" />
                 </association>
               </targetEnds>
             </class>
