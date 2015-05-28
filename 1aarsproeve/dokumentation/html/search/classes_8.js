@@ -9,6 +9,5 @@ var searchData=
   ['invalidsample',['InvalidSample',['../class__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_invalid_sample.html',1,'_1aarsproeveWebService::Areas::HelpPage']]],
   ['invokerparameternameattribute',['InvokerParameterNameAttribute',['../class_invoker_parameter_name_attribute.html',1,'']]],
   ['itemcanbenullattribute',['ItemCanBeNullAttribute',['../class__1aarsproeve_1_1_annotations_1_1_item_can_be_null_attribute.html',1,'_1aarsproeve::Annotations']]],
-  ['itemnotnullattribute',['ItemNotNullAttribute',['../class__1aarsproeve_1_1_annotations_1_1_item_not_null_attribute.html',1,'_1aarsproeve::Annotations']]],
-  ['ivagtsort',['IVagtSort',['../interface__1aarsproeve_1_1_strategy_1_1_i_vagt_sort.html',1,'_1aarsproeve::Strategy']]]
+  ['itemnotnullattribute',['ItemNotNullAttribute',['../class__1aarsproeve_1_1_annotations_1_1_item_not_null_attribute.html',1,'_1aarsproeve::Annotations']]]
 ];

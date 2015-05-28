@@ -10,9 +10,9 @@ Persistens-\/klasse der indeholder C\+R\+U\+D-\/funktioner
 \item 
 static void \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a58be4f9dca4d750397b687f82a75b242}{Gem\+D\+B} (string api, object objekt)
 \begin{DoxyCompactList}\small\item\em Gemmer data i databasen \end{DoxyCompactList}\item 
-static void \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a774ffeccb48cea0195fb2f42a9612e67}{Slet\+D\+B} (string api, object id)
+static void \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a1145232ebea2ac7839d0260599c8bd42}{Slet\+D\+B} (string api, int id)
 \begin{DoxyCompactList}\small\item\em Sletter data i databasen \end{DoxyCompactList}\item 
-static void \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_abf4034a829e5a233ef61fa7315220a98}{Rediger\+D\+B} (string api, int id, object objekt)
+static void \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_aaacc8d60cd5adf86552af54cf7230932}{Rediger\+D\+B} (string api, object objekt, int id=0, string streng=null)
 \begin{DoxyCompactList}\small\item\em Redigerer data i databasen \end{DoxyCompactList}\item 
 static async Task$<$ List$<$ T $>$ $>$ \hyperlink{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a282e4349d842d409431aebceaa12f978}{Load\+D\+B} (string api)
 \begin{DoxyCompactList}\small\item\em Henter data i databasen \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -64,15 +64,16 @@ Henter data i databasen
 {\em api} & Tager A\+P\+I-\/url som string\\
 \hline
 \end{DoxyParams}
-\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_abf4034a829e5a233ef61fa7315220a98}{}\index{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}!Rediger\+D\+B@{Rediger\+D\+B}}
+\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_aaacc8d60cd5adf86552af54cf7230932}{}\index{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}!Rediger\+D\+B@{Rediger\+D\+B}}
 \index{Rediger\+D\+B@{Rediger\+D\+B}!\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}}
 \subsubsection[{Rediger\+D\+B}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade}$<$ T $>$.Rediger\+D\+B (
 \begin{DoxyParamCaption}
 \item[{string}]{api, }
-\item[{int}]{id, }
-\item[{object}]{objekt}
+\item[{object}]{objekt, }
+\item[{int}]{id = {\ttfamily 0}, }
+\item[{string}]{streng = {\ttfamily null}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_abf4034a829e5a233ef61fa7315220a98}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_aaacc8d60cd5adf86552af54cf7230932}
 
 
 Redigerer data i databasen 
@@ -81,19 +82,21 @@ Redigerer data i databasen
 \begin{DoxyParams}{Parameters}
 {\em api} & Tager A\+P\+I-\/url som string\\
 \hline
-{\em id} & Tager I\+D som skal redigeres\\
-\hline
 {\em objekt} & Tager objekt som skal redigeres\\
 \hline
+{\em id} & Tager I\+D som skal redigeres\\
+\hline
+{\em streng} & Tager brugernavn som skal redigeres\\
+\hline
 \end{DoxyParams}
-\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a774ffeccb48cea0195fb2f42a9612e67}{}\index{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}!Slet\+D\+B@{Slet\+D\+B}}
+\hypertarget{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a1145232ebea2ac7839d0260599c8bd42}{}\index{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}!Slet\+D\+B@{Slet\+D\+B}}
 \index{Slet\+D\+B@{Slet\+D\+B}!\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade@{\+\_\+1aarsproeve\+::\+Persistens\+::\+Persistens\+Facade}}
 \subsubsection[{Slet\+D\+B}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \+\_\+1aarsproeve.\+Persistens.\+Persistens\+Facade}$<$ T $>$.Slet\+D\+B (
 \begin{DoxyParamCaption}
 \item[{string}]{api, }
-\item[{object}]{id}
+\item[{int}]{id}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a774ffeccb48cea0195fb2f42a9612e67}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class__1aarsproeve_1_1_persistens_1_1_persistens_facade_a1145232ebea2ac7839d0260599c8bd42}
 
 
 Sletter data i databasen 

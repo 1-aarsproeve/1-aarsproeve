@@ -10,18 +10,31 @@ Handler-\/klasser der håndterer vagtplanens operationer
 \item 
 \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a030580ed58226bf1741303da667a7954}{Vagt\+Handler} (\hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model}{Vagtplan\+View\+Model} vagtplan\+View\+Model)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler}{Vagt\+Handler} konstruktør \end{DoxyCompactList}\item 
-\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_ad99d4d82756eb8e546e528dc619ec51c}{}void {\bfseries Set\+Selected\+Vagt} (\hyperlink{class__1aarsproeve_1_1_model_1_1_vagter}{Vagter} v)\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_ad99d4d82756eb8e546e528dc619ec51c}
-
-\item 
+void \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_abf4cc3d85dcf76f1bc7b97232e7b3337}{Set\+Selected\+Vagt} (\hyperlink{class__1aarsproeve_1_1_model_1_1_vagt_model}{Vagt\+Model} v)
+\begin{DoxyCompactList}\small\item\em Set valgte vagt \end{DoxyCompactList}\item 
 void \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a1fd83f7cf36110449f308ed5d0029935}{Opret\+Vagt} ()
 \begin{DoxyCompactList}\small\item\em Opretter ny vagt \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a31b87d5032e283af1a0aca6c957c9d30}{Naviger\+Rediger\+Vagt} ()
+\begin{DoxyCompactList}\small\item\em Navigerer til Rediger\+Vagt view \end{DoxyCompactList}\item 
 void \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a12d58edb6cb14b8d9071e64c5ec2eee9}{Rediger\+Vagt} ()
 \begin{DoxyCompactList}\small\item\em Redigere i eksisterende vagt \end{DoxyCompactList}\item 
-async void \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a5ae24ac34975967834daefb50c95c0a4}{Slet\+Vagt} ()
-\begin{DoxyCompactList}\small\item\em Sletter valgte vagt \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_ab34331d398f924fd038d4345b7e84fa2}{Slet\+Vagt} ()
+\begin{DoxyCompactList}\small\item\em Sletter valgte vagt \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a8eed6832306e23516e36eec668b4632b}{Anmod\+Vagt} ()
+\begin{DoxyCompactList}\small\item\em Anmoder om valgte vagt \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+Time\+Span \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a56bffa0b024e4725e2c8b792dc6a9fa9}{Starttidspunkt}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Starttidspunkt property \end{DoxyCompactList}\item 
+Time\+Span \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a7013671696e6169e7408a4fd1b2304c0}{Sluttidspunkt}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sluttidspunkt property \end{DoxyCompactList}\item 
+int \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a1ba62aedc8333e3b5889d3ffa8132a4c}{Ugenummer}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ugenummer property \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_model_1_1_ugedage}{Ugedage} \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a97b98aef44c9aa2dfa598d14a9fc7813}{Ugedag}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ugedag property \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_model_1_1_ansatte}{Ansatte} \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_aaada027289c61a5e923bd2d0ff59db09}{Ansat}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ansat property \end{DoxyCompactList}\item 
 \hyperlink{class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model}{Vagtplan\+View\+Model} \hyperlink{class__1aarsproeve_1_1_handler_1_1_vagt_handler_ac7a38ad84077edb90a6dc695e05c756e}{Vagtplan\+View\+Model}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Vagtplan\+View\+Model property \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -51,6 +64,28 @@ Handler-\/klasser der håndterer vagtplanens operationer
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a8eed6832306e23516e36eec668b4632b}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Anmod\+Vagt@{Anmod\+Vagt}}
+\index{Anmod\+Vagt@{Anmod\+Vagt}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
+\subsubsection[{Anmod\+Vagt}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Anmod\+Vagt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a8eed6832306e23516e36eec668b4632b}
+
+
+Anmoder om valgte vagt 
+
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a31b87d5032e283af1a0aca6c957c9d30}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Naviger\+Rediger\+Vagt@{Naviger\+Rediger\+Vagt}}
+\index{Naviger\+Rediger\+Vagt@{Naviger\+Rediger\+Vagt}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
+\subsubsection[{Naviger\+Rediger\+Vagt}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Naviger\+Rediger\+Vagt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a31b87d5032e283af1a0aca6c957c9d30}
+
+
+Navigerer til Rediger\+Vagt view 
+
 \hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a1fd83f7cf36110449f308ed5d0029935}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Opret\+Vagt@{Opret\+Vagt}}
 \index{Opret\+Vagt@{Opret\+Vagt}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
 \subsubsection[{Opret\+Vagt}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Opret\+Vagt (
@@ -73,13 +108,29 @@ Opretter ny vagt
 
 Redigere i eksisterende vagt 
 
-\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a5ae24ac34975967834daefb50c95c0a4}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Slet\+Vagt@{Slet\+Vagt}}
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_abf4cc3d85dcf76f1bc7b97232e7b3337}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Set\+Selected\+Vagt@{Set\+Selected\+Vagt}}
+\index{Set\+Selected\+Vagt@{Set\+Selected\+Vagt}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
+\subsubsection[{Set\+Selected\+Vagt}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Set\+Selected\+Vagt (
+\begin{DoxyParamCaption}
+\item[{{\bf Vagt\+Model}}]{v}
+\end{DoxyParamCaption}
+)}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_abf4cc3d85dcf76f1bc7b97232e7b3337}
+
+
+Set valgte vagt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Tager Vagt\+Model som objekt\\
+\hline
+\end{DoxyParams}
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_ab34331d398f924fd038d4345b7e84fa2}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Slet\+Vagt@{Slet\+Vagt}}
 \index{Slet\+Vagt@{Slet\+Vagt}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
-\subsubsection[{Slet\+Vagt}]{\setlength{\rightskip}{0pt plus 5cm}async void \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Slet\+Vagt (
+\subsubsection[{Slet\+Vagt}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Slet\+Vagt (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a5ae24ac34975967834daefb50c95c0a4}
+)}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_ab34331d398f924fd038d4345b7e84fa2}
 
 
 Sletter valgte vagt 
@@ -87,6 +138,41 @@ Sletter valgte vagt
 
 
 \subsection{Property Documentation}
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_aaada027289c61a5e923bd2d0ff59db09}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Ansat@{Ansat}}
+\index{Ansat@{Ansat}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
+\subsubsection[{Ansat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ansatte} \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Ansat\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_aaada027289c61a5e923bd2d0ff59db09}
+
+
+Ansat property 
+
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a7013671696e6169e7408a4fd1b2304c0}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Sluttidspunkt@{Sluttidspunkt}}
+\index{Sluttidspunkt@{Sluttidspunkt}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
+\subsubsection[{Sluttidspunkt}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Span \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Sluttidspunkt\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a7013671696e6169e7408a4fd1b2304c0}
+
+
+Sluttidspunkt property 
+
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a56bffa0b024e4725e2c8b792dc6a9fa9}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Starttidspunkt@{Starttidspunkt}}
+\index{Starttidspunkt@{Starttidspunkt}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
+\subsubsection[{Starttidspunkt}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Span \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Starttidspunkt\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a56bffa0b024e4725e2c8b792dc6a9fa9}
+
+
+Starttidspunkt property 
+
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a97b98aef44c9aa2dfa598d14a9fc7813}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Ugedag@{Ugedag}}
+\index{Ugedag@{Ugedag}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
+\subsubsection[{Ugedag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ugedage} \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Ugedag\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a97b98aef44c9aa2dfa598d14a9fc7813}
+
+
+Ugedag property 
+
+\hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a1ba62aedc8333e3b5889d3ffa8132a4c}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Ugenummer@{Ugenummer}}
+\index{Ugenummer@{Ugenummer}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
+\subsubsection[{Ugenummer}]{\setlength{\rightskip}{0pt plus 5cm}int \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Ugenummer\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_a1ba62aedc8333e3b5889d3ffa8132a4c}
+
+
+Ugenummer property 
+
 \hypertarget{class__1aarsproeve_1_1_handler_1_1_vagt_handler_ac7a38ad84077edb90a6dc695e05c756e}{}\index{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}!Vagtplan\+View\+Model@{Vagtplan\+View\+Model}}
 \index{Vagtplan\+View\+Model@{Vagtplan\+View\+Model}!\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler@{\+\_\+1aarsproeve\+::\+Handler\+::\+Vagt\+Handler}}
 \subsubsection[{Vagtplan\+View\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vagtplan\+View\+Model} \+\_\+1aarsproeve.\+Handler.\+Vagt\+Handler.\+Vagtplan\+View\+Model\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_handler_1_1_vagt_handler_ac7a38ad84077edb90a6dc695e05c756e}

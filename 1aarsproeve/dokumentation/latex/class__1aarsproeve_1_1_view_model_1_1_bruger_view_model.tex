@@ -9,9 +9,9 @@ Data\+Context klasse til Views\+: Login, Opret\+Bruger, Profil
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a2852c87e53378bf746f319770e026be5}{Bruger\+View\+Model} ()
-\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model}{Bruger\+View\+Model} \end{DoxyCompactList}\item 
-void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a8c2d6da5fad3a9bdbbde9ce986dcbc74}{Log\+Ud} ()
-\begin{DoxyCompactList}\small\item\em Logger brugeren ud \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Konstruktør for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model}{Bruger\+View\+Model} \end{DoxyCompactList}\item 
+void \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a0df90b60137033df846e2aa184079a5d}{Log\+Ind} ()
+\begin{DoxyCompactList}\small\item\em Logger brugeren ind \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,10 +19,22 @@ Application\+Data\+Container \hyperlink{class__1aarsproeve_1_1_view_model_1_1_br
 \begin{DoxyCompactList}\small\item\em Gør det muligt at gemme værdier i local storage \end{DoxyCompactList}\item 
 string \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a63b4a8aa59a8e3e2ec0d7285c2ce6caa}{Brugernavn}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Brugernavn property \end{DoxyCompactList}\item 
+\hyperlink{class__1aarsproeve_1_1_handler_1_1_bruger_handler}{Bruger\+Handler} \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a8243e54970b06a3b95eeaa14c09d9fd8}{Bruger\+Handler}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Bruger \end{DoxyCompactList}\item 
+string \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a2efcc56e1c781052fc77fc6aeaed2222}{Password}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Password property \end{DoxyCompactList}\item 
+static Observable\+Collection$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_ansatte}{Ansatte} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a29035fd041bc72dd71e131b40e7724e3}{Ansatte\+Collection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ansatte\+Collection property \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class__1aarsproeve_1_1_model_1_1_stillinger}{Stillinger} $>$ \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_ac5c316878e65e35da6706ecf6623a864}{Stillinger\+Liste}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Liste med stillinger \end{DoxyCompactList}\item 
 I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a40fed761861b9387bc47a92a2f1e55fd}{Log\+Ind\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Logger brugeren ind \end{DoxyCompactList}\item 
 I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_afc1d332a62edcc717d3e1764db42c89a}{Log\+Ud\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Logger brugeren ud \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Logger brugeren ud \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_aa395aa2d3e7893d91fa9420ca66aa5b3}{Opret\+Bruger\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Opretter bruger \end{DoxyCompactList}\item 
+I\+Command \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_accb519586a3211fdc24e064d17460cf3}{Rediger\+Bruger\+Command}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Rediger bruger command \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -40,25 +52,39 @@ Data\+Context klasse til Views\+: Login, Opret\+Bruger, Profil
 )}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a2852c87e53378bf746f319770e026be5}
 
 
-Constructor for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model}{Bruger\+View\+Model} 
+Konstruktør for \hyperlink{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model}{Bruger\+View\+Model} 
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a8c2d6da5fad3a9bdbbde9ce986dcbc74}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Log\+Ud@{Log\+Ud}}
-\index{Log\+Ud@{Log\+Ud}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
-\subsubsection[{Log\+Ud}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Log\+Ud (
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a0df90b60137033df846e2aa184079a5d}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Log\+Ind@{Log\+Ind}}
+\index{Log\+Ind@{Log\+Ind}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
+\subsubsection[{Log\+Ind}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Log\+Ind (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a8c2d6da5fad3a9bdbbde9ce986dcbc74}
+)}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a0df90b60137033df846e2aa184079a5d}
 
 
-Logger brugeren ud 
+Logger brugeren ind 
 
 
 
 \subsection{Property Documentation}
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a29035fd041bc72dd71e131b40e7724e3}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Ansatte\+Collection@{Ansatte\+Collection}}
+\index{Ansatte\+Collection@{Ansatte\+Collection}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
+\subsubsection[{Ansatte\+Collection}]{\setlength{\rightskip}{0pt plus 5cm}Observable\+Collection$<${\bf Ansatte}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Ansatte\+Collection\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a29035fd041bc72dd71e131b40e7724e3}
+
+
+Ansatte\+Collection property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a8243e54970b06a3b95eeaa14c09d9fd8}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Bruger\+Handler@{Bruger\+Handler}}
+\index{Bruger\+Handler@{Bruger\+Handler}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
+\subsubsection[{Bruger\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bruger\+Handler} \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Bruger\+Handler\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a8243e54970b06a3b95eeaa14c09d9fd8}
+
+
+Bruger 
+
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a63b4a8aa59a8e3e2ec0d7285c2ce6caa}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Brugernavn@{Brugernavn}}
 \index{Brugernavn@{Brugernavn}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
 \subsubsection[{Brugernavn}]{\setlength{\rightskip}{0pt plus 5cm}string \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Brugernavn\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a63b4a8aa59a8e3e2ec0d7285c2ce6caa}
@@ -80,12 +106,40 @@ Logger brugeren ind
 
 Logger brugeren ud 
 
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_aa395aa2d3e7893d91fa9420ca66aa5b3}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Opret\+Bruger\+Command@{Opret\+Bruger\+Command}}
+\index{Opret\+Bruger\+Command@{Opret\+Bruger\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
+\subsubsection[{Opret\+Bruger\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Opret\+Bruger\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_aa395aa2d3e7893d91fa9420ca66aa5b3}
+
+
+Opretter bruger 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a2efcc56e1c781052fc77fc6aeaed2222}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Password@{Password}}
+\index{Password@{Password}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
+\subsubsection[{Password}]{\setlength{\rightskip}{0pt plus 5cm}string \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_a2efcc56e1c781052fc77fc6aeaed2222}
+
+
+Password property 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_accb519586a3211fdc24e064d17460cf3}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Rediger\+Bruger\+Command@{Rediger\+Bruger\+Command}}
+\index{Rediger\+Bruger\+Command@{Rediger\+Bruger\+Command}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
+\subsubsection[{Rediger\+Bruger\+Command}]{\setlength{\rightskip}{0pt plus 5cm}I\+Command \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Rediger\+Bruger\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_accb519586a3211fdc24e064d17460cf3}
+
+
+Rediger bruger command 
+
 \hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_ac9e91065596a741027a1b88853bd76e6}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Setting@{Setting}}
 \index{Setting@{Setting}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
 \subsubsection[{Setting}]{\setlength{\rightskip}{0pt plus 5cm}Application\+Data\+Container \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Setting\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_ac9e91065596a741027a1b88853bd76e6}
 
 
 Gør det muligt at gemme værdier i local storage 
+
+\hypertarget{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_ac5c316878e65e35da6706ecf6623a864}{}\index{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}!Stillinger\+Liste@{Stillinger\+Liste}}
+\index{Stillinger\+Liste@{Stillinger\+Liste}!\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model@{\+\_\+1aarsproeve\+::\+View\+Model\+::\+Bruger\+View\+Model}}
+\subsubsection[{Stillinger\+Liste}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Stillinger}$>$ \+\_\+1aarsproeve.\+View\+Model.\+Bruger\+View\+Model.\+Stillinger\+Liste\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class__1aarsproeve_1_1_view_model_1_1_bruger_view_model_ac5c316878e65e35da6706ecf6623a864}
+
+
+Liste med stillinger 
 
 
 

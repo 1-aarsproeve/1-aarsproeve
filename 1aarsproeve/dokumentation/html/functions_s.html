@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_k.html#index_k"><span>k</span></a></li>
       <li><a href="functions_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_m.html#index_m"><span>m</span></a></li>
       <li><a href="functions_n.html#index_n"><span>n</span></a></li>
@@ -147,17 +148,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SaveStateEventArgs()
 : <a class="el" href="class__1aarsproeve_1_1_common_1_1_save_state_event_args.html#ada2f56029afefc9938cb8567190037f9">_1aarsproeve.Common.SaveStateEventArgs</a>
 </li>
+<li>SelectedAnmodning
+: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_hoved_view_model.html#ab4a4d861215f4d6f8d5ca53382d88d8d">_1aarsproeve.ViewModel.HovedViewModel</a>
+</li>
+<li>SelectedAnmodningerCommand
+: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_hoved_view_model.html#a7f36282e82a32f8ea520ec676e53bcae">_1aarsproeve.ViewModel.HovedViewModel</a>
+</li>
 <li>SelectedVagter
-: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#aac1978ee8c25f05b536fd23f5faa44da">_1aarsproeve.ViewModel.VagtplanViewModel</a>
+: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#afc9b91af6d14800ca023ad17cc0809f0">_1aarsproeve.ViewModel.VagtplanViewModel</a>
+</li>
+<li>SelectedVagterCommand
+: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#aa46683f207146cac5e2d09555727d8f9">_1aarsproeve.ViewModel.VagtplanViewModel</a>
+</li>
+<li>SetSelectedAnmodning()
+: <a class="el" href="class__1aarsproeve_1_1_handler_1_1_hoved_handler.html#a98de2a70d06c32b84d5045982bc992c6">_1aarsproeve.Handler.HovedHandler</a>
+</li>
+<li>SetSelectedVagt()
+: <a class="el" href="class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#abf4cc3d85dcf76f1bc7b97232e7b3337">_1aarsproeve.Handler.VagtHandler</a>
 </li>
 <li>Setting
-: <a class="el" href="class__1aarsproeve_1_1_strategy_1_1_mine_vagter.html#ae23fc5bb662cda6bb70d28f74d8508aa">_1aarsproeve.Strategy.MineVagter</a>
-, <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_bruger_view_model.html#ac9e91065596a741027a1b88853bd76e6">_1aarsproeve.ViewModel.BrugerViewModel</a>
+: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_bruger_view_model.html#ac9e91065596a741027a1b88853bd76e6">_1aarsproeve.ViewModel.BrugerViewModel</a>
 , <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_hoved_view_model.html#afbb2eb2f33bdb6defe9979b80c6e79ff">_1aarsproeve.ViewModel.HovedViewModel</a>
 , <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#aa5e675ea6389cdc802698037ced2e091">_1aarsproeve.ViewModel.VagtplanViewModel</a>
 </li>
 <li>SkjulKnap
-: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_hoved_view_model.html#ab292f28c3e469ad73d6d6e648f3096f0">_1aarsproeve.ViewModel.HovedViewModel</a>
+: <a class="el" href="class__1aarsproeve_1_1_model_1_1_hjaelpeklasse.html#ac11b74a1a17f1dec6b3e9a3371bdcc15">_1aarsproeve.Model.Hjaelpeklasse</a>
+, <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_hoved_view_model.html#ab292f28c3e469ad73d6d6e648f3096f0">_1aarsproeve.ViewModel.HovedViewModel</a>
+, <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a84ab9afdefc9e4602b3f9864de570a21">_1aarsproeve.ViewModel.VagtplanViewModel</a>
 </li>
 <li>SkrivBesked()
 : <a class="el" href="class__1aarsproeve_1_1_handler_1_1_hoved_handler.html#a8b177c4c354c1657f3de1a240ce63334">_1aarsproeve.Handler.HovedHandler</a>
@@ -166,44 +183,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_hoved_view_model.html#a72688ca49a29be5fc3fa18d16449387e">_1aarsproeve.ViewModel.HovedViewModel</a>
 </li>
 <li>SletDB()
-: <a class="el" href="class__1aarsproeve_1_1_persistens_1_1_persistens_facade.html#a774ffeccb48cea0195fb2f42a9612e67">_1aarsproeve.Persistens.PersistensFacade&lt; T &gt;</a>
+: <a class="el" href="class__1aarsproeve_1_1_persistens_1_1_persistens_facade.html#a1145232ebea2ac7839d0260599c8bd42">_1aarsproeve.Persistens.PersistensFacade&lt; T &gt;</a>
 </li>
 <li>SletVagt()
-: <a class="el" href="class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#a5ae24ac34975967834daefb50c95c0a4">_1aarsproeve.Handler.VagtHandler</a>
+: <a class="el" href="class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#ab34331d398f924fd038d4345b7e84fa2">_1aarsproeve.Handler.VagtHandler</a>
+</li>
+<li>SletVagtCommand
+: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a68e39a09c13e2544fdd3dd2c4dff1649">_1aarsproeve.ViewModel.VagtplanViewModel</a>
 </li>
 <li>Sluttidspunkt
-: <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagter.html#a8c0eaa26c45ea13c970040ba85c26a8d">_1aarsproeve.Model.Vagter</a>
-, <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagtplan_view.html#a857981f9a44c61a751580ec5d6e72c7c">_1aarsproeve.Model.VagtplanView</a>
-, <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a049f0c84ca19cb72078132b243bf9023">_1aarsproeve.ViewModel.VagtplanViewModel</a>
+: <a class="el" href="class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#a7013671696e6169e7408a4fd1b2304c0">_1aarsproeve.Handler.VagtHandler</a>
+, <a class="el" href="class__1aarsproeve_1_1_model_1_1_anmodning_model.html#ab0acdf21e6217c7da97f1604716e0a9d">_1aarsproeve.Model.AnmodningModel</a>
+, <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagt_model.html#a94cc0bafce47a5b4527f67611d51420c">_1aarsproeve.Model.VagtModel</a>
+</li>
+<li>SluttidspunktFormat
+: <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagt_model.html#a9de0b5d04ba82bdc0a57c63c538066e1">_1aarsproeve.Model.VagtModel</a>
 </li>
 <li>Soendag
 : <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#abdd4c1e28095f4c2660a5ad71bab51ee">_1aarsproeve.ViewModel.VagtplanViewModel</a>
+</li>
+<li>SoendagCollection
+: <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagtplan_singleton.html#a8e3fc85316b10a3d892718b8705067b1">_1aarsproeve.Model.VagtplanSingleton</a>
 </li>
 <li>SoendagFarve
 : <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#aa6afb148e3e73f41c510862b157affb0">_1aarsproeve.ViewModel.VagtplanViewModel</a>
 </li>
 <li>SoendagVagter
-: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#aa31e5b366c76da7a1a64ef568af2764c">_1aarsproeve.ViewModel.VagtplanViewModel</a>
-</li>
-<li>Sort()
-: <a class="el" href="class__1aarsproeve_1_1_strategy_1_1_alle_vagter.html#a9155c0b6d6353e51c7e9d7c5a926c3f5">_1aarsproeve.Strategy.AlleVagter</a>
-, <a class="el" href="class__1aarsproeve_1_1_strategy_1_1_frie_vagter.html#ae1a30073de8aceb36378f7e7f2bd1e66">_1aarsproeve.Strategy.FrieVagter</a>
-, <a class="el" href="class__1aarsproeve_1_1_strategy_1_1_mine_vagter.html#a08d7a660990e05e06a04d78e8f283f43">_1aarsproeve.Strategy.MineVagter</a>
+: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a86de4df58eaeaf4a435a2148b6332973">_1aarsproeve.ViewModel.VagtplanViewModel</a>
 </li>
 <li>SortCommand
 : <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#aa57320a9de71c8c0cd393e0fc2dd8eca">_1aarsproeve.ViewModel.VagtplanViewModel</a>
 </li>
 <li>Starttidspunkt
-: <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagter.html#ad63e941763c0c11dad8f52c75015981c">_1aarsproeve.Model.Vagter</a>
-, <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagtplan_view.html#a2a9289ab85eb5b6cd7691a8c99f4db31">_1aarsproeve.Model.VagtplanView</a>
-, <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#ae31fb2b4cede10a3f44a5e417d83dee0">_1aarsproeve.ViewModel.VagtplanViewModel</a>
+: <a class="el" href="class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#a56bffa0b024e4725e2c8b792dc6a9fa9">_1aarsproeve.Handler.VagtHandler</a>
+, <a class="el" href="class__1aarsproeve_1_1_model_1_1_anmodning_model.html#a7d2d74742b204b85f554645ba6202e0c">_1aarsproeve.Model.AnmodningModel</a>
+, <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagt_model.html#a310beda16c24df5bcc7c517a5c8ef783">_1aarsproeve.Model.VagtModel</a>
+</li>
+<li>StarttidspunktFormat
+: <a class="el" href="class__1aarsproeve_1_1_model_1_1_vagt_model.html#a79b2581123985bb1d6dc55822fd5b963">_1aarsproeve.Model.VagtModel</a>
 </li>
 <li>Stilling
-: <a class="el" href="class__1aarsproeve_1_1_model_1_1_stillinger.html#a04814d75ce5bd3c40ebc73b60b81a49f">_1aarsproeve.Model.Stillinger</a>
-, <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_hoved_view_model.html#accaf70389376abb55df383d44edd5842">_1aarsproeve.ViewModel.HovedViewModel</a>
+: <a class="el" href="class__1aarsproeve_1_1_handler_1_1_bruger_handler.html#a46805384d3593dfcd0fdbd0bd9c24257">_1aarsproeve.Handler.BrugerHandler</a>
+, <a class="el" href="class__1aarsproeve_1_1_model_1_1_hjaelpeklasse.html#a42829bdb84cba176713783f7b872fe20">_1aarsproeve.Model.Hjaelpeklasse</a>
+, <a class="el" href="class__1aarsproeve_1_1_model_1_1_stillinger.html#a04814d75ce5bd3c40ebc73b60b81a49f">_1aarsproeve.Model.Stillinger</a>
 </li>
 <li>Stillinger()
 : <a class="el" href="class__1aarsproeve_1_1_model_1_1_stillinger.html#a548469273a6d2f22e63553a8179d6665">_1aarsproeve.Model.Stillinger</a>
+</li>
+<li>StillingerListe
+: <a class="el" href="class__1aarsproeve_1_1_view_model_1_1_bruger_view_model.html#ac5c316878e65e35da6706ecf6623a864">_1aarsproeve.ViewModel.BrugerViewModel</a>
 </li>
 <li>StillingId
 : <a class="el" href="class__1aarsproeve_1_1_model_1_1_ansatte.html#acc76312a334de51d5476ccac3ddb3d5f">_1aarsproeve.Model.Ansatte</a>
@@ -212,11 +240,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>StringFormatMethodAttribute()
 : <a class="el" href="class_string_format_method_attribute.html#a39256792ebf736db384513a1e9d88240">StringFormatMethodAttribute</a>
 </li>
+<li>SuccesMeddelelse()
+: <a class="el" href="class__1aarsproeve_1_1_model_1_1_hjaelpeklasse.html#a8f4a1aa7e7237e9031e3be2c784d7960">_1aarsproeve.Model.Hjaelpeklasse</a>
+</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 8 2015 13:41:14 for 1-aarsproeve by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 28 2015 09:44:10 for 1-aarsproeve by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

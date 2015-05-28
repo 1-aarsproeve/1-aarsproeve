@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['findugenummer',['FindUgenummer',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a5e3b5ba40e74748da6c018f8547d8baa',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['foerstedagpaauge',['FoersteDagPaaUge',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a8b8894a622f861e335c3e171a4ba93bc',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['fejlmeddelelse',['FejlMeddelelse',['../class__1aarsproeve_1_1_model_1_1_hjaelpeklasse.html#ace57d950f0b7031ee1f46f20161e1414',1,'_1aarsproeve::Model::Hjaelpeklasse']]],
+  ['findugenummer',['FindUgenummer',['../class__1aarsproeve_1_1_model_1_1_vagtplan_singleton.html#a7d8478359fc4142a09a94d39a7e58c62',1,'_1aarsproeve::Model::VagtplanSingleton']]],
+  ['foerstedagpaauge',['FoersteDagPaaUge',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a319e58fbb6c1975935fbc5426ff4c02d',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
   ['forrigeuge',['ForrigeUge',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#ae298778e1242b354d4ccd8fa69274ee3',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['frievagter',['FrieVagter',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#ae72f0ee8b095efbd7ec2d0d57c114dde',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]]
+  ['frievagter',['FrieVagter',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a2e0b9cc312790efff77696437e15ba77',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]]
 ];

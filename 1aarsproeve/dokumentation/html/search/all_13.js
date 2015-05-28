@@ -1,14 +1,17 @@
 var searchData=
 [
-  ['tablecontext',['TableContext',['../class_w_s1aarsproeve_1_1_table_context.html',1,'WS1aarsproeve']]],
-  ['terminatesprogramattribute',['TerminatesProgramAttribute',['../class_terminates_program_attribute.html',1,'']]],
-  ['textsample',['TextSample',['../class__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_text_sample.html',1,'_1aarsproeveWebService::Areas::HelpPage']]],
-  ['textsample',['TextSample',['../class_w_s1aarsproeve_1_1_areas_1_1_help_page_1_1_text_sample.html',1,'WS1aarsproeve::Areas::HelpPage']]],
-  ['tirsdag',['Tirsdag',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a504d0377b323ec2af99d27a0b586924a',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['tirsdagfarve',['TirsdagFarve',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#adc98e55c2f01916b7581f1ef865a70bc',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['tirsdagvagter',['TirsdagVagter',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a7d6c62127834e177525b22eb6ddd2ab6',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['torsdag',['Torsdag',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a8ae90390ac0ead14c7542bb1b735ec75',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['torsdagfarve',['TorsdagFarve',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a88d17bbfb35c27d773321581f4cfd5df',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['torsdagvagter',['TorsdagVagter',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a85143514a9445a534a3518738e53df82',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
-  ['tostring',['ToString',['../class__1aarsproeve_1_1_model_1_1_ansatte.html#ac4090e69bb8174b69cabc65aebf657b1',1,'_1aarsproeve.Model.Ansatte.ToString()'],['../class__1aarsproeve_1_1_model_1_1_ugedage.html#a4dfc2410bcebf3f10fd8355be0e9e4b7',1,'_1aarsproeve.Model.Ugedage.ToString()']]]
+  ['udloebsdato',['Udloebsdato',['../class__1aarsproeve_1_1_model_1_1_besked_model.html#a3d428cc4ff1f9c58b79c90d670e7ccb9',1,'_1aarsproeve::Model::BeskedModel']]],
+  ['ugedag',['Ugedag',['../class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#a97b98aef44c9aa2dfa598d14a9fc7813',1,'_1aarsproeve.Handler.VagtHandler.Ugedag()'],['../class__1aarsproeve_1_1_model_1_1_anmodning_model.html#a3c6de13dc6cefc3506fd3f1eb28d43e6',1,'_1aarsproeve.Model.AnmodningModel.Ugedag()'],['../class__1aarsproeve_1_1_model_1_1_ugedage.html#adad1fb5cce525dfcfd1977056660eece',1,'_1aarsproeve.Model.Ugedage.Ugedag()']]],
+  ['ugedage',['Ugedage',['../class__1aarsproeve_1_1_model_1_1_ugedage.html',1,'_1aarsproeve::Model']]],
+  ['ugedage',['Ugedage',['../class__1aarsproeve_1_1_model_1_1_ugedage.html#a4c1e0bc499297715858c08a00830653e',1,'_1aarsproeve.Model.Ugedage.Ugedage()'],['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#af345ce712696e7401e284d71323e9619',1,'_1aarsproeve.ViewModel.VagtplanViewModel.Ugedage()']]],
+  ['ugedage',['Ugedage',['../class_w_s1aarsproeve_1_1_ugedage.html',1,'WS1aarsproeve']]],
+  ['ugedage',['Ugedage',['../class__1aarsproeve_web_service_1_1_ugedage.html',1,'_1aarsproeveWebService']]],
+  ['ugedageliste',['UgedageListe',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#a288c70ed7f7ad254c50079c4fc33b855',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['ugedagescontroller',['UgedagesController',['../class__1aarsproeve_web_service_1_1_controllers_1_1_ugedages_controller.html',1,'_1aarsproeveWebService::Controllers']]],
+  ['ugedagescontroller',['UgedagesController',['../class_w_s1aarsproeve_1_1_controllers_1_1_ugedages_controller.html',1,'WS1aarsproeve::Controllers']]],
+  ['ugedagid',['UgedagId',['../class__1aarsproeve_1_1_model_1_1_anmodning_model.html#a11259c43ed56c127a304cac77b8d34f3',1,'_1aarsproeve.Model.AnmodningModel.UgedagId()'],['../class__1aarsproeve_1_1_model_1_1_ugedage.html#a4e36349c13da8ed6c5f15aac98c9acf0',1,'_1aarsproeve.Model.Ugedage.UgedagId()'],['../class__1aarsproeve_1_1_model_1_1_vagt_model.html#aad9893b881d0fa51dca039343ba7650a',1,'_1aarsproeve.Model.VagtModel.UgedagId()']]],
+  ['ugenummer',['Ugenummer',['../class__1aarsproeve_1_1_handler_1_1_vagt_handler.html#a1ba62aedc8333e3b5889d3ffa8132a4c',1,'_1aarsproeve.Handler.VagtHandler.Ugenummer()'],['../class__1aarsproeve_1_1_model_1_1_anmodning_model.html#ae3c4bd1da914b9af4c20cfe3716dcb46',1,'_1aarsproeve.Model.AnmodningModel.Ugenummer()'],['../class__1aarsproeve_1_1_model_1_1_vagt_model.html#a574593249f41955e2391a87c7e3e637f',1,'_1aarsproeve.Model.VagtModel.Ugenummer()'],['../class__1aarsproeve_1_1_model_1_1_vagtplan_singleton.html#a15018dbaee9711170c17635c6665480d',1,'_1aarsproeve.Model.VagtplanSingleton.Ugenummer()']]],
+  ['ugenumreliste',['UgenumreListe',['../class__1aarsproeve_1_1_view_model_1_1_vagtplan_view_model.html#af852f26329ee256810f5fb02f8c5ac1d',1,'_1aarsproeve::ViewModel::VagtplanViewModel']]],
+  ['uriparameters',['UriParameters',['../class__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model.html#a13910e263edc19222bbb60615d1f80be',1,'_1aarsproeveWebService.Areas.HelpPage.Models.HelpPageApiModel.UriParameters()'],['../class_w_s1aarsproeve_1_1_areas_1_1_help_page_1_1_models_1_1_help_page_api_model.html#adf89274591dc9d880d387f01a31b108b',1,'WS1aarsproeve.Areas.HelpPage.Models.HelpPageApiModel.UriParameters()']]],
+  ['usedimplicitlyattribute',['UsedImplicitlyAttribute',['../class_used_implicitly_attribute.html',1,'']]]
 ];

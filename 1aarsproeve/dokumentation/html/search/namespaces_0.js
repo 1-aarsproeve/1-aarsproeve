@@ -15,7 +15,6 @@ var searchData=
   ['modeldescriptions',['ModelDescriptions',['../namespace__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_model_descriptions.html',1,'_1aarsproeveWebService::Areas::HelpPage']]],
   ['models',['Models',['../namespace__1aarsproeve_web_service_1_1_areas_1_1_help_page_1_1_models.html',1,'_1aarsproeveWebService::Areas::HelpPage']]],
   ['persistens',['Persistens',['../namespace__1aarsproeve_1_1_persistens.html',1,'_1aarsproeve']]],
-  ['strategy',['Strategy',['../namespace__1aarsproeve_1_1_strategy.html',1,'_1aarsproeve']]],
   ['view',['View',['../namespace__1aarsproeve_1_1_view.html',1,'_1aarsproeve']]],
   ['viewmodel',['ViewModel',['../namespace__1aarsproeve_1_1_view_model.html',1,'_1aarsproeve']]]
 ];

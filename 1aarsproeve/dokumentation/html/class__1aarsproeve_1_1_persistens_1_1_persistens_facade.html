@@ -104,12 +104,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a58be4f9dca4d750397b687f82a75b242"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__1aarsproeve_1_1_persistens_1_1_persistens_facade.html#a58be4f9dca4d750397b687f82a75b242">GemDB</a> (string api, object objekt)</td></tr>
 <tr class="memdesc:a58be4f9dca4d750397b687f82a75b242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gemmer data i databasen  <a href="#a58be4f9dca4d750397b687f82a75b242">More...</a><br /></td></tr>
 <tr class="separator:a58be4f9dca4d750397b687f82a75b242"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a774ffeccb48cea0195fb2f42a9612e67"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__1aarsproeve_1_1_persistens_1_1_persistens_facade.html#a774ffeccb48cea0195fb2f42a9612e67">SletDB</a> (string api, object id)</td></tr>
-<tr class="memdesc:a774ffeccb48cea0195fb2f42a9612e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sletter data i databasen  <a href="#a774ffeccb48cea0195fb2f42a9612e67">More...</a><br /></td></tr>
-<tr class="separator:a774ffeccb48cea0195fb2f42a9612e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf4034a829e5a233ef61fa7315220a98"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__1aarsproeve_1_1_persistens_1_1_persistens_facade.html#abf4034a829e5a233ef61fa7315220a98">RedigerDB</a> (string api, int id, object objekt)</td></tr>
-<tr class="memdesc:abf4034a829e5a233ef61fa7315220a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redigerer data i databasen  <a href="#abf4034a829e5a233ef61fa7315220a98">More...</a><br /></td></tr>
-<tr class="separator:abf4034a829e5a233ef61fa7315220a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1145232ebea2ac7839d0260599c8bd42"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__1aarsproeve_1_1_persistens_1_1_persistens_facade.html#a1145232ebea2ac7839d0260599c8bd42">SletDB</a> (string api, int id)</td></tr>
+<tr class="memdesc:a1145232ebea2ac7839d0260599c8bd42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sletter data i databasen  <a href="#a1145232ebea2ac7839d0260599c8bd42">More...</a><br /></td></tr>
+<tr class="separator:a1145232ebea2ac7839d0260599c8bd42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacc8d60cd5adf86552af54cf7230932"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__1aarsproeve_1_1_persistens_1_1_persistens_facade.html#aaacc8d60cd5adf86552af54cf7230932">RedigerDB</a> (string api, object objekt, int id=0, string streng=null)</td></tr>
+<tr class="memdesc:aaacc8d60cd5adf86552af54cf7230932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redigerer data i databasen  <a href="#aaacc8d60cd5adf86552af54cf7230932">More...</a><br /></td></tr>
+<tr class="separator:aaacc8d60cd5adf86552af54cf7230932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a282e4349d842d409431aebceaa12f978"><td class="memItemLeft" align="right" valign="top">static async Task&lt; List&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__1aarsproeve_1_1_persistens_1_1_persistens_facade.html#a282e4349d842d409431aebceaa12f978">LoadDB</a> (string api)</td></tr>
 <tr class="memdesc:a282e4349d842d409431aebceaa12f978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Henter data i databasen  <a href="#a282e4349d842d409431aebceaa12f978">More...</a><br /></td></tr>
 <tr class="separator:a282e4349d842d409431aebceaa12f978"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,7 +198,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abf4034a829e5a233ef61fa7315220a98"></a>
+<a class="anchor" id="aaacc8d60cd5adf86552af54cf7230932"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -214,14 +214,20 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>objekt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">object&#160;</td>
-          <td class="paramname"><em>objekt</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>streng</em> = <code>null</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -240,15 +246,16 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">api</td><td>Tager API-url som string</td></tr>
-    <tr><td class="paramname">id</td><td>Tager ID som skal redigeres</td></tr>
     <tr><td class="paramname">objekt</td><td>Tager objekt som skal redigeres</td></tr>
+    <tr><td class="paramname">id</td><td>Tager ID som skal redigeres</td></tr>
+    <tr><td class="paramname">streng</td><td>Tager brugernavn som skal redigeres</td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a774ffeccb48cea0195fb2f42a9612e67"></a>
+<a class="anchor" id="a1145232ebea2ac7839d0260599c8bd42"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -264,7 +271,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">object&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>id</em>&#160;</td>
         </tr>
         <tr>
@@ -297,7 +304,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 8 2015 13:41:01 for 1-aarsproeve by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 28 2015 09:43:55 for 1-aarsproeve by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
