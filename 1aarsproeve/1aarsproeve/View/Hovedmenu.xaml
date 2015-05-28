@@ -119,8 +119,8 @@
                             <Core:NavigateToPageAction TargetPage="_1aarsproeve.View.Anmodninger"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
-                    <Border Margin="170,0,0,160" Background="White" Height="35" CornerRadius="10">
-                        <TextBlock Text="{Binding AnmodningCollection.Count}" Padding="5 0" FontSize="25" Foreground="#FFB81323" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Border Margin="170,0,0,160" Background="White" Height="30" CornerRadius="10">
+                        <TextBlock Text="{Binding AnmodningCollection.Count}" Padding="8 0" FontSize="20" Foreground="#FFB81323" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                     </Border>
                 </HyperlinkButton>
             </Grid>
