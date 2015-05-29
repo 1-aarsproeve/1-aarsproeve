@@ -142,7 +142,7 @@ namespace _1aarsproeveTests
             string password1 = "";
             string password2 = "";
 
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 100; i++)
             {
                 password1 = password1 + "a";
             }
