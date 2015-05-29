@@ -501,6 +501,9 @@ namespace _1aarsproeve.ViewModel
             NuvaerendeUgedag(new SolidColorBrush(Color.FromArgb(255, 169, 169, 169)), new SolidColorBrush(Color.FromArgb(255, 184, 19, 35)));
             Ugedage();
 
+            ClearVagterCollections();
+            VagtCollection.LoadVagter();
+
             VagtHandler = new VagtHandler(this);
 
             AnsatteListe = new List<Ansatte>();
@@ -533,6 +536,7 @@ namespace _1aarsproeve.ViewModel
         {
             try
             {
+                VagtCollection.LoadVagter();
                 ClearVagterCollections();
                 for (int i = 0; i < vagtCollection.Length; i++)
                 {
@@ -562,6 +566,7 @@ namespace _1aarsproeve.ViewModel
         {
             try
             {
+                VagtCollection.LoadVagter();
                 ClearVagterCollections();
                 for (int i = 0; i < vagtCollection.Length; i++)
                 {
@@ -591,6 +596,7 @@ namespace _1aarsproeve.ViewModel
         {
             try
             {
+                VagtCollection.LoadVagter();
                 ClearVagterCollections();
                 for (int i = 0; i < vagtCollection.Length; i++)
                 {

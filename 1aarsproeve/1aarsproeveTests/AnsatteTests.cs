@@ -175,7 +175,7 @@ namespace _1aarsproeveTests
                 password1 = password1 + "a";
             }
 
-            for (int I = 0; I < 31; I++)
+            for (int I = 0; I < 101; I++)
             {
                 password2 = password2 + "a";
             }

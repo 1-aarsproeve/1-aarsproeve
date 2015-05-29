@@ -150,8 +150,6 @@ namespace _1aarsproeveTests
                 brugernavn4 = brugernavn4 + "a";
             }
 
-
-
             _beskeder.Brugernavn = brugernavn4;
             Assert.AreEqual(brugernavn4, _beskeder.Brugernavn);
 
@@ -177,8 +175,6 @@ namespace _1aarsproeveTests
             {
                 brugernavn4 = brugernavn4 + "a";
             }
-
-
 
             _beskeder.Brugernavn = brugernavn4;
             Assert.AreEqual(brugernavn4, _beskeder.Brugernavn);

@@ -157,7 +157,7 @@ namespace _1aarsproeve.Handler
             MessageDialog m = Hjaelpeklasse.FejlMeddelelse("");
             try
             {
-                Ansatte.CheckNavn(BrugerViewModel.AnsatteCollection[0].Navn);
+                Ansatte.CheckNavn(Navn);
             }
             catch (Exception)
             {
@@ -173,7 +173,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckEmail(BrugerViewModel.AnsatteCollection[0].Email);
+                Ansatte.CheckEmail(Email);
             }
             catch (Exception)
             {
@@ -181,7 +181,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckAdresse(BrugerViewModel.AnsatteCollection[0].Adresse);
+                Ansatte.CheckAdresse(Adresse);
             }
             catch (Exception)
             {
@@ -189,7 +189,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckPostnummer(BrugerViewModel.AnsatteCollection[0].Postnummer);
+                Ansatte.CheckPostnummer(Postnummer);
             }
             catch (Exception)
             {
@@ -197,7 +197,7 @@ namespace _1aarsproeve.Handler
             }
             try
             {
-                Ansatte.CheckMobil(BrugerViewModel.AnsatteCollection[0].Mobil);
+                Ansatte.CheckMobil(Mobil);
             }
             catch (Exception)
             {
@@ -211,11 +211,19 @@ namespace _1aarsproeve.Handler
             {
                 PersistensFacade<Ansatte>.RedigerDB("api/Ansattes",
                     new Ansatte(BrugerViewModel.AnsatteCollection[0].Brugernavn,
-                        BrugerViewModel.AnsatteCollection[0].Navn, Hjaelpeklasse.KrypterStreng(Password),
-                        BrugerViewModel.AnsatteCollection[0].Email, BrugerViewModel.AnsatteCollection[0].Mobil,
-                        BrugerViewModel.AnsatteCollection[0].Adresse, BrugerViewModel.AnsatteCollection[0].Postnummer,
+                        Navn, Hjaelpeklasse.KrypterStreng(Password),
+                        Email, Mobil,
+                        Adresse, Postnummer,
                         BrugerViewModel.AnsatteCollection[0].StillingId),
                     streng: BrugerViewModel.AnsatteCollection[0].Brugernavn);
+
+                BrugerViewModel.AnsatteCollection[0].Navn = Navn;
+                BrugerViewModel.AnsatteCollection[0].Password = Password;
+                BrugerViewModel.AnsatteCollection[0].Email = Email;
+                BrugerViewModel.AnsatteCollection[0].Mobil = Mobil;
+                BrugerViewModel.AnsatteCollection[0].Adresse = Adresse;
+                BrugerViewModel.AnsatteCollection[0].Postnummer = Postnummer;
+
 
                 var rootFrame = Window.Current.Content as Frame;
                 rootFrame.Navigate(typeof(Hovedmenu));

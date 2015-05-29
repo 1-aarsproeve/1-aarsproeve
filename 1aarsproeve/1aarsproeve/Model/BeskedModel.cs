@@ -47,6 +47,18 @@ namespace _1aarsproeve.Model
             Brugernavn = brugernavn;
         }
         /// <summary>
+        /// Checker brugernavn
+        /// </summary>
+        /// <param name="brugernavn">Tager brugernavn som parameter</param>
+        public static void CheckBrugernavn(string brugernavn)
+        {
+            if (string.IsNullOrEmpty(brugernavn) || brugernavn.Length > 30)
+            {
+                throw new ArgumentException("brugernavn er forkert");
+            }
+
+        }
+        /// <summary>
         /// Checker beskrivelse
         /// </summary>
         /// <param name="beskrivelse">beskrivelse parameter</param>
@@ -116,10 +128,19 @@ namespace _1aarsproeve.Model
         /// </summary>
         public DateTime Udloebsdato { get; set; }
 
+        private string _brugernavn;
         /// <summary>
         /// Brugernavn Property
         /// </summary>
-        public string Brugernavn { get; set; }
+        public string Brugernavn
+        {
+            get { return _brugernavn; }
+            set
+            {
+                CheckBrugernavn(value);
+                _brugernavn = value;
+            }
+        }
 
 
         public Ansatte Ansat { get; set; }

@@ -54,18 +54,18 @@
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
             <TextBlock Style="{StaticResource LoggetIndText}" Grid.Column="1">
                 <Run Text="Du er logget ind som: "/>
-                <Run Text="{Binding Brugernavn}" FontWeight="Bold"/>
+                <Run Text="{Binding AnsatteCollection[0].Brugernavn}" FontWeight="Bold"/>
             </TextBlock>
         </Grid>
         <Grid Margin="300 40" Grid.Row="1">
             <StackPanel Margin="100 0">
                 <TextBox Opacity="0.6" Style="{StaticResource GenerelTextbox}" Text="{Binding AnsatteCollection[0].Brugernavn, Mode=TwoWay}" IsReadOnly="True" PlaceholderText="Brugernavn" ToolTipService.ToolTip="Brugernavnet kan ikke ændres" />
-                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Navn" Text="{Binding AnsatteCollection[0].Navn, Mode=TwoWay}"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding BrugerHandler.Navn, Mode=TwoWay}" PlaceholderText="{Binding AnsatteCollection[0].Navn, Mode=TwoWay}"/>
                 <PasswordBox Style="{StaticResource GenerelPasswordbox}" PlaceholderText="Password" Password="{Binding BrugerHandler.Password, Mode=TwoWay}"/>
-                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="E-mail" Text="{Binding AnsatteCollection[0].Email, Mode=TwoWay}"/>
-                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Adresse" Text="{Binding AnsatteCollection[0].Adresse, Mode=TwoWay}"/>
-                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Postnummer" Text="{Binding AnsatteCollection[0].Postnummer, Mode=TwoWay}"/>
-                <TextBox Style="{StaticResource GenerelTextbox}" PlaceholderText="Mobil" Text="{Binding AnsatteCollection[0].Mobil, Mode=TwoWay}"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding BrugerHandler.Email, Mode=TwoWay}" PlaceholderText="{Binding AnsatteCollection[0].Email, Mode=TwoWay}"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding BrugerHandler.Adresse, Mode=TwoWay}" PlaceholderText="{Binding AnsatteCollection[0].Adresse, Mode=TwoWay}"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding BrugerHandler.Postnummer, Mode=TwoWay}" PlaceholderText="{Binding AnsatteCollection[0].Postnummer, Mode=TwoWay}"/>
+                <TextBox Style="{StaticResource GenerelTextbox}" Text="{Binding BrugerHandler.Mobil, Mode=TwoWay}" PlaceholderText="{Binding AnsatteCollection[0].Mobil, Mode=TwoWay}"/>
                 <Button Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Gem profil" Command="{Binding RedigerBrugerCommand}"/>
             </StackPanel>
         </Grid>
