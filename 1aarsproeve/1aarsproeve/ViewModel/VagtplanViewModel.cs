@@ -519,7 +519,7 @@ namespace _1aarsproeve.ViewModel
             {
                 UgedageListe.Add(item);
             }
-            for (int i = 1; i <= 52; i++)
+            for (int i = 1; i <= 53; i++)
             {
                 UgenumreListe.Add(i);
             }
