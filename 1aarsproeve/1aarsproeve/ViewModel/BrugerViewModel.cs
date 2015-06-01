@@ -166,7 +166,6 @@ namespace _1aarsproeve.ViewModel
             _ansatteSingleton = GeneriskSingleton<Ansatte>.Instance();
             Setting = ApplicationData.Current.LocalSettings;
             Brugernavn = (string)Setting.Values["Brugernavn"];
-            Brugernavn = "";
             StillingerListe = new List<Stillinger>();
 
             //Brugernavn = "Daniel";

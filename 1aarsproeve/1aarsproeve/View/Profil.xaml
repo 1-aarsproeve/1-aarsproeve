@@ -54,7 +54,7 @@
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
             <TextBlock Style="{StaticResource LoggetIndText}" Grid.Column="1">
                 <Run Text="Du er logget ind som: "/>
-                <Run Text="{Binding AnsatteCollection[0].Brugernavn}" FontWeight="Bold"/>
+                <Run Text="{Binding Brugernavn}" FontWeight="Bold"/>
             </TextBlock>
         </Grid>
         <Grid Margin="300 40" Grid.Row="1">
