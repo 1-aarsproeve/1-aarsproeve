@@ -61,6 +61,7 @@
                     <Button Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Command="{Binding LogIndCommand}" Content="Login"/>
                     <Button Style="{StaticResource GenerelButton}" Template="{StaticResource ButtonTemplate}" Content="Glemt password" Grid.Column="1"/>
                 </Grid>
+                <Image Margin="0 20" Source="../Assets/fakta_logo.jpg" Height="50" Stretch="Uniform"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Grid>
     </Grid>
