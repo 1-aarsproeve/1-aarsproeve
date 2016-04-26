@@ -1,5 +1,5 @@
 $ cat .gitattributes
-*.rb linguist-language=C#
+*.html linguist-language=Java
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
